@@ -1,0 +1,179 @@
+---
+permalink: domino-ops/reference_domino_plug_in_specific_errors.html 
+sidebar: sidebar 
+keywords: domino, ibm, troubleshooting, plug-ins, errors 
+summary: 常见的 Snap Creator 错误分为两类：通用 Snap Creator 错误和 Domino 插件特定错误。Domino 插件专用错误通常涉及安装前问题，数据库损坏或自定义还原操作出现问题。 
+---
+= 排除 Domino 插件特定错误
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+常见的 Snap Creator 错误分为两类：通用 Snap Creator 错误和 Domino 插件特定错误。Domino 插件专用错误通常涉及安装前问题，数据库损坏或自定义还原操作出现问题。
+
+
+NOTE: 有关常规 Snap Creator 错误的信息，请参见 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+
+
+== 此平台不支持 Domino 插件
+
+通常，如果未满足 Domino 插件的前提条件，则会收到此错误。通常，此错误消息类似于以下内容：
+
+[listing]
+----
+Failed to load plug-in domino. Reason: ERROR: [ltd-00009] Domino plug-in
+couldn't be loaded. Reasons could be 1) Domino plug-in is not supported
+on this platform.
+----
+已知还会显示以下错误消息：
+
+[listing]
+----
+ERROR: [tampico:9090(4.1.x)] SCF-00038: Application quiesce for
+plug-in [domino] failed with exit code [99], continuing with backup.
+----
+以及以下内容：
+
+[listing]
+----
+ERROR: [scf-00094] Application environment set for plug-in domino failed
+[ERROR: [scf-00060] unknown application object [app] / application domino at snapcreator.pl line 6410.
+----
+如果不满足以下条件之一，则会显示这些错误消息：
+
+* 未执行预安装步骤或未正确执行安装步骤：
++
+** 在 UNIX 主机上，必须创建指向 IBM Domino 共享对象文件的符号链接。
+** 在 Windows 主机上，必须将 IBM Domino 安装路径添加到 path 环境变量。有关详细信息，请参见 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["《 Snap Creator Framework 4.1.2 安装指南》"]。
+
+
+* Domino 的位级别与 Snap Creator 的位级别不同。例如，如果您使用的是 32 位 Domino ，则应使用 32 位 Snap Creator 。
+
+
+
+
+== Snap Creator 备份因数据库损坏而失败
+
+默认情况下，如果一个或多个数据库处于不一致或损坏状态，备份操作将失败。您可以强制插件在出现错误的情况下继续执行备份操作，如步骤中所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["使用 GUI 创建配置文件的任务"]。
+
+
+
+== 使用自定义操作还原 Domino 失败
+
+如果还原路径设置不正确，通常会发生还原错误。检查路径中是否存在额外字符和反斜杠。此外，验证是否已正确设置数据还原目录。
+
+错误如下所示：
+
+[listing]
+----
+########## Custom plug-in action ##########
+[Thu Apr 19 16:05:55 2012] DEBUG: Restoring to current time.
+[Thu Apr 19 16:05:55 2012] DEBUG: Calling dominocore::postRestoreToTime with arguments(C:\Lotus\Domino\notes.ini,F:\Domino\data\,H:\changeinfo\fuji15-daily_20120419130836,-1,F:\Domino\data\restore\mail\dadams.nsf,UP-TO-THE-MINUTE,H:\changeinfo\logs\)
+[Thu Apr 19 16:05:55 2012] TRACE: Notes API initialized
+Applying Change info for:F:\Domino\data\restore\mail\dadams.nsf
+Error: unable to open file 'H:\changeinfo\fuji15-daily_20120419130836/restore_mail_dadams.nsf.info', for path 'F:\Domino\data\restore\mail\dadams.nsf'.
+Error:5114
+NSFRecoverDatabases failed for database:F:\Domino\data\restore\mail\dadams.nsf
+Recovery Manager: Recovery only supported for Backup Files.ERROR_CODE:5114
+[Thu Apr 19 16:05:55 2012] ERROR: [ltd-00008] Restoring databases finished with errors
+[Thu Apr 19 16:05:55 2012] ERROR: [scf-00154] Action custom for plugin domino failed with exit code 1, Exiting!
+[Thu Apr 19 16:05:55 2012] DEBUG: Exiting with error code - 2
+----
+
+
+== 所有 Domino 插件专用错误
+
+下表以参考格式列出了 IBM Domino 插件专用的错误消息：
+
+|===
+| 错误代码 | 错误消息 | 说明 / 解决方法 
+
+
+ a| 
+LTD 00001
+ a| 
+Domino 插件无法与 snap_timestamp_only = N 结合使用snap_timestamp_only 应设置为 Y
+ a| 
+有关详细信息，请参见第步 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3["task_Using_the_guI_to_create_a_configuration_file.md#sted_81795CF9D6294AC891BC3D0CE4827CA3"]。
+
+
+
+ a| 
+LTC-00002
+ a| 
+数据库暂停已完成，但出现错误
+ a| 
+Domino 插件无法将所有数据库置于备份模式。检查日志以查找错误的确切原因，或者在调试模式下运行 Snap Creator 以查找错误。
+
+
+
+ a| 
+LTC-00003
+ a| 
+数据库取消静默已完成，但出现错误
+ a| 
+Domino 插件无法使所有数据库退出备份模式。检查日志以查找错误的确切原因，或者在调试模式下运行 Snap Creator 以查找错误。
+
+
+
+ a| 
+LTC-00004
+ a| 
+发现数据库失败
+ a| 
+应用程序错误导致应用程序发现失败。检查配置和应用程序设置。您可以通过设置 APP_AUTO_DISCOVERY=N 并标注 validate_volumes 来禁用自动发现。
+
+
+
+ a| 
+LTC-00005
+ a| 
+收集操作系统信息失败 - $@
+ a| 
+收集操作系统信息时出错，导致 scdump 操作失败。检查日志并尝试手动运行命令。
+
+
+
+ a| 
+LTC-00006
+ a| 
+收集 SnapDrive 信息失败 - $@
+ a| 
+收集 SnapDrive 信息时出错，导致 scdump 操作失败。检查日志并尝试手动运行命令。
+
+
+
+ a| 
+LTC-00008
+ a| 
+还原数据库已完成，但出现错误
+ a| 
+Domino 插件无法成功还原所有数据库。检查日志以查找错误的确切原因，或者在调试模式下运行 Snap Creator 以查找错误。
+
+
+
+ a| 
+LTC-00009
+ a| 
+Domino 插件不能以 root 用户身份运行
+ a| 
+原因可能是：
+
+* 此平台不支持 Domino 插件。
+* 不满足运行 Domino 插件的前提条件。
+
+
+有关详细信息，请参见 link:reference_domino_plug_in_specific_errors.html#domino-plug-in-is-not-supported-on-this-platform["此平台不支持 Domino 插件"]。
+
+
+
+ a| 
+LTD 00010
+ a| 
+打开数据库时遇到错误
+ a| 
+检查日志以查找错误的确切原因，或者在调试模式下运行 Snap Creator 以查找错误。
+
+|===

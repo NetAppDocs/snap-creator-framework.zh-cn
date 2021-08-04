@@ -1,0 +1,60 @@
+---
+permalink: administration/reference_parameters_to_connect_to_vfiler_units_and_interface.html 
+sidebar: sidebar 
+keywords: several, parameter, snap, creator, sefver, vfiler, unit, interface, management, secondary 
+summary: 要将 Snap Creator 服务器连接到 vFiler 单元和接口，需要使用多个参数。 
+---
+= 用于连接到 vFiler 单元和接口的参数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要将 Snap Creator 服务器连接到 vFiler 单元和接口，需要使用多个参数。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+vFiler
+ a| 
+ a| 
+列出 vFiler 单元及其托管存储系统或卷。例如： vFiler1@controller1 ： vol1 ， vol2 ， vol3 ； vFiler2@controller2 ： vol1 ； vFiler3@controller3 ： vol2 ， vol3* 注： * vFiler 单元不支持 HTTPS 。
+
+
+
+ a| 
+管理接口
+ a| 
+ a| 
+列出了用于通信的主存储控制器及其管理接口。例如： management_interfaces=controller1 ： controller1-mgmt ； controller2 ： controller2-mgmt
+
+
+
+ a| 
+二级接口
+ a| 
+ a| 
+列出 SnapVault 和 SnapMirror 关系的主存储控制器或 vFiler 单元及其二级接口的源或目标。例如： Controller1 ： controller1-source/controller2-destination
+
+
+NOTE: 必须将 SnapVault 和 SnapMirror 关系配置为使用此二级接口。Snap Creator 不管理 SnapMirror 和 SnapVault 关系。
+
+
+
+ a| 
+use_proxy
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+允许 API 调用通过 Active IQ Unified Manager 服务器代理进行，而不是直接通过存储控制器进行。如果使用此选项，则不需要 NTAP_Users 。
+ a| 
+允许 _IP_ADDR
+ a| 
+Y
+
+|===

@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_profiles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, profile, menu, assign 
+summary: 您可以使用 Snap Creator 图形用户界面为 Snap Creator 用户分配配置文件。 
+---
+= 将配置文件分配给 Snap Creator 用户
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator 图形用户界面为 Snap Creator 用户分配配置文件。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 用户和角色 * > * 用户管理 * 。
+. 在用户管理选项卡中，选择所需的用户名，然后单击 * 分配配置文件 * 。
+. 将所需配置文件从左列移至右列，然后单击 * 保存 * 。
++
+您可以在列之间选择并拖动配置文件，也可以单击箭头在列之间移动配置文件。
+
+. 通过选择用户并在 * 已分配配置文件和角色 * 窗格中查看已分配的配置文件，验证是否已分配此配置文件。
+

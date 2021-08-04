@@ -1,0 +1,22 @@
+---
+permalink: administration/reference_error_messages.html 
+sidebar: sidebar 
+keywords: error, messages, scf, repo, storage, agt, gui 
+summary: 您必须了解与不同 Snap Creator 操作相关的错误消息。 
+---
+= 错误消息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解与不同 Snap Creator 操作相关的错误消息。
+
+每个错误消息都包含一个区域代码和一个唯一的 5 位标识符 - 例如，错误： <<Area code>-<Unique Area error identifiery>] <error message> 。区域代码用于标识错误发生的位置。不同的区域代码如下所示：
+
+* `sCF` ： Snap Creator Framework
+* `rePO` ：存储库
+* `s存储` ：存储
+* `agt` ： Snap Creator Agent
+* `GUI` ： Snap Creator 图形用户界面（ GUI ）
+

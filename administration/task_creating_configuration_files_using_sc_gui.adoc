@@ -1,0 +1,176 @@
+---
+permalink: administration/task_creating_configuration_files_using_sc_gui.html 
+sidebar: sidebar 
+keywords: configuration, file, wizard, gui, management 
+summary: 您可以使用配置向导创建配置文件。 
+---
+= 正在创建配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用配置向导创建配置文件。
+
+. 从 Snap Creator 图形用户界面的主菜单中，选择 * 管理 * > * 配置 * 。
+. 在配置文件和配置窗格中，右键单击要查找新配置文件的配置文件，然后选择 * 新建配置 * 。
++
+此时将在右侧窗格中打开配置向导。
+
+. 
++
+.. 在配置页面上，输入配置文件的名称。
++
+
+NOTE: 默认情况下，密码加密处于启用状态，以防止密码以明文形式显示在配置文件中。
+
+.. 在插件类型页面上，选择插件的类型。
++
+您在配置向导中转到的页面取决于您选择的选项。
+
++
+|===
+| 插件类型选项 | 下一页 | 下一页 
+
+
+ a| 
+应用程序插件
+ a| 
+* 应用程序插件 * 选择要配置的插件。
+ a| 
+* 插件参数 * 提供与选定插件选项关联的配置详细信息。
+
+
+
+ a| 
+虚拟化插件
+ a| 
+* 虚拟化插件 * 选择要配置的插件。
+ a| 
+* 插件参数 * 提供与选定插件选项关联的配置详细信息。
+
+
+
+ a| 
+社区插件
+ a| 
+* 社区插件 * 选择要配置的插件。
+ a| 
+* 插件参数 * 提供与选定插件选项关联的配置详细信息。
+
+
+
+ a| 
+无（如果未使用插件）
+ a| 
+* 代理配置 *
+ a| 
+--
+
+--
+|===
++
+有关插件参数和配置的详细信息，请参见插件文档。
+
+.. 在代理配置页面上，输入 Snap Creator 代理的配置信息。
+.. 在存储连接设置页面上，选择传输类型（ HTTP 或 HTTPS ）。
++
+此时将显示选定传输类型的标准端口。如果存储系统使用非标准端口，请在端口字段中输入端口信息。
+
+.. 在 Controller/Vserver Credentials 页面上，输入包含此配置文件中的卷的每个存储控制器 SVM 的 IP 地址和登录凭据。
++
+
+NOTE: 必须至少向配置中添加一个存储控制器或 SVM 。
+
+.. 在控制器 /Vserver 卷窗格中，选择要包含的每个卷，然后将其拖动到右窗格或单击右箭头将该卷移动到右窗格，然后单击 * 保存 * 。
++
+
+IMPORTANT: 如果您计划将 Snapshot 副本复制到 SnapMirroror SnapVault 目标，则在此步骤中输入的 SVM 的名称必须与创建 SnapMirroror SnapVault 关系时使用的 SVM 的名称完全相同。如果您在创建关系时指定了完全限定域名，则必须在此步骤中指定完全限定域名，无论 Snap Creator 是否能够使用您提供的信息找到 SVM 。您用于名称的大小写（大写或小写）非常重要。
+
++
+您可以使用 snapmirror show 命令检查主存储系统上 SVM 的名称：
+
++
+[listing]
+----
+snapmirror show -destination-path destination_SVM:destination_volume
+----
++
+其中 destination_svm_name 是目标系统上 SVM 的名称， destination_volume 是卷。
+
+.. 在控制器凭据页面上，验证控制器是否显示正确的信息。
++
+如果需要更改，请选择一个控制器，然后单击 * 编辑 * 。
+
+.. 在 Snapshot 详细信息页面上，提供 Snapshot 副本详细信息。
++
+|===
+| 字段 | Description 
+
+
+ a| 
+Snapshot 副本名称
+ a| 
+用于指定 Snapshot 副本名称通常， Snapshot 副本与配置文件具有相同的名称；但是， Snapshot 副本名称可以反映正在备份的数据。
+
++ 注：指定 Snapshot 副本名称时，请勿使用特殊字符。
+
+
+
+ a| 
+Snapshot 副本标签
+ a| 
+用于指定 Snapshot 副本标签此选项适用于集群模式 Data ONTAP 8.2 及更高版本。对于集群模式 Data ONTAP 8.2 之前的 Data ONTAP 版本，此字段不提供任何功能。
+
+
+
+ a| 
+Policy type
+ a| 
+用于选择策略类型有两个选项：
+
+*** 策略：此选项可启用 Snapshot 副本策略区域中显示的一个内置策略，并指定保留时间（要保留的备份数）
+*** 使用策略对象：如果已创建策略对象，则应选择此选项。
+
+
+
+
+ a| 
+Snapshot 副本策略
+ a| 
+提供用于选择要启用的策略的选项
+
+
+
+ a| 
+防止删除 Snapshot 副本
+ a| 
+用于确定是否阻止删除 Snapshot 副本
+
+
+
+ a| 
+策略保留期限
+ a| 
+用于指定策略保留期限
+
+
+
+ a| 
+命名约定
+ a| 
+用于指定备份的命名约定（近期或时间戳）。SAP HANA ， Vibe 和 Domino 等插件不支持 "`Recent` " 。
+
++
+
+|===
+.. 在 Snapshot 详细信息（续）页面上，配置适用于您的环境的任何其他设置。
+.. 在数据保护页面上，选择是否需要与 SnapMirror 或 SnapVault 操作集成。
++
+如果选择了 SnapMirror 或 SnapVault 技术，则需要使用追加信息。对于 SnapMirror 和 SnapVault 技术，您必须提供存储系统名称，而不是 IP 地址。
+
+.. 在 DFM/OnCommand 设置页面上，如果要将 Snap Creator 配置与 NetApp OnCommand 管理工具集成，请选择并提供详细信息。
+.. 查看摘要，然后单击 * 完成 * 。
+
+
+

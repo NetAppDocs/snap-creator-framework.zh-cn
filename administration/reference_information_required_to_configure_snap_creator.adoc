@@ -1,0 +1,203 @@
+---
+permalink: administration/reference_information_required_to_configure_snap_creator.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, native, plug-in, oracle, db2, mysql, sybase, ase, domino, snapmanager, micorsoft, sql 
+summary: Snap Creator 支持以下内置（或原生）插件： Oracle ， DB2 ， MySQL ， Sybase ASE ， Domino ， 适用于 Microsoft SQL Server 的 SnapManager ，适用于 Microsoft Exchange 的 SnapManager ， MaxDB ， VMware （ vSphere 和 vCloud Director ）， Red Hat KVM ， Citrix XenServer 和 SAP HANA 。社区插件不包含在此软件包中，必须单独下载。 
+---
+= 配置 Snap Creator 所需的插件信息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 支持以下内置（或原生）插件： Oracle ， DB2 ， MySQL ， Sybase ASE ， Domino ， 适用于 Microsoft SQL Server 的 SnapManager ，适用于 Microsoft Exchange 的 SnapManager ， MaxDB ， VMware （ vSphere 和 vCloud Director ）， Red Hat KVM ， Citrix XenServer 和 SAP HANA 。社区插件不包含在此软件包中，必须单独下载。
+
+下表列出并介绍了插件参数和设置：
+
+|===
+| Parameters | 正在设置 ... | Description 
+
+
+ a| 
+应用程序名称
+ a| 
+Oracle
+| DB2 
+
+
+| MySQL | Domino | Vibe 
+
+
+| SMSQL | SME | Sybase 
+
+
+| 最大数据库数 | KVM | Xen 
+
+
+| HANA < 插件 >  a| 
+确定要备份的应用程序。Snap Creator 内置了对所列应用程序的支持。您可以使用 app_name 或配置 app_quiesc_CMDXX ， app_unquiesc_CMDXX 和 pre_exit_CMDXX 。如果 Snap Creator 不直接支持此应用程序，您可以使用插件或运行自己的应用程序暂停或取消暂停命令或脚本。<plug-in ：将此插件复制到 /path_to_scServer
+| scAgent/plug-ins 目录并在 app_name 参数中指定此插件。命令或脚本： -- app_quiesce_CMD01=path_to_quiesceCMD app_unquiesce_CMD01=path_to_unquiesceCMD pre_exit _CMD01=path_to_unquiescCMD 
+
+
+ a| 
+app_ignore_error
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+确定 Snap Creator 是否应忽略应用程序插件中的错误。如果您希望备份多个数据库，而不希望在一个数据库的静默或取消静默操作失败时停止备份，则此功能非常有用。
+ a| 
+app_defined_backup
+ a| 
+Y
+
+
+
+| 不包括  a| 
+应用程序插件应执行整个备份操作，包括暂停，创建 Snapshot 副本和取消暂停。内置插件不支持此类备份。
+ a| 
+app_defined_restore
+
+
+
+ a| 
+Y
+| 不包括  a| 
+启用基于应用程序的还原操作。在执行还原操作时， Snap Creator 会向应用程序插件发送请求，此插件将处理此请求。
+
+
+
+ a| 
+app_defined_mount
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+将忽略 Snap Creator 的内置挂载功能。而是由插件负责所有挂载活动，包括创建卷或 LUN 克隆。内置插件不支持此类挂载。
+ a| 
+app_defined_umount
+ a| 
+Y
+
+
+
+| 不包括  a| 
+将忽略 Snap Creator 的内置卸载功能。相反，该插件负责处理所有卸载活动，包括卷或 LUN 克隆删除。内置插件不支持此类卸载操作。
+ a| 
+APP_AUTO_DISCOVERY
+
+
+
+ a| 
+Y
+| 不包括  a| 
+启用应用程序自动发现。Snap Creator 会向应用程序插件发送发现请求，然后该插件负责发现存储配置。如果要将此信息保存到配置文件中，则可以使用 APP_CONF_PERSISTENT 参数动态执行此操作，也可以将此操作永久执行。
+
+
+
+ a| 
+APP_CONF_persistence
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+使自动发现持久，这意味着更改会在配置文件中动态更新。
+ a| 
+app_defined_clone
+ a| 
+Y
+
+
+
+| 不包括  a| 
+将忽略 Snap Creator 的内置克隆功能。相反，该插件负责处理所有克隆活动，包括创建和删除卷或 LUN 克隆。内置插件不支持此类克隆。
+ a| 
+fs_name
+
+
+
+ a| 
+插件
+ a| 
+确定用于文件系统操作的插件。
+ a| 
+java_home
+
+
+
+ a| 
+文本
+ a| 
+此设置指向应用于执行 .class 和 .jar 文件的 Java 虚拟机（ JVM ）。
+ a| 
+jvm_args
+
+
+
+ a| 
+文本
+ a| 
+此设置用于控制执行原生 java .class 或 .jar 文件时的 JVM 设置。默认设置为 -Xms32M -Xmx128M 。
+ a| 
+JAVA_CLASSPATH
+
+
+
+ a| 
+文本
+ a| 
+此设置用于定义 Java 类路径。默认情况下，插件 / 本机配置为已配置，并且可以使用附加到默认值的环境变量来完成。
+ a| 
+meta_data_volume
+
+
+
+ a| 
+ a| 
+允许在取消静默操作后创建指定卷的 Snapshot 副本。对于某些插件来说，这一点非常重要，因为这些插件必须在不同时间创建数据的 Snapshot 副本。参数不仅要指定卷，还要指定控制器（例如， `controller1 ： volume1 ， volume2 ； controller2 ： volume3 ， volume4 ； controller3 ： volume5 ， volume6` ）。
+ a| 
+perl_home
+
+
+
+ a| 
+文本
+ a| 
+此设置指向执行 .pl 文件时应使用的 Perl 解释器。
+ a| 
+perl_opts
+
+
+
+ a| 
+文本
+ a| 
+此设置用于控制执行原生 Perl 文件时的 Perl 解释器设置。其他设置选项包括可传递给 Perl 解释器的目录（ -I ）。
+ a| 
+Python_home
+
+
+
+ a| 
+文本
+ a| 
+此设置指向应用于执行 .py 文件的 Python 解释器。
+ a| 
+Python_opts
+
+
+
+ a| 
+文本
+ a| 
+此设置用于控制执行原生 Python 文件时的 Python 解释器设置。
+ a| 
+validate_volumes
+
+|===

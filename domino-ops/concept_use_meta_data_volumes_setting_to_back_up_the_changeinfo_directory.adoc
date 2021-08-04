@@ -1,0 +1,37 @@
+---
+permalink: domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, changeinfo, directory 
+summary: 如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷。这样做会指示 IBM Domino 插件在为数据库文件创建 Snapshot 副本之后为 changeinfo 卷创建 Snapshot 副本。 
+---
+= 备份 changeinfo 目录
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷。这样做会指示 IBM Domino 插件为 changeinfo 卷 _after_ 创建 Snapshot 副本，以便为数据库文件创建 Snapshot 副本。
+
+您应已将 changeinfo 卷标识为在创建配置文件时要备份的卷。有关详细信息，请参见第步 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_2036E43A6921415985798979F2226786["使用 GUI 创建配置的任务"]。
+
+您可以在配置文件中使用 meta_data_volume 参数将 changeinfo 卷标识为元数据卷。此参数在图形用户界面中不可用。
+
+. 在文本编辑器中打开配置文件。
++
+配置文件位于 Snap Creator 安装目录中为配置文件命名的子目录中。例如，在 Windows 主机上， C ： \Program Files\NetApp\Snap_Creator_Frame\scServer4.1.x\enginer\configs\Domino\Fuji15.conf ，其中 Domino 是配置文件的名称，而 Fuji15.conf 是配置文件的名称。
+
+. 在 meta_data_volume 参数中输入 changeinfo 卷的名称。
++
+changeinfo 卷应已在 volumes 参数中列出。
+
++
+以下示例显示了如何将 Fuji15_DomChangeInfo 配置为元数据卷：
+
++
+[listing]
+----
+VOLUMES=domino_vserver:Fuji15_DomDAOS,Fuji15_DomChangeInfo,
+Fuji15_DomTxn,Fuji15_DomData
+META_DATA_VOLUME=domino_vserver:Fuji15_DomChangeInfo
+----
+

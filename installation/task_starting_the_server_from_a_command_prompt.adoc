@@ -1,0 +1,34 @@
+---
+permalink: installation/task_starting_the_server_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, server, command, prompt 
+summary: 您可以通过运行批处理脚本（ scServer.bat ）从命令提示符手动启动 Snap Creator 服务器。 
+---
+= 从命令提示符启动服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过运行批处理脚本（ scServer.bat ）从命令提示符手动启动 Snap Creator 服务器。
+
+通常，只有在安装期间未选择 * 启动服务器作为服务 * 选项时，才必须遵循此操作步骤。
+
+您还可以通过 Windows 任务计划程序计划在启动时运行批处理脚本（ scServer.bat ）。有关使用 Windows 任务计划程序的详细信息，请参见适用于您的 Windows 操作系统的文档。
+
+由于批处理脚本（ scServer.bat ）在前台运行 Snap Creator ，因此，只有在命令提示符处于打开状态时， Snap Creator 服务器才会继续运行。关闭命令提示符将退出 Snap Creator 服务器。要在后台运行，应使用 Snap Creator 服务器服务。
+
+. 打开命令提示符并输入以下命令：
++
+[listing]
+----
+cd \install_path\scServerrelease-version\bin\
+scServer.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scServer4.1.0\bin\
+scServer.bat start
+----
+

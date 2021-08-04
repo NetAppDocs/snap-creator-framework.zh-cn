@@ -1,0 +1,75 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_4_0_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.0.x, unix, unix-based 
+summary: 您可以在基于 UNIX 的系统上直接从 Snap Creator Server 4.0.x 进行升级。 
+---
+= 在基于 UNIX 的系统上升级 Snap Creator Server 4.0.x
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在基于 UNIX 的系统上直接从 Snap Creator Server 4.0.x 进行升级。
+
+* 如果您的任何用户名在 Snap Creator 中包含特殊字符，则必须仅使用字母字符（ a 到 z 或 a 到 Z ）对这些用户进行重命名。
+* 在备份 Snap Creator 目录之前，您已停止 Snap Creator 进程，以确保备份的数据完整。
++
+例如，输入以下命令：
+
++
+[listing]
+----
+/install_path/scServer4.0.x/bin/scServer stop
+/install_path/scAgent4.0.x/bin/scAgent stop
+----
+* 您已在 Snap Creator 4.0.x 服务器引擎子目录（ /install_path/scServer4.0.x 引擎）中备份以下目录以及所有关联的子目录和文件：
++
+** Snap Creator 数据库（ ./snapcreator ）
+** Snap Creator 服务器属性（ ... 等）
+** 配置文件和配置（ ./configs ）
+** 日志（ ./logs ） * 注意： * 您不能删除已创建的 Snap Creator 4.0.x 备份副本。
+
+
+
+
+以下步骤中提供的路径是指默认安装路径。以下命令中的路径可能与您的安装路径不同。
+
+升级过程完成后，您应考虑以下问题：
+
+* 如果升级的 Snap Creator 数据库包含一些标记为 " 进行中 " 的任务，则即使升级过程完成，该状态也会保持不变。
+* 最新版本的 Snap Creator 中的默认管理员必须是 Snap Creator 4.0.x 中的管理员如果 4.0.x 用户不是管理员，则升级会为 4.0.x 用户分配操作员角色。
++
+.. 如果尚未停止 Snap Creator 进程，请执行此操作。
++
+有关停止进程的信息，请参见本主题前面提供的详细信息。
+
+.. 安装最新的 Snap Creator ，但不要启动 Snap Creator 服务器服务。
++
+有关详细信息，请参见有关在 UNIX 上安装 Snap Creator 服务器的信息。
+
+.. 将已备份的 Snap Creator 4.0.x 数据库目录复制到最新位置（ /install_path/scServer4.1.x/enginer/snapcreator ）。
+.. 将备份的 4.0.x 配置文件和配置目录复制到最新位置（ /install_path/scServer4.1.x / 引擎 /configs ）。
+.. 将备份的 4.0.x 日志目录复制到最新位置（ /install_path/scServer4.1.x/enginer/logs ）。
+.. 将目录更改为 Snap Creator 安装路径（ /install_path/scServer4.1.x / 引擎）中的 engine 子目录。
+.. 输入以下命令以升级 Snap Creator ： java -JAR snapcreator.jar -upgrade
+
+
+
+
+升级过程完成后，输入以下命令启动 Snap Creator 服务器服务：
+
+/install_path/scServer4.1.x/bin/scServer start
+
+此外，还应删除 Snap Creator 4.0 安装目录。
+
+
+IMPORTANT: 在确定不需要还原到旧版本之前，请勿删除备份副本。
+
+此外，您还必须导航到指定端口上的本地主机来验证 Snap Creator Framework 图形用户界面的启动情况 (https://IP_address:gui_port)[]。
+
+您必须使用 HTTPS 进行连接；否则，此连接不会自动重定向到 HTTPS 连接，并且图形用户界面将不起作用。
+
+* 相关信息 *
+
+xref:task_installing_the_snap_creator_server_on_unix.adoc[在基于 UNIX 的系统上安装 Snap Creator 服务器]

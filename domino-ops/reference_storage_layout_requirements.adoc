@@ -1,0 +1,72 @@
+---
+permalink: domino-ops/reference_storage_layout_requirements.html 
+sidebar: sidebar 
+keywords: domino, ibm, storage, layout, requirements, 
+summary: 典型的 IBM Domino 环境至少具有三个 Domino 卷，每个卷分别用于 Domino 数据， Domino 事务日志和插件 changeinfo 目录。许多站点还为 Domino DAOS 和 View 重建提供了卷。 
+---
+= 存储布局要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+典型的 IBM Domino 环境至少具有三个 Domino 卷，每个卷分别用于 Domino 数据， Domino 事务日志和插件 changeinfo 目录。许多站点还为 Domino DAOS 和 View 重建提供了卷。
+
+IBM Domino 插件使用 changeinfo 目录来记录备份操作期间所记录的更改以及在最新还原操作中使用的事务日志副本。最佳做法是将 changeinfo 目录存储在一个单独的卷上，以避免无意中覆盖信息并使备份更容易。
+
+您可能还会发现，为 Domino DAOS （如果已启用）和 View 重建创建单独的卷也很有用。当 Domino 重建视图时（例如，当用户打开索引已删除的视图或运行 updall -R 时），它可能会生成临时文件来对数据进行排序，以便快速重建视图。
+
+默认情况下，这些临时文件位于系统的临时文件夹或 Domino 数据文件夹中。IBM 建议将临时文件的位置更改为其他驱动器，以分布磁盘 I/O 并确保有足够的空间来重建视图。要更改用于视图重建的临时文件夹，请将 view_rebuild_dir 设置添加到 notes.ini 文件中。
+
+下表显示了首选卷布局：
+
+|===
+| Volume | 内容 | 注释： 
+
+
+ a| 
+卷 1
+ a| 
+Domino 数据
+ a| 
+首选 FC ， SAS 或 SSD 驱动器。
+
+
+
+ a| 
+第 2 卷
+ a| 
+Domino 事务日志
+ a| 
+首选 FC ， SAS 或 SSD 驱动器。
+
+
+
+ a| 
+第 3 卷
+ a| 
+changeinfo
+ a| 
+存储备份操作期间记录的更改以及事务日志副本，以便在即时还原操作中使用。
+
+
+
+ a| 
+第 4 卷
+ a| 
+查看重建
+ a| 
+可选。存储在索引更新期间创建的临时文件。可以使用 RAM 磁盘。将 view_Rebuild_Dir 设置添加到 notes.ini 文件中。
+
+
+
+ a| 
+第 5 卷
+ a| 
+DAOS 存储库
+ a| 
+可选。包含来自 DAOS 的 .DLO 文件。由于 I/O 要求较低，因此很适合使用 SATA 驱动器。
+
+|===
+
+NOTE: 在虚拟环境中，优先使用子系统挂载的磁盘。

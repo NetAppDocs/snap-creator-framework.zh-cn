@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_cli_command_results_in_500_connect_failed_error.html 
+sidebar: sidebar 
+keywords: unix, 500, error, connect, failed 
+summary: 在 UNIX 环境中，运行 CLI 命令时可能会遇到 500 Connect Failed 错误。 
+---
+= CLI 命令导致出现 500 连接失败错误
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 UNIX 环境中，运行 CLI 命令时可能会遇到 500 Connect Failed 错误。
+
+* * 问题描述 *
++
+在 UNIX 环境中，您尝试运行 CLI 命令；但遇到 500 连接失败错误。例如：
+
++
+[listing]
+----
+500 Connect failed: connect: Connection refused; Connection refused at //scServer4.1.0/snapcreator>SnapCreator/Service/Engine.pm line 152
+----
+* * 发生原因 *
++
+如果 Snap Creator 未侦听选定端口，则通常会发生此错误。
+
+* * 更正操作 *
++
+验证 Snap Creator 是否正在选定端口上运行。
+
+

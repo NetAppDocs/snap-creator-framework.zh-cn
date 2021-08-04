@@ -1,0 +1,31 @@
+---
+permalink: administration/reference_transport_layer_security_tls.html 
+sidebar: sidebar 
+keywords: cryptographic, flaw, transport, layer, security, tls, protocol 
+summary: 传输层安全性中的加密缺陷 
+---
+= 传输层安全性中的加密缺陷
+:icons: font
+:imagesdir: ../media/
+
+
+* * 问题描述 *
++
+TLS 1.0 存在多个加密缺陷。攻击者可能会利用这些缺陷进行中间人攻击，或者对受影响的服务和客户端之间的通信进行解密。
+
+* * 发生原因 *
++
+远程服务接受使用 TLS 1.0 加密的连接。
+
+* * 更正操作 *
++
+Snap Creator 可选择启用或禁用 TLS 1.0 协议。
+
++
+.. 要支持向后兼容性，请在 snapcreator.properties 和 agent.properties 文件中将 enable_security_Protocol_tls_V1 参数设置为 Y 。默认情况下， enable_security_Protocol_tls_V1 参数设置为 N 。
+
+
+
+
+
+NOTE: enable_security_Protocol_tls_V1 参数只能在 Snap Creator Framework 4.3.3 之前的版本中使用。因为 Snap Creator Framework 4.3.3 。版本仅支持 Oracle Java 和 OpenJDK 1.8 及更高版本，但对 TLS 1.0 的支持已从 Snap Creator Framework 中删除。

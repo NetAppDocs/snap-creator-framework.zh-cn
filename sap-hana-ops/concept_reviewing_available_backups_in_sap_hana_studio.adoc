@@ -1,0 +1,25 @@
+---
+permalink: sap-hana-ops/concept_reviewing_available_backups_in_sap_hana_studio.html 
+sidebar: sidebar 
+keywords: reviewing, review, available, backups, sap, hana, studio 
+summary: 您可以在 SAP HANA Studio 中查看存储 Snapshot 备份列表。 
+---
+= 在 SAP HANA Studio 中查看可用备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 SAP HANA Studio 中查看存储 Snapshot 备份列表。
+
+下图中突出显示的备份显示了一个名为 "`Backup-ANA _hourly_20140320103943 的 Snapshot 副本。` 此备份包括 SAP HANA 系统所有三个数据卷的 Snapshot 副本。备份也可从二级存储获得。
+
+image::../media/sap_hana_backup_list_scfw_gui.gif[此图通过周围的文本进行了说明。]
+
+当 Snap Creator 在 SAP HANA 备份目录中注册存储 Snapshot 副本时， Snap Creator 会使用 Snapshot 副本名称作为备份 ID 。在 SAP HANA Studio 中，存储 Snapshot 备份会显示在备份目录中。外部备份 ID （ EBID ）与 Snapshot 副本名称的值相同，如下图所示。
+
+image::../media/sap_hana_backup_catalog.gif[此图通过周围的文本进行了说明。]
+
+每次运行备份时， Snap Creator 都会根据为不同计划（每小时，每天等）定义的保留策略删除主存储和二级存储上的 Snapshot 备份。
+
+如果主存储或二级存储不存在备份，则 Snap Creator 还会删除 SAP HANA 备份目录中的备份。SAP HANA 备份目录始终显示主存储和 / 或二级存储上可用的备份的完整列表。

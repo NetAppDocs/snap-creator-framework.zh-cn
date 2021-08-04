@@ -1,0 +1,133 @@
+---
+permalink: domino-ops/task_performing_point_in_time_volume_restore.html 
+sidebar: sidebar 
+keywords: domino, ibm, volume, restore 
+summary: 您可以使用 IBM Domino 插件对所有主要存储类型执行时间点，即时或可选的即时卷还原。 
+---
+= 执行卷还原
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 IBM Domino 插件对所有主要存储类型执行时间点，即时或可选的即时卷还原。
+
+请确保：
+
+* 将配置文件中的数据还原目录设置为 Domino 数据目录。
+* 停止 Domino 服务器。
+
+
+卷还原选项如下：
+
+|===
+| 还原类型 | Description 
+
+
+ a| 
+卷还原（时间点）
+ a| 
+将整个卷还原到创建 Snapshot 副本时的状态。
+
+
+
+ a| 
+卷还原（最新）
+ a| 
+将整个卷还原到创建 Snapshot 副本时的状态，然后将播放 Domino 事务日志并将其转发到最新的副本。
+
+
+
+ a| 
+卷还原（可在分钟内选择）
+ a| 
+将整个卷还原到创建 Snapshot 副本时的状态，然后将播放 Domino 事务日志并将其转发到指定时间。
+
+|===
+
+NOTE: 要进行最新且可选择的时间点还原，必须启用 Domino 事务日志记录。
+
+事务日志只能前转。选择创建 Snapshot 副本之前的时间会导致还原错误。
+
+. 在配置文件和配置窗格中，选择配置文件，然后单击 * 操作 * > * 还原 * 。
++
+选择 * 还原 * 将自动启动 Snap Creator Framework 还原向导。在整个还原向导中，单击 * 下一步 * 进入下一页。单击 * 返回 * 可返回上一页。
+
++
+
+NOTE: 如果要从 SnapVault 副本还原，系统会提示您从主存储或二级存储还原。您的选择取决于您如何处理中所述的限制 link:concept_domino_database_restore_overview.html["还原数据库"]。
+
+. 在还原详细信息页面上，指定还原详细信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Controller/Vserver name
+ a| 
+选择要从中还原的存储系统上的 SVM 。
+
+
+
+ a| 
+还原卷名称
+ a| 
+选择要从中还原的卷。
+
+
+
+ a| 
+策略
+ a| 
+选择要从中还原的备份的策略。
+
+
+
+ a| 
+Snap Creator Snapshot 副本 / 所有 Snapshot 副本
+ a| 
+保留默认值。
+
+
+
+ a| 
+还原 Snapshot 副本名称
+ a| 
+选择要从中还原的 Snapshot 副本。
+
+
+
+ a| 
+还原类型
+ a| 
+选择 * 卷还原 * 。
+
+|===
+. 在以下页面上，指定卷还原类型：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+还原类型
+ a| 
+单击卷还原类型。如果您选择 * 可选的最新分钟 * ，则会显示新字段，您可以在其中指定要播放正向 Domino 事务日志的日期和时间。如果 Snap Creator 服务器上的时间与存储控制器上的时间不匹配，请单击 * 忽略验证 * 。
+
+
+
+ a| 
+禁用复制
+ a| 
+选中此框可为已还原的数据库文件设置新的 Domino 副本 ID 。
+
+|===
+. 查看摘要并单击 * 完成 * 。
+. 在卷还原对话框中，单击 * 确定 * 。
++
+Snap Creator 将启动还原作业。作业信息将显示在控制台窗格中。
+
+
+
+还原操作完成后，重新启动 Domino 服务器。

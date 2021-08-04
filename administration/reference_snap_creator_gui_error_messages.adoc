@@ -1,0 +1,220 @@
+---
+permalink: administration/reference_snap_creator_gui_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, error, message, gui 
+summary: 下表列出了 Snap Creator GUI 错误消息。 
+---
+= Snap Creator GUI 错误消息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出了 Snap Creator GUI 错误消息。
+
+|===
+| 错误代码 | 说明 / 解决方法 
+
+
+ a| 
+GUI-00001
+ a| 
+确保配置文件中的加密密码正确无误。
+
+
+
+ a| 
+GUI-00002
+ a| 
+确保使用的 Snap Creator 可执行文件正确无误。验证 /etc/snapcreatorgui 。 conf 是否正确。
+
+
+
+ a| 
+GUI-00003
+ a| 
+确保存在日志和相应的配置文件文件夹。
+
+
+
+ a| 
+GUI-00004
+ a| 
+检查是否存在 Snap Creator home/logs/profilename 。
+
+
+
+ a| 
+GUI-00005
+ a| 
+检查 configs 目录中是否存在相应的配置文件和配置。
+
+
+
+ a| 
+GUI-00006
+ a| 
+如果 snapcreatorgui .conf 丢失，请尝试运行 snapcreator profile setup 。
+
+
+
+ a| 
+GUI-00007
+ a| 
+检查您的配置是否已重命名或删除。
+
+
+
+ a| 
+GUI-00008
+ a| 
+检查您的用户名和密码，并验证您是否已运行 snapcreator profile setup 命令。
+
+
+
+ a| 
+GUI-00009
+ a| 
+检查是否存在对文件或文件夹的权限。
+
+
+
+ a| 
+GUI-00010
+ a| 
+检查是否存在对文件或文件夹的权限。
+
+
+
+ a| 
+GUI-00011
+ a| 
+选择其他配置文件或删除现有配置文件。
+
+
+
+ a| 
+GUI-00012
+ a| 
+验证 configs 目录是否存在以及是否已运行 snapcreator profile setup 命令。
+
+
+
+ a| 
+GUI-00013
+ a| 
+有关详细信息，请查看日志。
+
+
+
+ a| 
+GUI-00014
+ a| 
+关闭配置并重新打开。
+
+
+
+ a| 
+GUI-00015
+ a| 
+检查文件的权限以及是否存在这些权限。
+
+
+
+ a| 
+GUI-00017
+ a| 
+检查 vCenter 是否正确以及是否具有有效的数据中心。
+
+
+
+ a| 
+GUI-00019
+ a| 
+请重试，因为数据存储库可能已在检索期间被删除。
+
+
+
+ a| 
+GUI-00020
+ a| 
+请重试，因为数据存储库可能已在检索期间被删除。
+
+
+
+ a| 
+GUI-00021
+ a| 
+请重试，验证您的 vCenter 是否正确。
+
+
+
+ a| 
+GUI-00022
+ a| 
+向 vCenter 添加数据存储库。
+
+
+
+ a| 
+GUI-00023
+ a| 
+请重试，验证您的 vCenter 。
+
+
+
+ a| 
+GUI-00024
+ a| 
+不支持您正在使用的 vCloud Director 版本。
+
+
+
+ a| 
+GUI-00025
+ a| 
+请输入正确的凭据并重试。
+
+
+
+ a| 
+GUI-00026
+ a| 
+未找到适合使用 VCD 的组织。创建组织并重试。
+
+
+
+ a| 
+GUI-00027
+ a| 
+检查您的 vCenter 凭据。
+
+
+
+ a| 
+GUI-00028
+ a| 
+检查控制器详细信息 /NTAP_Users 。
+
+
+
+ a| 
+GUI-00029
+ a| 
+验证 vCloud Director URL 。
+
+
+
+ a| 
+GUI-00030
+ a| 
+检查这些组织是否存在 VDC 。
+
+
+
+ a| 
+GUI-00031
+ a| 
+检查 VDC 是否存在 vApp 。
+
+|===

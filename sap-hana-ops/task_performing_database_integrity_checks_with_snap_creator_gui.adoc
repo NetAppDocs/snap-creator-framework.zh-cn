@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/task_performing_database_integrity_checks_with_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: sap, hana, peforming, database, integrity, checks, snap, creator, gui, graphical, user, interface 
+summary: 您可以从 Snap Creator 图形用户界面（ GUI ）执行数据库完整性检查。 
+---
+= 从 Snap Creator GUI 执行数据库完整性检查
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 Snap Creator 图形用户界面（ GUI ）执行数据库完整性检查。
+
+您必须已在 HANA 完整性检查设置选项卡中启用数据库完整性检查参数。
+
+. 选择 HANA 数据库完整性检查配置。
+. 选择 * 操作 * > * 完整性检查 * 。
++
+image::../media/performing_file_based_backup_with_gui.gif[使用 GUI 执行基于文件的备份]
+
+. 将策略选项设置为 * 无 * ，然后单击 * 确定 * 。
++
+image::../media/performing_file_based_backup_with_gui_2.gif[使用 GUI 执行基于文件的备份]
+
+

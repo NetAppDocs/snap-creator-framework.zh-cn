@@ -1,0 +1,23 @@
+---
+permalink: domino-ops/task_copying_files_to_restore_location.html 
+sidebar: sidebar 
+keywords: domino, ibm, copy, copying, file, data restore directory 
+summary: 挂载要还原的文件的 Snapshot 副本后，您可以将该文件复制到备份和还原配置文件中指定的数据还原目录。 
+---
+= 将文件复制到数据还原目录
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+挂载要还原的文件的 Snapshot 副本后，您可以将该文件复制到备份和还原配置文件中指定的数据还原目录。
+
+. 从挂载的 Snapshot 副本复制要还原的文件。
+. 将文件粘贴到备份和还原配置文件中指定的数据还原目录中。
++
+以下示例显示了如何将数据库文件 t04.nssf 从 R ：驱动器上挂载的 Snapshot 副本复制到配置文件中指定的数据还原目录。
+
++
+image::../media/scfw_domino_copy_files_to_restore.gif[此图通过周围的文本进行了说明。]
+
+

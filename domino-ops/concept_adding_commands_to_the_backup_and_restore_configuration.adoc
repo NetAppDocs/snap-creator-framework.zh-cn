@@ -1,0 +1,35 @@
+---
+permalink: domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, commands, backup, restore, configuration, supplemental, 
+summary: 您可能更喜欢使用 SnapDrive 命令进行备份，而不是使用原生 Snap Creator 命令，以确保操作系统级别的文件系统一致性。 
+---
+= 向备份和还原配置添加命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有时，备份或还原操作可能需要运行 Snap Creator 中未提供的命令。例如，在使用 FC 或 iSCSI 的 Windows 主机上，您可能更喜欢使用 SnapDrive 命令进行备份，而不是使用原生 Snap Creator 命令，以确保文件系统在操作系统级别的一致性。
+
+
+
+== 在何处运行补充命令
+
+默认情况下，补充命令在 Snap Creator 代理上运行。您可以在服务器上运行补充命令，方法是在命令前面加上文本 Server ，后跟冒号（：）。例如，服务器： C ： \mysnt.bat 。
+
+如果要在代理上运行补充命令，则必须将该命令包含在代理上的 allowed_commands.config 文件中，以明确允许执行该命令。不要求允许在服务器上执行补充命令。
+
+
+
+== 如何添加补充命令
+
+您可以使用 Snap Creator GUI 或 Snap Creator CLI 向备份和还原配置中添加命令。
+
+
+NOTE: 本指南介绍如何使用 GUI 添加命令。有关如何使用命令行界面的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+* 相关信息 *
+
+link:concept_allowing_additional_commands_through_the_snap_creator_agent.adoc["允许对 Snap Creator 代理执行补充命令"]
+

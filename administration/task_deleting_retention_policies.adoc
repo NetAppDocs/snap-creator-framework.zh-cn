@@ -1,0 +1,25 @@
+---
+permalink: administration/task_deleting_retention_policies.html 
+sidebar: sidebar 
+keywords: delete, retention, policy, snap, creator, gui 
+summary: 您可以删除保留策略。 
+---
+= 正在删除保留策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除保留策略。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 策略 * > * 策略管理 * 。
+. 从 * 策略管理器 * 选项卡中，选择一个策略并单击 * 删除 * 。
++
+
+NOTE: 如果您尝试删除分配给配置文件的策略，则图形用户界面会显示以下错误消息： policy cannot be deleted since the policy name is applied to configuration.Use Detach policy and then delete the policy.
+
+. 单击确认窗口中的 * 是 * 。
++
+此策略将从策略管理器选项卡中删除。
+
+

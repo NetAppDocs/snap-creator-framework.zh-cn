@@ -1,0 +1,22 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html 
+sidebar: sidebar 
+keywords: configuration, file, downloading, gui, snap, creator 
+summary: 您可以通过下载现有文件并使用 Snap Creator 图形用户界面以新文件名导入这些文件来创建新配置文件。 
+---
+= 通过下载现有配置文件创建新配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过下载现有文件并使用 Snap Creator 图形用户界面以新文件名导入这些文件来创建新配置文件。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
+. 从配置文件和配置窗格中，右键单击配置文件并选择 * 下载 * 。
+. 将此文件保存为 require-path/requireed-filename.ext.
++
+
+NOTE: 请务必为此新文件提供一个唯一的名称；否则，请务必在上传文件之前对其进行重命名，以避免覆盖原始配置文件。
+
+

@@ -1,0 +1,17 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, file-based, backup, database, integrity, checks 
+summary: SAP 建议将基于存储的 Snapshot 备份与每周基于文件的备份相结合，以执行块完整性检查。可以从 Snap Creator 图形用户界面（ GUI ）或命令行界面（ CLI ）中执行块完整性检查。 
+---
+= SAP HANA 基于文件的备份和数据库完整性检查
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP 建议将基于存储的 Snapshot 备份与每周基于文件的备份相结合，以执行块完整性检查。可以从 Snap Creator 图形用户界面（ GUI ）或命令行界面（ CLI ）中执行块完整性检查。
+
+在保留文件的备份副本时，将使用基于文件的数据备份操作。如果需要丢弃备份副本，则会使用数据库完整性检查操作。
+
+您可以配置其中一项操作，也可以同时配置这两项操作。在按需备份期间，您可以选择任一操作。

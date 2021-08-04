@@ -1,0 +1,45 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_plug_in_overview.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, overview 
+summary: SAP HANA 插件可与 Snap Creator Framework 结合使用，为依赖 NetApp 存储后端的 SAP HANA 数据库提供一个备份解决方案Snap Creator 创建的 Snapshot 备份会注册到 HANA 目录中，并可在 HANA Studio 中查看。 
+---
+= SAP HANA 插件概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA 插件可与 Snap Creator Framework 结合使用，为依赖 NetApp 存储后端的 SAP HANA 数据库提供一个备份解决方案Snap Creator 创建的 Snapshot 备份会注册到 HANA 目录中，并可在 HANA Studio 中查看。
+
+Snap Creator Framework 支持两种类型的 SAP HANA 数据库：单个容器和多租户数据库容器（ MDG ）单租户数据库。
+
+在 7- 模式和集群模式 Data ONTAP 下运行的 Data ONTAP 支持 Snap Creator 和 SAP HANA 插件，并使用 NFS 或光纤通道将 SAP HANA 数据库节点连接到存储控制器。SAP HANA 数据库所需的接口可用于 Service Pack Stack （ SP ） 7 及更高版本。
+
+Snap Creator Framework 可与存储系统进行通信，以创建 Snapshot 副本并使用 SnapVault 将数据复制到二级存储。Snap Creator 还可用于使用主存储上的 SnapRestore 或从二级存储进行 SnapVault 还原来还原数据。
+
+适用于 SAP HANA 的 Snap Creator 插件使用 SAP HANA hdbsql客户端 执行 SQL 命令，以便提供数据库一致性并管理 SAP HANA 备份目录。SAP HANA 插件既支持 SAP 认证硬件设备，也支持定制数据中心集成（ TDI ）计划。
+
+适用于 SAP HANA 的 Snap Creator 插件使用 SAP HANA hdbsql客户端 为以下任务执行 SQL 命令：
+
+* 确保数据库一致性，以准备基于存储的 Snapshot 备份
+* 在文件系统级别管理日志文件备份保留
+* 管理数据文件和日志文件备份的 SAP HANA 备份目录
+* 执行基于文件的备份以进行块完整性检查
+
+
+下图简要显示了 Snap Creator 与存储和 SAP HANA 数据库的通信路径。
+
+image::../media/sap_hana_overview_of_communication_path.gif[此图通过周围的文本进行了说明。]
+
+Snap Creator 执行以下步骤来备份数据库：
+
+. 创建 SAP HANA 数据库 Snapshot 副本以在持久性层上获取一致的映像。
+. 创建数据卷的存储 Snapshot 副本。
+. 在 SAP HANA 备份目录中注册存储 Snapshot 备份。
+. 删除 SAP HANA Snapshot 副本。
+. 对数据卷执行 SnapVault 更新。
+. 根据为主存储和二级存储上的备份定义的保留策略，删除主存储和 / 或二级存储上的存储 Snapshot 副本。
+. 如果主存储和二级存储上不再存在备份，则删除 SAP HANA 备份目录条目。
+. 删除文件系统和 SAP HANA 备份目录中早于最旧数据备份的所有日志备份。
+

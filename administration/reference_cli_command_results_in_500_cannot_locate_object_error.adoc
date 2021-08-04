@@ -1,0 +1,87 @@
+---
+permalink: administration/reference_cli_command_results_in_500_cannot_locate_object_error.html 
+sidebar: sidebar 
+keywords: unix, 500, locate, error, cli, ssl, libraries 
+summary: 在 UNIX 环境中，运行 CLI 命令后，您可能会遇到 500 无法找到对象错误。 
+---
+= CLI 命令导致 500 无法找到对象错误
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 UNIX 环境中，运行 CLI 命令后，您可能会遇到 500 无法找到对象错误。
+
+* * 问题描述 *
++
+在 UNIX 环境中，您尝试运行 CLI 命令，但遇到 500 无法找到对象错误，如以下示例所示：
+
++
+[listing]
+----
+500 Can't locate object method "new" via package "LWP::Protocol::https::Socket"
+----
+* * 发生原因 *
++
+出现此错误消息的可能原因有两个：
+
++
+** 此错误消息最可能的发生原因是命令行界面 SSL 库未链接。
+** 如果错误消息不是由于 SSL 库未链接而导致的，则另一个发生原因可能是缺少 HTTPS Perl 库。
+
+
+* * 更正操作 *
++
+要解析链接问题描述的库文件，需要手动创建 simlinks 。请咨询操作系统管理员，并验证是否存在 libssl.so 和 libCrypto.so 文件。可能需要安装 SSL 软件包。
+
++
+假设存在这些文件，您必须手动链接这些文件。为此，请根据您的操作系统运行以下几组命令之一：
+
++
+** 对于 32 位：
++
+[listing]
+----
+cd /usr/lib
+ln -s libssl.so.1.0.0 libssl.so.6
+ln -s libcrypto.so.1.0.0 libcrypto.so.6
+----
+** 对于 3264it ：
++
+[listing]
+----
+cd /usr/lib64
+ln -s libssl.so.1.0.0 libssl.so.6
+ln -s libcrypto.so.1.0.0 libcrypto.so.6
+----
+
+
+* * 更正操作 *
++
+要解决缺少的 HTTPS Perl 库问题描述，请在 CPAN 模式下安装 LWP ：协议：：： https 库。
+
++
+执行以下步骤：
+
++
+.. 打开 Linux 服务器的 SSH 会话并运行以下命令： Perl -MCPAN -e shell
++
+
+NOTE: 如果这是您第一次使用 CPAN ，系统将提示您执行以下操作：
+
++
+[listing]
+----
+Would you like me to configure as much as possible automatically? [yes]
+----
++
+按 * 输入 * 接受默认值。此时将打开 CPAN Shell 。
+
+.. 运行以下命令： install LWP ：： protocol ：：： https
++
+下载并安装所需的软件包。如果需要其他软件包，则系统可能会提示您同时安装这些软件包，方法是选择 [yes] 。
+
+.. 安装完成后，输入 exit 返回到正常 Shell 。
+
+
+

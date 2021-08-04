@@ -1,0 +1,88 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_3_6_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 3.6.x, windows 
+summary: 您可以直接从 Windows 上的 Snap Creator Server 3.6.x 进行升级。 
+---
+= 在 Windows 上升级 Snap Creator Server 3.6.x
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接从 Windows 上的 Snap Creator Server 3.6.x 进行升级。
+
+* 如果您的任何 Snap Create 用户名包含特殊字符，则必须在执行升级之前仅使用字母字符（ a-z ， A-Z ）对这些用户进行重命名。
+* 在备份 Snap Creator 目录之前，您已停止 Snap Creator 服务（ `snapcreatorserverservice` 和 `snapcreatoragentservice` ），以确保备份的数据完整。
++
+例如，您可以使用服务管理单元停止服务：
+
++
+.. 选择 * 开始 * > * 运行 * 并输入 `services .msc` 。
+.. 找到并选择 Snap Creator 服务；然后停止该服务。或者，您也可以打开命令提示符并输入以下命令：
+
+
++
+[listing]
+----
+sc stop snapcreatorserverservice
+sc stop snapcreatoragentservice
+----
+* 您已在 Snap Creator 3.6.x 服务器目录（ C ： \Program Files\NetApp\NetApp_Snap_Creator_Frider\scServer3.6.x ）中备份以下目录以及所有关联的子目录和文件：
++
+** Snap Creator 数据库（ .\guI\snapcreator ）
+** 配置文件和配置文件（ .\configs ）
+** 日志（ .\logs ） * 注意： * 请勿删除您创建的 Snap Creator 3.6.x 备份副本。
+
+
+* （可选）如果 Snap Creator 代理与 Snap Creator 服务器安装在同一主机上，则应备份 agent.conf 文件（ C ： \Program Files\NetApp\NetApp_Snap_Creator_Frider\scServer3.6.x\config\agent.conf ）
+
+
+以下步骤中提供的路径是指 Windows 的默认安装路径。如果未使用默认值，则路径信息可能会有所不同。
+
+升级过程完成后，请考虑以下问题：
+
+* 如果升级的 Snap Creator 数据库包含一些标记为 "`in progress` " 的任务，则即使升级过程完成，此状态也会保持不变。
+* 最新 Snap Creator 中的默认管理员必须是 Snap Creator 3.6.x 中的管理员如果 3.6.x 用户不是管理员，则升级会为 3.6.x 用户分配操作员角色。
++
+.. 如果尚未停止 Snap Creator 服务，请停止此服务。
++
+有关停止服务的信息，请参见本主题前面提供的详细信息。
+
+.. 选择 * 开始 * > * 程序 * > * Snap Creator* > * 卸载 NetApp Snap Creator Framework * ，卸载 Snap Creator （适用于 Windows ）。
++
+有关详细信息，请参见有关在 Windows 上卸载 Snap Creator 的信息。
+
+.. 安装最新的 Snap Creator 服务器。
++
+有关详细信息，请参见有关在 Windows 上安装 Snap Creator 服务器的信息。
+
+.. 如果在安装最新的 Snap Creator 服务器时选择以服务的形式启动 Snap Creator 服务器，请停止此服务。
++
+有关停止服务的信息，请参见本主题前面提供的详细信息。
+
+.. 删除最新的 Snap Creator Server 数据库文件夹（ C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x\enginer\snapcreator ）。
+.. 将备份的 Snap Creator 3.6.x 数据库目录复制到最新位置（ C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x \enginer\snapcreator ）。
+.. 将备份的 Snap Creator 3.6.x 配置文件和配置目录复制到最新位置（ C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x \enginer\configs ）。
+.. 将备份的 Snap Creator 3.6.x 日志目录复制到最新位置（ C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x \enginer\logs ）。
+.. 打开命令提示符并将目录更改为 Snap Creator 安装路径中的 engine 子目录（ C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x\engine ）。
+.. 输入以下命令以升级 Snap Creator ： java -JAR snapcreator.jar -upgrade
+
+
+
+
+升级过程完成后，通过执行以下操作之一启动 Snap Creator 服务器服务：
+
+* 使用服务管理单元并启动服务。
+* 在命令提示符处输入以下命令： `sc start snapcreatorserverservice`
+
+
+此外，您还必须通过导航到指定端口上的本地主机来验证 Snap Creator Framework 图形用户界面的启动情况 (https://IP_address:gui_port)[]。
+
+您必须使用 HTTPS 进行连接；否则，此连接不会自动重定向到 HTTPS 连接，并且图形用户界面将不起作用。
+
+* 相关信息 *
+
+xref:concept_installing_the_snap_creator_server.adoc[安装 Snap Creator 服务器]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[在 Windows 上卸载 Snap Creator]

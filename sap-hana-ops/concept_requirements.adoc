@@ -1,0 +1,34 @@
+---
+permalink: sap-hana-ops/concept_requirements.html 
+sidebar: sidebar 
+keywords: requirements, sap, hana, plug-in, create, backups, point-in-time, recovery, databases 
+summary: 您可以通过 SAP HANA 插件创建备份并对 HANA 数据库执行时间点恢复。 
+---
+= 要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过 SAP HANA 插件创建备份并对 HANA 数据库执行时间点恢复。
+
+对 SAP HANA 插件的支持如下：
+
+* 主机操作系统： SUSE Linux Enterprise Server （ SLES ）， 32 位和 64 位
+* 在 7- 模式下运行的集群模式 Data ONTAP 或 Data ONTAP
+* 至少一个通过 NFS 连接的 SAP HANA 数据库节点
+* 运行 Service Pack Stack （ SP ） 7 或更高版本的 SAP HANA
+
+
+
+NOTE: 有关支持的最新信息或要查看兼容性列表，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]。
+
+* 所需许可证 *
+
+主存储控制器必须安装 SnapRestore 和 SnapVault 许可证。二级存储必须安装 SnapVault 许可证。
+
+Snap Creator 和 Snap Creator SAP HANA 插件不需要许可证。
+
+* Snapshot 备份的容量要求 *
+
+与传统数据库的更改率相比，必须考虑存储层上的块更改率更高。由于列存储的表合并过程，写入磁盘的数据远远多于仅写入块更改的数据。在获得更多客户数据之前，当前对变更率的估计为每天 20% 到 50% 。

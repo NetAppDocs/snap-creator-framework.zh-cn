@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/task_overview_of_database_backups.html 
+sidebar: sidebar 
+keywords: snap, creator, backing, up, database, 
+summary: 在 Snap Creator 备份数据库时，将执行以下步骤。 
+---
+= 数据库备份概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Snap Creator 备份数据库时，将执行以下步骤。
+
+. 创建一个全局同步备份保存点（ SAP HANA Snapshot 副本），以便在持久性层上获得一致的映像。
+. 为所有数据卷创建存储 Snapshot 副本。
++
+在此示例中，有三个数据卷分布到两个存储控制器： hana1a 和 hana1b 。
+
+. 在 SAP HANA 备份目录中注册存储 Snapshot 备份。
+. 删除 SAP HANA Snapshot 副本。
+. 为所有数据卷启动 SnapVault 更新。
+. 检查 SnapVault 状态并等待，直到超时完成或可配置为止。
+. 根据为主存储和二级存储上的备份定义的保留策略，删除 SAP HANA 备份目录中的存储 Snapshot 副本和备份。
+. 删除文件系统和 SAP HANA 备份目录中早于最早数据备份的所有日志备份。
+

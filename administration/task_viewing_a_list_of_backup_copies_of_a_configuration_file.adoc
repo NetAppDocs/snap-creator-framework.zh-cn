@@ -1,0 +1,24 @@
+---
+permalink: administration/task_viewing_a_list_of_backup_copies_of_a_configuration_file.html 
+sidebar: sidebar 
+keywords: backup, copy, ontap, volume, configuration, file, data 
+summary: 您可以查看配置文件中定义的 ONTAP 卷的备份副本列表。您还可以获取有关可用备份的详细信息，并根据需要重命名特定备份。 
+---
+= 查看配置文件的备份副本列表
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看配置文件中定义的 ONTAP 卷的备份副本列表。您还可以获取有关可用备份的详细信息，并根据需要重命名特定备份。
+
+. 从 Snap Creator GUI 的主菜单中，选择 * 数据 * > * 备份 * 。
+. 从备份选项卡的配置文件和配置窗格中，展开一个配置文件，然后选择一个配置文件。
++
+备份选项卡显示配置文件中定义的 ONTAP 卷的所有备份副本的列表。
+
++
+
+NOTE: Snap Creator 4.3 或更早版本会根据保留期限删除 Snapshot 副本，即使这些副本已重命名也是如此。为了不受限制地保留 Snapshot 副本， Snap Creator Framework 在 Snap Creator Framework 图形用户界面上的 " `data \\>backup` " 选项卡下提供了一个名为 "`无限制保留` " 的按钮。您可以选择要保留无限时间的 Snapshot 副本，然后单击 "`无限制保留` " 按钮。选定 Snapshot 副本的名称将从 <snapshot_name> 更改为 <snapshot_name_unlimited_> 。
+
+

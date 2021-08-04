@@ -1,0 +1,17 @@
+---
+permalink: administration/concept_managing_policies.html 
+sidebar: sidebar 
+keywords: managing, retention, policies, list, delete, policies, snapshot, snapvault 
+summary: 您可以创建保留策略，以及列出和删除这些策略。 
+---
+= 管理保留策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建保留策略，以及列出和删除这些策略。
+
+保留策略通常会定义 Snapshot 保留设置，例如应保留多少个 Snapshot 副本以及保留多长时间。例如，每日策略可能会保留 30 天的 Snapshot 副本，这些副本必须至少保留 30 天。（保留期限设置可防止在同一天创建的多个 Snapshot 副本绕过服务级别协议（ SLA ），此协议可能会指出 Snapshot 副本必须使用 30 天。）
+
+如果使用 SnapVault ，则该策略还会定义 SnapVault 副本的保留设置。

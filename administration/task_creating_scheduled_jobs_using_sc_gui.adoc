@@ -1,0 +1,104 @@
+---
+permalink: administration/task_creating_scheduled_jobs_using_sc_gui.html 
+sidebar: sidebar 
+keywords: local, retention, policy, configuration, snap, creator, gui, copy, lun, volume, clone, snapvault, ossv, job 
+summary: 如果您使用的是本地保留策略（位于配置文件中），则可以使用 Snap Creator 图形用户界面（ GUI ）计划程序创建计划并运行任务。Snap Creator 服务器中的计划程序可以计划备份（ Snapshot 副本）， LUN 克隆，卷克隆，应用程序定义的克隆， Open Systems SnapVault （ OSSV ）传输，归档作业和自定义操作。 
+---
+= 正在创建计划作业
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用的是本地保留策略（位于配置文件中），则可以使用 Snap Creator 图形用户界面（ GUI ）计划程序创建计划并运行任务。Snap Creator 服务器中的计划程序可以计划备份（ Snapshot 副本）， LUN 克隆，卷克隆，应用程序定义的克隆， Open Systems SnapVault （ OSSV ）传输，归档作业和自定义操作。
+
+如果您计划使用策略对象而不是本地保留策略，则应跳过此操作步骤并创建策略计划。
+
+. 从 Snap Creator 图形用户界面的主菜单中，选择 * 管理 * > * 计划 * ，然后单击 * 创建 * 。
+. 在新建作业窗口中，输入作业的详细信息。
++
+image::../media/schedule_new_job_window.gif[计划新作业窗口]
+
++
+|===
+| 字段 | Description 
+
+
+ a| 
+作业名称
+ a| 
+指定已计划作业的名称。
+
+
+
+ a| 
+Start date
+ a| 
+选择今天的日期或未来的日期。
+
+
+
+ a| 
+活动
+ a| 
+设置为 Active 表示作业将按计划运行。Active 是默认设置。
+
+
+
+ a| 
+配置文件
+ a| 
+选择要与此作业关联的配置文件。
+
+
+
+ a| 
+Configuration
+ a| 
+选择要与此作业关联的配置。
+
+
+
+ a| 
+Action
+ a| 
+选择以下选项之一：
+
+** * 备份 * ：使用 NetApp 存储技术创建备份。
+** * 克隆 Lun* ：使用 lun clone 命令创建备份并克隆一个或多个 LUN 。
+** * 克隆卷 * ：创建备份并克隆卷。
+** * 克隆 * ：执行插件驱动的克隆操作。
+** * OSSV* ：使用开放式系统 SnapVault 执行备份。
++
+未创建主备份。
+
+** * 归档 * ：仅执行归档日志管理。
++
+不创建备份。
+
+** * 自定义 * ：执行插件定义的克隆操作。
+
+
+
+
+ a| 
+策略
+ a| 
+选择要与此作业关联的策略。
+
+
+
+ a| 
+Frequency
+ a| 
+选择此作业的频率。根据您的选择，您必须选择相应的时间字段来运行计划的作业。
+
++
+
+|===
+. 单击 * 保存 * 。
+
+
+* 相关信息 *
+
+xref:task_creating_policy_schedules.adoc[正在创建策略计划]

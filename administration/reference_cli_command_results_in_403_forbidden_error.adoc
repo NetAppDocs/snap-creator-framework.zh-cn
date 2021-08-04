@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_cli_command_results_in_403_forbidden_error.html 
+sidebar: sidebar 
+keywords: unix, cli, command, 403, forbidden, error, username, password, incorrect 
+summary: 在 UNIX 环境中，运行 CLI 命令时可能会遇到 403 For禁用 错误。 
+---
+= CLI 命令会导致 403 For禁用 错误
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 UNIX 环境中，运行 CLI 命令时可能会遇到 403 For禁用 错误。
+
+* * 问题描述 *
++
+在 UNIX 环境中，您尝试运行 CLI 命令，但遇到 403 For禁用 错误，如以下示例所示：
+
++
+[listing]
+----
+403 Forbidden at //scServer4.1.0/snapcreator>SnapCreator/Service/Engine.pm line 152
+----
+* * 发生原因 *
++
+如果由于 Snap Creator 用户名或密码不正确而拒绝权限，则通常会发生此错误。
+
+* * 更正操作 *
++
+验证您的 Snap Creator 用户名和密码是否正确。
+
+

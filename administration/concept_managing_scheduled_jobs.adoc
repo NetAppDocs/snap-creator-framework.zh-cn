@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_managing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: manage, scheduled, jobs, listing, running, deleting, managing 
+summary: 您可以通过创建计划作业 \ （以自动执行备份操作 \ ）以及列出以及编辑，列出，运行和删除这些计划作业来管理这些作业。 
+---
+= 管理已计划作业
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过创建计划作业（以自动执行备份操作）以及列出以及编辑，列出，运行和删除这些计划作业来管理这些作业。
+
+Snap Creator 服务器包含一个集中式计划程序，可通过策略计划（属于策略对象）或直接通过计划程序创建 Snap Creator 作业。计划程序可以同时运行多达 10 个作业，并可对其他作业进行排队，直到正在运行的作业完成为止。

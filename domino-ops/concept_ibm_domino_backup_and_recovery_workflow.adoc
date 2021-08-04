@@ -1,0 +1,18 @@
+---
+permalink: domino-ops/concept_ibm_domino_backup_and_recovery_workflow.html 
+sidebar: sidebar 
+keywords: domino, ibm, backup, recovery, workflows 
+summary: 在使用 IBM Domino 插件创建备份之前，您需要先安装 Snap Creator Server 和 Agent 软件并配置 NetApp 存储。如果您计划将 Snapshot 副本复制到二级存储以进行灾难恢复和归档，则需要设置 SnapMirror 和 SnapVault 关系。 
+---
+= IBM Domino 备份和恢复工作流
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用 IBM Domino 插件创建备份之前，您需要先安装 Snap Creator Server 和 Agent 软件并配置 NetApp 存储。如果您计划将 Snapshot 副本复制到二级存储以进行灾难恢复和归档，则需要设置 SnapMirror 和 SnapVault 关系。
+
+
+NOTE: 尤其是在 SAN 环境中，您可能希望在 Snap Creator 代理主机上使用 SnapDrive 来备份数据库或挂载 Snapshot 副本以实现单文件还原。有关详细信息，请参见 xref:concept_adding_commands_to_the_backup_and_restore_configuration.adoc[向备份和还原配置添加命令] 和 xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[在 SAN 环境中执行单文件还原]。
+
+image::../media/ibm_domino_workflow.gif[IBM Domino 工作流]

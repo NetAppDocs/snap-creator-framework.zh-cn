@@ -1,0 +1,30 @@
+---
+permalink: domino-ops/concept_backup_operations_using_domino_plug_in.html 
+sidebar: sidebar 
+keywords: domino, ibm, backup, operations, ibm, understanding 
+summary: 与其他备份技术不同， IBM Domino 插件允许在备份操作期间将数据写入数据库。它可通过将备份操作期间对数据库所做的任何更改记录在名为 changeinfo 的临时目录中来确保备份与应用程序数据一致。在还原时，它会在从 Snapshot 副本还原数据后将这些更改应用于数据库。 
+---
+= 了解 IBM Domino 插件备份操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+与其他备份技术不同， IBM Domino 插件允许在备份操作期间将数据写入数据库。它可通过将备份操作期间对数据库所做的任何更改记录在名为 changeinfo 的临时目录中来确保备份与应用程序数据一致。在还原时，它会在从 Snapshot 副本还原数据后将这些更改应用于数据库。
+
+在备份操作期间，数据库文件称为处于备份模式。尽管 Snap Creator Framework 将这些文件称为 "`quiesced ，` " ，但事实并非如此。在创建 Snapshot 副本期间，数据将继续写入文件。
+
+高级步骤如下：
+
+. 列出要备份的卷中的数据库，模板和邮箱。
+. 将文件置于备份模式，一次一个数据库。
+. 检查数据库是否不一致或已损坏。
++
+
+NOTE: 您可以强制插件在出现错误的情况下继续执行备份操作，如步骤中所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["task_Using_the_gui_to_create_a_configuration_file.mc#sted_AA41331683A24598B7845367CB967F99"]。
+
+. 为每个卷创建一个 Snapshot 副本。
+. 如果正在使用 Domino 事务日志记录，请对 Domino 事务日志的副本进行归档，以便在最新的还原操作中使用。
+. 使文件脱离备份模式，一次一个数据库。
+. 记录自文件置于备份模式以来对数据库所做的更改，并将其置于 changeinfo 目录中。
+

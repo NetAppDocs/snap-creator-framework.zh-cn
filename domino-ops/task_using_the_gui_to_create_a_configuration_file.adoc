@@ -1,0 +1,325 @@
+---
+permalink: domino-ops/task_using_the_gui_to_create_a_configuration_file.html 
+sidebar: sidebar 
+keywords: domino, ibm,creating, create, configuraiton, file 
+summary: 在备份 IBM Domino 数据库之前，您需要先创建一个配置文件。此配置文件是 Snap Creator 备份和还原操作的输入。 
+---
+= 创建配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在备份 IBM Domino 数据库之前，您需要先创建一个配置文件。此配置文件是 Snap Creator 备份和还原操作的输入。
+
+配置和配置文件名称仅允许使用字母数字字符和下划线字符。名称不能以数字开头。
+
+
+TIP: 许多站点使用配置文件范围或站点范围的全局配置文件将存储系统或 VMware 凭据信息应用于备份和还原配置。有关如何创建全局配置文件的详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+. 在配置文件和配置窗格中，单击 * 添加配置文件 * 。
+. 在新建配置文件对话框中，输入配置文件的名称，然后单击 * 确定 * 。
++
+创建新配置文件会自动启动 Snap Creator Framework 配置向导。要向现有配置文件添加新配置，请右键单击该配置文件，然后选择 * 新建配置 * 。
+
++
+在整个配置向导中，单击 * 下一步 * 进入下一页，然后单击 * 返回 * 返回上一页。
+
+. 在配置页面上，输入配置的名称，然后指定是否要启用密码加密。
++
+默认情况下，密码加密处于启用状态，以防止密码以明文形式显示在配置文件中。
+
++
+
+TIP: 将鼠标悬停在向导中的某个字段上可显示工具提示。
+
+. 在插件类型页面上，选择 * 应用程序插件 * 。
+. 在应用程序插件页面上，选择 * IBM Domino* 。
+. 在插件参数页面上，指定 IBM Domino 备份配置详细信息：
++
+
+NOTE: 下表中的示例适用于 UNIX 环境。您可以在下表的屏幕截图中查看 Windows 设置示例。
+
++
+|===
+| GUI 参数 | CLI 参数 | Description 
+
+
+ a| 
+Domino 数据目录
+ a| 
+Domino_data_ 路径
+ a| 
+Domino 数据目录的路径。例如， /domino/data 。
+
+
+
+ a| 
+notes.ini 路径
+ a| 
+Domino_INI_path
+ a| 
+notes.ini 文件的路径。例如， /domino/data/notes.in
+
+
+
+ a| 
+更改信息目录
+ a| 
+Domino_change_info_path
+ a| 
+changeinfo 文件的路径。例如， /changeinfo 。* 重要信息： * 请确保将 changeinfo 文件存储在 Domino 数据卷以外的卷上。
+
+
+
+ a| 
+备份类型
+ a| 
+Domino_ database_type
+ a| 
+要备份的数据库文件。从 GUI 下拉列表中选择一个值，或者在命令行界面命令中指定相应的数字：
+
+** 所有内容（建议）（ CLI = 0 ）
+** * 。 box 文件（命令行界面 = 1 ）
+** * 。 nssf ， * 。 nsg 和 * 。 nsh 文件（命令行界面 = 2 ）
+** * 。 ntf 文件（命令行界面 = 3 ）
+
+
+
+
+ a| 
+IBM Domino 安装目录
+ a| 
+Lotus
+ a| 
+安装 Domino 二进制文件的目录的路径。例如，在 Linux 中，为 /opt/IBM/Domino （假定使用默认安装路径）。在 Windows 中， Domino 共享对象目录的父级。* 注： * 此路径不是 IBM Notes 的路径，以前称为 Lotus Notes 。
+
+
+
+ a| 
+Domino 共享对象的路径
+ a| 
+Notes_ExecDirectory
+ a| 
+包含 Domino 共享对象文件（ .so 或 .dll ）的路径。例如， /opt/IBM/Domino/notes/latest/linux 。
+
+
+
+ a| 
+数据还原目录
+ a| 
+Domino_ restore_data_ 路径
+ a| 
+对于卷还原（假设您要还原到从其进行备份的位置），为 Domino 数据目录路径。对于单文件还原（仅限 NFS ），是指与 Domino 数据目录位于同一卷上的位置。例如， /domino/data/restore 。
+
+
+
+ a| 
+验证 Domino 数据目录
+ a| 
+验证 _ Domino_data_ 路径
+ a| 
+如果 Domino 环境具有多个挂载点，则某些挂载点可能位于 NetApp 存储上，而其他挂载点则可能不在 NetApp 存储上。从 GUI 下拉列表中选择一个值，或者在命令行界面命令中指定相应的值：
+
+** 是仅备份 Domino 数据目录路径上的文件。
+** no 会备份 Domino 环境中的所有文件，无论这些文件位于磁盘上的哪个位置。
+
+
+|===
++
+以下示例显示了如何在 Windows 环境中完成这些字段：
+
++
+image::../media/scfs_domino_param_filled_in_windows.gif[此图通过周围的文本进行了说明。]
+
+. 在代理配置页面上，指定 Snap Creator 代理连接信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+IP/DNS
+ a| 
+输入 Snap Creator Agent 主机的 IP 地址或 DNS 主机名。
+
+
+
+ a| 
+Port
+ a| 
+如果不使用 Snap Creator 代理的默认端口（ 9090 ），请输入端口号。
+
+
+
+ a| 
+超时（秒）
+ a| 
+保留默认值。
+
+|===
+. 对输入内容感到满意后，单击 * 测试代理连接 * 以验证与代理的连接。
++
+
+NOTE: 如果代理未响应，请验证代理详细信息并确认主机名解析是否正常工作。
+
+. 在存储连接设置页面上，指定主存储系统上 Storage Virtual Machine （ SVM ，以前称为 Vserver ）的连接信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+传输
+ a| 
+选择用于与 SVM 通信的传输协议： HTTP 或 HTTPS 。
+
+
+
+ a| 
+Controller/Vserver 端口
+ a| 
+如果您不使用 SVM 的默认端口（ 80 表示 HTTP ， 443 表示 HTTPS ），请输入端口号。
+
+|===
++
+* 注： * 有关如何使用 OnCommand 代理的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+. 在 Controller/Vserver Credentials 页面上，指定主存储系统上 SVM 的凭据：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+控制器 /Vserver IP 或名称
+ a| 
+输入 SVM 主机的 IP 地址或 DNS 主机名。
+
+
+
+ a| 
+Controller/Vserver 用户
+ a| 
+输入 SVM 主机的用户名。
+
+
+
+ a| 
+Controller/Vserver 密码
+ a| 
+输入 SVM 主机的密码。
+
+|===
++
+* 重要说明： * 如果您计划将 Snapshot 副本复制到 SnapMirroror SnapVault 目标，则在此步骤中输入的 SVM 名称必须与创建 SnapMirroror SnapVault 关系时使用的 SVM 名称完全匹配。如果您在创建关系时指定了完全限定域名，则必须在此步骤中指定一个完全限定域名，无论 SnapCreator 是否可以使用您提供的信息找到 SVM 。案例非常重要。
+
++
+您可以使用 snapmirror show 命令检查主存储系统上 SVM 的名称： snapmirror show -destination-path destination_svm ： destination_volume ，其中 destination_svm_name 是目标系统上 SVM 的名称， destination_volume 是卷。有关创建 SnapMirror 和 SnapVault 关系的详细信息，请参见 xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror 和 SnapVault 设置]。
+
++
+单击 * 下一步 * 时，将显示控制器 /Vserver 卷窗口。
+
+. 在控制器 /Vserver 卷窗口中，通过将左窗格中的可用卷列表拖放到右窗格中要备份的卷列表来指定要备份的卷，然后单击 * 保存 * 。
++
+指定的卷将显示在 Controller/Vserver Credentials 页面上。
+
++
+
+IMPORTANT: 如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷，如中所述 xref:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc[备份 changeinfo 目录]。此选项指示 IBM Domino 插件为 changeinfo 卷 _after_ 创建 Snapshot 副本，以便为数据库文件创建 Snapshot 副本。
+
+. 如果要指定 SVM 详细信息以及要为另一个主存储系统备份的卷，请在控制器 /Vserver 凭据页面上单击 * 添加 * 。
+. 在 Snapshot 详细信息页面上，指定 Snapshot 配置信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Snapshot 副本名称
+ a| 
+输入 Snapshot 副本的名称。* 提示： * 如果要在配置文件中重复使用 Snapshot 副本名称，请单击 * 允许重复的 Snapshot 副本名称 * 。
+
+
+
+ a| 
+Snapshot 副本标签
+ a| 
+输入 Snapshot 副本的描述性文本。
+
+
+
+ a| 
+Policy type
+ a| 
+单击 * 使用策略 * ，然后选择要用于此配置的内置备份策略。选择策略后，单击 * 保留 * 单元格以指定要保留的具有该策略类型的 Snapshot 副本数。* 注： * 有关如何使用策略对象的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+
+
+ a| 
+防止删除 Snapshot 副本
+ a| 
+仅当您不希望 Snap Creator 自动删除超过要保留的副本数的 Snapshot 副本时，才指定是。* 注： * 指定 " 是发生原因 " 可能会使您超出每个卷支持的 Snapshot 副本数。
+
+
+
+ a| 
+策略保留期限
+ a| 
+指定要保留的 Snapshot 副本数超过要保留的副本数的天数。您可以通过输入策略类型： age 来指定每个策略类型的保留期限，例如， daily ： 15 。
+
+
+
+ a| 
+命名约定
+ a| 
+保留默认值。
+
+|===
++
+以下示例中指定的配置执行每日备份并保留四个 Snapshot 副本：
+
++
+image::../media/scfw_domino_snapshot_details_pane.gif[此图通过周围的文本进行了说明。]
+
+. 如果要强制执行备份操作，即使一个或多个数据库处于不一致或损坏状态，也可以在 Snapshot 详细信息的 " 继续 " 页面上将 * 忽略应用程序错误 * 设置为是。
++
+您应忽略其余字段。
+
++
+
+TIP: Domino 环境可能包含数百或数千个数据库。即使一个数据库处于不一致或损坏状态，备份也将失败。启用 * 忽略应用程序错误 * 可以继续备份。
+
+. 在数据保护页面上，指定是否要对二级存储执行可选的 Snapshot 副本复制：
++
+.. 单击 * SnapMirror * 以镜像 Snapshot 副本。
++
+镜像 Snapshot 副本的策略与主 Snapshot 副本的策略相同。
+
+.. 单击 * 快照 * 以归档 SnapVault 副本。
+.. 指定归档 Snapshot 副本的策略。
+.. 有关说明，请参见以下步骤<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13>>。
+.. 在 * SnapVault 等待时间 * 中，输入希望 Snap Creator 等待 SnapVault 操作完成的分钟数。
+.. 在向二级存储执行复制之前，您需要已设置 SnapMirror 和 SnapVault 关系。有关详细信息，请参见 xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror 和 SnapVault 设置]。
+
+
+. 在数据保护卷页面上，单击 * 添加 * ，然后选择主存储系统的 SVM 。
++
+单击 * 下一步 * 时，将显示数据保护卷选择窗口。
+
+. 在数据保护卷选择窗口中，通过将左窗格中的可用卷列表拖放到右窗格中 SnapMirror 和 / 或 SnapVault 区域中的卷列表来指定要复制的源卷，然后单击 * 保存 * 。
++
+指定的卷将显示在 " 数据保护卷 " 页面上。
+
+. 如果要指定 SVM 详细信息以及要复制到另一个主存储系统的卷，请在数据保护卷页面上单击 * 添加 * 。
+. 在数据保护关系页面上，指定 SnapMirror/ 或 SnapVault 目标系统上 SVM 的凭据。
+. 如果您希望使用 NetAppOnCommand Unified Manager API 而非 Data ONTAP API 来执行 Snapshot 副本和 SnapMirror/SnapVault 更新，请填写 DFM/OnCommand 设置页面上的字段：
++
+.. 如果要接收 Unified Manager 警报，请单击 * 操作管理器控制台警报 * ，然后输入 Unified Manager 虚拟机所需的连接信息。
+.. 如果要使用 NetApp 管理控制台数据保护功能进行 7- 模式 SnapVault 复制，请单击 * NetApp 管理控制台数据保护功能 * ，然后输入 Unified Manager 虚拟机所需的连接信息。
+
+
+. 查看摘要，然后单击 * 完成 * 。
+
+
+Snap Creator 会在配置文件和配置窗格中的指定配置文件下方列出配置文件。您可以通过选择配置文件并单击配置内容窗格中的相应选项卡来编辑配置。您可以通过单击右键菜单中的 * 重命名 * 来重命名配置。您可以通过单击右键菜单中的 * 删除 * 来删除此配置。

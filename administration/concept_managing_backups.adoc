@@ -1,0 +1,19 @@
+---
+permalink: administration/concept_managing_backups.html 
+sidebar: sidebar 
+keywords: managing, backups, backup, copies, 
+summary: 您可以创建备份副本，查看备份副本列表以及在不再需要备份副本时删除这些副本。 
+---
+= 管理备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建备份副本，查看备份副本列表以及在不再需要备份副本时删除这些副本。
+
+此外，您还可以自动执行备份操作。有关详细信息，请参见相关任务，了解有关创建计划作业的信息。
+
+* 相关信息 *
+
+xref:task_creating_scheduled_jobs_using_sc_gui.adoc[正在创建计划作业]

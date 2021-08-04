@@ -1,0 +1,35 @@
+---
+permalink: administration/task_performing_volume_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: volume, restore, snap, creator, gui, perform, wizard 
+summary: 您可以使用 Snap Creator GUI 执行卷还原。 
+---
+= 正在执行卷还原
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 执行卷还原。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
+. 从 * 配置 * 选项卡的 * 配置文件和配置 * 窗格中，选择配置文件。
+. 选择 * 操作 * > * 还原 * 。
++
+此时，还原向导将显示在右侧窗格中。
+
+. 完成还原向导中的页面以执行还原。
++
+.. 在 * 还原详细信息 * 页面中，选择控制器 /SVM 名称，还原卷名称，策略和还原 Snapshot 副本名称，然后从 * 还原类型 * 下拉列表中选择 * 卷还原 * 。
++
+image::../media/restore_wizard_restore_details.gif[还原向导还原详细信息]
+
+.. 查看摘要，然后单击 * 完成 * 。
+
+
++
+此时将显示一条警告消息，询问是否还有其他项目需要还原。
+
+. 单击 * 否 * ，然后单击还原确认页面上的 * 确定 * 。
+. 在 * 控制台 * 窗格中，查看消息以验证还原是否已成功完成。
+

@@ -1,0 +1,52 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, service, start, verify, stop, windows 
+summary: 您可以启动和停止 Snap Creator Agent 服务，并验证 Snap Creator Agent 服务是否正在 Windows 系统上运行。 
+---
+= 在 Windows 上启动，验证和停止 Snap Creator 代理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以启动和停止 Snap Creator Agent 服务，并验证 Snap Creator Agent 服务是否正在 Windows 系统上运行。
+
+. 在命令提示符处，根据需要启动或停止 Snap Creator Agent 服务，或者验证 Snap Creator Agent 服务是否正在运行：
++
+|===
+| 如果您要 ... | 输入以下内容 ... 
+
+
+ a| 
+启动 Snap Creator Agent 服务
+ a| 
+SC 启动 snapcreatoragentservice
+
+
+
+ a| 
+验证 Snap Creator 代理服务是否正在运行
+ a| 
+SC 查询 snapcreatoragentservice
+
+
+
+ a| 
+停止 Snap Creator Agent 服务
+ a| 
+SC 停止 snapcreatoragentservice
+
+|===
++
+如果要在前台运行 Snap Creator ，请执行以下步骤，而不是使用 SC start 命令：
+
++
+.. 在安装 Snap Creator Agent 的主机上打开命令提示符，然后导航到 Snap Creator 代理目录： cd ` \install_path\scAgent4.3.0\bin\`
+.. 要启动 Snap Creator Agent 服务，请运行批处理脚本： scAgent.bat start
++
+关闭命令提示符将停止 Snap Creator Agent 服务。由于批处理脚本（ scAgent.bat ）在前台运行 Snap Creator ，因此，只有在命令提示符处于打开状态时， Snap Creator Agent 才会运行。要在后台运行 Snap Creator ，应使用 Snap Creator Agent 服务。
+
+
+
+

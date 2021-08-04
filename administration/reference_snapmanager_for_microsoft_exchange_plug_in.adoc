@@ -1,0 +1,63 @@
+---
+permalink: administration/reference_snapmanager_for_microsoft_exchange_plug_in.html 
+sidebar: sidebar 
+keywords: snapmanager, microsoft, exchange, plug-in, centralize, backup, operation 
+summary: SnapManager for Microsoft Exchange 插件用于通过 Snap Creator 集中管理 Microsoft Exchange Server 的备份操作。使用此插件，您可以通过 Snap Creator 为 Exchange 服务器配置数十或数百个 SnapManager ，从而可以从一个界面查看所有 SnapManager for Exchange 备份作业和状态。 
+---
+= 适用于 Microsoft Exchange 的 SnapManager 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Microsoft Exchange 插件用于通过 Snap Creator 集中管理 Microsoft Exchange Server 的备份操作。使用此插件，您可以通过 Snap Creator 为 Exchange 服务器配置数十或数百个 SnapManager ，从而可以从一个界面查看所有 SnapManager for Exchange 备份作业和状态。
+
+与其他插件不同， SnapManager 插件（适用于 Microsoft SQL Server 的 SnapManager 和适用于 Microsoft Exchange 的 SnapManager ）使用 PowerShell 与现有 SnapManager 安装进行通信。SnapManager 插件要求 SnapManager 产品已安装并正常运行。SnapManager 插件使用 new-backup PowerShell cmdlet 通过 SnapManager 创建备份。所有克隆和还原操作都应继续通过 SnapManager 界面执行。
+
+
+NOTE: 有关支持的最新信息或要查看兼容性列表，请参见互操作性表。
+
+SnapManager for Microsoft Exchange 插件要求 Snap Creator 代理与 SnapManager for Microsoft Exchange 安装在同一主机上。您应将 sc_agent_timeout 值设置为 900 或更高。
+
+下表提供了适用于 Microsoft Exchange 的 SnapManager 插件参数，提供了这些参数的设置并对其进行了说明：
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+SME PS_CONF
+ a| 
+示例： "C ： \Program Files\NetApp\SnapManager for Exchange\smeShell.psc1"
+ a| 
+指定 SnapManager for Microsoft Exchange 的 PowerShell 配置文件的路径。
+
+
+
+ a| 
+SME 备份选项
+ a| 
+示例： `s服务器 "EX2K10-DAG01" -GenericNaming -ManagementGroup "tandard" -NoTruncateLogs $False -RetainBackups 8 -StorageGroup "ag01_db01" -BackupCopyRemoteCCRNode $False`
+ a| 
+指定适用于 Microsoft Exchange 的 SnapManager 备份选项。 Snap Creator 使用 PowerShell cmdlet 进行新备份。
+
+
+
+ a| 
+SME 服务器名称
+ a| 
+示例： `EX2K10-DAG01`
+ a| 
+指定 SnapManager for Microsoft Exchange 服务器名称。
+
+
+
+ a| 
+SME 32 位
+ a| 
+Y
+| 不包括 
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

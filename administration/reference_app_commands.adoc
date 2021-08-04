@@ -1,0 +1,45 @@
+---
+permalink: administration/reference_app_commands.html 
+sidebar: sidebar 
+keywords: app, command 
+summary: 下表列出了应用程序（ APP ）命令 
+---
+= 应用程序命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出了应用程序（ APP ）命令。
+
+|===
+| 命令 | Description 
+
+
+ a| 
+app_clone_follow_ up_ CMD ##
+ a| 
+这些脚本或命令是克隆数据库后要执行的脚本或命令，其中 ## 是介于 01 到 99 之间的数字，包括 01 到 99 之间。此功能可用于在 SAP 系统上执行应用程序专用的后续活动，例如安装 SAP 许可证，调整数据库表，删除或更新内容以及启动应用程序。
+
+
+
+ a| 
+APP_quiesce_CMD ##
+ a| 
+这些脚本或命令会将应用程序置于备份模式，其中 ### 是介于 01 到 99 之间的数字（含 01 到 99 ）。 * 注意： * 如果使用 APP_NAME ，则会忽略此问题，因为在这种情况下，它会在 Snap Creator 中进行内部处理。
+
+
+
+ a| 
+app_unquiesce _ CMD ##
+ a| 
+这些脚本或命令可使应用程序退出备份模式，其中 ## 是一个介于 01 到 99 之间的数字，包括 01 到 99 之间。* 注： * 如果使用 APP_NAME ，则会忽略此设置，因为在这种情况下，它会在 Snap Creator 中进行内部处理。
+
+
+
+ a| 
+Archive_CMD ##
+ a| 
+此命令用于处理数据库归档；也可以用作包装程序来运行其他脚本，其中 ## 是 01 到 99 之间的数字。
+
+|===

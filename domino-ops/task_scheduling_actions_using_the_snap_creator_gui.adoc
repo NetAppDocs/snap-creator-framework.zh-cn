@@ -1,0 +1,90 @@
+---
+permalink: domino-ops/task_scheduling_actions_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, scheduling, schedule, backups 
+summary: 您可以在执行初始备份后计划重复的备份作业。 
+---
+= 计划备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在执行初始备份后计划重复的备份作业。
+
+您应已为备份创建配置文件，如中所述 xref:task_using_the_gui_to_create_a_configuration_file.adoc[创建配置文件]。
+
+. 在配置文件和配置窗格中，选择配置文件，然后单击 Snap Creator Framework 窗口顶部的 * 管理 * > * 计划 * 。
+. 在作业窗格中，单击 * 创建 *
+. 在新建作业对话框中，指定作业信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+作业名称
+ a| 
+输入作业的名称。
+
+
+
+ a| 
+Start date
+ a| 
+使用日历控件选择计划应开始的日期。
+
+
+
+ a| 
+活动
+ a| 
+选中此框可激活计划。取消选中此框可停用此计划。
+
+
+
+ a| 
+配置文件
+ a| 
+选择配置文件的配置文件。
+
+
+
+ a| 
+Configuration
+ a| 
+选择配置文件。
+
+
+
+ a| 
+Action
+ a| 
+选择备份。
+
+
+
+ a| 
+策略
+ a| 
+选择备份作业的策略。* 注： * 您必须已在配置文件中配置策略。
+
+
+
+ a| 
+Frequency
+ a| 
+选择作业的运行频率。根据您的选择，系统将显示新字段，您可以在其中指定运行作业的分钟，小时和日期。如果要使用 cron 作业，请选择 cron 并输入 cron 命令。
+
+|===
++
+以下示例显示了如何计划每天午夜运行备份作业：
+
++
+image::../media/scfw_domino_new_job.gif[此图通过周围的文本进行了说明。]
+
+. 单击 * 保存 * 。
++
+已计划作业将列在作业窗格的计划选项卡上。选择要运行，编辑或删除的作业。
+
+

@@ -1,0 +1,24 @@
+---
+permalink: administration/task_creating_policy_schedules.html 
+sidebar: sidebar 
+keywords: policy, schedule, snap, creator, gui 
+summary: 您可以选择使用 Snap Creator GUI 创建策略计划。 
+---
+= 正在创建策略计划
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以选择使用 Snap Creator GUI 创建策略计划。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 策略 * > * 策略计划 * 。
+. 从 * 策略计划 * 选项卡中，单击 * 创建 * 。
+. 输入计划名称并选择操作和频率，然后单击 * 保存 * 。
++
+根据您选择的频率，您需要选择相应的时间字段来运行计划的作业。
+
++
+image::../media/add_policy_schedule.gif[添加策略计划]
+
+

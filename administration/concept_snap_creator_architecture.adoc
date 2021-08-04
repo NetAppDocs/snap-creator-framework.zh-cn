@@ -1,0 +1,19 @@
+---
+permalink: administration/concept_snap_creator_architecture.html 
+sidebar: sidebar 
+keywords: snap, creator, full-featured, server, agent, architecture, plug-ins, snapshot 
+summary: Snap Creator 具有一个功能完备的服务器和代理架构，其中包括三个主要组件： Snap Creator Server ， Snap Creator Agent 和插件。 
+---
+= Snap Creator 架构
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 具有一个功能完备的服务器和代理架构，其中包括三个主要组件： Snap Creator Server ， Snap Creator Agent 和插件。
+
+Snap Creator 可与各种技术和产品进行交互和集成，如下图所示：
+
+image::../media/scfw_high_level_arch_41_refresh_administration.gif[scfw 高级 arch41 刷新管理]
+
+上图中的 NetApp 软件产品是可选的；除了 Snapshot 技术之外， Snap Creator Framework 正常运行不需要其他软件产品。

@@ -1,0 +1,20 @@
+---
+permalink: administration/task_monitoring_jobs_using_the_gui.html 
+sidebar: sidebar 
+keywords: monitor, job, snap, creator, gui 
+summary: 您可以使用 Snap Creator GUI 监控 Snap Creator 正在执行的作业的状态。 
+---
+= 监控作业
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 监控 Snap Creator 正在执行的作业的状态。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 作业监控 * 。
++
+此时将显示正在运行的作业的列表。
+
+. 要停止正在运行的作业，请选择该作业并单击 * 取消 * 。
+

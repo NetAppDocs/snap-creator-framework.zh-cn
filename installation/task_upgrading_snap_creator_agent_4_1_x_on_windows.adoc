@@ -1,0 +1,74 @@
+---
+permalink: installation/task_upgrading_snap_creator_agent_4_1_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, snap, creator, agent, 4.1.x, windows 
+summary: 您可以从 Windows 上的 Snap Creator Agent 4.1.x 进行升级。 
+---
+= 在 Windows 上升级 Snap Creator Agent 4.1.x
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 Windows 上的 Snap Creator Agent 4.1.x 进行升级。
+
+* 在备份 Snap Creator Agent 目录之前，您已停止 Snap Creator Agent 服务（ `snapcreatoragentservice` ），以确保备份的数据完整。
++
+例如，您可以使用服务管理单元停止服务：
+
++
+.. 选择 * 开始 * > * 运行 * 并输入 `services .msc` 。
+.. 找到并选择 Snap Creator Agent 服务；然后停止该服务。或者，您也可以打开命令提示符并输入以下命令：
+
+
++
+[listing]
+----
+sc stop snapcreatoragentservice
+----
+* 您已在 Snap Creator Agent 目录（ C ： \Program Files\NetApp\NetApp_Snap_Creator_Frider\scAgent4.1.x ）中备份以下目录以及所有关联的子目录和文件：
++
+** Snap Creator Agent 属性（ .\etc ），其中包含 allowed_commands.config 和 agent.properties 文件
+** 日志（ .\logs ）
+** 插件（ .\plugins ） * 注意： * 请勿删除您创建的 Snap Creator 4.1.x 备份副本。
+
+
+
+
+以下步骤中提供的路径是指 Windows 的默认安装路径。如果未使用默认值，则路径信息可能与安装路径不同。
+
+. 如果尚未停止 Snap Creator 代理服务，请停止此服务。
++
+有关停止服务的信息，请参阅本主题前面提供的详细信息。
+
+. 选择 * 开始 * > * 程序 * > * Snap Creator* > * 卸载 NetApp Snap Creator Framework * ，卸载 Snap Creator （适用于 Windows ）。
++
+有关详细信息，请参见有关在 Windows 上卸载 Snap Creator 的信息。
+
+. 安装最新的 Snap Creator 代理。
++
+有关详细信息，请参见有关在 Windows 上安装 Snap Creator 代理的信息。
+
+. 如果在安装最新的 Snap Creator 服务器时选择以服务形式启动 Snap Creator 代理，请停止此服务。
++
+有关停止服务的信息，请参阅本主题前面提供的详细信息。
+
+. 将备份的 Snap Creator 4.1.x 日志目录复制到最新位置（ C ： \Program Files\NetApp\Snap_Creator_Frider\scAgent4.1.x \logs ）。
+. 将备份的 Snap Creator 4.1.x 插件目录复制到最新位置（ C ： \Program Files\NetApp\Snap_Creator_Frider\scAgent4.1.x\plugins ）。
+. 将备份的 Snap Creator 4.1.x 代理属性目录复制到最新位置（ C ： \Program Files\NetApp\Snap_Creator_Frider\scAgent4.1.x 等）。
+. 通过执行以下操作之一启动 Snap Creator 代理服务：
++
+** 使用服务管理单元并启动服务。
+** 在命令提示符处输入以下命令：
++
+[listing]
+----
+sc start snapcreatoragentservice
+----
+
+
++
+
+NOTE: 如果对 allowed_commands.config 或 agent.properties 文件进行的任何更改都需要重新启动 Snap Creator Agent ，前提是在进行更改时它正在运行。
+
+

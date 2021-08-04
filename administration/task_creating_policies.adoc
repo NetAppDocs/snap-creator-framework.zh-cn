@@ -1,0 +1,104 @@
+---
+permalink: administration/task_creating_policies.html 
+sidebar: sidebar 
+keywords: create, retention, policy, snap, creator, gui, guideline, policy, management 
+summary: 您可以使用 Snap Creator 图形用户界面创建一个新的保留策略，以便使用不同的保留计数配置多个 Snapshot 策略。 
+---
+= 正在创建策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator 图形用户界面创建一个新的保留策略，以便使用不同的保留计数配置多个 Snapshot 策略。
+
+您应了解定义 Snap Creator 策略的准则。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 策略 * > * 策略管理 * 。
+. 在 * 策略管理器 * 选项卡中，单击 * 创建 * 。
+. 输入详细信息，然后单击 * 保存 * 。
++
+image::../media/create_new_policy.gif[创建新策略]
+
++
+|===
+| 字段 | Description 
+
+
+ a| 
+Policy name
+ a| 
+指定策略的名称。
+
+
+
+ a| 
+备份类型
+ a| 
+（可选）选择备份类型。
+
+
+
+ a| 
+Policy type
+ a| 
+选择策略类型：
+
+** * 本地 *
++
+在主存储上创建 Snapshot 副本。如果没有 SnapMirror 或 SnapVault 关系，请选择此类型。
+
+** SnapVault
++
+在主存储上创建 Snapshot 副本并执行 SnapVault 更新。必须为配置中的所有卷启用 SnapVault 更新。
+
+** SnapMirror
++
+在主存储上创建 Snapshot 副本并执行 SnapMirror 更新。必须为配置中的所有卷启用 SnapMirror 更新。
+
+
+
+
+
+ a| 
+策略计划
+ a| 
+（可选）选择要使用的策略计划。如果未指定策略计划，则这些操作不会自动运行。
+
+
+
+ a| 
+Snapshot 保留计数
+ a| 
+输入要保留的备份数。
+
+
+
+ a| 
+Snapshot 保留期限
+ a| 
+输入删除备份之前必须保留的最短期限。
+
+
+
+ a| 
+SnapVault 保留计数
+ a| 
+如果选择 SnapVault 作为策略类型，请输入 SnapVault 的保留计数。
+
+
+
+ a| 
+SnapVault 保留期限
+ a| 
+如果选择 SnapVault 作为策略类型，请输入 SnapVault 的保留期限。
+
+
+
+ a| 
+添加 / 覆盖参数
+ a| 
+可以覆盖某个策略的某些参数。如果需要，请选中此复选框，然后添加要覆盖的参数。
+
+|===
+

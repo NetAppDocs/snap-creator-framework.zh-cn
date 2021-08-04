@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_permissions_to_snap_creator_roles.html 
+sidebar: sidebar 
+keywords: assign, permission, snap, creator, gui, role, gui, permission 
+summary: 您可以使用 Snap Creator GUI 为 Snap Creator 角色分配权限。 
+---
+= 为 Snap Creator 角色分配权限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 为 Snap Creator 角色分配权限。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 用户和角色 * > * 角色管理 * 。
+. 在角色管理选项卡中，选择所需角色，然后单击 * 分配权限 * 。
+. 将所需权限从左列移至右列，然后单击 * 保存 * 。
++
+您可以选择并拖动列之间的权限，也可以单击箭头在列之间移动权限。
+
+. 通过选择角色并在角色和分配的权限窗格中查看分配的权限，验证是否已分配权限。
+

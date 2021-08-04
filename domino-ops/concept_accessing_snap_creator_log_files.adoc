@@ -1,0 +1,63 @@
+---
+permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
+summary: 您可以在 Snap Creator 作业监控器中查看作业状态。您可以在作业运行时在控制台窗格中查看作业操作日志，也可以在作业的 " 输出日志 " 中查看作业操作日志。此外，还提供了许多专用日志。 
+---
+= 查看作业状态和日志
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Snap Creator 作业监控器中查看作业状态。您可以在作业运行时在控制台窗格中查看作业操作日志，也可以在作业的 " 输出日志 " 中查看作业操作日志。此外，还提供了许多专用日志。
+
+您可以在图形用户界面中查看以下日志：
+
+|===
+| 日志 | Description 
+
+
+ a| 
+出
+ a| 
+为作业提供详细级别的信息。
+
+
+
+ a| 
+调试
+ a| 
+提供详细级别的信息以及在调试中有用的信息。
+
+
+
+ a| 
+图形用户界面
+ a| 
+提供有关 Snap Creator GUI 操作的信息。
+
+
+
+ a| 
+标准
+ a| 
+提供有关写入标准错误的错误的信息（仅限 " 报告 " 窗格）。
+
+
+
+ a| 
+error
+ a| 
+提供所有错误信息（仅限 " 报告 " 窗格）。
+
+|===
+如果不想使用作业监控器或报告窗格，则可以在文本编辑器中查看所有日志。日志位于 Snap Creator 服务器的安装目录中。
+
+* 相关信息 *
+
+xref:task_using_the_snap_creator_job_monitor_to_review_logs.adoc[在作业监控器中查看作业状态和日志]
+
+xref:task_using_the_snap_creator_reports_option_to_view_logs.adoc[在报告窗格中查看日志]
+
+xref:task_creating_an_scdump_using_the_snap_creator_gui.adoc[使用 scdump 以压缩格式收集日志]

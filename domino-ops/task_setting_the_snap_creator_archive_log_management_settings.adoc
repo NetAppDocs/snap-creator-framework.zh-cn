@@ -1,0 +1,73 @@
+---
+permalink: domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html 
+sidebar: sidebar 
+keywords: domino, ibm, cleaning up, purging, archives, archived, copies, transaction, logs 
+summary: 如果您使用的是 Domino 事务日志记录，则 IBM Domino 插件会将 Domino 事务日志的副本归档到 changeinfo 目录，以便在即时还原操作中使用。在 Snap Creator 清理不再需要的事务日志副本之前，您需要启用事务日志管理。 
+---
+= 清除 Domino 事务日志的归档副本
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用的是 Domino 事务日志记录，则 IBM Domino 插件会将 Domino 事务日志的副本归档到 changeinfo 目录，以便在即时还原操作中使用。在 Snap Creator 清理不再需要的事务日志副本之前，您需要启用事务日志管理。
+
+Domino 插件会将 changeinfo 文件和 Domino 事务日志的归档副本存储在 changeinfo 目录中。此插件会根据配置的保留策略自动清理 .info 文件。它不会清理不需要的事务日志副本，除非您在 Snap Creator 中明确启用事务日志管理。
+
+在设置事务日志管理时，请确保在您要为最新还原操作保留的事务日志归档副本数量与包含 changeinfo 目录的卷大小之间达到适当的平衡。
+
+
+IMPORTANT: 请勿将 Archive Log 目录参数设置为 Domino 事务日志的路径。这样做可能会损坏 Domino 环境。
+
+. 在配置文件和配置窗格中，选择配置文件并单击 * 归档日志管理 * 选项卡。
+. 在 * 归档日志管理 * 选项卡中，为事务日志管理设置指定以下值：
++
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+启用归档日志
+ a| 
+Y
+ a| 
+启用事务日志清理。
+
+
+
+ a| 
+归档日志保留
+ a| 
+输入一个大于或等于 Snapshot 副本保留天数的值。
+ a| 
+保留事务日志的天数。
+
+
+
+ a| 
+归档日志目录
+ a| 
+更改信息 / 日志
+ a| 
+要清理的目录。* 重要信息： * 请勿指定 Domino 事务日志的路径。这样做可能会损坏 Domino 环境。
+
+
+
+ a| 
+归档日志扩展
+ a| 
+ a| 
+Domino 事务日志文件副本的扩展名。
+
+
+
+ a| 
+归档日志递归搜索
+ a| 
+不包括
+ a| 
+Snap Creator 插件会将 .txn 文件置于 changeinfo 目录的 logs 子目录中，因此不需要进行递归搜索。
+
+|===
+. 单击配置内容窗格中的 * 保存 * 以保存所做的更改。
+

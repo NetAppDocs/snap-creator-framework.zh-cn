@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/concept_setup_assumptions_in_this_guide.html 
+sidebar: sidebar 
+keywords: setup, assumptions 
+summary: 虽然典型的 Snap Creator 安装假定服务器安装在一台主机上，而代理安装在另一台主机上，但本指南中使用的设置基于 SAP HANA 多节点设备。 
+---
+= 本指南中的设置假设
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+虽然典型的 Snap Creator 安装假定服务器安装在一台主机上，而代理安装在另一台主机上，但本指南中使用的设置基于 SAP HANA 多节点设备。
+
+在此配置中， SAP HANA 数据库在 3+1 数据库节点配置上运行，所有 Snap Creator 软件组件（服务器，代理和插件）安装在同一主机上。
+
+此设置中使用的 NetApp 存储系统正在运行 7- 模式 Data ONTAP 。存储层上使用一个高可用性（ HA ）控制器对。三个 SAP HANA 数据库节点的数据和日志卷会分布到两个存储控制器。在示例设置中，另一个 HA 控制器对的一个存储控制器将用作二级存储。每个数据卷都会复制到二级存储上的一个专用备份卷。备份卷的大小取决于要保留在二级存储上的备份数量。
+
+此处所述的所有 Snap Creator 和 SAP HANA Studio 操作对于运行集群模式 Data ONTAP 的存储系统均相同。但是，存储系统上的初始 SnapVault 配置以及需要直接在存储上执行的所有 SnapVault 命令与集群模式 Data ONTAP 不同。本指南重点介绍了这些差异。
+
+下图显示了主存储上的数据卷以及二级存储的复制路径：
+
+image::../media/sap_hana_multimode_setup.gif[显示了主存储上的数据卷以及二级存储的复制路径。]
+
+
+NOTE: 必须在二级存储控制器上创建需要备份的所有卷。在此示例中，在二级存储控制器上创建了卷 backup_data_00001 ， backup_data_00002 和 backup_data_00003 。

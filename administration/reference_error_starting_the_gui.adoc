@@ -1,0 +1,29 @@
+---
+permalink: administration/reference_error_starting_the_gui.html 
+sidebar: sidebar 
+keywords: unix, environment, snap, creator, gui, linux 
+summary: 在 UNIX 环境中，启动 Snap Creator GUI 时可能会遇到错误。 
+---
+= 启动 Snap Creator GUI 时出错
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 UNIX 环境中，启动 Snap Creator GUI 时可能会遇到错误。
+
+* * 问题描述 *
++
+在 UNIX 环境中，启动 Snap Creator GUI 时会收到 HTTP 错误 503 ；例如： HTTP 错误 503Problem 访问 / 。原因： service_unavailable
+
+* * 发生原因 *
++
+如果临时文件空间不足，您可能会收到此错误消息。
+
+* * 更正操作 *
++
+验证您在相应操作系统文件夹的 temp 文件夹中是否有足够的空间。
+
+
+
+示例：在 Linux 环境中，检查 /tmp 。

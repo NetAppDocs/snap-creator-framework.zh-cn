@@ -1,0 +1,21 @@
+---
+permalink: administration/reference_sap_hana_plug_in.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, backup, point-in-time, recovery, sql 
+summary: 通过 SAP HANA 插件，您可以根据存储 Snapshot 副本创建 SAP HANA 数据库的备份并执行时间点恢复。 
+---
+= SAP HANA 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 SAP HANA 插件，您可以根据存储 Snapshot 副本创建 SAP HANA 数据库的备份并执行时间点恢复。
+
+此插件使用 SAP HANA hdbsql 客户端执行 SQL 命令以提供数据库一致性并管理 SAP HANA 备份目录。SAP 认证硬件设备和定制数据中心集成（ TDI ）计划均支持此插件。
+
+此插件作为 Snap Creator 代理的一部分安装在可访问 SAP HANA 数据库节点的主机上。
+
+* 相关信息 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854420["《 Snap Creator Framework 4.3.3 SAP HANA 插件操作指南》"]

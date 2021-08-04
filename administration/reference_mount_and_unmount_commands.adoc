@@ -1,0 +1,31 @@
+---
+permalink: administration/reference_mount_and_unmount_commands.html 
+sidebar: sidebar 
+keywords: cloning, mount_cmd, unmount_cmd, command, snap, creator, pre, post 
+summary: 克隆时，应使用 mount_CMD 和 umount_CMD 命令，而不是 Snap Creator PRE 或 POST 命令。 
+---
+= mount 和 unmount 命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆时，应使用 mount_CMD 和 umount_CMD 命令，而不是 Snap Creator PRE 或 POST 命令。
+
+|===
+| 命令 | Description 
+
+
+ a| 
+mount_CMD ##
+ a| 
+挂载命令用于挂载文件系统以执行克隆或挂载操作，其中 ## 是一个从 01-99 开始的数字。
+
+
+
+ a| 
+umount_CMD ##
+ a| 
+unmount 命令用于挂载文件系统以执行克隆或挂载操作，其中 ## 是一个从 01-99 开始的数字。
+
+|===

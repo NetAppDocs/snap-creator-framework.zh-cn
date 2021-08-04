@@ -1,0 +1,23 @@
+---
+permalink: sap-hana-ops/task_scheduling_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, schedule, database, integrity, checks 
+summary: 对于 SAP HANA 配置，您可以计划其他操作，例如基于文件的备份和数据库完整性检查。您可以计划按特定间隔执行数据库完整性检查操作。 
+---
+= 计划数据库完整性检查
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于 SAP HANA 配置，您可以计划其他操作，例如基于文件的备份和数据库完整性检查。您可以计划按特定间隔执行数据库完整性检查操作。
+
+. 从 Snap Creator 图形用户界面的主菜单中，选择 * 管理 * > * 计划 * ，然后单击 * 创建 * 。
+. 在新建作业窗口中，输入作业的详细信息。
++
+默认情况下，完整性检查策略设置为 "`none` " 。
+
++
+image::../media/creating_database_integrity_checks_schedules.gif[创建数据库完整性检查计划]
+
+

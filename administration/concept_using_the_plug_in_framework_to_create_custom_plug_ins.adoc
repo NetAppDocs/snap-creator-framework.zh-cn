@@ -1,0 +1,42 @@
+---
+permalink: administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: plug-in, framework, snap, creator, reuse, quiesce, unquiesce, discover, scdump, restore, restore, clone, describe, restore 
+summary: 通过此插件框架，您可以为 Snap Creator 创建自己的插件或重复使用现有插件。该插件为 Snap Creator 提供了处理给定应用程序备份和恢复的步骤。 
+---
+= 使用插件框架创建自定义插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过此插件框架，您可以为 Snap Creator 创建自己的插件或重复使用现有插件。该插件为 Snap Creator 提供了处理给定应用程序备份和恢复的步骤。
+
+此插件框架定义了以下方法：
+
+* Quiesce —用于处理给定应用程序插件的暂停的方法
+* unquiesce —用于处理给定应用程序插件的取消静默状态的方法
+* 发现—用于发现给定应用程序插件的存储对象的方法
+* scdump —用于收集支持信息，数据库，操作系统和 SnapDrive 的方法
+* Restore —用于处理给定应用程序插件的还原的方法
+* restore_pree —处理给定应用程序插件的预存储操作的方法（可以使用 Snap Creator 的内置还原 CLI ）
+* restore_post —用于处理给定应用程序插件的还原后操作的方法（可以使用 Snap Creator 的内置还原 CLI ）
+* clone_pre —用于处理给定应用程序插件的克隆前操作的方法
+* clone_post —用于处理给定应用程序插件的克隆后操作的方法
+* 描述—描述插件实施的内容的方法。此选项对于 Perl 插件是可选的，但对于插件 / 本机下的原生插件是必需的。
+* clone_all —处理给定应用程序插件克隆的方法（无法使用内置克隆接口）
+* clone_cleanup —在克隆操作失败时处理清理的方法
+* restore_cleanup —在还原操作失败时处理清理的方法
+
+
+
+NOTE: 此插件框架支持使用 Perl ， PowerShell ， Java ， UNIX Shell 和 Python 进行编程。注意：通过此插件框架，您可以实施 Snap Creator 中的对象和功能。
+
++ 例如，可以处理错误，这意味着插件可以使用 Snap Creator 的标准实施。这样可以减少创建插件所需的工作。
+
+* Perl 插件安装在 /plug-ins/plug-in-name/plug-in.pm 下。
+* 原生插件安装在 /plug-ins/native/plug-in.sh ， plug-in.java.plug-in.bat 等下。
+* 插件必须安装在应运行的位置。根据 Snap Creator 的设置，该代理可以是 Snap Creator Server 或 Snap Creator Agent 。
+
+
+有关插件框架，插件和插件用户指南的详细信息，请参见 http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework 讨论社区论坛"]。

@@ -1,0 +1,48 @@
+---
+permalink: domino-ops/concept_domino_database_restore_overview.html 
+sidebar: sidebar 
+keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror, snapvault, destination, directories 
+summary: IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库文件。Snapshot 还原完成后，此插件将应用在 changeinfo 目录中记录的任何更改。 
+---
+= 还原数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库文件。Snapshot 还原完成后，此插件将应用在 changeinfo 目录中记录的任何更改。
+
+
+
+== 了解 SnapMirror 和 SnapVault 还原操作
+
+您不能使用 Snap Creator 还原数据的 SnapMirror 副本。如果要还原镜像副本，则需要先中断镜像，然后手动还原数据。有关详细信息，请参见 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《 ONTAP 9 卷灾难恢复快速指南》"]。
+
+从二级存储还原 SnapVault 副本时，只能进行时间点卷还原。您不能执行最新的卷还原或单个文件还原。您可以通过首先从二级存储还原到主存储来解决此限制。然后，您可以根据需要从主存储执行最新的卷还原或单个文件还原。
+
+
+
+== 了解目标目录
+
+卷还原和单文件还原通常具有不同的目标目录。您可以在备份和还原配置文件的 Data Restore Directory 参数中指定目标目录（请参见第步 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["task_Using_the_gui_to_create_a_configuration_file.md#sted_E6C507729B3647FD8B2E8D0818F22D3B"]）：
+
+* 对于卷还原，您需要将 Data Restore Directory 设置为 Domino 数据目录。
+* 对于单文件还原，您需要将 Data Restore Directory 设置为 Domino 数据卷上的子目录。
+
+
+这意味着，如果您选择其他还原类型，则需要修改数据还原目录，使其指向每种还原类型的正确设置。否则，更改信息将无法正确应用，并且数据与要还原到的数据库状态不一致。当然，如果愿意，您可以为卷和单文件还原创建不同的配置。
+
+
+
+== 从何处运行还原
+
+除了一个例外情况，您可以使用 Snap Creator GUI 或 Snap Creator CLI 还原数据库。对于 SAN 环境中的单文件还原，必须使用命令行界面，如中所述 xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[在 SAN 环境中执行单文件还原]。
+
+
+NOTE: 本指南介绍如何在 SAN 环境中仅使用命令行界面进行单文件还原。否则，它将显示如何使用 GUI 还原数据库。有关如何使用命令行界面的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+* 相关信息 *
+
+link:task_performing_point_in_time_volume_restore.adoc["执行卷还原"]
+
+

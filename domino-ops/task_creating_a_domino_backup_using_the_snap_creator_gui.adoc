@@ -1,0 +1,29 @@
+---
+permalink: domino-ops/task_creating_a_domino_backup_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases, on-demand, on, demand 
+summary: 您应在 NetApp 存储中提供数据库后立即对其进行备份。您可以计划在初始备份之后进行重复备份。 
+---
+= 按需备份数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应在 NetApp 存储中提供数据库后立即对其进行备份。您可以计划在初始备份之后进行重复备份。
+
+您应已为备份创建配置文件，如中所述 xref:task_using_the_gui_to_create_a_configuration_file.adoc[创建配置文件]。
+
+. 在配置文件和配置窗格中，选择配置文件，然后单击 * 操作 * > * 备份 * 。
+. 在 Additional Parameters 对话框的 * 策略 * 下拉列表中选择备份作业的策略，然后单击 * 确定 * 。
++
+image::../media/scfw_domino_select_a_policy.gif[此图通过周围的文本进行了说明。]
+
++
+
+NOTE: 您必须已在配置文件中配置策略。
+
++
+Snap Creator 启动备份作业。作业信息将显示在控制台窗格中。
+
+

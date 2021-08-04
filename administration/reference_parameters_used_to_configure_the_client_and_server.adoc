@@ -1,0 +1,100 @@
+---
+permalink: administration/reference_parameters_used_to_configure_the_client_and_server.html 
+sidebar: sidebar 
+keywords: parameter, snap, creator, agent, host, client, port 
+summary: 您必须了解用于配置 Snap Creator 代理主机客户端和 Snap Creator 服务器的参数。 
+---
+= 用于配置 Snap Creator 代理主机客户端和 Snap Creator 服务器的参数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解用于配置 Snap Creator 代理主机客户端和 Snap Creator 服务器的参数。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+sc_agent_###
+ a| 
+主机名或 IP_address ： port
+ a| 
+使用单个配置在多个远程主机上同时运行命令或任务。任务可以是已定义的插件（参数 app_name ），也可以是使用 _CMD 命令指定的命令（例如 NTAP_snapshot_create_CMD01 ）。
+
+要指定远程主机，应输入主机名或 IP 地址，后跟一个冒号，以及 Snap Creator Agent 正在侦听的端口。
+
+例如： SC_AGENT_NUMBER = IP address ： Port
+
+SC_AGENT_01= 代理 IP ：代理端口
+
+SC_AGENT_02= 代理 IP ：代理端口
+
+在远程主机上，您可以通过运行 < scAgent_v<#>/bin/scAgent start 命令来启动 Snap Creator Agent 。
+
+
+
+ a| 
+sc_clone_target
+ a| 
+克隆目标： port 的主机名或 IP_address
+ a| 
+启用克隆操作。将参数 * cloneVol* 与 ｛ pre
+
+
+
+| POST ｝ _clone_create_CMDxx 参数时，您可以管理远程端的远程存储对象（例如挂载或卸载文件系统）。要指定克隆目标，应输入其名称或 IP 地址，后跟一个冒号以及 Snap Creator Agent 正在侦听的端口。  a| 
+sc_agent_timeout
+ a| 
+时间（以秒为单位）
+
+
+
+ a| 
+指定代理服务的超时时间（以秒为单位）。实施的客户端 / 服务器架构使用超时机制。这意味着，如果客户端在指定的时间间隔内未响应，则服务器将失败并显示超时消息。但是，客户端上的任务不会中止，需要进一步调查。
+
+默认情况下，超时设置为 300 秒。在负载较高或已知任务运行时间较长的服务器（例如，用户创建的脚本或复杂的 SnapDrive 操作）上，您应延长超时时间并根据需要修改此值。
+
+您应将此参数设置为操作可以花费的最长时间（例如，如果暂停需要 1 ， 800 分钟，则此参数必须设置为 1800 ）。
+
+
+NOTE: 某些插件具有特定的 sc_agent_timeout 值要求。
+ a| 
+sc_agent_watchdog 启用
+ a| 
+"`Y` " 或 "`N` "
+
+
+
+ a| 
+只有在 Snap Creator Agent 版本低于 4.1 时， SC_AGENT_watchdox_enable 参数才适用。此参数用于启用或禁用 watchdog 进程。对于 Snap Creator Agent 4.1 或更高版本，此参数将被忽略，因为 watchdog 进程始终处于启用状态。如果参数已启用（即设置为 Y ），并且 Snap Creator Agent 版本为 4.1 或更高版本，则在 Snap Creator 代理收到暂停请求时， watchdog 进程将启动。
+
+watchdog 进程使用 sc_agent_unquiesce_timeout 参数作为超时参数来取消应用程序静默。如果参数已禁用（即设置为 N ）且 Snap Creator 代理版本早于 4.1 ，则 watchdog 进程将退出应用程序，但它会使用 scAgent/etc/agent.properties 路径中的 operation_timeout_in_msec 参数（默认值： 1 小时）。
+
+
+NOTE: 对于 Snap Creator Agent 4.1 ， SC_AGENT_watchdog 启用参数已弃用，并且仅适用于 Snap Creator Agent 4.0 。从 Snap Creator Agent 4.1 开始，无论为此参数设置的值如何，都会启用 watchdog 进程（因为它是硬编码的）。
+ a| 
+sc_agent_unquiesce_timeout
+ a| 
+时间（以秒为单位）
+
+
+
+ a| 
+指定静默超时（以秒为单位）。对于 Snap Creator Agent 4.1 之前的版本，只有在将 SC_AGENT_watchdox_enable 设置为 Y 时，才会使用此参数对于 Snap Creator Agent 4.1 或更高版本，此参数始终适用，因为 Snap Creator Agent watchdog 进程始终处于打开状态。如果无法与 Snap Creator Agent 进行通信，并且某个应用程序处于静默状态， Snap Creator Agent 会自动将应用程序返回到其正常运行模式，而无需服务器进行通信。默认情况下， unquiesce 超时设置为 sc_agent_timeout 参数值加 5 秒。
+ a| 
+SC_TMP_DIR
+ a| 
+"`Y` " 或 "`N` "
+
+
+
+ a| 
+允许使用用户定义的备用临时目录来存储 Snap Creator 相关文件。用户创建目录并管理用户访问。插件使用临时文件与数据库进行交互。临时文件创建在主机的默认临时目录中，该目录对所有用户都具有写入访问权限。如果临时目录已满，则 Snap Creator 会在创建临时文件时显示错误。
+ a| 
+sc_agent_log_enable
+ a| 
+"`Y` " 或 "`N` "
+
+|===

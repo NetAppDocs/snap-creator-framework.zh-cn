@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_roles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, user, gui, role, management 
+summary: 您可以使用 Snap Creator 图形用户界面为 Snap Creator 用户分配角色。 
+---
+= 为 Snap Creator 用户分配角色
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator 图形用户界面为 Snap Creator 用户分配角色。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 用户和角色 * > * 用户管理 * 。
+. 在用户管理选项卡中，选择所需的用户名，然后单击 * 分配配置文件 * 。
+. 将所需角色从左列移至右列，然后单击 * 保存 * 。
++
+您可以在列之间选择和拖动角色，也可以单击箭头在列之间移动角色。
+
+. 通过选择用户并在 * 已分配配置文件和角色 * 窗格中查看已分配的角色，验证是否已分配此角色。
+

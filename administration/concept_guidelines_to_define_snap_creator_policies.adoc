@@ -1,0 +1,38 @@
+---
+permalink: administration/concept_guidelines_to_define_snap_creator_policies.html 
+sidebar: sidebar 
+keywords: snap, creator, policies, guidelines, retendtion, snapshot 
+summary: Snap Creator 策略是用户定义的 Snapshot 副本保留，适用于主存储上的 Snapshot 副本以及二级存储上的 SnapVault 和 SnapMirror 副本。您可以使用策略定义要保留的 Snapshot 副本数量以及 Snapshot 副本使用期限。 
+---
+= 定义 Snap Creator 策略的准则
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 策略是用户定义的 Snapshot 副本保留，适用于主存储上的 Snapshot 副本以及二级存储上的 SnapVault 和 SnapMirror 副本。您可以使用策略定义要保留的 Snapshot 副本数量以及 Snapshot 副本使用期限。
+
+必须在 * 快照保留计数 * 字段中至少定义一个策略。对于 SnapVault ，您可以将同一策略与不同的 SnapVault 保留期限相关联。例如，要在主存储上创建每日 Snapshot 副本并将其保留七天，在二级存储上保留一个月，必须使用以下策略选项和设置：
+
+* * 快照保留计数 * ：每日： 7
+* * SnapVault 保留计数 * ：每日： 28
+
+
+您还可以指定删除 Snapshot 副本之前的最小天数。根据上述示例，您应使用以下选项和设置：
+
+* * 快照保留期限 * ： 7.
+* * SnapVault 保留期限 * ： 28
+
+
+此外，您还可以通过在配置文件中设置以下参数来按期限指定 Snapshot 副本删除：
+
+ntap_snapshot_delete_by-age_only=primary| secondary | 两者
+
+
+NOTE: 此参数不能通过 Snap Creator 图形用户界面使用。有关用于设置 Snapshot 副本的配置文件参数的详细信息，请参见相关参考。
+
+Snap Creator 一次只能运行一个策略。最大期限值是一个全局参数，用于适用场景所有策略。要配置其他每周策略，请定义该策略，然后使用 cron 或任务管理器并将 Snap Creator 变量 %snap_type 设置为 weekly ，在 Snap Creator 中每周调用一次。
+
+* 相关信息 *
+
+xref:reference_parameters_to_set_up_a_snapshot_copy.adoc[用于设置 Snapshot 副本的参数]

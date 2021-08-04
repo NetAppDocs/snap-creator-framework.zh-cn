@@ -1,0 +1,44 @@
+---
+permalink: administration/concept_vm_backup_and_restore_using_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, vmware, virtual, machines, vsphere, api, vmware, vcenter, credentials 
+summary: Snap Creator 支持通过 VMware 插件备份 VMware 虚拟机。虚拟机备份通过 VMware vCenter 服务器上的 vSphere API 进行。 
+---
+= 使用 VMware 插件备份和还原虚拟机
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 支持通过 VMware 插件备份 VMware 虚拟机。虚拟机备份通过 VMware vCenter 服务器上的 vSphere API 进行。
+
+对于虚拟机备份，您必须在配置文件中提供以下详细信息：
+
+* vCenter IP 或主机名和凭据
+* vSphere 虚拟机和数据存储库名称
+
+
+
+NOTE: 只有在默认端口（ 443 ）上配置了 vCenter 时， Snap Creator 才会发现 vCenter 。
+
+对于还原操作，您应提供备份参数和 Snapshot 副本名称。
+
+执行 VMware 备份和还原过程时，请考虑以下事项：
+
+* 如果某个虚拟机已列出且不可用，则此插件将显示一条错误消息。即使已备份丢失的虚拟机，它也无法还原。
+* 如果列出了一个数据存储库，则会备份该数据存储库中的所有虚拟机。
+* 仅会备份指定数据存储库中列出的虚拟机或虚拟机。
+* 如果选择进行备份的虚拟机包含在也选择进行备份的数据存储库中，则该虚拟机将仅备份一次。
+* VMware 插件同时支持网络文件系统（ NFS ）和 VMware 虚拟机文件系统（ VMFS ）数据存储库。
++
+** NFS 数据存储库上的虚拟机还原会在存储系统上使用单文件 SnapRestore （ SFSR ），从而避免主机副本。
+** 要还原 VMFS 数据存储库上的虚拟机，请执行以下步骤：
++
+... 对特定还原 Snapshot 副本中的 LUN 使用 FlexClone 或 LUN 克隆。
+... 将其映射到集群。
+... 使用 vCenter API 调用将内容从 VMFS 数据存储库的 Snapshot 副本复制到原始 VMFS 数据存储库。
+
+
+
+
+

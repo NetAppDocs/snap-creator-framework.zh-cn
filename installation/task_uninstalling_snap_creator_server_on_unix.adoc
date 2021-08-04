@@ -1,0 +1,47 @@
+---
+permalink: installation/task_uninstalling_snap_creator_server_on_unix.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, server, unix 
+summary: 您可以通过删除 Snap Creator Server 安装文件夹从 UNIX 卸载 Snap Creator Server 。 
+---
+= 在 UNIX 上卸载 Snap Creator 服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过删除 Snap Creator Server 安装文件夹从 UNIX 卸载 Snap Creator Server 。
+
+备份 Snap Creator 服务器引擎目录（ /install_path/scServer4.1.0/engine ）中的以下目录以及所有关联的子目录和文件：
+
+* Snap Creator 数据库（ ./snapcreator ）
+* Snap Creator 服务器属性（ ... 等）
+* 配置（ ./configs ）
+* 日志（ ./logs ）
+* 插件存储库（如果已启用）（ ./snapcreatorPlugin ）
+
+
+
+NOTE: 请务必备份这些目录；否则，您将丢失用户数据，并且无法恢复。
+
+要卸载 Snap Creator 服务器，请执行以下步骤。
+
+
+NOTE: 以下步骤中提供的路径是指通用安装路径。您可以修改这些命令中的路径，以反映自定义的 Snap Creator Server 安装路径。
+
+. 使用以下脚本停止 Snap Creator 服务器服务（ `snapcreatorserverservice` ）：
++
+[listing]
+----
+/install_path/scServer4.1.0/bin/scServer stop
+----
+. 删除 Snap Creator Server 安装文件夹。
++
+例如，对于 Linux 系统，请运行以下命令：
+
++
+[listing]
+----
+rm -Rf /install_path/scServer4.1.0
+----
+

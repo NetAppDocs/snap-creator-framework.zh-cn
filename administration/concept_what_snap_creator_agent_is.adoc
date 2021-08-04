@@ -1,0 +1,52 @@
+---
+permalink: administration/concept_what_snap_creator_agent_is.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, quiesce, server, plug-in, multi-tenant 
+summary: Snap Creator 代理通常安装在安装应用程序或数据库的同一主机上，用于处理从 Snap Creator 服务器到给定应用程序的静默和取消静默命令，并且是插件所在位置。有时，在 Snap Creator 中， Agent 会缩短为 scAgent 。 
+---
+= Snap Creator Agent 概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 代理通常安装在安装应用程序或数据库的同一主机上，用于处理从 Snap Creator 服务器到给定应用程序的静默和取消静默命令，并且是插件所在位置。有时，在 Snap Creator 中， Agent 会缩短为 scAgent 。
+
+Snap Creator 代理仅通过代理 RESTful 接口和 HTTPS 从 Snap Creator 服务器的代理接口接收通信。这意味着安全加密的通信，这是多租户和云环境中的一项非常重要的功能。自签名证书允许将生成的证书与 Snap Creator 代理结合使用。此外， Snap Creator 代理还通过可配置的用户和密码组合进行保护，这些用户和密码组合存储在磁盘上。
+
+下图展示了 Snap Creator 代理的架构：
+
+image::../media/scfw_agent_architecture_41_refresh.gif[刷新 scfw 代理架构 41]
+
+Snap Creator Agent （有时在 Snap Creator 本身中缩短为 scAgent ）组件包括以下部分：
+
+* * 操作和执行管理器 *
++
+Operation Manager 负责处理传入，传出和已完成的请求。执行管理器负责执行这些请求。
+
+* * 线程池 *
++
+线程池由辅助线程组成，用于执行多个任务。
+
++
+这将确定任意给定时间的并发操作数。执行管理器执行插件，并在线程池中的一个线程中执行该插件。如果线程池包含八个线程，则可以同时运行八个插件操作。新的传入操作将排队，直到线程重新可用为止。
+
+* * 监视程序 *
++
+在执行管理器为某些操作触发的操作（通常为暂停）中，如果需要，此 watchdog 会在指定时间后回调到执行管理器以停止该操作，并执行相应的撤消操作。例如，调用插件暂停功能将应用程序置于备份模式。watchdog 将开始侦听。如果未在指定的时间窗口内执行静默，则 watchdog 将取消应用程序的静默状态，使其恢复到正常操作模式。这是为了确保数据库不会停留在备份模式下。
+
+* * 上下文存储 *
++
+上下文存储可保存工作流生命周期内所需的所有信息，并根据需要为插件提供上下文对象，如果工作流失败或从未完成，则上下文对象将在一段时间后删除。
+
++
+对于未完成或在未定义状态下失败的工作流，在 install_path/etc/agent.properties: context_lifee_in_msec=1800000 （默认值为 30 分钟）中指定了最长上下文时间。如果增加此值， Snap Creator 代理将占用更多内存。
+
+* * 插件工厂 *
++
+插件出厂时会启动此插件，并确保其在隔离的空间中运行。插件工厂还会与上下文存储进行通信，以访问存储的信息。此外，还可以使用插件集成引擎从 Snap Creator 运行基于 Perl 的插件和原生插件。
+
++
+Snap Creator 代理还可以使用以 Java 以外的语言编写的插件。
+
+

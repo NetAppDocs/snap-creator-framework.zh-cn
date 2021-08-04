@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_policies.html 
+sidebar: sidebar 
+keywords: assign, retention, policy, configuration, snap, creator, gui, assignment 
+summary: 您可以使用 Snap Creator GUI 为配置文件分配保留策略。 
+---
+= 正在分配策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 为配置文件分配保留策略。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 策略 * > * 策略分配 * 。
+. 从配置文件窗格中选择一个配置文件。
+. 选中右侧窗格上的相应复选框，选择要分配给配置文件的一个或多个策略，然后单击 * 保存 * 。
++
+如果配置文件中已存在配置文件，则会显示一条消息，通知您分配的策略将覆盖配置文件中的设置。
+
+. 单击 * 是 * 以分配策略。
+

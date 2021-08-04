@@ -1,0 +1,51 @@
+---
+permalink: installation/concept_plug_ins_for_application_integration.html 
+sidebar: sidebar 
+keywords: plug-in, application, integration 
+summary: 插件用于将应用程序或数据库置于一致状态。Snap Creator 包含多个插件，这些插件已包含在二进制文件中，不需要进行任何其他安装。 
+---
+= 用于应用程序集成的插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+插件用于将应用程序或数据库置于一致状态。Snap Creator 包含多个插件，这些插件已包含在二进制文件中，不需要进行任何其他安装。
+
+支持的应用程序类型包括数据库，电子邮件，虚拟机管理程序或自定义应用程序。支持在 Snap Creator 中使用以下插件：
+
+* 应用程序和数据库插件：
++
+** DB2
+** IBM Domino （ Domino ）
+** 最大数据库数
+** MySQL
++
+
+NOTE: MySQL 插件不支持对多个数据库执行备份和还原操作。
+
+** Oracle
+** SAP 高性能分析设备（ HANA ）
+** Sybase Adaptive Server Enterprise （ ASE ）
+
+
+* SnapManager 插件：
++
+** 适用于 Microsoft Exchange 的 SnapManager
+** 适用于 Microsoft SQL Server 的 SnapManager
+
+
+* 虚拟机管理程序插件：
++
+** Citrix XenServer
+** Red Hat 基于内核的虚拟机（ KVM ）
+** VMware （ vSphere 用于单个虚拟机备份， vCloud Director 用于 vApp 备份）
+
+
+
+
+自定义（也称为 " 社区 " ）插件由开发人员社区编写，可通过 Snap Creator 启用，但不受支持。这些插件利用 Snap Creator 提供的界面，使开发人员能够将开发工作集中在目标应用程序上。
+
+有关详细信息，请访问 http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework 讨论社区论坛"] 站点
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["《 Snap Creator Framework 4.3.3 管理指南》"]

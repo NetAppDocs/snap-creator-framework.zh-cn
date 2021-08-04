@@ -1,0 +1,95 @@
+---
+permalink: administration/reference_troubleshooting_network_issues.html 
+sidebar: sidebar 
+keywords: network, issues, snap, creator, authorization, failure, troubleshoot, nat 
+summary: 您可能会在 Snap Creator 中遇到网络问题，例如授权失败。您应了解这些问题并知道如何对其进行故障排除。 
+---
+= 对网络问题进行故障排除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能会在 Snap Creator 中遇到网络问题，例如授权失败。您应了解这些问题并知道如何对其进行故障排除。
+
+* * 问题描述 *
++
+在 Snap Creator 中，您遇到授权失败问题描述。
+
+* * 发生原因 *
++
+授权失败可能是由于配置，防火墙权限或网络地址转换（ Network Address Translation ， NAT ）造成的。
+
+* * 更正操作 *
++
+验证以下内容：
+
++
+** IP/Host name
++
+除非使用主机等效，否则控制器上 hostname 命令中的存储系统名称应与在 Snap Creator 配置文件中输入的名称相同。
+
++
+存储系统的主机名缩写时，请勿使用完全限定域名（ FQDN ）。
+
++
+确保 IP 解析与您指定的名称匹配。如果不匹配，请在存储系统上使用主机等效进行更正。
+
++
+要启用主机等效，请执行以下步骤：
+
++
+... 输入以下命令： options https.admin.hostsequiv.enable on
+... 编辑 /etc/hostsequiv 文件并添加以下内容： IP/Host_name_in_Snap_Creator config_fileSnap_Creator_user
+
+
+** NetApp 管理控制台数据保护功能
++
+在 Snap Creator 配置参数卷中定义的存储控制器名称必须与 NetApp 管理控制台数据保护功能中的存储控制器名称匹配。如果存储控制器名称不匹配，您可以使用操作系统主机文件强制存储控制器名称匹配。
+
+** 防火墙：
++
+如果运行 Snap Creator 的主机与存储系统之间存在防火墙，请确保为 80 ， 443 或这两者打开双向访问控制列表（ ACL ）。
+
++
+*** 80 ：如果选择 HTTP ，则用于与存储系统进行通信
+*** 443 ：用于与存储系统通信如果选择 HTTPS 对 Linux ， Solaris 或 AIX 使用 HTTPS （ 443 ），请安装 openssl 库，这是使用 SSL 所需的。
+
+
+
+
++
+如果 Snap Creator Agent 正在运行，则运行该代理的端口必须处于打开状态。确保存储系统返回的流量可以传输到运行 Snap Creator 的系统，至少在非特权端口上。
+
++
+** 如果禁用了 SSL ，则 Snap Creator Framework 可以使用 TLS 与集群模式 Data ONTAP 和在 7- 模式下运行的 Data ONTAP 进行通信。
++
+在 Snap Creator Framework 中，您可以在主机和存储系统中禁用 SSLv3 ：
+
++
+*** 要在 AIX ， Unix 或 Windows 上禁用 SSLv3 ，您应按如下所示更新 java.security 文件中的 JDK.tls.disableAlgorithms 参数：
++
+JDK.tls.disabledAlgorithms=SSLv3
+
++
+java.security 文件位于路径： /java/jre/lib/security/ 下
+
+*** 要在存储系统上禁用 SSLv3 ，应执行 system service web modify 命令并配置以下参数：
++
+TLSv1 Enabled ： true
+
++
+SSLv3 Enabled ： false
+
++
+SSLv2 已启用： false
+
+
+
+** NAT
++
+如果使用 NAT ，请确保传输控制协议（ Transmission Control Protocol ， TCP ）数据包中的源 / 目标 IP 地址未更改。主机和存储系统需要知道他们正在与谁进行通信。提供防火墙 IP 而不是实际主机或控制器 IP 可能会出现发生原因问题。
+
+
+
+

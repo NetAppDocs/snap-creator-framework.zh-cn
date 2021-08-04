@@ -1,0 +1,39 @@
+---
+permalink: sap-hana-ops/task_starting_the_snapvault_relationships_with_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: sap, hana, starting, snapvault, relationship, data, ontap, operating, 7-mode 
+summary: 您可以使用在二级存储系统上执行的命令启动 SnapVault 关系。 
+---
+= 使用在 7- 模式下运行的 Data ONTAP 启动 SnapVault 关系
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用在二级存储系统上执行的命令启动 SnapVault 关系。
+
+. 对于运行 7- 模式 Data ONTAP 的存储系统，您可以运行以下命令来启动 SnapVault 关系：
++
+[listing]
+----
+hana2b> snapvault start -S hana1a:/vol/data_00001/mnt00001 /vol/backup_data_00001/mnt00001
+Snapvault configuration for the qtree has been set.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+hana2b>
+hana2b> snapvault start -S hana1a:/vol/data_00003/mnt00003 /vol/backup_data_00003/mnt00003
+Snapvault configuration for the qtree has been set.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+hana2b>
+hana2b> snapvault start -S hana1b:/vol/data_00002/mnt00002 /vol/backup_data_00002/mnt00002
+Snapvault configuration for the qtree has been set.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+hana2b>
+----
++
+
+NOTE: 建议您使用专用网络传输复制流量。在这种情况下，请在主存储控制器上配置此接口的主机名。主机名可以是 hana1a-rep 和 hana1b-rep ，而不是 hana1b 和 hana1b-rep 。
+
+

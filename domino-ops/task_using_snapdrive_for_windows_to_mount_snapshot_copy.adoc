@@ -1,0 +1,35 @@
+---
+permalink: domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, using, snapdrive, mount, snapshot, copy 
+summary: 您可以使用 SnapDrive 挂载要还原的文件的 Snapshot 副本。然后，您可以手动将文件复制到数据还原目录。 
+---
+= 使用 SnapDrive 挂载 Snapshot 副本
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapDrive 挂载要还原的文件的 Snapshot 副本。然后，您可以手动将文件复制到数据还原目录。
+
+以下操作步骤显示了如何使用 SnapDrive for Windows 在 Windows Server 2008 主机上挂载 Snapshot 副本。主机上必须运行 SnapDrive for Windows 和 Snap Creator 代理。
+
+. 在服务器管理器中，单击 * 存储 * > * SnapDrive * > * 物理服务器名称 * > * 磁盘 * 。
+. 在磁盘标识窗格中，导航到包含要还原的文件副本的 Snapshot 副本，然后在右键单击菜单中选择 * 连接磁盘 * 。
++
+此时将打开连接磁盘向导。
+
++
+在连接磁盘向导中，单击 * 下一步 * 进入下一页。单击 * 返回 * 可返回上一页。
+
++
+
+TIP: 记下 Snapshot 副本的名称。将文件复制到数据还原目录时，您需要此名称。
+
+. 在提供存储系统名称， LUN 路径和名称页面上，可以选择输入 LUN 的描述性文本。
+. 在 Select a LUN Type 页面上，保留默认值。
+. 在 Select LUN Properties 页面上，选择 Snapshot 副本的驱动器号或挂载点。
+. 在 iSCSI 启动程序 /FC 主机总线适配器（ HBA ）页面上，选择 iSCSI 启动程序或 FC 主机总线适配器（ HBA ）。
+. 在管理类型页面上，选择要用于映射到 LUN 的管理类型：自动或手动。
+. 单击 * 完成 * 将 Snapshot 副本挂载到指定的挂载点。
+

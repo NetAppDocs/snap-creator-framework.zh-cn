@@ -1,0 +1,36 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, job, status, logs, monitor 
+summary: Snap Creator 作业监控器是一个类似于信息板的界面，可用于 Snap Creator 作业。您可以使用作业监控器查看作业状态和下载日志。 
+---
+= 在作业监控器中查看作业状态和日志
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 作业监控器是一个类似于信息板的界面，可用于 Snap Creator 作业。您可以使用作业监控器查看作业状态和下载日志。
+
+作业监控器指示作业状态，如下所示：
+
+* image:../media/scfw_domino_icon_job_in_progress.gif["此图通过周围的文本进行了说明。"] 指示正在进行的作业。
+* image:../media/scfw_domino_icon_job_successful.gif["此图通过周围的文本进行了说明。"] 指示已成功完成的作业。
+* image:../media/scfw_domino_icon_job_completed_with_errors.gif["此图通过周围的文本进行了说明。"] 指示作业已完成但出现错误。
+* image:../media/scfw_domino_icon_job_failed.gif["此图通过周围的文本进行了说明。"] 指示作业失败。
++
+.. 在配置文件和配置窗格中，选择配置文件，然后单击 Snap Creator Framework 窗口顶部的 * 管理 * > * 作业监控器 * 。
++
+此时将显示作业监控窗格，您可以在此查看作业状态。
+
+.. 选择一个作业，然后单击 * 下载日志 * > * 日志类型 * ，其中日志类型为以下项之一：
++
+*** * 出日志 * 可为作业提供详细级别的信息。
+*** * 调试日志 * 可提供详细级别的信息以及在调试中有用的信息。
+*** * 图形用户界面日志 * 提供有关 Snap Creator 图形用户界面操作的信息。图形用户界面日志不特定于选定的作业。
+
+
+.. 在下载对话框中，根据需要单击 * 打开 * 或 * 保存 * 。
+
+
+

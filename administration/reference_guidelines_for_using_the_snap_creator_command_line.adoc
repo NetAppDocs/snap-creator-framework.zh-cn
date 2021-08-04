@@ -1,0 +1,71 @@
+---
+permalink: administration/reference_guidelines_for_using_the_snap_creator_command_line.html 
+sidebar: sidebar 
+keywords: snap, creator, command-line, functionality, gui, cli, backup, lun 
+summary: Snap Creator 提供了命令行功能，使您无需使用图形用户界面（ GUI ）即可执行各种操作。例如，您可以创建备份，克隆卷或 LUN ，并从命令行界面（ CLI ）导入配置文件。 
+---
+= 使用 Snap Creator 命令行界面的准则
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 提供了命令行功能，使您无需使用图形用户界面（ GUI ）即可执行各种操作。例如，您可以创建备份，克隆卷或 LUN ，并从命令行界面（ CLI ）导入配置文件。
+
+要查看所有命令和关联参数的完整列表，应在命令提示符处执行 Snap Creator ，而不使用参数： /install_path/scServer/snapcreator
+
+[listing]
+----
+[root@lyon scServer4.3.0]# ./snapcreator
+Usage: ./snapcreator --server <IP> --port <Port> --user <User> --passwd <Passwd> --profile <Profile> --config <Config> --action <Action> --policy <Policy> <Optional Arguments>
+
+Connection Information
+  --server <IP|Hostname>     The IP address or hostname of the Snap Creator server
+  --port <number>            The port number of the Snap Creator server
+  --user <user>              The username used for Snap Creator server authentication
+  --passwd <password>        The password used for Snap Creator server authentication
+
+Configuration Information
+  --profile <Profile>        The profile you want to run
+                             Profiles are dir's located under configs dir
+                             Uses default config, unless --config is specified
+  list                       Displays all configurations known to Snap Creator
+
+ Workflow Actions
+  --action <Action>          The action you want Snap Creator to perform
+  backup                     Takes a backup using NetApp storage technology
+  ossv                       Uses OSSV to perform the backup, no primary backup is taken
+  cloneLun                   In addition to backup will clones lun(s)
+                             using lun clone
+  cloneVol                   In addition to backup will clones volume
+                             using vol clone
+  cloneDel                   Deletes vol clones outside of normal workflow
+  clone                      Performs a plug-in driven clone operation
+
+  restore                    Enters an interactive restore menu for a given
+                             Snap Creator policy, you can choose a file or volume restore
+
+  backupDel                  Enters an interactive backup delete menu for a given
+                             Snap Creator policy
+  backupList                 Lists all backups under Snap Creator control
+  volumeList                 Lists all volumes under Snap Creator control
+  cloneList                  Lists all volume clones under Snap Creator control
+  dpstatus                   Shows the snapvault/snapmirror status
+  pmsetup                    Creates a Protection Manager DataSet for given config
+  arch                       Does not take backup, only performs
+                             archive log management
+  quiesce                    Does not take backup, only performs
+                             quiesce for given application defined in APP_NAME
+  unquiesce                  Does not take backup, only performs
+                             unquiesce for given application defined in APP_NAME
+  discover                   Does not take backup, only performs
+                             discover for given application defined in APP_NAME
+  mount                      Clone an existing backup and provide optional mount commands
+  umount                     Clone an existing backup and provide optional umount commands
+  scdump                     Dumps logs, configs, and support information for a given profile
+                             in a zip file called scdump located under Snap Creator root directory
+  custom                     A plug-in may define a custom action
+  dispatch                   Executes any Snap Creator workflow that exists
+  ...
+----
+如果在使用 Snap Creator CLI 时提供的用户名或密码不正确，则会显示以下错误消息： 403 For禁用 —— 用户名和密码不正确

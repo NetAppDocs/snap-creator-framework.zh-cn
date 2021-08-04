@@ -1,0 +1,42 @@
+---
+permalink: installation/task_uninstalling_snap_creator_agent_from_unix.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, agent, unix 
+summary: 您可以通过删除 Snap Creator Agent 安装文件夹从 UNIX 卸载 Snap Creator Agent 。 
+---
+= 在 UNIX 上卸载 Snap Creator Agent
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过删除 Snap Creator Agent 安装文件夹从 UNIX 卸载 Snap Creator Agent 。
+
+备份 Snap Creator Agent 目录（ /install_path/scAgent4.1.0 ）中的以下目录以及所有关联的子目录和文件：
+
+* 日志（ ./logs ）
+* 插件（ ./plugins ）
+* Snap Creator Agent 属性（ ./etc ），其中包含 allowed_commands.config 和 agent.properties 文件
+
+
+要卸载 Snap Creator 代理，请执行以下步骤。
+
+
+NOTE: 以下步骤中提供的路径是指通用安装路径。您可以修改这些命令中的路径，以反映自定义的 Snap Creator Agent 安装路径。
+
+. 使用以下脚本停止 Snap Creator 代理：
++
+[listing]
+----
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+. 删除 Snap Creator Agent 安装文件夹。
++
+例如，在 Linux 系统上，运行以下命令：
+
++
+[listing]
+----
+rm -Rf /install_path/scAgent4.1.0
+----
+

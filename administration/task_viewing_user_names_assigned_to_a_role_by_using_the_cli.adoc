@@ -1,0 +1,29 @@
+---
+permalink: administration/task_viewing_user_names_assigned_to_a_role_by_using_the_cli.html 
+sidebar: sidebar 
+keywords: snap, creator, command-line, interface, cli 
+summary: 您只能使用命令行界面（ CLI ）查看分配给每个角色的所有 Snap Creator 用户的列表。 
+---
+= 使用命令行界面查看分配给角色的 Snap Creator 用户
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您只能使用命令行界面（ CLI ）查看分配给每个角色的所有 Snap Creator 用户的列表。
+
+. 输入以下命令：
++
+`snapcreator -server host_name -port port_number -user sc_user_name -passwd sc_passwd -action userListAssigned -roleName roleName roleName -verbose`
+
++
+以下是一个示例：
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 –-action userListAssigned
+–rolename ADMINISTRATOR –verbose
+----
+

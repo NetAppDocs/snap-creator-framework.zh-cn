@@ -1,0 +1,297 @@
+---
+permalink: administration/reference_snap_creator_variable_and_parameter_descriptions.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, variable, parameter, basic, configuration, description, snap, type, time, action 
+summary: Snap Creator 包括基本配置所需的内置变量和参数。 
+---
+= Snap Creator 变量和参数说明
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 包括基本配置所需的内置变量和参数。
+
+|===
+| 变量 | Description 
+
+
+ a| 
+%snap_type
+ a| 
+在运行 Snap Creator 时使用，并且保留策略为每日，每周，每月
+
+
+
+ a| 
+%snap_time
+ a| 
+在为 Snapshot 副本命名时使用的时间戳（ YYMMDDhmmss ），用于为每个 Snapshot 副本创建有保障的唯一名称。它还用于命名备份报告和 Sybase 事务日志。
+
+
+
+ a| 
+% 操作
+ a| 
+运行 Snap Creator 时可以执行的操作列表：（备份
+
+
+
+| cloneVol | cloneLun 
+
+
+| Arch | 还原 
+
+
+| backupDel | 备份列表 
+
+
+| cloneList | pmsetup 
+
+
+| OSSV ）  a| 
+%MSG
+
+
+
+ a| 
+用于向电子邮件或 Tivoli 等其他程序发送错误消息只能与 send说唱 功能结合使用。
+ a| 
+%user_defined
+
+|===
+下表列出并介绍了基本配置中使用的 Snap Creator 参数：
+
+|===
+
+
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+sname
+ a| 
+ a| 
+指定 Snapshot 副本命名约定，它应是唯一的。Snapshot 副本将根据命名约定进行删除。
+
+
+
+ a| 
+snap_timestamp_only
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+设置 Snapshot 命名约定如果设置为 Y ，则 Snapshot 副本以 YYMMDDHMMSS. 结尾。否则，新的 Snapshot 副本将重命名为以 YYMMDDHMMSS. 结尾。
+ a| 
+Volumes
+ a| 
+
+
+
+ a| 
+列出要创建 Snapshot 副本的主存储控制器和卷，例如：
+
+[listing]
+----
+controller1:vol1,vol2,vol3;
+controller2:vol1;
+controller3:vol2,vol3
+---- a| 
+volume_groups
+ a| 
+vol_1 ， vol_2 ， vol_n
+
+
+
+ a| 
+将多个卷定义为一个组。多个卷指定为逗号分隔列表，例如：
+
+[listing]
+----
+VOLUMES_01=filer1:vol1,vol2,vol3;filer2:vol1
+VOLUMES_02=filer1:vol3,vol4
+VOLUMES_03=filer2:vol3,vol4
+VOLUME_GROUPS=VOLUMES_01,VOLUMES_02,VOLUMES_03
+----
+
+NOTE: 只有备份操作才支持 volume_groups 。如果设置了此参数，则在备份期间将忽略 volumes 参数。
+ a| 
+ntap_snapshot_rettents.
+ a| 
+
+
+
+ a| 
+确定给定策略要保留的 Snapshot 副本数，例如：
+
+[listing]
+----
+daily:7,weekly:4,monthly:1
+---- a| 
+ntap_users
+ a| 
+
+
+
+ a| 
+列出存储系统及其相应的用户名和密码，例如：
+
+[listing]
+----
+controller1:joe/password1;
+controller2:bob/password2;
+controller3:ken/password3
+----
+
+NOTE: 密码必须至少包含两个字符。
+ a| 
+ntap_pWD 保护
+ a| 
+Y
+
+
+
+| 不包括  a| 
+启用或禁用密码保护您必须对所有密码（存储系统和应用程序或插件）进行加密，并将加密的密码保存在配置文件中。
+ a| 
+传输
+
+
+
+ a| 
+HTTP
+| HTTPS  a| 
+用于使用 HTTP 或 HTTPS 连接到存储控制器。 * 注意： * HTTPS 可能需要 openssl-devel 库。
+
+
+
+ a| 
+Port
+ a| 
+ a| 
+配置存储控制器使用的端口号；通常为 80 和 443
+
+
+
+ a| 
+log_nUM
+ a| 
+ a| 
+指定 Snap Creator 必须保留的 .debug 和 .out 报告的数量
+
+
+
+ a| 
+config_type
+ a| 
+插件
+| 标准 
+
+
+ a| 
+指定配置类型有两种配置类型：插件和标准。您可以使用多个插件配置来构建复杂的静默和取消静默备份工作流。
+ a| 
+CMODE_cluster_Users
+ a| 
+
+
+
+ a| 
+（对于集群模式 Data ONTAP 为必需）列出了主和二级集群模式 Data ONTAP 集群及其对应的用户名和密码，例如：
+
+[listing]
+----
+cluster1:joe/password1;
+cluster2:bob/password2
+----
+
+NOTE: 密码必须至少包含两个字符。
+ a| 
+CMODE_cluster_name
+ a| 
+
+
+
+ a| 
+（对于集群模式 Data ONTAP 为必需项）指定主集群模式 Data ONTAP 集群的名称
+ a| 
+CMODE_snapshot_force_delete
+ a| 
+Y
+
+
+
+| 不包括  a| 
+确保删除应根据集群模式 Data ONTAP 中的 Snapshot 副本策略删除的 Snapshot 副本，如果这些副本具有任何依赖关系，例如克隆，则不会删除这些副本。
+ a| 
+log_trace_enable
+
+
+
+ a| 
+Y
+| 不包括  a| 
+启用或禁用所有事件的日志记录如果禁用，则不会记录管理 ONTAP 解决方案结果对象。
+
+
+
+ a| 
+ntap_timeout
+ a| 
+秒
+ a| 
+设置所有存储控制器管理 ONTAP 解决方案调用的超时值；默认值为 60 秒
+
+
+
+ a| 
+使用 _global_config
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+用于使用全局配置存储值
+ a| 
+联合应用程序
+ a| 
+
+
+
+ a| 
+列出配置下联合应用程序的配置和配置文件名称，例如：
+
+[listing]
+----
+databases@db2;databases@oracle
+---- a| 
+CMODE_SET
+ a| 
+Y
+
+
+
+| 不包括  a| 
+定义配置是适用于集群模式 Data ONTAP 还是在 7- 模式下运行的 Data ONTAP
+ a| 
+allow_duplicate_snAME
+
+
+
+ a| 
+Y
+| 不包括  a| 
+（可选）启用或禁用使用重复的 Snapshot 名称创建配置文件的功能此参数不适用于全局（超级全局或全局配置文件）配置文件。
+
+
+
+ a| 
+SNAPCREATOR_MISSEDJOB_RUN
+ a| 
+Y
+| 不包括 
+|===

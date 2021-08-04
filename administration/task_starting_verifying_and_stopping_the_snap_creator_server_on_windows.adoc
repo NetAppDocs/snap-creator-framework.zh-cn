@@ -1,0 +1,64 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, server, service, start, verify, stop, windows 
+summary: 您可以启动和停止 Snap Creator 服务器服务，并验证 Snap Creator 服务器服务是否正在 Windows 系统上运行。 
+---
+= 在 Windows 上启动，验证和停止 Snap Creator 服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以启动和停止 Snap Creator 服务器服务，并验证 Snap Creator 服务器服务是否正在 Windows 系统上运行。
+
+. 如果 Snap Creator 图形用户界面（ GUI ）未打开，请将其打开：
++
+.. 在 Web 浏览器中输入 Snap Creator 服务器的 URL ： "https://IP_address:gui_port"[]
++
+默认情况下，端口为 8443 。
+
+.. 使用 Snap Creator 图形用户界面的凭据登录。
+
+
++
+如果 Snap Creator GUI 打开，则 Snap Creator 服务器服务正在运行。
+
+. 在命令提示符处，根据需要启动或停止 Snap Creator 服务器服务，或者验证 Snap Creator 服务器服务是否正在运行：
++
+|===
+| 如果您要 ... | 输入以下内容 ... 
+
+
+ a| 
+启动 Snap Creator 服务器服务
+ a| 
+SC 启动 snapcreatorserverservice
+
+
+
+ a| 
+验证 Snap Creator 服务器服务是否正在运行
+ a| 
+SC 查询 snapcreatorserverservice
+
+
+
+ a| 
+停止 Snap Creator 服务器服务
+ a| 
+SC 停止 snapcreatorserverservice
+
+|===
++
+如果要在前台运行 Snap Creator ，请执行以下步骤，而不是使用 SC start 命令：
+
++
+.. 在安装 Snap Creator 服务器的主机上打开命令提示符，然后导航到 Snap Creator 服务器目录： `cd \install_path\scServer4.3.0\bin\`
+.. 要启动 Snap Creator 服务器，请运行批处理脚本： `scServer.bat start`
++
+关闭命令提示符将停止 Snap Creator 服务器服务。由于批处理脚本（ scServer.bat ）在前台运行 Snap Creator ，因此，只有在命令提示符处于打开状态时， Snap Creator 服务器才会运行。要在后台运行 Snap Creator ，应使用 Snap Creator Server 服务命令。
+
+
+
+

@@ -1,0 +1,18 @@
+---
+permalink: administration/task_viewing_a_list_of_snap_creator_users_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, user, gui, assign, profile, role 
+summary: 您可以使用 Snap Creator GUI 查看 Snap Creator 用户及其分配的角色的列表。 
+---
+= 查看 Snap Creator 用户和已分配角色的列表
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 查看 Snap Creator 用户及其分配的角色的列表。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 用户和角色 * > * 用户管理 * 。
+. 在已分配的配置文件和角色窗格中查看用户列表。
+. 选择所需用户，然后在已分配的配置文件和角色窗格中查看已分配的角色。
+

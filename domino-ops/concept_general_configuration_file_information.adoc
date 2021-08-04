@@ -1,0 +1,24 @@
+---
+permalink: domino-ops/concept_general_configuration_file_information.html 
+sidebar: sidebar 
+keywords: domino, ibm, logging into, Snap Creator, GUI, login 
+summary: 您可以使用 Web 浏览器登录到 Snap Creator GUI 。请向管理员咨询 Snap Creator 服务器的 IP 地址，端口和登录凭据。 
+---
+= 登录到 Snap Creator GUI
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Web 浏览器登录到 Snap Creator GUI 。请向管理员咨询 Snap Creator 服务器的 IP 地址，端口和登录凭据。
+
+. 在 Web 浏览器中输入以下 URL ： ` +https://server_name:port+` ，其中：
++
+** SERVER_name 是 Snap Creator 服务器的名称或 IP 地址
+** port 是 Snap Creator 服务器的端口（默认为 8443 ）
+
+
+. 输入 Snap Creator 服务器的登录凭据。
+
+
+此时将在浏览器中显示 Snap Creator 图形用户界面。如果您是首次启动 GUI ，则屏幕上将显示欢迎消息。单击 * 确定 * 以取消此消息。

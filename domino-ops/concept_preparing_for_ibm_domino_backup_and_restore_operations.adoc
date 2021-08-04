@@ -1,0 +1,19 @@
+---
+permalink: domino-ops/concept_preparing_for_ibm_domino_backup_and_restore_operations.html 
+sidebar: sidebar 
+keywords: domino, ibm, preparing, prepare, ibm, domino, backup, restore 
+summary: 在部署 IBM Domino 插件之前，请确保存储系统和主机满足最低资源要求。您还需要为数据库配置存储系统布局，并可选择设置 SnapMirror 和 SnapVault 关系。 
+---
+= 准备 IBM Domino 备份和还原
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在部署 IBM Domino 插件之前，请确保存储系统和主机满足最低资源要求。您还需要为数据库配置存储系统布局，并可选择设置 SnapMirror 和 SnapVault 关系。
+
+有关 Snap Creator 服务器和代理安装要求，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["《 Snap Creator Framework 4.1.2 安装指南》"]。请特别注意 Agent 主机的 IBM Domino 预安装要求：
+
+* 在 UNIX 主机上，必须创建指向 IBM Domino 共享对象文件的符号链接。
+* 在 Windows 主机上，必须将 IBM Domino 安装路径添加到 path 环境变量。
+

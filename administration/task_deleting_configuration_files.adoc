@@ -1,0 +1,28 @@
+---
+permalink: administration/task_deleting_configuration_files.html 
+sidebar: sidebar 
+keywords: delete, configuration, file, profile, management 
+summary: 您可以从配置文件中删除配置文件。 
+---
+= 从配置文件中删除配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从配置文件中删除配置文件。
+
+
+IMPORTANT: 删除配置文件时，与配置关联的计划也会在此过程中删除。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
+. 从配置文件和配置窗格中，展开配置文件的内容。
++
+分配给配置文件的配置文件列在配置文件名称下方。
+
+. 右键单击配置文件并选择 * 删除 * 。
+. 单击确认窗口中的 * 是 * 。
++
+配置文件将从配置文件名称下的列表中删除，并从 Snap Creator 服务器中永久删除。
+
+

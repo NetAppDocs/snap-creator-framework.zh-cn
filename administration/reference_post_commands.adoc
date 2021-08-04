@@ -1,0 +1,59 @@
+---
+permalink: administration/reference_post_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, post, command, quiescecmde, cmd, ntap, app, post, transfer 
+summary: Snap Creator 服务器包括多个配置文件 POST 命令。 
+---
+= POST 命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 服务器包括多个配置文件 POST 命令。
+
+|===
+| 命令 | Description 
+
+
+ a| 
+POST_APP_QUIESCMD#
+ a| 
+这是一个应用程序后备份启动命令，其中 ## 是一个介于 01-99 之间的数字。
+
+
+
+ a| 
+POST_NTAP_CMD ##
+ a| 
+这是一个 POST 命令，其中 ### 是一个介于 01-99 之间的数字。此操作会在所有操作完成后运行。
+
+
+
+ a| 
+post_app_unquiesce _CMD ##
+ a| 
+这是一个应用程序后备份停止命令，其中 ### 是一个介于 01-99 之间的数字。
+
+
+
+ a| 
+POST_NTAP_DATA_ transfer_CMD ##
+ a| 
+这是在 SnapVault 或 SnapMirror 传输之后运行的数据后传输命令，其中 ## 是一个介于 01-99 之间的数字。
+
+
+
+ a| 
+后还原 _ CMD ##
+ a| 
+这是一个可选命令，可在完成交互式还原后运行。通过它，您可以与要还原的应用程序进行交互。还原完成后，您可能需要启动此应用程序。* 注意： * MySQL 插件不支持此功能。
+
+
+
+ a| 
+post_clone_create_ CMD ##
+ a| 
+这是一个可选命令，可在执行 ONTAPI 克隆操作后运行，其中 ## 是一个介于 01-99 之间的数字。这些命令用于执行挂载克隆文件系统等操作。
+
+|===

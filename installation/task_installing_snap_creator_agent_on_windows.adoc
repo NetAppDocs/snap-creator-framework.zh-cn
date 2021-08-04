@@ -1,0 +1,84 @@
+---
+permalink: installation/task_installing_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, agent, windows 
+summary: 您可以使用 Windows 安装程序在 Windows 主机上安装 Snap Creator Agent 。 
+---
+= 在 Windows 上安装 Snap Creator Agent
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Windows 安装程序在 Windows 主机上安装 Snap Creator Agent 。
+
+* 必须安装 JRE 1.8 Update 72 或更高版本。
+* 您必须具有管理员级别的权限。
+* 默认端口（ 9090 ）或其他网络端口必须可用。
+* 必须下载 Snap Creator 。
++
+.. 双击 Snap_Creator_Frameworkrelease-Windowsversion.exe 文件图标（例如 Snap_Creator_FridFramework 4.1.0-Windows64.exe ）启动 Snap Creator 安装程序。
+.. 在欢迎页面上，单击 * 下一步 * 开始安装。
+.. 查看并接受许可协议的条款。
+.. 在选择安装类型页面上，根据各种安装类型配置以下设置：
++
+*** * 选择安装类型 *
++
+选择 * 代理 * 。
+
+*** * 将代理作为服务启动 *
++
+选择此选项可在安装过程完成后立即安装并启动 * 快照代理服务 * 。
+
++
+如果未选择此选项，则会禁用代理端口字段。
+
++
+
+NOTE: 如果不选择此选项，则不会安装此服务，您必须通过从命令提示符运行批处理脚本来手动启动 Snap Creator Agent 。
+
+*** * 输入系统 IP*
++
+选择此选项可提供安装 Snap Creator Server 或 Snap Creator Agent 的系统的 IP 地址。此选项用于在 Snap Creator 安装过程中生成 SSL 证书。
+
+*** * 输入 Java 文件箱路径 *
++
+选择此选项可提供 Java 文件箱路径以查找 keytool 实用程序。keytool 实用程序用于在 Snap Creator 安装过程中生成 SSL 证书。
+
+*** * 代理端口 *
++
+接受默认端口（ 9090 ）或指定端口号。
+
+
+
+
+
++
+image::../media/choose_install_type_page.gif[选择安装类型页面]
+
++
+.. 单击 * 下一步 * 。
+.. 在选择安装位置页面上，输入 Snap Creator 安装路径或接受默认路径（ C ： \Program Files\NetApp\Snap_Creator_Framework ），然后单击 * 下一步 * 。
++
+
+NOTE: 如果您计划使用 IBM Domino 插件，则必须选择 Domino 数据文件夹以外的其他位置。
+
+.. 在选择开始菜单文件夹页面上，自定义 Snap Creator 应显示在 Windows 开始菜单中的文件夹或接受默认文件夹选项，然后单击 * 安装 * 。
+.. 安装完成后，单击 * 下一步 * 。
++
+在 Snap Creator Agent 服务安装期间，如果在安装选项中选择了某个服务，则会显示命令提示符。此过程会尝试启动现有服务；因此，在此步骤中通常会列出失败消息，您应忽略这些消息。
+
+.. 单击 * 完成 * 关闭 Windows 安装程序。
+
+
+
+
+如果在安装过程中未选择 * 将代理启动为服务 * 选项，则必须手动启动 Snap Creator 代理。
+
+* 相关信息 *
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[在 Snap Creator 主机上安装 Java]
+
+xref:task_downloading_the_snap_creator_software.adoc[下载 Snap Creator 软件]
+
+xref:task_starting_the_agent_from_a_command_prompt.adoc[从命令提示符启动代理]

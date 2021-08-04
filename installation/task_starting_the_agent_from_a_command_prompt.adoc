@@ -1,0 +1,34 @@
+---
+permalink: installation/task_starting_the_agent_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, agent, command, prompt 
+summary: 您可以通过运行批处理脚本（ scAgent.bat ）从命令提示符处手动启动 Snap Creator Agent 。 
+---
+= 从命令提示符启动代理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过运行批处理脚本（ scAgent.bat ）从命令提示符处手动启动 Snap Creator Agent 。
+
+通常，只有在安装过程中未选择 * 启动代理作为服务 * 选项时，才应遵循此操作步骤。
+
+您还可以通过 Windows 任务计划程序计划在启动时运行批处理脚本（ scAgent.bat ）。有关使用 Windows 任务计划程序的详细信息，请参见适用于您的 Windows 操作系统的文档。
+
+. 打开命令提示符并输入以下命令：
++
+[listing]
+----
+cd \install_path\scAgentrelease-version\bin\
+scAgent.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scAgent4.1.0\bin\
+scAgent.bat start
+----
+
+
+由于批处理脚本（ scAgent.bat ）会在前台运行 Snap Creator ，因此，只要命令提示符处于打开状态， Snap Creator Agent 就会继续运行。关闭命令提示符将退出 Snap Creator Agent 。要在后台运行 Snap Creator ，应使用 Snap Creator Agent 服务。

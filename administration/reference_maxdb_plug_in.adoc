@@ -1,0 +1,136 @@
+---
+permalink: administration/reference_maxdb_plug_in.html 
+sidebar: sidebar 
+keywords: maxdb, plug-in, automates, backup, restore, operations 
+summary: MaxDB 插件可自动对 MaxDB 数据库执行备份和还原操作。 
+---
+= MaxDB 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MaxDB 插件可自动对 MaxDB 数据库执行备份和还原操作。
+
+
+NOTE: 有关支持或查看兼容性列表的最新信息，请参见互操作性表。
+
+MaxDB 插件提供以下功能：
+
+* 用于备份，还原和克隆 MaxDB 数据库的集中式框架
+* 与数据库集成并提供应用程序一致性
+* 利用 Snapshot 技术创建数据库的时间点副本
+* 无论文件的容量或数量如何，均可在数秒内利用 SnapRestore 恢复先前的 Snapshot 副本，从而实现应用程序一致的数据库
+* 利用 FlexClone 技术基于 Snapshot 副本备份为数据库创建节省空间的快速克隆
+
+
+下表列出了 MaxDB 插件参数，提供了这些参数的设置并对其进行了说明：
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+应用程序名称
+ a| 
+最大数据库数
+ a| 
+指定应用程序名称。
+
+
+
+ a| 
+XUSER_ENABLE
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+启用或禁用对 MaxDB 使用 xuser ，以便数据库用户不需要密码。
+ a| 
+Handle_LOGWRITER
+ a| 
+Y
+
+
+
+| 不包括  a| 
+执行暂停日志写入程序（ N ）或恢复日志写入程序（ Y ）操作。
+ a| 
+DBMCLICMD
+
+
+
+ a| 
+path_to_dbmcli_cmd
+ a| 
+指定 MaxDB dbmcli 命令的路径。如果未设置，则使用搜索路径上的 dbmcli 。
+
+
+NOTE: 如果在 Windows 环境中，则路径需要包含在双引号（ "..." ）中。
+ a| 
+SQLCLICMD
+
+
+
+ a| 
+path_to_sqlcli_cmd
+ a| 
+指定 MaxDB sqlcli 命令的路径。如果未设置，则在搜索路径上使用 sqlcli 。
+ a| 
+MaxDB_update_HIST_LOG
+
+
+
+ a| 
+Y
+| 不包括  a| 
+指示 MaxDB 备份程序是否更新 MaxDB 历史记录日志。
+
+
+
+ a| 
+MaxDB_Databases
+ a| 
+DB_name ： user_name/ 密码
+ a| 
+列出要使用用户名和密码备份的数据库。可以使用逗号分隔列表指定多个数据库和用户名：例如， `dB1 ：用户 1/ 密码， DB2 ：用户 2/密码` 。
+
+
+
+ a| 
+MaxDB_check_snapshot_DIR
+ a| 
+示例： ` + SID1 ：目录（，目录） ...] ；（ SID2 ：目录（，目录） ...]+`
+ a| 
+检查 Snap Creator Snapshot 副本操作是否成功，并确保已创建 Snapshot 副本。仅限此适用场景 NFS 。此目录必须指向包含 .snapshot 目录的位置。
+
+多个目录可以包含在一个逗号分隔列表中。可以将多个数据库指定为分号分隔的列表。
+
+在 MaxDB 7.8 及更高版本中，数据库备份请求在备份历史记录中标记为失败。
+
+
+
+ a| 
+MaxDB_backup_templates
+ a| 
+template_name 示例： `na_snap`
+ a| 
+为每个数据库指定一个备份模板。此模板必须已存在，并且是外部类型的备份模板。
+
+要为 MaxDB 7.8 及更高版本启用 Snapshot 副本集成，您必须具有 MaxDB 后台服务器功能并已配置 MaxDB 备份模板。
+
+
+
+ a| 
+MaxDB_BG_SERVER_PREFIX
+ a| 
+bG_server_prefix 示例： `na_bg`
+ a| 
+指定后台服务器名称的前缀。如果设置了 MaxDB_backup_templates 参数，则还必须设置 MaxDB_BG_SERVER_PREFIXP参数 。如果未设置前缀，则会使用默认值 `na_bg_database` 。
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

@@ -1,0 +1,182 @@
+---
+permalink: administration/reference_parameters_to_set_up_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: parameter, snapshot, copy, snap, creator, server, retention, snapdrive 
+summary: 要为 Snap Creator 服务器设置 Snapshot 副本，需要使用多个配置文件参数。 
+---
+= 用于设置 Snapshot 副本的参数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要为 Snap Creator 服务器设置 Snapshot 副本，需要使用多个配置文件参数。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+ntap_snapshot_ retention_age
+ a| 
+ a| 
+用于定义 Snapshot 副本的保留期限（以天为单位）。如果已配置 Snapshot 副本，则只有当这些副本超过 NTAP_snapshot_ retention 参数中定义的数量且超过保留期限（以天为单位）时，才会删除这些副本。
+
+
+
+ a| 
+SnapDrive
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+用于使用 SnapDrive 而不是 Data ONTAP API 创建 Snapshot 副本。
+
+
+
+ a| 
+SnapDrive_discovery
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+用于使用 SnapDrive 进行存储发现。在 SAN 或 Isan 环境中使用 validate_volumes 参数时需要执行此操作。
+
+
+
+ a| 
+ntap_snapshot_ disable
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+禁止 Snap Creator 创建 Snapshot 副本，以便 Snap Creator 可以处理适用于 SnapManager 的 SnapVault 或 SnapMirror 。要使此设置正常工作， SnapManager Snapshot 副本必须遵循以下命名约定： snapshot_copy_name-policy_recent 。
+
+
+
+ a| 
+ntap_snapshot_ NDOLETE
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+覆盖 NTAP_snapshot_reretties 参数，并防止删除 Snapshot 副本。启用此变量可能会使卷已满。
+
+
+
+ a| 
+ntap_snapshot_delete_cmd
+ a| 
+ a| 
+根据快照保留情况，通过 SnapDrive 而不是 Snap Creator 删除快照。 * 注意： * 此 SnapDrive 命令中用于删除快照的所有卷（挂载驱动器）也应包含在配置文件中。
+
+
+
+ a| 
+ntap_snapshot_delete_by-age_only
+ a| 
+主卷
+| 二级 
+
+
+| 两者 | 不包括  a| 
+允许删除旧的 Snapshot 副本。此参数需要 NTAP_snapshot_retention_age 参数，并根据 Snapshot 副本使用期限而不是 Snapshot 副本数量强制删除。
+
+
+
+ a| 
+ntap_snapshot_dependency_ignore.
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+仅适用于使用 backupDel 操作删除 Snapshot 副本。不允许手动删除具有依赖关系的 Snapshot 副本。
+
+
+
+ a| 
+ntap_snapshot_ create_CMD ##
+ a| 
+ a| 
+创建 Snapshot 副本并刷新文件系统缓冲区； ## 是一个介于 1 到 99 之间的数字。* 注： * 如果启用 SnapDrive 参数，则需要此设置。Data ONTAP API 仍用于执行其他所有操作，但 SnapDrive 选项会创建 Snapshot 副本。
+
+
+
+ a| 
+ntap_ metadata_snapshot_ create_CMD ##
+ a| 
+ a| 
+创建元数据卷 Snapshot 副本并刷新文件系统缓冲区； ## 是一个介于 1 到 99 之间的数字。
+
+
+
+ a| 
+ntap_consistent_ Group_snapshot
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+允许使用一致性组在多个卷之间创建一致的 Snapshot 副本。
+
+
+
+ a| 
+ntap_consistent_ Group_snapshot_retry_count
+ a| 
+ a| 
+指定在发生故障时应重试一致性组 Snapshot 的次数。
+
+
+
+ a| 
+ntap_consistent_ Group_snapshot_retry_wait
+ a| 
+时间（以秒为单位）
+ a| 
+指定每次重试一致性组 Snapshot 之间的等待时间。
+
+
+
+ a| 
+ntap_consistent_ Group_timeout
+ a| 
+（紧急
+| 中等 
+
+
+| RELAXD ）  a| 
+指定存储控制器对 Snapshot 副本进行一致分组的等待时间。
+ a| 
+ntap_consistent_Group_wafl_sync
+
+
+
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+通过在 CG-start 之前通过 WAFL-sync 强制建立一致点（ CP ），可提高一致性组 Snapshot 副本的性能。* 注： * 如果使用 DB2 插件执行一致性组备份，则必须将此参数设置为 "`N` " 。
+ a| 
+ntap_snapshot_restore_auto_detect
+
+
+
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+如果禁用此设置，则在执行单个文件还原时，此设置始终强制使用单个文件 SnapRestore （ SFSR ）。
+ a| 
+ntap_snapshot_cleanup
+
+
+
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+删除在备份失败时创建的任何 Snapshot 副本。
+ a| 
+ntap_use_external_snapshot
+
+
+
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+启用导入非 Snap Creator Snapshot 副本。已匹配最新的 Snapshot 副本。
+ a| 
+ntap_external_snapshot_REGEX
+
+|===

@@ -1,0 +1,29 @@
+---
+permalink: administration/reference_snap_creator_agent_not_responding.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, responding, corrective, action 
+summary: Snap Creator 代理未响应。 
+---
+= Snap Creator 代理无响应
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 代理未响应。
+
+* * 问题描述 *
++
+Snap Creator 代理未响应。
+
+* * 更正操作 *
++
+验证以下内容：
+
++
+** Snap Creator 代理正在运行。
+** 选定端口尚未使用。
+** 允许通过防火墙在代理端口上进行通信。
+
+
+

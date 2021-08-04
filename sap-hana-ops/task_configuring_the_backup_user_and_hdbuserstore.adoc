@@ -1,0 +1,49 @@
+---
+permalink: sap-hana-ops/task_configuring_the_backup_user_and_hdbuserstore.html 
+sidebar: sidebar 
+keywords: configuring, configure, backup, user, hdbususerstore 
+summary: 您应在 HANA 数据库中配置一个专用数据库用户，以便使用 Snap Creator 运行备份操作。第二步，您应该为此备份用户配置 SAP HANA 用户存储密钥。此用户存储密钥用于配置 Snap Creator SAP HANA 插件。 
+---
+= 配置备份用户和 hdbuserstore
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应在 HANA 数据库中配置一个专用数据库用户，以便使用 Snap Creator 运行备份操作。第二步，您应该为此备份用户配置 SAP HANA 用户存储密钥。此用户存储密钥用于配置 Snap Creator SAP HANA 插件。
+
+备份用户必须具有以下权限：
+
+* 备份管理员
+* 目录读取
+
+
+image::../media/sap_hana_studio_to_create_backup_user.gif[以下 SAP HANA Studio 屏幕截图显示了可在何处创建备份用户。]
+
+. 在安装了 Snap Creator 的主机管理主机上，系统会为 SAP HANA 数据库中的所有数据库主机配置用户存储密钥。用户存储密钥配置有操作系统 root 用户： hdbuserstore set keyhost 3[ 实例 ]15 用户密码
+. 为所有四个数据库节点配置一个密钥。
++
+[listing]
+----
+mgmtsrv01:/usr/sap/hdbclient32 # ./hdbuserstore set SCADMIN08 cishanar08:34215 SCADMIN Password
+mgmtsrv01:/usr/sap/hdbclient32 # ./hdbuserstore set SCADMIN09 cishanar09:34215 SCADMIN Password
+mgmtsrv01:/usr/sap/hdbclient32 # ./hdbuserstore set SCADMIN10 cishanar10:34215 SCADMIN password
+mgmtsrv01:/usr/sap/hdbclient32 # ./hdbuserstore set SCADMIN11 cishanar11:34215 SCADMIN Password
+mgmtsrv01:/usr/sap/hdbclient32 # ./hdbuserstore LIST
+DATA FILE       : /root/.hdb/mgmtsrv01/SSFS_HDB.DAT
+
+KEY SCADMIN08
+  ENV : cishanar08:34215
+  USER: SCADMIN
+KEY SCADMIN09
+  ENV : cishanar09:34215
+  USER: SCADMIN
+KEY SCADMIN10
+  ENV : cishanar10:34215
+  USER: SCADMIN
+KEY SCADMIN11
+  ENV : cishanar11:34215
+  USER: SCADMIN
+mgmtsrv01:/usr/sap/hdbclient32
+----
+

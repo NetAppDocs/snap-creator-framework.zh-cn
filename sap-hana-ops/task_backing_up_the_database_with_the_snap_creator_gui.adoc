@@ -1,0 +1,29 @@
+---
+permalink: sap-hana-ops/task_backing_up_the_database_with_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: backing, up, database, snap, creator, gui, user, interface, ui 
+summary: 您可以使用 Snap Creator GUI 备份数据库。 
+---
+= 使用 Snap Creator GUI 备份数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 备份数据库。
+
+. 选择 * HANA 数据库备份配置 * ，然后选择 * 操作 * > * 备份 * 。
++
+image::../media/sap_hana_db_backup.gif[此图通过周围的文本进行了说明。]
+
+. 选择备份策略并单击 * 确定 * 。
++
+image::../media/sap_hana_database_backup_scfw_gui.gif[此图通过周围的文本进行了说明。]
+
++
+备份将开始。Snap Creator 会触发 SnapVault update ，` ， Snap Creator 会等待数据复制到二级存储。此等待时间已在配置期间进行配置，可在 SnapVault 设置选项卡中进行调整。对于同一存储控制器上的每个卷， Snap Creator 会同时触发 SnapVault 更新，但对于每个存储控制器，此更新会按顺序触发。
+
++
+image::../media/sap_hana_database_backup2_scfw_gui.gif[此图通过周围的文本进行了说明。]
+
+

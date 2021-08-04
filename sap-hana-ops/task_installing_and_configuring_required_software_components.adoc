@@ -1,0 +1,60 @@
+---
+permalink: sap-hana-ops/task_installing_and_configuring_required_software_components.html 
+sidebar: sidebar 
+keywords: installing, install, configuring, configure, required, software 
+summary: 对于使用 Snap Creator Framework 和 SAP HANA 插件的 SAP HANA 备份和还原解决方案，您需要安装 Snap Creator 软件组件和 SAP HANA hdbsql. 客户端软件。 
+---
+= 安装和配置所需的软件组件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于使用 Snap Creator Framework 和 SAP HANA 插件的 SAP HANA 备份和还原解决方案，您需要安装 Snap Creator 软件组件和 SAP HANA hdbsql. 客户端软件。
+
+您无需单独安装此插件。它会随代理一起安装。
+
+. 在与安装 Snap Creator 的主机共享网络连接的主机上安装 Snap Creator 服务器。
+. 在与 Snap Creator 服务器主机共享网络连接的主机上安装 Snap Creator 代理。
++
+** 在单个 SAP HANA 节点环境中，在数据库主机上安装代理。或者，也可以将代理安装在与数据库主机和 Snap Creator 服务器主机具有网络连接的另一台主机上。
+** 在多节点 SAP HANA 环境中，不应在数据库主机上安装代理；需要将代理安装在与数据库主机和 Snap Creator 服务器主机具有网络连接的单独主机上。
+
+
+. 在安装 Snap Creator 代理的主机上安装 SAP HANA hdbsql. 客户端软件。
++
+配置通过此主机管理的 SAP HANA 节点的用户存储密钥。
+
++
+[listing]
+----
+mgmtsrv01:/sapcd/HANA_SP5/DATA_UNITS/HDB_CLIENT_LINUXINTEL # ./hdbinst
+
+SAP HANA Database Client installation kit detected.
+
+SAP HANA Database Installation Manager - Client Installation 1.00.46.371989
+***************************************************************************
+
+Enter Installation Path [/usr/sap/hdbclient32]:
+Checking installation...
+Installing and configuring required software components | 13
+Preparing package "Product Manifest"...
+Preparing package "SQLDBC"...
+Preparing package "ODBC"...
+Preparing package "JDBC"...
+Preparing package "Client Installer"...
+Installing SAP HANA Database Client to /usr/sap/hdbclient32...
+Installing package 'Product Manifest' ...
+Installing package 'SQLDBC' ...
+Installing package 'ODBC' ...
+Installing package 'JDBC' ...
+Installing package 'Client Installer' ...
+Installation done
+Log file written to '/var/tmp/hdb_client_2013-07-05_11.38.17/hdbinst_client.log'
+mgmtsrv01:/sapcd/HANA_SP5/DATA_UNITS/HDB_CLIENT_LINUXINTEL #
+----
+
+
+* 相关信息 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854419["《 Snap Creator Framework 安装指南》"]

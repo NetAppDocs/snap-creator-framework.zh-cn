@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_creating_retention_policies.html 
+sidebar: sidebar 
+keywords: creating, retention, policies, local, configuration 
+summary: 如果您计划使用策略对象而不是本地保留策略（此策略包含在配置文件中），则可以创建保留策略。 
+---
+= 正在创建保留策略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您计划使用策略对象而不是本地保留策略（此策略包含在配置文件中），则可以创建保留策略。
+
+在创建保留策略时，您可以创建备份类型和策略计划。

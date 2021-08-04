@@ -1,0 +1,17 @@
+---
+permalink: administration/concept_creating_clones.html 
+sidebar: sidebar 
+keywords: creating, clones, lunes, volumes, cloning, snapshot 
+summary: 克隆卷或 LUN 的方法有两种：从新备份和从现有备份。 
+---
+= 创建克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+克隆卷或 LUN 的方法有两种：从新备份和从现有备份。
+
+* 从新备份创建克隆包括创建 Snapshot ，克隆新的 Snapshot 副本，然后挂载克隆的副本。
+* 从现有备份创建克隆包括克隆现有 Snapshot 副本，然后挂载克隆的副本。
+

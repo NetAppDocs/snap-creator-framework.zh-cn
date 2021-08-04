@@ -1,0 +1,94 @@
+---
+permalink: administration/reference_snap_creator_agent_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, error, message, aft, sc_agentconfiguration, parameter, remote, port 
+summary: 下表列出了 Snap Creator 代理错误消息。 
+---
+= Snap Creator 代理错误消息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出了 Snap Creator 代理错误消息。
+
+|===
+| 错误代码 | 说明 / 解决方法 
+
+
+ a| 
+Agt-00001
+ a| 
+Snap Creator 代理或其他某个进程正在指定的端口上运行。请尝试使用其他端口。
+
+
+
+ a| 
+Agt-00003
+ a| 
+提供的参数不正确，无法启动 Snap Creator 代理。检查所需的参数。
+
+
+
+ a| 
+Agt-00004
+ a| 
+使用远程代理时，必须定义 SC_AGENTconfiguration 参数。
+
+
+
+ a| 
+Agt-00005
+ a| 
+不允许执行回退暂停操作，并且一个操作已在运行。等待或运行取消静默。
+
+
+
+ a| 
+Agt-00006
+ a| 
+watchdog 进程无法生成。系统很可能已达到最大进程数。在配置中禁用 watchdog 或检查操作系统设置。
+
+
+
+ a| 
+Agt-00008
+ a| 
+暂停和取消静默操作未完成，备份仅崩溃状态一致。检查日志。如果暂停操作用时过长，并且您正在使用 watchdog ，则可能会发生这种情况。按照配置中的定义， watchdog 进程会在 x 秒后执行强制退出静默。
+
+
+
+ a| 
+Agt-00009
+ a| 
+必须允许在代理端的 agent.conf 中使用 PRE 和 POST 命令。更新 agent.conf 并允许执行必要的命令。
+
+
+
+ a| 
+Agt-00010
+ a| 
+代理无法读取其配置文件。检查 agent.conf 文件的权限。
+
+
+
+ a| 
+Agt-00011
+ a| 
+已向代理发送命令，但不允许这样做。更新 agent.conf 以允许执行命令。
+
+
+
+ a| 
+Agt-00012
+ a| 
+加载插件时发生此错误。检查插件和 app_name 设置。
+
+
+
+ a| 
+Agt-00013
+ a| 
+在插件中运行 setenv 方法时发生此错误。检查此插件并确保语法正确。
+
+|===

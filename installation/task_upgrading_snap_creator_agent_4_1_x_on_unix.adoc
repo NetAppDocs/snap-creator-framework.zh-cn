@@ -1,0 +1,56 @@
+---
+permalink: installation/task_upgrading_snap_creator_agent_4_1_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 4.1.x, unix, unix-based 
+summary: 您可以在基于 UNIX 的系统上从 Snap Creator Agent 4.1.x 进行升级。 
+---
+= 在基于 UNIX 的系统上升级 Snap Creator Agent 4.1.x
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在基于 UNIX 的系统上从 Snap Creator Agent 4.1.x 进行升级。
+
+* 在备份 Snap Creator Agent 目录之前，您已停止 Snap Creator Agent ，以确保备份的数据完整。
++
+例如，输入以下命令：
+
++
+[listing]
+----
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+* 您已在 Snap Creator Agent 目录（ /install_path/scAgent4.1.x ）中备份以下目录以及所有关联的子目录和文件：
++
+** Snap Creator Agent 属性（ ./etc ），其中包含 allowed_commands.config 和 agent.properties 文件
+** 日志（ ./logs ）
+** 插件（ ./plugins ） * 注意： * 请勿删除您创建的 Snap Creator 4.1.x 备份副本。
+
+
+
+
+以下步骤中提供的路径是指默认安装路径。如果未使用默认值，则路径信息可能与安装路径不同。
+
+. 如果尚未停止 Snap Creator Agent ，请停止此操作。
++
+有关信息，请参阅本主题前面提供的详细信息。
+
+. 安装最新的 Snap Creator 代理，但不要启动 Snap Creator 代理。
++
+有关详细信息，请参见有关在 UNIX 上安装 Snap Creator Agent 的信息。
+
+. 将备份的 Snap Creator 4.1.x 日志目录复制到 /install_path/scAgent4.1.x 日志中的最新位置。
+. 将备份的 Snap Creator 4.1.x 插件目录复制到 /install_path/scAgent4.1.x plugins 的最新位置。
+. 将备份的 Snap Creator 4.1.x 代理属性目录复制到 /install_path/scAgent4.1.x 等的最新位置。
+. 输入以下命令启动 Snap Creator Agent ：
++
+[listing]
+----
+/install_path/scAgent4.1.x/bin/scAgent start
+----
++
+
+NOTE: 如果对 allowed_commands.config 或 agent.properties 文件进行了任何更改，则在进行更改时，如果 Snap Creator 代理正在运行，则需要重新启动它。
+
+

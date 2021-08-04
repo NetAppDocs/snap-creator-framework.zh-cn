@@ -1,0 +1,53 @@
+---
+permalink: sap-hana-ops/task_configuring_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: configuring, configure snapvault, relationships, snaprestore 
+summary: 配置 SnapVault 关系时，主存储控制器必须安装有效的 SnapRestore 和 SnapVault 许可证。二级存储必须安装有效的 SnapVault 许可证。 
+---
+= 配置 SnapVault 关系
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+配置 SnapVault 关系时，主存储控制器必须安装有效的 SnapRestore 和 SnapVault 许可证。二级存储必须安装有效的 SnapVault 许可证。
+
+. 在主存储控制器和二级存储控制器上启用 SnapVault 和 NDMP 。
++
+[listing]
+----
+hana1a> options snapvault.enable on
+hana1a> ndmp on
+hana1a>
+hana1b> options snapvault.enable on
+hana1b> ndmpd on
+hana1b
+hana2b> options snapvault.enable on
+hana2b> ndmpd on
+hana2b>
+----
+. 在所有主存储控制器上，配置对二级存储控制器的访问。
++
+[listing]
+----
+hana1a> options snapvault.access host=hana2b
+hana1a>
+hana1b> options snapvault.access host=hana2b
+hana1b>
+----
++
+
+NOTE: 建议使用专用网络传输复制流量。在这种情况下，需要在二级存储控制器上配置此接口的主机名。主机名可以是 hana2b-rep ，而不是 hana2b 。
+
+. 在二级存储控制器上，配置所有主存储控制器的访问权限。
++
+[listing]
+----
+hana2b> options snapvault.access host=hana1a,hana1b
+hana2b>
+----
++
+
+NOTE: 建议使用专用网络传输复制流量。在这种情况下，需要在主存储控制器上配置此接口的主机名。主机名可以是 hana1a-rep 和 hana1b-rep ，而不是 hana1b 和 hana1a 。
+
+

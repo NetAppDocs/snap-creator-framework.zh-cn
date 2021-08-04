@@ -1,0 +1,93 @@
+---
+permalink: administration/reference_parameters_to_set_up_snapmirror.html 
+sidebar: sidebar 
+keywords: parameter, snapmirror, snap, creator, server, update, cascading, volume 
+summary: 要为 Snap Creator 服务器设置 SnapMirror ，需要使用多个参数。 
+---
+= 用于设置 SnapMirror 的参数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要为 Snap Creator 服务器设置 SnapMirror ，需要使用多个参数。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+ntap_snapmirror_update
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+用于打开和关闭 SnapMirror 更新功能。
+
+
+
+ a| 
+ntap_snapmirror_caslated_update
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+用于打开和关闭级联 SnapMirror 更新功能。这是使用 SnapVault 目标卷进行的 SnapMirror 更新。
+
+
+NOTE: 集群模式 Data ONTAP 不支持此功能。
+
+
+
+ a| 
+snapmirror_volumes
+ a| 
+ a| 
+指定要执行 SnapMirror 更新的源存储系统和卷的列表（例如， controller1 ： vol1 ， vol2 ， vol3 ； controller2 ： vol1 ； controller3 ： vol2 ， vol3 ）。* 注： * 对于 VMware 插件（ vSphere 和 vCloud ），此值应设置为 auto ： detect 。
+
+
+
+ a| 
+snapmirror_lated_volumes
+ a| 
+ a| 
+指定在 SnapVault 更新后要执行 SnapMirror 更新的 SnapVault 目标存储系统和卷的列表（例如， sec-controller1 ： vol1-sec ， vol2-sec ）。如果源卷具有多个目标，则级联复制不支持此操作。
+
+
+NOTE: 集群模式 Data ONTAP 不支持此功能。
+
+
+
+ a| 
+ntap_snapmirror_wait
+ a| 
+ a| 
+指定在 SnapMirror 目标上创建克隆之前完成 SnapMirror 更新过程的等待时间（以分钟为单位）。如果 NTAP_clone_secondary 设置为 Y ，则 Snap Creator 将等待 SnapMirror 更新完成，然后再继续操作。
+
+
+NOTE: 此选项只能用于 NTAP_clone_secondary 和 cloneVol 操作（当前仅支持卷克隆）。
+
+
+
+ a| 
+ntap_snapmirror_use_snapshot
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+如果启用此参数， SnapMirror 更新将使用新创建的 Snapshot 副本，从而在 SnapMirror 目标上创建 Snapshot 副本。* 注： * 对于 NTAP_clone_secondary ，需要使用此副本，因为要在 SnapMirror 目标上创建克隆，需要 Snapshot 副本。
+
+
+
+ a| 
+ntap_snapmirror_MAX_transfer
+ a| 
+ a| 
+指定允许 SnapMirror 使用的最大带宽（以 KBps 为单位）。如果未设置此参数， SnapMirror 将使用最大可用带宽。
+
+
+
+ a| 
+snapmirror_qtree_include
+ a| 
+ a| 
+指定要包括在 SnapMirror 更新中的主存储控制器和 qtree 路径的列表（例如， controller1 ： /vol/qtree1 ， /vol/volume/qtree2 ； controller2 ： /vol/volume/qtree1 ）。如果未使用此选项，则会备份卷下的所有 qtree 。通过使用此选项指定列表，将仅备份列出的 qtree ；其余 qtree 将被忽略。
+
+|===

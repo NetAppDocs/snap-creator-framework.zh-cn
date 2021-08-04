@@ -1,0 +1,30 @@
+---
+permalink: sap-hana-ops/task_configuring_log_backups.html 
+sidebar: sidebar 
+keywords: configuring, log, backups 
+summary: 日志备份应存储在与主存储不同的存储系统上。用于数据备份的存储系统也可用于日志备份。 
+---
+= 配置日志备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+日志备份应存储在与主存储不同的存储系统上。用于数据备份的存储系统也可用于日志备份。
+
+在二级存储上，需要配置一个卷来保存日志备份。确保已关闭此卷的自动 Snapshot 副本。
+
+. 通过运行 mount 命令或编辑文件系统表（ fstab ）文件，在每个数据库节点上挂载卷。
++
+[listing]
+----
+hana2b:/vol/backup_log_ANA /mnt/backup_log_ANA nfs
+rw,bg,vers=3,hard,timeo=600,rsize=65536,wsize=65536,actimeo=0,noatime   0  0
+----
++
+在 SAP HANA Studio 中，日志备份目标的配置如下图所示。
+
++
+image::../media/sap_hana_studio_log_backup_destination_gui.gif[此图通过周围的文本进行了说明。]
+
+

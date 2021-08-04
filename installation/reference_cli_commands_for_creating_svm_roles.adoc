@@ -1,0 +1,521 @@
+---
+permalink: installation/reference_cli_commands_for_creating_svm_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, svm, roles, role create 
+summary: 下表列出了为新 SVM 用户创建角色所需的命令。 
+---
+= 用于创建 SVM 角色的 CLI 命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出了为新 SVM 用户创建角色所需的命令。
+
+|===
+| 命令目录名称 | 要运行的命令 
+
+
+ a| 
+添加用户
+ a| 
+role create -role vserrbacrole_new -cmddirname "adduser" -vserver Snapcreator
+
+
+
+ a| 
+event generate-autosupport-log
+ a| 
+role create -role vserrbacrole_new -cmddirname "event generate-autosupport-log" -vserver Snapcreator
+
+
+
+ a| 
+LUN 注释
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun comment" -vserver Snapcreator
+
+
+
+ a| 
+创建 LUN
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun create" -vserver Snapcreator
+
+
+
+ a| 
+LUN 删除
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun delete" -vserver Snapcreator
+
+
+
+ a| 
+LUN 几何结构
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun geometer" -vserver Snapcreator
+
+
+
+ a| 
+lun igroup add
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun igroup add" -vserver Snapcreator
+
+
+
+ a| 
+lun igroup create
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun igroup create" -vserver Snapcreator
+
+
+
+ a| 
+已设置 LUN igroup
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun igroup set" -vserver Snapcreator
+
+
+
+ a| 
+lun igroup show
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun igroup show" -vserver Snapcreator
+
+
+
+ a| 
+LUN 映射
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun map" -vserver Snapcreator
+
+
+
+ a| 
+lun mapping show
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun mapping show" -vserver Snapcreator
+
+
+
+ a| 
+修改 LUN
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun modify" -vserver Snapcreator
+
+
+
+ a| 
+LUN 移动
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun move" -vserver Snapcreator
+
+
+
+ a| 
+LUN 脱机
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun offline" -vserver Snapcreator
+
+
+
+ a| 
+LUN 联机
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun online" -vserver Snapcreator
+
+
+
+ a| 
+调整 LUN 大小
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun resize" -vserver Snapcreator
+
+
+
+ a| 
+lun show
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun show" -vserver Snapcreator
+
+
+
+ a| 
+LUN 取消映射
+ a| 
+role create -role vserrbacrole_new -cmddirname "lun unmap" -vserver Snapcreator
+
+
+
+ a| 
+网络
+ a| 
+role create -role vserrbacrole_new -cmddirname "network" -vserver SnapCreator
+
+
+
+ a| 
+网络连接
+ a| 
+role create -role vserrbacrole_new -cmddirname "network connections" -vserver SnapCreator
+
+
+
+ a| 
+网络连接处于活动状态
+ a| 
+role create -role vserrbacrole_new -cmddirname "network connections active" -vserver SnapCreator
+
+
+
+ a| 
+network connections listening show
+ a| 
+role create -role vserrbacrole_new -cmddirname "network connections listening show" -vserver SnapCreator
+
+
+
+ a| 
+网络接口
+ a| 
+role create -role vserrbacrole_new -cmddirname "network interface" -vserver SnapCreator
+
+
+
+ a| 
+网络路由组
+ a| 
+role create -role vserrbacrole_new -cmddirname "network routing-groups" -vserver SnapCreator
+
+
+
+ a| 
+restore-file
+ a| 
+role create -role vserrbacrole_new -cmddirname "restore-file" -vserver Snapcreator
+
+
+
+ a| 
+SnapMirror
+ a| 
+role create -role vserrbacrole_new -cmddirname "snapmirror" -vserver SnapCreator
+
+
+
+ a| 
+version
+ a| 
+role create -role vserrbacrole_new -cmddirname "version" -vserver Snapcreator
+
+
+
+ a| 
+volume
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume"
+
+
+
+ a| 
+卷自动调整大小
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume autosize" -vserver Snapcreator
+
+
+
+ a| 
+卷克隆
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume clone" -vserver Snapcreator
+
+
+
+ a| 
+创建卷克隆
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume clone create" -vserver Snapcreator
+
+
+
+ a| 
+卷创建
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume create" -vserver Snapcreator
+
+
+
+ a| 
+卷销毁
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume destroy" -vserver Snapcreator
+
+
+
+ a| 
+卷效率关闭
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume efficiency off" -vserver Snapcreator
+
+
+
+ a| 
+卷效率打开
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume efficiency on" -vserver Snapcreator
+
+
+
+ a| 
+卷效率启动
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume efficiency start" -vserver Snapcreator
+
+
+
+ a| 
+volume efficiency show
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume efficiency show" -vserver Snapcreator
+
+
+
+ a| 
+卷文件
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume file" -vserver Snapcreator
+
+
+
+ a| 
+卷文件克隆
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume file clone" -vserver Snapcreator
+
+
+
+ a| 
+创建卷文件克隆
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume file clone create" -vserver Snapcreator
+
+
+
+ a| 
+卷修改
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume modify" -vserver Snapcreator
+
+
+
+ a| 
+卷挂载
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume mount" -vserver Snapcreator
+
+
+
+ a| 
+卷脱机
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume offline" -vserver Snapcreator
+
+
+
+ a| 
+volume show
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume show" -vserver Snapcreator
+
+
+
+ a| 
+卷大小
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume size" -vserver Snapcreator
+
+
+
+ a| 
+创建卷快照
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume snapshot create" -vserver Snapcreator
+
+
+
+ a| 
+卷快照删除
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume snapshot delete" -vserver Snapcreator
+
+
+
+ a| 
+卷快照还原
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume snapshot restore" -vserver Snapcreator
+
+
+
+ a| 
+卷卸载
+ a| 
+role create -role vserrbacrole_new -cmddirname "volume unmount " -vserver Snapcreator
+
+
+
+ a| 
+vserver export-policy rule show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver export-policy rule show" -vserver Snapcreator
+
+
+
+ a| 
+vserver export-policy show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver export-policy show" -vserver Snapcreator
+
+
+
+ a| 
+Vserver FCP
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver fcp" -vserver Snapcreator
+
+
+
+ a| 
+vserver fcp initiator show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver fcp initiator show" -vserver snapcreator
+
+
+
+ a| 
+vserver fcp show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver fcp show" -vserver snapcreator
+
+
+
+ a| 
+SVM FCP 状态
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver fcp status" -vserver snapcreator
+
+
+
+ a| 
+SVM iSCSI
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi" -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi connection show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi connection show" -vserver Snapcreator
+
+
+
+ a| 
+添加 SVM iSCSI 接口访问列表
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi interface accesslist add" -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi interface accesslist show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi interface accesslist show" -vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI iSNS 查询
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi isns query" -vserver Snapcreator
+
+
+
+ a| 
+SVM iSCSI 节点名称
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi nodename -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi session show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi session show" -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi show" -vserver Snapcreator
+
+
+
+ a| 
+SVM iSCSI 状态
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver iscsi status" -vserver Snapcreator
+
+
+
+ a| 
+Vserver NFS
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver nfs" -vserver Snapcreator
+
+
+
+ a| 
+Vserver NFS 状态
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver nfs status" -vserver Snapcreator
+
+
+
+ a| 
+vserver services dns hosts show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver services name-service dns hosts show" -vserver SnapCreator
+
+
+
+ a| 
+vserver services unix-group create
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver services name-service unix-group create" -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-group show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver services name-service unix-group show" -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-user create
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver services name-service unix-user create" -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-user show
+ a| 
+role create -role vserrbacrole_new -cmddirname "vserver services name-service unix-user show" -vserver Snapcreator
+
+|===

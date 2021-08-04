@@ -1,0 +1,13 @@
+---
+permalink: administration/concept_managing_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: start, verify, snap, creator, agent, port, managing, unix, windows 
+summary: 您可以在 Windows 和 UNIX 系统上启动，验证和停止 Snap Creator 代理，更改代理端口以及管理代理安全性。 
+---
+= 管理 Snap Creator 代理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Windows 和 UNIX 系统上启动，验证和停止 Snap Creator 代理，更改代理端口以及管理代理安全性。

@@ -1,0 +1,19 @@
+---
+permalink: installation/concept_upgrading_from_releases_earlier_than_snap_creator_3_6.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, releases, earlier, before, snap, creator, 3.6 
+summary: 如果要从 Snap Creator 3.6 之前的版本升级，则必须先一次升级到一个版本的 Snap Creator 3.6 。 
+---
+= 从 Snap Creator 3.6 之前的版本升级
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要从 Snap Creator 3.6 之前的版本升级，则必须先一次升级到一个版本的 Snap Creator 3.6 。
+
+例如，要从 Snap Creator 3.5.x 升级，必须先从 3.5.x 升级到 3.6 。运行 Snap Creator 3.6 后，您可以完成到最新版本的升级。在此升级过程中，您可以在升级 Snap Creator 服务器的同时安装 Snap Creator 代理。
+
+* 相关信息 *
+
+xref:task_upgrading_the_snap_creator_server_3_6_x_on_windows.adoc[在 Windows 上升级 Snap Creator Server 3.6.x]

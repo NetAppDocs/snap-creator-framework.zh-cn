@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_performing_restore_operations.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, snapdrive, windows 
+summary: 您可以使用 Snap Creator GUI 执行卷还原，单个文件还原和应用程序定义的还原操作。 
+---
+= 执行还原操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 执行卷还原，单个文件还原和应用程序定义的还原操作。
+
+如果使用 SnapDrive for Windows ，则必须使用 SnapDrive 执行还原操作，此操作应在 Snap Creator 之外执行。

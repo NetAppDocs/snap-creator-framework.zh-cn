@@ -1,0 +1,142 @@
+---
+permalink: sap-hana-ops/reference_sap_hana_plug_in_parameters.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, parameters 
+summary: SAP HANA 插件参数 
+---
+= SAP HANA 插件参数
+:icons: font
+:imagesdir: ../media/
+
+
+下表列出了 SAP HANA 插件参数，提供了参数设置并对参数进行了说明。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+HANA SID
+ a| 
+示例： ABC
+ a| 
+HANA 数据库 SID 。
+
+
+
+ a| 
+HANA 节点
+ a| 
+示例： node1 ， node2 ， node3
+ a| 
+可在其中执行 hdbsql. 语句的 HANA 节点列表，以逗号分隔。
+
+
+
+ a| 
+ha_user_name
+ a| 
+示例： backupUser
+ a| 
+HANA 数据库用户名。此用户所需的最小权限为备份管理员权限。
+
+
+
+ a| 
+hana 密码
+ a| 
+示例： hfasfh87r83r
+ a| 
+HANA 数据库密码。
+
+
+
+ a| 
+HANA 实例
+ a| 
+示例： 42
+ a| 
+HANA 节点实例编号。
+
+
+
+ a| 
+Hana HDBSQL_CMD
+ a| 
+示例： /usr/sa p/hdbclient/ hdbsql
+ a| 
+HANA hdbsqll 命令的路径。如果未设置此参数，则使用搜索路径上的 hdbsql.默认值为 hdbsql.
+
+
+
+ a| 
+HANA OSDS_USER
+ a| 
+示例：用户 1
+ a| 
+执行 hdbsql（ 通常为 sidadm ）的操作系统用户必须在搜索路径中具有 hdbsql二 进制文件并具有执行该二进制文件的权限。
+
+
+
+ a| 
+ha_USERSTORE_keys
+ a| 
+示例： node1 ： key1 ， node 2 ： key2 ， node3 ： ke Y3
+ a| 
+可用于执行 hdbsql. 语句的 HANA 用户存储密钥和节点对的逗号分隔列表。
+
+
+
+ a| 
+ha_file_backup_enable
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+确定 Snap Creator 是否应为 SAP HANA 插件启用基于文件的备份。如果要执行 SAP HANA 基于文件的备份操作，此设置非常有用。
+
+
+
+ a| 
+ha_file_backup_path
+ a| 
+示例： /ha/data/scn/mnt00001
+ a| 
+（可选）可存储数据库文件备份的目录路径。如果未设置此参数，请使用 default 。
+
+
+
+ a| 
+ha_file_backup_prefix
+ a| 
+示例： SnapCreator_<Hana file_backup_prefix>_<current_timestamp>
+ a| 
+（可选）为备份文件名称添加前缀。默认值： SnapCreator__<current_timestamp>
+
+
+
+ a| 
+ha_integrity_check_enable
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+确定 Snap Creator 是否应为 SAP HANA 插件启用完整性检查。如果要执行 SAP HANA 完整性检查操作，通常会使用此设置。
+
+
+
+ a| 
+hana ，温度，文件，备份路径
+ a| 
+示例： /temp
+ a| 
+（可选）可存储完整性检查临时数据库文件的路径。如果不确定，请使用默认值。
+
+
+
+ a| 
+han_log_cleanup_enable
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+启用日志目录清理。
+
+|===

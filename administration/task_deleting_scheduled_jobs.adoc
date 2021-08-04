@@ -1,0 +1,21 @@
+---
+permalink: administration/task_deleting_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: delete, schedule, job, management 
+summary: 您可以删除已计划的作业。 
+---
+= 正在删除已计划的作业
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除已计划的作业。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 计划 * 。
+. 从计划选项卡中，从已计划作业列表中选择一个作业，然后单击 * 删除 * 。
+. 单击确认窗口中的 * 是 * 。
++
+已计划作业将从列表中删除。
+
+

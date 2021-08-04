@@ -1,0 +1,668 @@
+---
+permalink: administration/reference_snap_creator_framework_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, error, message, troubleshoot, issue, scf, serial, number, plug-in, snapcreator, application 
+summary: Snap Creator Framework 错误消息可帮助您对发生的任何问题进行故障排除。 
+---
+= Snap Creator Framework 错误消息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework 错误消息可帮助您对发生的任何问题进行故障排除。
+
+|===
+| 错误代码 | 错误消息 | 说明 / 解决方法 
+
+
+ a| 
+SCP-00001
+ a| 
+无法获取序列号 "%s"
+ a| 
+未运行 Snap Creator 设置命令。运行 snapcreator -profile setup 命令。确保序列号为空或设置为数字值。
+
+
+
+ a| 
+SCC-00002
+ a| 
+插件 "%s" 的备份处理失败，出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序备份失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCC-00003
+ a| 
+插件 "%s" 的备份清理处理失败，并出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序备份清理失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCC-00004
+ a| 
+对插件 "%s" 的克隆处理失败，并出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序克隆失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCC-00005
+ a| 
+插件 "%s" 的克隆清理处理失败，并出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序克隆清理失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCC-00006
+ a| 
+对 "%s" 进行克隆前处理失败，并出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序克隆前操作失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCC-00007
+ a| 
+克隆后处理插件 "%s" 失败，并显示错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序克隆后操作失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCC-00008
+ a| 
+在 "%s" 上将 LUN igroup 映射从 %s 克隆到 igroup "%s" 失败，正在退出！
+ a| 
+LUN 克隆的 igroup 映射失败。检查错误日志。您可能遇到 NetApp 易管理性 SDK 解决方案错误。这些日志可能会显示此问题的发生原因。
+
+
+
+ a| 
+SCC-00009
+ a| 
+数据集 "%s" 的 NetApp 管理控制台备份列表结束失败，退出代码为 "%s" ，正在退出！
+ a| 
+Snap Creator 已在 NetApp 管理控制台中启动备份删除操作，但无法列出 Snapshot 副本。确保 Snap Creator 正在注册备份，并检查 NTAP_PM_update 和 NTAP_dFM_DATA_set 参数的配置。
+
+
+
+ a| 
+SCP-00010
+ a| 
+NetApp 管理控制台备份列表未定义，数据集 "%s" 不存在备份，正在退出！
+ a| 
+Snap Creator 在 NetApp 管理控制台中启动了备份删除操作，但 Snapshot 副本存在。确保 Snap Creator 正在注册备份，并检查 NTAP_PM_update 和 NTAP_dFM_DATA_set 参数的配置。
+
+
+
+ a| 
+SCP-00011
+ a| 
+为数据集 "%s" 删除 NetApp 管理控制台备份版本 ID 为 "%s" 的时间戳 "%s" 失败，并显示退出代码为 "%s" ，正在退出！
+ a| 
+确保 Snap Creator 正在注册备份，并检查 NTAP_PM_update 和 NTAP_dFM_DATA_set 参数的配置。
+
+
+
+ a| 
+SCP-00012
+ a| 
+检索数据集 "%s" 的 NetApp 管理控制台数据集状态失败，退出代码为 "%s" ，正在退出！
+ a| 
+确保数据集存在且状态符合要求。此外，请确保数据集是由 Snap Creator 创建的。不是由 Snap Creator 创建的数据集不是应用程序数据集；这些数据集不起作用。
+
+
+
+ a| 
+SCP-00013
+ a| 
+无法使用数据集 "%s" 退出代码 "%s" 注册 Snapshot 副本
+ a| 
+检查 NTAP_PM_update 和 NTAP_DFM_DATA_SET 参数的配置。
+
+
+
+ a| 
+SCP-00014
+ a| 
+为 "%s" （ "%s" ）启动 NetApp 管理控制台备份失败，正在退出！
+ a| 
+检查 NTAP_PM_update 和 NTAP_DFM_DATA_SET 参数的配置。
+
+
+
+ a| 
+SCP-00015
+ a| 
+已完成作业 ID 为 "%s" 的 NetApp 管理控制台备份，但出现错误 - "%s"
+| [%s] 
+
+
+| [%s] | [%s]  a| 
+Snap Creator 已启动 NetApp 管理控制台备份，但获取备份操作进度失败。检查 NTAP_PM_update 和 NTAP_DFM_DATA_SET 参数的配置。
+
+
+
+ a| 
+SCP-00016
+ a| 
+%s 的 SnapMirror 状态失败，正在退出！
+ a| 
+Snap Creator 找不到给定控制器的任何 SnapMirror 关系。登录到存储控制器并运行 snapmirror status 命令，以确保此关系存在。
+
+
+
+ a| 
+SCP-00017
+ a| 
+不存在针对以下项的 SnapMirror 关系： "%s" ，正在退出！
+ a| 
+Snap Creator 找不到给定控制器卷的 SnapMirror 关系。登录到存储控制器，运行 snapmirror status 命令，并确保给定控制器名称的关系存在。如果使用其他名称，则必须配置 secondary _interFACE 参数以通知 Snap Creator 映射到存储控制器的内容。
+
+
+
+ a| 
+SCP-00018
+ a| 
+"%s" 的 SnapVault 状态列表失败，正在退出！
+ a| 
+Snap Creator 找不到给定控制器的任何 SnapVault 关系。登录到存储控制器并运行 SnapVault status 命令。确保 SnapVault 关系已存在。
+
+
+
+ a| 
+SCP-00019
+ a| 
+%s 的 SnapVault 关系不存在： "%s" ，正在退出！
+ a| 
+Snap Creator 找不到 SnapVault 关系。请登录到存储控制器并运行 SnapVault status 命令。确保给定控制器名称的 SnapVault 关系存在。如果使用其他名称，则必须配置 secondary _interfaces 参数以告知 Snap Creator 哪些内容映射到存储控制器。
+
+
+
+ a| 
+SCP-00020
+ a| 
+在使用源 "%s" 的目标 "%s" 上运行 SnapVault 更新失败！
+ a| 
+Snap Creator 无法启动 SnapVault 更新。登录到存储控制器并运行 SnapVault status 命令。确保给定控制器名称的 SnapVault 关系存在。如果使用其他名称，则必须配置 secondary _interfaces 参数以告知 Snap Creator 哪些内容映射到存储控制器。
+
+
+
+ a| 
+SCP-00021
+ a| 
+检测到 SnapMirror 传输错误 - "%s" ，正在退出！
+ a| 
+检查 SnapMirror 的错误和存储控制器设置。
+
+
+
+ a| 
+SCP-00022
+ a| 
+源 "%s" 上的 SnapMirror 更新无法在 "%s" 分钟内完成，正在退出！
+ a| 
+SnapMirror 更新所用时间超过配置的等待时间。您可以通过增加配置文件中 NTAP_snapmirror_wait 的值来调整等待时间。
+
+
+
+ a| 
+SCP-00023
+ a| 
+源 "%s" 上的 SnapVault 更新无法在 "%s" 分钟内完成，正在退出！
+ a| 
+SnapVault 更新所用时间超过配置的等待时间。您可以通过增加配置文件中 NTAP_SnapVault_wait 的值来调整等待时间。
+
+
+
+ a| 
+SCP-00024
+ a| 
+检测到 SnapVault 传输错误 - "%s" ，正在退出！
+ a| 
+检查 SnapVault 的错误和存储控制器设置。
+
+
+
+ a| 
+SCP-00025
+ a| 
+还原后处理插件 "%s" 失败，并显示错误 "%s" 和退出代码 "%s"
+ a| 
+应用程序还原后操作因应用程序错误而失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00026
+ a| 
+还原清理处理插件 "%s" 失败，并显示错误 "%s" 和退出代码 "%s"
+ a| 
+由于应用程序错误，应用程序还原清理操作失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00027
+ a| 
+还原前处理插件 "%s" 失败，并显示错误 "%s" 和退出代码 "%s"
+ a| 
+由于应用程序错误，应用程序预还原操作失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00028
+ a| 
+自动发现插件 "%s" 失败，并显示错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序发现失败。检查日志和应用程序设置。此外，可以通过设置 APP_AUTO_DISCOVERY=N 并标注 validate_volumes 来禁用自动发现。
+
+
+
+ a| 
+SCP-00029
+ a| 
+自动发现插件 "%s" 失败，因为环境为空，正在退出！
+ a| 
+此应用程序插件不支持使用自动发现。通过设置 APP_AUTO_DISCOVERY=N 禁用自动发现
+
+
+
+ a| 
+SCP-00030
+ a| 
+文件系统暂停插件 "%s" 失败，并出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于文件系统错误，文件系统暂停失败。检查日志和文件系统设置。要忽略错误并继续备份，您可以设置 app_ignore_error=Y
+
+
+
+ a| 
+SCP-00031
+ a| 
+文件系统暂停插件 "%s" 遇到错误，退出代码为 "%s" ，继续备份！
+ a| 
+由于文件系统错误，文件系统暂停失败。但是， app_ignore_error=Y ； Snap Creator 将继续备份。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00032
+ a| 
+由于应用程序错误，应用程序取消静默失败。要忽略应用程序错误并继续备份，您可以设置 app_ignore_error=Y
+ a| 
+检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00033
+ a| 
+应用程序取消暂停插件 "%s" 失败，退出代码为 "%s" ，继续备份！
+ a| 
+由于应用程序错误，应用程序取消静默失败。但是， app_ignore_error=Y ； Snap Creator 将继续进行备份。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00034
+ a| 
+在 "%s" 上从 "%s" 创建 LUN 克隆为 "%s" 失败： "%s" ，正在退出！
+ a| 
+LUN 克隆创建失败。检查错误日志。可能存在 NetApp 易管理性错误。这些日志可能会显示此问题的发生原因。
+
+
+
+ a| 
+SCP-00035
+ a| 
+%s 上的 LUN 清单失败，正在退出！
+ a| 
+LUN 列表创建失败。检查错误日志。可能存在 NetApp 易管理性错误。这些日志可能会显示此问题的发生原因。
+
+
+
+ a| 
+SCP-00036
+ a| 
+应用程序暂停插件 "%s" 失败，插件未返回退出代码，正在退出！
+ a| 
+应用程序暂停已完成，无退出代码。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00037
+ a| 
+应用程序暂停插件 "%s" 失败，并出现错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序暂停失败。检查日志和应用程序设置。要忽略应用程序错误并继续备份，您可以设置 app_ignore_error=Y
+
+
+
+ a| 
+SCP-00038
+ a| 
+应用程序暂停插件 "%s" 失败，退出代码为 "%s" ，继续备份。
+ a| 
+由于应用程序错误，应用程序暂停失败。但是， app_ignore_error=Y ； Snap Creator 将继续进行备份。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00039
+ a| 
+指定的控制器 "%s" 与配置中指定的任何控制器不匹配。检查配置文件中的 NTAP_Users 参数。
+ a| 
+检查 NTAP_Users 并确保在配置文件中定义了存储控制器。
+
+
+
+ a| 
+SCP-00040
+ a| 
+指定的卷 "%s" 与配置中指定的任何存储系统或卷不匹配。检查配置文件中的 volumes 参数。
+ a| 
+检查配置文件中的卷设置，并确保已配置正确的控制器卷。
+
+
+
+ a| 
+SCP-00041
+ a| 
+检测到集群模式 Data ONTAP ，但 CMODE_cluster_name 配置不正确。检查配置参数，退出！
+ a| 
+CMODE_cluster_name 参数是必需的，用于 AutoSupport 和 SnapMirror 。您应在配置文件中正确定义此参数。
+
+
+
+ a| 
+SCP-00042
+ a| 
+检测到集群模式 Data ONTAP ，但 CMODE_cluster_Users 配置不正确。检查配置参数，退出！
+ a| 
+AutoSupport 和 SnapMirror 需要使用 CMODE_cluster_name 和 CMODE_cluster_Users 参数。您应在配置文件中正确定义这些参数。
+
+
+
+ a| 
+SCP-00043
+ a| 
+集群模式 Data ONTAP 不支持 SnapVault ，请在配置中将 NTAP_SnapVault_update 设置为 N 。
+ a| 
+检查配置并更改参数。集群模式 Data ONTAP 不支持 SnapVault 。
+
+
+
+ a| 
+SCP-00044
+ a| 
+meta_data_volume 参数已定义，但指定的存储系统： volume 与在 volumes 参数中配置的不匹配。检查配置：
+ a| 
+未在卷中指定 meta_data_volume 参数。将元数据卷添加到卷。
+
+
+
+ a| 
+SCP-00045
+ a| 
+meta_data_volume 参数已定义，但不能是在 volumes 参数中指定的唯一卷。元数据卷必须是一个单独的卷。
+ a| 
+在 meta_data_volume 中指定的卷是卷中唯一存在的卷。此外，还应存在其他卷。请勿使用 meta_data_volume 执行正常的 Snapshot 操作。
+
+
+
+ a| 
+SCP-00046
+ a| 
+NetApp 管理控制台仅支持时间戳 Snapshot 副本。
+ a| 
+更新配置文件，并将 snap_timestamp_only 选项设置为 Y
+
+
+
+ a| 
+SCP-00047
+ a| 
+选择的设置不兼容。无法同时启用 NTAP_SnapVault_update 和 NTAP_SnapVault_snapshot 选项
+ a| 
+编辑配置文件，并禁用这两个选项之一。
+
+
+
+ a| 
+SCP-00048
+ a| 
+插件 "%s" 的挂载处理失败，并显示错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序挂载失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00049
+ a| 
+卸载插件 "%s" 的处理失败，并显示错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，应用程序卸载失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00050
+ a| 
+只有应用程序插件才支持自定义操作
+ a| 
+未在配置文件中设置 app_name 参数。此参数用于确定要使用的插件。只有应用程序插件才支持自定义操作。
+
+
+
+ a| 
+SCP-00051
+ a| 
+无法为具有退出代码为 "%s" 的 "%s" 创建 NetApp 管理控制台数据集，正在退出！
+ a| 
+检查调试错误消息。与 Active IQ Unified Manager 服务器通信时可能出现问题。
+
+
+
+ a| 
+SCP-00052
+ a| 
+还原插件处理操作失败 "%s" ，并显示错误 "%s" 退出代码 "%s" ，正在退出！
+ a| 
+由于应用程序错误，还原失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00053
+ a| 
+文件系统取消暂停插件 "%s" 失败，并显示错误 "%s" 和退出代码 "%s" ，正在退出！
+ a| 
+由于文件系统错误，文件系统取消静默失败。但是， app_ignore_error=Y ； Snap Creator 将继续进行备份。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00054
+ a| 
+文件系统暂停插件 "%s" 遇到错误，退出代码为 "%s" ，继续备份！
+ a| 
+由于文件系统错误，文件系统取消静默失败。但是， app_ignore_error=Y ； Snap Creator 将继续进行备份。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00055
+ a| 
+NetApp 管理控制台驱动的数据集（ %s ）备份（策略为 %s ）在存储控制器上为 "%s" ）
+ a| 
+不适用
+
+
+
+ a| 
+SCP-00056
+ a| 
+已成功创建存储控制器 "%s" 上策略为 "%s" 的数据集 "%s" 的 NetApp 管理控制台驱动的备份 "%s"
+ a| 
+不适用
+
+
+
+ a| 
+SCP-00057
+ a| 
+在存储控制器 "%s" 上使用策略为 "%s" 创建数据集 "%s" 的 NetApp 管理控制台驱动的备份 "%s" 失败，并显示错误为 "%s"
+ a| 
+检查 NTAP_PM_update 和 NTAP_DFM_DATA_SET 参数的配置。
+
+
+
+ a| 
+SCP-00058
+ a| 
+使用应用程序已发现值更新配置失败（针对 %s ），正在退出！
+ a| 
+由于权限问题或无法解析从应用程序返回的值，无法更新文件。检查运行 Snap Creator 的用户的权限，并确保这些权限正确无误。
+
+
+
+ a| 
+SCP-00059
+ a| 
+%s 插件的转储失败，退出代码为 "%s" ，正在退出！
+ a| 
+由于应用程序错误， scdump 操作失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00060
+ a| 
+DTO 无效： "%s"
+ a| 
+DTO 中的必填字段未设置或无效，这会在处理 DTO 时导致验证错误。更正问题描述并重新发送 DTO 。
+
+
+
+ a| 
+SCP-00061
+ a| 
+归档日志删除失败，并显示错误 "%s" ，正在退出！
+ a| 
+Snap Creator 无法删除应用程序的归档日志。检查 Snap Creator 用户的权限；此用户可以是 Snap Creator Server 或 Snap Creator Agent ，具体取决于配置。
+
+
+
+ a| 
+SCP-00062
+ a| 
+身份验证失败！
+ a| 
+身份验证失败，因为用户无权执行此操作。
+
+
+
+ a| 
+SCP-00063
+ a| 
+发现 "%s" 失败，返回代码为 "%s" ，消息为 "%s"
+ a| 
+由于应用程序错误，使用 validate_volumes=data 发现应用程序失败。检查日志和应用程序设置。
+
+
+
+ a| 
+SCP-00064
+ a| 
+发现未发现任何存储对象
+ a| 
+使用 validate_volumes=data 发现应用程序失败。Snap Creator 无法发现存储系统上的任何数据卷。要禁用自动发现，请注释掉 validate_volumes 。
+
+
+
+ a| 
+SCP-00065
+ a| 
+配置文件中不包括 "%s" 上的卷 "%s"
+ a| 
+应用程序发现检测到某些卷缺失。检查缺少的卷并将其添加到 volumes 参数中，以便将其包含在备份中。
+
+
+
+ a| 
+SCP-00066
+ a| 
+%s 的代理验证失败，并出现错误 "%s"
+ a| 
+无法访问配置的代理。代理可能已关闭，或者可能存在本地防火墙问题描述。检查配置参数 SC_AGENT 。
+
+
+
+ a| 
+SCP-00067
+ a| 
+无法列出名称模式为 "%s" 的 "%s" 的外部 Snapshot 副本
+ a| 
+根据正则表达式 NTAP_EXITORE_SNAPONE_REGEX ， Snap Creator 找不到外部 Snapshot 副本。登录到控制器，并将快照列表输出与正则表达式进行匹配。
+
+
+
+ a| 
+SCP-00068
+ a| 
+插件 "%s" 的文件系统 Pre_restore 失败，退出代码为 "%s" ，正在退出！
+ a| 
+由于文件系统错误，文件系统预还原失败。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00069
+ a| 
+插件 "%s" 的文件系统 pre_restore 遇到错误退出代码 "%s" ，正在继续备份！
+ a| 
+由于文件系统错误，文件系统预还原失败。但是， app_ignore_error=Y ； Snap Creator 将继续执行其他操作。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00070
+ a| 
+插件 "%s" 的文件系统还原后失败，退出代码为 "%s" ，正在退出！
+ a| 
+由于文件系统错误，文件系统还原后失败。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00071
+ a| 
+插件 "%s" 的文件系统还原后遇到错误，退出代码为 "%s" ，继续备份！
+ a| 
+由于文件系统错误，文件系统还原后失败。但是， app_ignore_error=Y ； Snap Creator 将继续执行其他操作。检查日志和文件系统设置。
+
+
+
+ a| 
+SCP-00072
+ a| 
+策略 "%s" 不是配置中定义的 Snapshot 副本保留策略，正在退出！
+ a| 
+您正在使用的策略无效。检查配置文件并正确配置 NTAP_snapshot_rerett残 留。
+
+|===

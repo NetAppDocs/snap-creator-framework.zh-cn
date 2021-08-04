@@ -1,0 +1,172 @@
+---
+permalink: administration/reference_sybase_plug_in.html 
+sidebar: sidebar 
+keywords: sybase, ase, plug-in, isql, command, database, parameter, user, server 
+summary: Sybase ASE 插件使用 isql 命令与 Sybase 数据库进行交互。 
+---
+= Sybase ASE 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sybase ASE 插件使用 isql 命令与 Sybase 数据库进行交互。
+
+
+NOTE: 有关支持或查看兼容性列表的最新信息，请参见互操作性表。
+
+下表列出了 Sybase 插件参数，提供了这些参数的设置并对其进行了说明：
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+sybase_user
+ a| 
+user_name
+ a| 
+指定可以运行 isql 命令的操作系统用户。UNIX 需要此参数。如果运行 Snap Creator Agentstart 和 stop 命令的用户（通常为 root 用户）与运行 isql 命令的用户不同，则需要此参数。
+
+
+
+ a| 
+Sybase 服务器
+ a| 
+data_server_name
+ a| 
+指定 Sybase 数据服务器名称（ isql 命令上的 -S 选项）。例如： `p_test`
+
+
+
+ a| 
+Sybase 数据库
+ a| 
+DB_name ： user_name/ 密码
+ a| 
+列出实例中要备份的数据库。此时将添加主数据库；例如： `dBAtest2 ： sa/53616c7404351e` 。如果使用了名为 +all 的数据库，则会使用数据库自动发现，并排除 sysbsyntax ， sybsystemdb ， sybsystemproc 和 tempdb 数据库。
+
+例如： ` +all ： sa/53616c71a6351e`
+
+如果设置了 NTAP_PWD 保护参数，则支持加密密码。
+
+
+
+ a| 
+Sybase 数据库排除
+ a| 
+数据库名称
+ a| 
+允许在使用 +all 构造时排除数据库。您可以使用分号分隔的列表指定多个数据库。例如， `pubs2 ； test_db1`
+
+
+
+ a| 
+Sybase Tran 转储
+ a| 
+DB_name ： directory_path
+ a| 
+用于在创建 Snapshot 副本后执行 Sybase 事务转储。例如： `pubs2 ： /sysedumps/pubs2`
+
+您必须指定需要事务转储的每个数据库。
+
+
+
+ a| 
+Sybase Tran 转储格式
+ a| 
+%S_%D_%T.CMN
+ a| 
+用于指定转储命名约定。可以指定以下密钥：
+
+* %S = Sybase 服务器中的实例名称
+* %d = Sybase 数据库中的数据库
+* %T = 唯一的时间戳
+
+
+以下是一个示例： ` %S_%D_%T.log`
+
+
+
+ a| 
+Sybase Tran 转储压缩
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+启用或禁用原生 Sybase 事务转储压缩。
+ a| 
+Sybase ISQL_CMD
+ a| 
+示例： /opt/sybase/OS-15_0/bin/isql
+
+
+
+ a| 
+定义 isql 命令的路径。
+ a| 
+Sybase
+ a| 
+示例： /Sybase
+
+
+
+ a| 
+指定 Sybase 安装的位置。
+ a| 
+sybase_logdir
+ a| 
+示例： /usr/local/ntap/scServer/logs
+
+
+
+ a| 
+定义放置 Snap Creator 日志的目录。
+ a| 
+Sybase 清单
+ a| 
+示例： `dBAtest2 ： /t_inf_nZL_devs/`
+
+
+
+ a| 
+指定应创建清单文件的数据库以及应放置清单文件的位置。
+ a| 
+Sybase 清单格式
+ a| 
+%S_%D_%T.Manifest 示例： ` %S_%D_%T.Manifest`
+
+
+
+ a| 
+用于指定清单文件命名约定。可以指定以下密钥：
+
+* %S = Sybase 服务器中的实例名称
+* %d = Sybase 数据库中的数据库
+* %T = 唯一的时间戳，与 Snapshot 副本命名所使用的时间戳相同
+
+ a| 
+sybase_manifest_delete
+ a| 
+Y
+
+
+
+| 不包括  a| 
+允许在创建 Snapshot 副本后删除清单。清单文件应捕获到 Snapshot 副本中，以便始终可用于备份。
+ a| 
+sybase_exclude_tempdb
+
+
+
+ a| 
+Y
+| 不包括  a| 
+自动排除用户创建的临时数据库。
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

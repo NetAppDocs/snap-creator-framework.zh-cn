@@ -1,0 +1,110 @@
+---
+permalink: administration/reference_red_hat_kvm_plug_in.html 
+sidebar: sidebar 
+keywords: kernel, kvm, virtualization, linux, snap, creator, virsh, command, plug-in, red, hat, guideline 
+summary: 基于内核的虚拟机（ KVM ）是 Linux 内核的虚拟化解决方案。Snap Creator 使用 KVM 插件备份和还原子虚拟机。 
+---
+= Red Hat KVM 插件准则
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+基于内核的虚拟机（ KVM ）是 Linux 内核的虚拟化解决方案。Snap Creator 使用 KVM 插件备份和还原子虚拟机。
+
+
+NOTE: 有关支持或兼容性列表的最新信息，请参见互操作性表。
+
+KVM 插件支持 Linux ， Windows 和 Solaris 等子操作系统。
+
+此插件在内部使用 virsh 命令。
+
+使用 KVM 插件时，必须考虑以下事项：
+
+* 不支持使用 Active IQ Unified Manager 服务器作为代理。
+* 不支持使用 Open Systems SnapVault 和归档日志管理执行挂载，卸载和备份操作。
+* 在存储区域网络（ SAN ）环境中，需要使用 Linux Host Utilities （ LHU ）套件从存储控制器收集有关 LUN 和卷的信息。
++
+LHU 套件应安装在 KVM 虚拟机管理程序上，该虚拟机管理程序与 Snap Creator 代理位于同一位置。
+
++
+
+NOTE: 如果未安装 LHU 套件，并且配置混合使用网络连接存储和存储区域网络环境，则备份和还原操作仅适用于网络文件系统（ NFS ）。
+
+* KVM 插件仅支持 Linux 版本的 Snap Creator 4.0 和 4.1 Agent 。
+* 不支持卷还原；仅支持应用程序定义的还原操作。
+* 无法还原已删除的虚拟机（ VM ）。
+* 存储控制器 IP 和主机应位于 KVM 主机上的 /etc/hosts 中或域名系统（ Domain Name System ， DNS ）中。
+* 每个配置仅支持一个 KVM 主机。
+* 如果虚拟机是使用 ISO 存储库创建的，则要执行任何操作，您应通过 CD-ROM 选项中的 Virt Manager 控制台断开此存储库与虚拟机的连接。
+* sc_agent_timeout 值应大于默认值 600 或更高。
+* 系统会通过自动检测功能自动发现这些卷。
++
+如果目标不在 SnapMirror 关系中，则看不到已发现的目标卷。您应使用 dpstatus 检查 SnapMirror 关系的状态。如果 SnapMirror 关系不存在，则必须先创建 SnapMirror 关系。
+
+* 如果 app_defined_restore 的值为 Y ，则不支持使用图形用户界面执行 SnapVault 还原操作。
+* 使用图形用户界面创建 SnapMirror 和 SnapVault 配置时，必须手动输入卷详细信息，因为不会自动检测到 SnapMirror 和 SnapVault 关系。
+* 不会备份映射到 VM 的数据磁盘。
+* VM 暂停和恢复操作按顺序执行。
++
+对于多个 VM ，备份操作期间 VM 处于暂停状态的持续时间取决于 VM 数量。
+
+
+
+
+
+== 支持的 KVM 配置
+
+* SAN ：支持安装在原始多路径设备（具有多个路径的 LUN ）上的子虚拟机。
+* NAS ：支持 NFS 卷上安装的子虚拟机。
+
+
+
+NOTE: 不支持在一个多路径设备上安装多个虚拟机的配置。
+
+不支持安装在 LVM 上或 SAN 环境中的映像文件上的子虚拟机。
+
+下表介绍了 KVM 插件参数：
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+kvm_restore_vm_list
+ a| 
+示例： `VM1 ， VM2`
+ a| 
+指定要还原的 VM 的列表。只有在还原期间才需要此参数。
+
+
+
+ a| 
+kvm_mapping
+ a| 
+示例： `VM1 ： s_C1 ： /vol/vol1/lun1 ； VM2 ： s_C2 ： /vol/vol2/lun2 ；`
+ a| 
+（必需）指定虚拟机与其关联存储控制器， LUN 或文件路径之间的映射。此参数会在发现过程中动态更新。
+
+
+
+ a| 
+kvm_config_DIR
+ a| 
+默认值： /etc/libvirt/qemu
+ a| 
+（可选）指定用于存储 VM 的所有 XML 配置文件的目录的路径。
+
+
+
+ a| 
+kvm_cmd_retry_count
+ a| 
+默认值： `3`
+ a| 
+（可选）指定在 KVM 插件中运行失败时重新运行命令的次数。
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

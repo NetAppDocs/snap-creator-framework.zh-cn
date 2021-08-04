@@ -1,0 +1,178 @@
+---
+permalink: sap-hana-ops/reference_troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshooting 
+summary: 故障排除部分提供了有关错误代码和错误消息的信息，并提供了用于解决问题描述的问题描述或解决方案。 
+---
+= 故障排除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+故障排除部分提供了有关错误代码和错误消息的信息，并提供了用于解决问题描述的问题描述或解决方案。
+
+下表列出了 SAP HANA 插件错误消息。
+
+|===
+| 错误代码 | 错误消息 | 说明 / 解决方法 
+
+
+ a| 
+HDB-00001
+ a| 
+找不到可访问的 HANA 节点，无法使用提供的配置参数执行 hdbsql. 命令。验证并更新配置中的 HANA 设置，然后重试。
+ a| 
+验证 HANA 节点是否正在运行且可访问，以及提供的实例编号是否正确。
+
+
+
+ a| 
+HDB-00002
+ a| 
+为 $SID] 创建数据库快照失败。
+ a| 
+检查是否已在数据库上创建 HANA 数据库快照。如果已创建 HANA 数据库快照，请删除此快照或运行取消静默操作。如果尚未创建，请检查日志以了解其他错误消息和详细信息。
+
+
+
+ a| 
+HDB-00003
+ a| 
+删除 $SID] 的数据库快照失败。
+ a| 
+检查是否已删除 HANA 数据库快照。如果是，则可以忽略此错误。如果否，请检查 SAP HANA 插件参数，并确保节点可访问且提供的实例编号正确。
+
+
+
+ a| 
+HDB-00004
+ a| 
+与实例为 $instance 的 $HANA 节点连接失败，因为连接被拒绝。
+ a| 
+无法访问消息中显示实例的 HANA 节点。这可能只是一个警告，因为插件将尝试在其他节点上运行 hdbsql. 命令。检查日志以查看操作是否成功。
+
+
+
+ a| 
+HDB-00005
+ a| 
+数据库 $SID] 已有快照！
+ a| 
+此数据库已存在 HANA 数据库快照。删除 HANA 数据库快照或运行静默操作以解析此问题描述。
+
+
+
+ a| 
+HDB-00006
+ a| 
+无法解析主机名 [$HANA 节点 ] 。
+ a| 
+无法解析 HANA 节点主机名。检查 DNS 服务器或 Etc 主机条目。
+
+
+
+ a| 
+HDB-00007
+ a| 
+用户名或密码无效。请验证凭据并重试。
+ a| 
+为 HANA 数据库提供的用户名和密码不正确。请更正配置文件中的条目并重试。
+
+
+
+ a| 
+HDB-00008
+ a| 
+在 $Hana 节点上运行命令 $hdbsql_cmd] 失败。
+ a| 
+插件无法在配置中提供的所有 HANA 节点上执行 hdbsql. 命令。验证 HANA 节点和实例参数，并确保至少有一个 HANA 节点已启动且可访问。
+
+
+
+ a| 
+HDB-00009
+ a| 
+找不到 HANA $info] 。
+ a| 
+SAP HANA 插件 SCDUMP 操作无法从 HANA 数据库中检索特定信息。验证 HANA 节点和实例参数，并确保至少有一个 HANA 节点已启动且可访问。
+
+
+
+ a| 
+HDB-00010
+ a| 
+收集操作系统信息失败。
+ a| 
+在 Windows 环境中收集操作系统信息失败； Windows 不支持 SAP HANA 插件。请改用 SLES 操作系统。
+
+
+
+ a| 
+HDB-00011
+ a| 
+收集操作系统信息失败。
+ a| 
+Snap Creator 无法收集 SCDUMP 操作的操作系统信息。检查代理配置文件并更正设置。
+
+
+
+ a| 
+HDB-00012
+ a| 
+收集 SnapDrive 信息失败。
+ a| 
+SAP HANA 插件仅在 NFS 环境中受支持。您的 HANA 数据库配置已启用 SnapDrive ；请在配置文件中设置 SnapDrive=N 。
+
+
+
+ a| 
+HDB-00013
+ a| 
+未设置 hana 节点参数。检查配置文件中的 HANA 设置。
+ a| 
+SAP HANA 插件需要 HANA 节点（ HANA 节点）参数。设置参数并重试。
+
+
+
+ a| 
+HDB-00014
+ a| 
+找不到可访问的 HANA 节点，无法使用提供的配置参数执行 hdbsqlcommands 。验证并更新配置中的 HANA 设置，然后重试。
+ a| 
+验证 HANA 节点是否正在运行且可访问，以及提供的实例编号是否正确。
+
+
+
+ a| 
+HDB-00015
+ a| 
+未设置 hana 实例参数。检查配置文件中的 HANA 设置。
+ a| 
+SAP HANA 插件需要 HANA 实例（ HANA 实例）参数。设置参数并重试。
+
+
+
+ a| 
+HDB-00016
+ a| 
+未设置 hana 密码参数。检查配置文件中的 HANA 设置。
+ a| 
+SAP HANA 插件需要 HANA 密码（ HANA 密码）参数。设置参数并重试。
+
+
+
+ a| 
+HDB-00017
+ a| 
+hdbsql 的路径，参数 Hana HDBSQL_CMD 的值无效！
+ a| 
+已发生以下情况之一：
+
+* 您未提供 hdbsql. 路径
+* 提供的 hdbsql. 路径不正确。
+
+
+确保已在安装 Snap Creator Agent 的管理主机上安装 HANA hdbsql. 客户端，并在 HANA 参数中提供正确的 hdbsql. 二进制文件路径；然后重试。
+
+|===

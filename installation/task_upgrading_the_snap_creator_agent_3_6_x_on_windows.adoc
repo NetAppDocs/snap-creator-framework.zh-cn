@@ -1,0 +1,120 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_agent_3_6_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 3.6.x, windows 
+summary: 您可以直接从 Windows 上的 Snap Creator Agent 3.6.x 进行升级。 
+---
+= 在 Windows 上升级 Snap Creator Agent 3.6.x
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接从 Windows 上的 Snap Creator Agent 3.6.x 进行升级。
+
+* 在备份 Snap Creator Agent 目录之前，您已停止 Snap Creator Agent 服务（ `snapcreatoragentservice` ），以确保备份的数据完整。
++
+例如，您可以使用服务管理单元停止服务：
+
++
+.. 选择 * 开始 * > * 运行 * 并输入 `services .msc` 。
+.. 找到并选择 Snap Creator Agent 服务；然后停止该服务。或者，您也可以打开命令提示符并输入以下命令：
+
+
++
+[listing]
+----
+sc stop snapcreatoragentservice
+----
+* 您已在 Snap Creator Agent 目录（ C ： \Program Files\NetApp\NetApp_Snap_Creator_Frider\scAgent3.6.x ）中备份以下目录以及所有关联的子目录和文件：
++
+** agent.conf 文件（ .\config\agent.conf ）
++
+
+NOTE: 如果在同一系统上安装了 Snap Creator 服务器，则在升级 Snap Creator 服务器 3.6.x 时，您可能已经备份了此文件
+
+** 日志目录（如果已启用）（ .\logs ）
+** 插件目录（ .\plugins ）
+
+
+
+
+4.1 之前版本中的 Snap Creator Agent 使用名为 agent.conf 的文件列出了 Snap Creator 之外可能会在 Snap Creator Agent 上执行的命令。在 4.1 中，使用 allowed_commands.config 文件。
+
+同样， agent.conf 文件也会列出允许 Snap Creator Agent 与之通信的主机。默认情况下， Snap Creator 代理允许与所有 Snap Creator 服务器进行通信。但是，如果您选择在先前版本的 Snap Creator 中使用此功能，则 agent.properties 文件中的 authorized_hosts 参数现在将替换该功能。
+
+
+NOTE: 如果未使用这些参数，只需简单安装新代理即可。
+
+以下步骤中提供的路径是指 Windows 的默认安装路径。如果未使用默认值，则路径信息可能与安装路径不同。
+
+. 如果尚未停止 Snap Creator 代理服务，请停止此服务。
++
+有关停止服务的信息，请参见本主题前面提供的详细信息。
+
+. 选择 * 开始 * > * 程序 * > * Snap Creator* > * 卸载 NetApp Snap Creator Framework * ，卸载 Snap Creator （适用于 Windows ）。
++
+有关详细信息，请参见有关在 Windows 上卸载 Snap Creator 的信息。
+
+. 安装最新的 Snap Creator 代理。
++
+有关详细信息，请参见有关在 Windows 上安装 Snap Creator Agent 的信息。
+
+. 在文本编辑器中打开 agent.conf 文件的备份副本。
++
+以下是 agent.conf 的示例：
+
++
+[listing]
+----
+host: scServer@Tampico
+command: sdcli.exe
+----
+. 在文本编辑器中打开新的 allowed_commands.config 文件（ C ： \Program Files\NetApp\Snap_Creator_Frider\scAgent4.1.x\etc\allowed_commands.config ），并将命令行从 agent.conf 复制到 allowed_commands.config 文件；但是，由于最新的 Snap Creator 中的安全性增强，请确保此命令完全符合要求。
++
+从上一示例中， allowed_commands.config 文件应包含以下内容：
+
++
+[listing]
+----
+command: "C:\Program Files\NetApp\SnapDrive\sdcli.exe"
+----
++
+
+NOTE: 由于 "[.code]``Program Files`` " 之间有空格，因此必须包含引号才能封装命令。如果命令不包含任何空格，则不需要使用引号。
+
++
+您可以根据需要添加命令，每个命令位于单独的行上。
+
+. 保存并关闭文件。
+. 在文本编辑器中打开 agent.properties 文件（ C ： \Program Files\NetApp\Snap_Creator_Fridation\scAgent4.1.x\etc\agent.properties ），并更改 Authorized_hosts=* 的默认条目以反映 agent.conf 文件中的主机设置。
++
+在上一示例中， authorized_hosts 参数应包含以下内容：
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Tampico
+----
++
+可以根据需要添加主机，使用逗号分隔主机名。主机名和 IP 地址均受支持：
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Tampico, 10.10.10.192, Fuji01
+----
+. 保存并关闭文件。
+. 通过执行以下操作之一启动 Snap Creator 代理服务：
++
+** 使用服务管理单元并启动服务。
+** 在命令提示符处，输入以下命令： `sc start snapcreatoragentservice`
+
+
+
+
+* 相关信息 *
+
+xref:task_installing_snap_creator_agent_on_windows.adoc[在 Windows 上安装 Snap Creator Agent]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[在 Windows 上卸载 Snap Creator]

@@ -1,0 +1,136 @@
+---
+permalink: administration/concept_managing_user_access.html 
+sidebar: sidebar 
+keywords: snap, creator, security, features, rbac, snapcreator 
+summary: Snap Creator 提供了一些安全功能，例如基于角色的访问控制 \ （ RBAC ），您可以通过这些功能在 Snap Creator 中管理用户访问。 
+---
+= 管理用户访问
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 提供了基于角色的访问控制（ Role-Based Access Control ， RBAC ）等安全功能，您可以通过这些功能在 Snap Creator 中管理用户访问。
+
+RBAC 涉及用户，角色，权限，操作和配置文件。用户，角色和权限可由 Snap Creator 用户定义。
+
+
+
+== 用户
+
+* 用户通过用户名和密码进行唯一标识。
+* 可以将用户分配给一个或多个角色和配置文件并将其取消分配。
+* 启动 Snap Creator 服务器后， snapcreator.properties 文件中的 SNAPCREATOR_USER 将以用户身份添加。
+* 在启动期间创建用户时， snapcreator.properties 文件中的 SNAPCREATOR_USER 将分配默认管理员角色。
+
+
+
+
+== 角色
+
+角色具有一个或多个权限。分配的权限决定了用户可以执行的操作以及用户可以访问的 GUI 元素。有三种内置角色：
+
+* * 管理员 *
++
+对所有 API 具有完全访问权限。这是唯一可以创建，编辑和删除用户的角色。
+
+* * 运算符 *
++
+此角色已配置为超级用户，可访问 RBAC 以外的所有 API 。
+
+* * 查看器 *
++
+访问权限非常有限。此角色可以访问只读 Snap Creator API 调用。
+
+
+
+无法添加，删除或修改这些内置角色。
+
+
+
+== 权限
+
+权限是指用户有权执行的一组操作。以下是内置权限：
+
+* * 备份 *
++
+执行备份或克隆操作时需要。
+
+* * 配置 *
++
+用于创建，读取，更新和删除配置文件。
+
+* * 自定义 *
++
+启动自定义插件操作所需的。
+
+* * 扩展存储库 *
++
+执行目录（也称为扩展存储库）操作所需的。
+
+* * 全局 *
++
+用于创建，编辑和删除全局配置文件。
+
+* * 策略管理 *
++
+用于调用策略操作（例如 AddPolicy ， updatePolicy ， removePolicy ）。
+
+* * 策略查看器 *
++
+只读策略操作所需。
+
+* * RBAC 管理 *
++
+管理用户（例如，创建，更新，删除用户和角色）所需的信息； 分配和取消分配角色和权限）。
+
+* * RBAC 视图 *
++
+查看用户帐户，分配的角色和分配的权限时需要此权限。
+
+* * 还原 *
++
+执行还原操作所需的。
+
+* * 计划程序 *
++
+执行计划程序操作所需的。
+
+* * 查看器 *
++
+为只读操作提供授权。
+
+
+
+
+
+== 操作
+
+操作是 Snap Creator 检查授权的基本值。例如， getTask ， fileCloneCreate ， createTask ， dirCreate 等操作。
+
+
+NOTE: 无法添加，删除或修改操作。
+
+
+
+== 配置文件
+
+* 配置文件将分配给用户。
+* RBAC 中的配置文件在文件系统上的配置文件目录中创建。
+* 某些 Snap Creator API 会检查是否已将用户分配给配置文件，并检查操作权限。
++
+例如，如果用户需要作业状态， RBAC 将验证用户是否有权调用 ScheduleJob ，然后检查是否已将与该作业关联的配置文件分配给该用户。
+
+* 如果分配了操作员角色的用户创建了配置文件，则该配置文件将自动分配给该用户。
+
+
+
+
+== 管理存储控制器的用户访问
+
+如果您不使用 Active IQ Unified Manager 代理，则需要用户名和密码才能与存储控制器进行通信。为确保安全，可以对密码进行加密。
+
+
+NOTE: 您不应使用 root 用户或 admin/vsadmin 用户。最佳实践是创建具有所需 API 权限的备份用户。
+
+网络通信通过 HTTP （ 80 ）或 HTTPS （ 443 ）进行，因此，您必须在运行 Snap Creator 的主机和存储控制器之间打开其中一个或两个端口。必须在存储控制器上创建用户以进行身份验证。对于 HTTPS ，您必须确保已在存储控制器上启用并配置用户。

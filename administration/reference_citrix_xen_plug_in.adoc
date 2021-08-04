@@ -1,0 +1,120 @@
+---
+permalink: administration/reference_citrix_xen_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, restore, citrix, xenserver, virtual, machine, vm, citrix, xenserver, plug-in 
+summary: Snap Creator 支持使用 Citrix XenServer 插件备份和还原 Citrix XenServer 虚拟机（ VM ）。 
+---
+= Citrix XenServer 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 支持使用 Citrix XenServer 插件备份和还原 Citrix XenServer 虚拟机（ VM ）。
+
+
+NOTE: 有关支持或兼容性列表的最新信息，请参见互操作性表。
+
+Citrix XenServer 插件支持 Windows 和 XenServer 。
+
+使用 Citrix XenServer 插件时，请考虑以下事项：
+
+* 不支持使用 Active IQ Unified Manager 服务器作为代理。
+* 不支持使用 Open Systems SnapVault 和归档日志管理执行挂载，卸载和备份操作。
+* 不支持卷还原操作；仅支持应用程序定义的还原操作。
+* 可以还原已删除的 VM 。
+* 必须在安装了 XenCenter 的主机上安装 Snap Creator 代理，并且不能在 XenServer 上安装 Snap Creator Server 。
+* sc_agent_timeout 值应大于默认值 600 或更高。
+* 如果 app_defined_restore 的值为 Y ，则不支持使用图形用户界面执行 SnapVault 还原操作。
+* 如果服务器池中的池主服务器发生故障，则应使用新的主服务器手动修改 Snap Creator 配置文件，以便执行进一步的活动。
+* 必须在所有 VM 上安装 XenServer 工具。
+* 对于存储区域网络（ SAN ）环境中的光纤通道，必须在安装了 Snap Creator Agent 的主机上安装 plink.exe 工具，并且必须将 plink.exe 路径添加到系统环境变量中。
++
+有关如何将 plink.exe 路径添加到系统环境变量的详细信息，请参阅 _Snap Creator Framework 安装指南 _ 。
+
+* VM 暂停和取消暂停操作会按顺序执行。
++
+对于多个 VM ，备份操作期间 VM 处于暂停状态的持续时间取决于 VM 数量。
+
+* 支持自动发现卷。
+
+
+
+
+== 支持的 Citrix XenServer 配置
+
+支持以下 Citrix XenServer 配置：
+
+* SAN
++
+** 支持子虚拟机，每个存储库具有一个虚拟磁盘映像 (VDI) 。
+** 支持每个存储库具有一个 VDI 的数据磁盘
+
+
+* NAS
++
+** 支持 NFS 挂载上安装的子虚拟机。
+** 支持 NFS 挂载上的数据磁盘。
+
+
+
+
+
+
+== Parameters
+
+下表列出并介绍了 Citrix XenServer 插件参数：
+
+|===
+
+
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+Xen_VMS
+ a| 
+主机 IP ： VM#
+ a| 
+列出特定主机的虚拟机，以斜杠（ / ）分隔。例如： 10.10.10.192 ： VM1/VM2/VM3
+
+
+
+ a| 
+Xen_host_users
+ a| 
+主机 IP ：用户名 / 密码
+ a| 
+列出 Xen 主机以及相应的用户名和密码。
+
+
+
+ a| 
+xen_bin_path
+ a| 
+例如： C ： \Program Files\Citrix\XenCenter\xe.exe
+ a| 
+指定 XenServer 可执行文件（ xe ）的路径。导入和导出 VM 元数据需要使用 XenCenter 控制台。
+
+
+
+ a| 
+xen_metadata_path
+ a| 
+例如： C ： \scmetadata
+ a| 
+指定服务器上可将虚拟机元数据下载到的路径。
+
+
+
+ a| 
+Xen_restore_VMS
+ a| 
+例如： xenserver1 ： vm1 ， vm2 ； xenserver2 ： vm1 ， vm2
+ a| 
+包含必须还原的 VM 。只有在还原操作期间才需要此参数。
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

@@ -1,0 +1,35 @@
+---
+permalink: administration/task_creating_clones_from_a_new_backup.html 
+sidebar: sidebar 
+keywords: clone, volume, lun, snapshot, copy, create, profile, configuration 
+summary: 您可以从新 Snapshot 副本克隆卷或 LUN 。 
+---
+= 从新备份创建克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从新 Snapshot 副本克隆卷或 LUN 。
+
+* Snap Creator 服务器必须与存储系统通信。
+* 您必须以适当的权限登录到 Snap Creator 才能执行克隆操作。
+
+
+此克隆操作涉及克隆新的 Snapshot 副本。
+
+. 从 Snap Creator 图形用户界面（ GUI ）的主菜单中，选择 * 管理 * > * 配置 * 。
+. 在 * 配置文件和配置 * 窗格中，选择一个配置文件。
+. 导航到 * 克隆设置 * 选项卡，并验证设置是否设置正确。
++
+image::../media/clone_settings.gif[克隆设置]
+
+. 根据所需的克隆类型，选择 * 操作 * 和以下选项之一：
++
+** LUN 克隆
+** 卷克隆
+
+
+. 在 Additional Parameters 对话框中，选择相应的策略，然后单击 * 确定 * 以启动克隆过程。
+. 在 * 控制台 * 窗格中，验证克隆过程是否成功。
+

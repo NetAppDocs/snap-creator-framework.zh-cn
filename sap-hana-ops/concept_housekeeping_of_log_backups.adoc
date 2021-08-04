@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: housekeeping, log, backups 
+summary: SAP HANA 中日志备份的管理基于 HANA Studio 中的一项功能，或者基于允许删除选定备份之前的所有备份的 SQL 语句。 
+---
+= 日志备份的管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA 中日志备份的管理基于 HANA Studio 中的一项功能，或者基于允许删除选定备份之前的所有备份的 SQL 语句。
+
+Snap Creator 可通过删除主存储或二级存储上的 Snapshot 副本以及根据定义的保留策略删除 HANA 目录中的相应条目来处理数据备份（ Snapshot 副本）的管理工作。
+
+早于最新数据备份的日志备份将被删除，因为它们不是必需的。
+
+Snap Creator 在文件系统级别和 SAP HANA 备份目录中处理日志文件备份的管理工作。在使用 Snap Creator 执行每个 Snapshot 备份时，系统会执行以下步骤：
+
+* 读取备份目录并获取最早成功的数据或 Snapshot 备份的备份 ID 。
+* 删除早于最旧备份的所有备份。
+
+
+
+NOTE: Snap Creator 仅处理基于 Snapshot 副本的备份的管理工作。如果创建了其他基于文件的备份，则必须确保从备份目录和文件系统中删除基于文件的备份。如果不从备份目录中手动删除此类数据备份，它可能会成为最旧的数据备份，并且日志备份整理操作将失败。

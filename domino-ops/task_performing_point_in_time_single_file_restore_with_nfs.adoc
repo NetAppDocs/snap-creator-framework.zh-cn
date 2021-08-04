@@ -1,0 +1,145 @@
+---
+permalink: domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html 
+sidebar: sidebar 
+keywords: snap creator, ibm, domino, plug-in, perfomring, single-file, single, file restore 
+summary: 您可以使用 IBM Domino 插件为 NFS 环境中的数据库执行时间点，即时或可选的即时单文件还原。 
+---
+= 执行单文件还原
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 IBM Domino 插件为 NFS 环境中的数据库执行时间点，即时或可选的即时单文件还原。
+
+您必须在配置文件中将 Data Restore Directory 参数设置为 Domino 数据卷上的正确子目录。
+
+
+NOTE: 您无需停止 Domino 服务器即可执行单文件还原。
+
+单文件还原选项如下：
+
+|===
+| 还原类型 | Description 
+
+
+ a| 
+单文件还原（时间点）
+ a| 
+将单个文件还原到创建 Snapshot 副本时的状态（仅限 NFS ）。
+
+
+
+ a| 
+单文件还原（最新）
+ a| 
+将单个文件还原到 Snapshot 副本时的状态，然后播放将 Domino 事务日志转发到最新副本（仅限 NFS ）。
+
+
+
+ a| 
+单文件还原（可随时选择）
+ a| 
+将单个文件还原到 Snapshot 副本时的状态，然后将播放 Domino 事务日志并将其转发到指定时间（仅限 NFS ）。
+
+|===
+
+NOTE: 要进行最新且可选择的时间点还原，必须启用 Domino 事务日志记录。
+
+事务日志只能前转。选择创建 Snapshot 副本之前的时间会导致还原错误。
+
+. 在配置文件和配置窗格中，选择配置文件，然后单击 * 操作 * > * 还原 * 。
++
+选择 * 还原 * 将自动启动 Snap Creator Framework 还原向导。在整个还原向导中，单击 * 下一步 * 进入下一页，然后单击 * 返回 * 返回上一页。
+
++
+
+NOTE: 如果要从 SnapVault 副本还原，系统会提示您从主存储或二级存储还原。您的选择取决于您如何处理中所述的限制 link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["概念 _Domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"]。
+
+. 在还原详细信息页面上，指定还原详细信息：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+Controller/Vserver name
+ a| 
+选择要从中还原的存储系统上的 SVM 。
+
+
+
+ a| 
+还原卷名称
+ a| 
+选择要从中还原的卷。
+
+
+
+ a| 
+策略
+ a| 
+选择要从中还原的备份的策略。
+
+
+
+ a| 
+Snap Creator Snapshot 副本 / 所有 Snapshot 副本
+ a| 
+保留默认值。
+
+
+
+ a| 
+还原 Snapshot 副本名称
+ a| 
+选择要从中还原的 Snapshot 副本。
+
+
+
+ a| 
+还原类型
+ a| 
+选择 * 单个文件还原 * 。
+
+|===
+. 在以下页面上，选择要还原的文件。
++
+该文件将在 * 源路径 * 字段中显示，并显示其完整路径名。
+
++
+
+TIP: 将路径名称复制到剪贴板以供日后使用。
+
+. 在以下页面上，选择要将文件还原到的目录。
++
+此文件的父子目录名称必须与源路径中父子目录的名称相同。例如，如果源路径为 /domino/data/mail/user1.nssf ，则还原路径为 /domino/data/restore/mail/user1.nssf 。
+
++
+此时将在 * 目标路径 * 字段中显示目录及其完整路径名。
+
+. 在以下页面上，指定单文件还原类型：
++
+|===
+| 对于此字段 ... | 执行此操作 ... 
+
+
+ a| 
+还原类型
+ a| 
+单击单文件还原类型。如果您选择 * 可选的最新分钟 * ，则会显示新字段，您可以在其中指定要播放正向 Domino 事务日志的日期和时间。如果 Snap Creator 服务器上的时间与存储控制器上的时间不匹配，请单击 * 忽略验证 * 。
+
+
+
+ a| 
+禁用复制
+ a| 
+选中此框可为已还原的数据库文件设置新的 Domino 副本 ID 。
+
+|===
+. 查看摘要，然后单击 * 完成 * 。
+. 在单个文件还原对话框中，单击 * 确定 * 。
++
+Snap Creator 将启动还原作业。作业信息将显示在控制台窗格中。
+
+

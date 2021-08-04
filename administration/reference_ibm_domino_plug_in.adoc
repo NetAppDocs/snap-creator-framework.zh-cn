@@ -1,0 +1,25 @@
+---
+permalink: administration/reference_ibm_domino_plug_in.html 
+sidebar: sidebar 
+keywords: ibm, domino, plug-in, snap, creator, framework, backup, netapp, api, snapshot, snapmirror, snapvault 
+summary: 适用于 Snap Creator Framework 的 IBM Domino 插件可为 NetApp 存储上的 Domino 数据库提供完整的备份和恢复解决方案。借助 IBM Domino 插件，您可以高效地备份数据库并根据需要进行还原，而无需使数据库服务器脱机。此插件使用 IBM 提供的 API 来确保应用程序一致性。 
+---
+= IBM Domino 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 Snap Creator Framework 的 IBM Domino 插件可为 NetApp 存储上的 Domino 数据库提供完整的备份和恢复解决方案。借助 IBM Domino 插件，您可以高效地备份数据库并根据需要进行还原，而无需使数据库服务器脱机。此插件使用 IBM 提供的 API 来确保应用程序一致性。
+
+通过在 Snap Creator Framework 中紧密集成关键 NetApp 数据保护技术，您可以使用 IBM Domino 插件：
+
+* 在主存储上创建应用程序一致的 Snapshot 副本
+* 将 Snapshot 副本复制到二级存储以实现灾难恢复和归档
+
+
+集成技术包括 Snapshot ， SnapMirror 和 SnapVault 。
+
+* 相关信息 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12422115["《 Snap Creator Framework 4.1.2 IBM Domino 插件操作指南》"]

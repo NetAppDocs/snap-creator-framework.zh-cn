@@ -1,0 +1,22 @@
+---
+permalink: installation/concept_configuring_settings_for_the_domino_plug_in.html 
+sidebar: sidebar 
+keywords: configuring, configure, settings 
+summary: 只有在计划使用作为 Snap Creator Agent 安装一部分提供的 IBM Domino 插件时，才需要配置特定设置。 
+---
+= 配置 Domino 插件的设置
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+只有在计划使用作为 Snap Creator Agent 安装一部分提供的 IBM Domino 插件时，才需要配置特定设置。
+
+
+NOTE: 最佳做法是在不同主机上安装 Snap Creator Server 和 Snap Creator Agent 。
+
+根据您的操作系统，您必须在安装用于 IBM Domino 插件的 Snap Creator Agent 之前配置这些设置，才能正常工作。
+
+* 对于 Windows 环境，必须将 Domino 路径添加到环境变量。
+* 对于 UNIX 环境，必须创建符号链接以链接到 Domino 的共享对象文件。
+

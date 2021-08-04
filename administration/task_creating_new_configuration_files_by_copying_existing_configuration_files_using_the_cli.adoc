@@ -1,0 +1,21 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_copying_existing_configuration_files_using_the_cli.html 
+sidebar: sidebar 
+keywords: cli, command-line, interface, configuration, file, copy 
+summary: 使用命令行界面（ CLI ），您可以通过复制现有配置文件并重命名新文件来创建新配置文件。 
+---
+= 通过复制现有配置文件创建新配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用命令行界面（ CLI ），您可以通过复制现有配置文件并重命名新文件来创建新配置文件。
+
+. 切换到配置目录： `cd install_path/scServer4.3/enginer/configs`
+. 复制源配置文件： `cp source_profile_name/configuration_nametarget_profile_name/new_configuration_name`
++
+您必须为新配置文件提供一个名称。
+
+. 自定义新配置文件，以用于要管理的应用程序或数据库。
+

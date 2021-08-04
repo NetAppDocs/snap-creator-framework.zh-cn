@@ -1,0 +1,25 @@
+---
+permalink: installation/concept_scf_component_server.html 
+sidebar: sidebar 
+keywords: snap, creator, server 
+summary: Snap Creator 操作由 Snap Creator 服务器启动。 
+---
+= Snap Creator 服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 操作由 Snap Creator 服务器启动。
+
+通常， Snap Creator 服务器安装在物理或虚拟主机上。该服务器托管 Snap Creator GUI 和必要的数据库，用于存储有关作业，计划，用户，角色，配置文件， 配置文件和插件中的元数据。在 Snap Creator 中，此服务器有时会缩短为 scServer 。
+
+服务器通过 Snap Creator 代理向支持的应用程序（数据库，电子邮件，虚拟机管理程序或任何其他自定义应用程序）发送暂停或取消暂停操作。默认情况下，服务器端口 9090 上会发生服务器与 Snap Creator 代理之间的通信，但您可以根据需要自定义此端口。
+
+默认情况下， Snap Creator 服务器使用 Data ONTAP API 调用与存储系统和其他 NetApp 软件产品进行通信。从 Snap Creator 服务器向存储系统发出的命令通过端口 80 或端口 443 执行，并在提交对存储设备或池的更改之前处理所有 Snapshot ， SnapVault 和 SnapMirror 类型的功能。
+
+Snap Creator 服务器通过 Unified Manager API 与 Active IQ Unified Manager 进行通信。
+
+* 相关信息 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["《 Snap Creator Framework 4.3.3 管理指南》"]

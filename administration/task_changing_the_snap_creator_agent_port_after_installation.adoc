@@ -1,0 +1,44 @@
+---
+permalink: administration/task_changing_the_snap_creator_agent_port_after_installation.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, creatoragent, properties, unix, default, port 
+summary: 要更改 Snap Creator 代理正在侦听的端口，您可以更改 Snap Creatoragent.properties 文件并重新启动代理。 
+---
+= 安装后更改 Snap Creator 代理端口
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更改 Snap Creator 代理正在侦听的端口，您可以更改 Snap Creatoragent.properties 文件并重新启动代理。
+
+用于更改 Snap Creator 代理端口的操作步骤对于 Windows 和 UNIX 是相同的。以下操作步骤使用 UNIX 环境中的示例。
+
+. 登录到运行 Snap Creator Agent 的系统，然后切换到安装目录中的 etc 子目录。
++
+[listing]
+----
+cd /install_path/scAgent4.3.0/etc
+----
+. 使用文本编辑器打开 agent.properties 文件。
+. 将 default_port 参数的值更改为新端口（默认情况下，端口为 9090 ）。
++
+例如，要使用端口 9191 ，请按如下所示更改 default_port 参数：
+
++
+[listing]
+----
+DEFAULT_PORT=9191
+----
+. 保存并关闭 agent.properties 文件。
+. 重新启动 Snap Creator 代理。
++
+[listing]
+----
+/install_path/scAgent4.3.0/bin/scAgent restart
+----
++
+
+NOTE: 如果在对 allowed_commands.config 文件或 agent.properties 文件进行任何更改时 Snap Creator 代理正在运行，则必须重新启动该代理。
+
+

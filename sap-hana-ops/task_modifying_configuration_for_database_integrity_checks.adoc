@@ -1,0 +1,21 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: modifying, modify, configuration, database, integrity, checks, sap, hana 
+summary: 您可以修改为数据库完整性检查配置的参数。后续计划或按需完整性检查操作将反映更新后的信息。 
+---
+= 修改数据库完整性检查的配置
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以修改为数据库完整性检查配置的参数。后续计划或按需完整性检查操作将反映更新后的信息。
+
+. 单击 SAP HANA 配置文件。
+. 选择要修改的配置，然后单击 * HANA 完整性检查设置 * 。
++
+image::../media/modifying_database_integrity_check_configuration.gif[修改数据库完整性将检查配置]
+
+. 编辑此信息，然后单击 * 保存 * 。
+

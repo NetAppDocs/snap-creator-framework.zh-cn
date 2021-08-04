@@ -1,0 +1,83 @@
+---
+permalink: administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html 
+sidebar: sidebar 
+keywords: mysql, plug-in, net-mysql, interoperability, matrix 
+summary: MySQL 插件使用 Net-MySQL 与数据库进行通信。 
+---
+= MySQL 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL 插件使用 Net-MySQL 与数据库进行通信。
+
+MySQL 插件不支持对多个数据库执行备份和还原操作。互操作性表包含有关支持和兼容性的最新信息。
+
+对于 Snap Creator 配置， MySQL 数据库用户必须已授予锁定表权限，以及超级和重新加载等其他权限。
+
+下表列出了 MySQL 插件参数，提供了这些参数的设置并对其进行了说明：
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+应用程序名称
+ a| 
+MySQL
+ a| 
+应用程序名称
+
+
+
+ a| 
+mysql_databases
+ a| 
+DB_name ： user_name/ 密码
+ a| 
+MySQL 数据库，用户名和密码的列表。您可以指定多个数据库，并将用户名和密码指定为分号分隔列表，例如， `dB1 ： user1/pwd1 ； DB2 ： user2/pwd2` 。
+
+
+
+ a| 
+host
+ a| 
+host_name
+ a| 
+数据库所在主机的名称。 * 注意： * validate_volumes 只有在 host=localhost 时才能正常运行。如果 host=IP_address ，则 validate_volumes 不会发现 MySQL 数据库。
+
+
+
+ a| 
+端口
+ a| 
+DB_name ： port_number
+ a| 
+列出正在侦听的数据库及其端口，例如， `dB1 ： 3307 ； DB2 ： 3308` 。
+
+
+
+ a| 
+主从节点
+ a| 
+Y
+| 不包括 
+
+
+ a| 
+指定备份数据库环境：如果设置为 Y ，则备份主数据库。
+
+如果设置为 N ，则备份从属数据库或不使用主从配置。
+
+
+NOTE: Snap Creator Framework 备份会删除启用 Master_Slave 选项的 MySQL 服务器上所需的 MySQL 二进制日志文件。使用 Snap Creator Framework 的 MySQL （主）数据库备份会删除所有二进制日志文件，并且只保留一个具有重置编号（ .000001 ）的空二进制日志文件。由于此问题描述，从服务器无法在备份操作后启动。
+ a| 
+purg_binary_log
+ a| 
+Y
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

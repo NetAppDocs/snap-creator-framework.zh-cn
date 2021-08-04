@@ -1,0 +1,15 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_backup_and_restore_solution_overview.html 
+sidebar: sidebar 
+keywords: sap, hana, backup, restore, solution, overview 
+summary: 如今，企业要求 SAP 应用程序每周七天，每天 24 小时可用。无论数据量不断增加，系统备份等日常维护任务如何，性能都应保持一致。 
+---
+= SAP HANA 备份和还原解决方案概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如今，企业要求 SAP 应用程序每周七天，每天 24 小时可用。无论数据量不断增加，系统备份等日常维护任务如何，性能都应保持一致。
+
+运行 SAP 数据库备份会对生产 SAP 系统的性能产生显著影响。由于备份时间不断缩短，需要备份的数据量也在不断增加，因此很难定义在执行备份时对业务流程影响最小的时间点。恢复和恢复 SAP 系统所需的时间尤其值得关注，因为必须将停机时间降至最低。

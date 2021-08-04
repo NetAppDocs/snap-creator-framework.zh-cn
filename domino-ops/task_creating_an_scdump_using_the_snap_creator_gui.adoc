@@ -1,0 +1,86 @@
+---
+permalink: domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, using scdump, gathering, logs, compressed, format 
+summary: 您可以使用 Snap Creatorscdump 操作将日志收集到压缩文件归档中。然后，您可以将归档发送给技术支持或 Snap Creator 专家进行审核。 
+---
+= 使用 scdump 以压缩格式收集日志
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creatorscdump 操作将日志收集到压缩文件归档中。然后，您可以将归档发送给技术支持或 Snap Creator 专家进行审核。
+
+您应已创建备份和还原配置文件。
+
+scdump 包含以下文件：
+
+|===
+| 文件 | Description 
+
+
+ a| 
+scdump.txt
+ a| 
+包含 Snap Creator 代理版本和主机操作系统， Data ONTAP 版本和 Domino 版本。
+
+
+
+ a| 
+engine.log
+ a| 
+包含有关 Snap Creator 工作流引擎操作的信息。
+
+
+
+ a| 
+gui.log
+ a| 
+包含有关 Snap Creator GUI 操作和消息的信息。可能包含多个日志。
+
+
+
+ a| 
+sc_server.log
+ a| 
+包含有关 Snap Creator 服务器操作的详细信息。可能包含多个日志。
+
+
+
+ a| 
+注销日志
+ a| 
+包含作业的详细级别信息。选定配置文件中所有配置的输出日志都会包括在内。
+
+
+
+ a| 
+调试日志
+ a| 
+包含详细级别的信息以及在调试中有用的信息。选定配置文件中所有配置的调试日志均包含在内。
+
+
+
+ a| 
+错误日志
+ a| 
+包含日志的错误信息。选定配置文件中所有配置的错误日志都会包含在内。
+
+
+
+ a| 
+配置文件
+ a| 
+选定配置文件中的所有配置文件都会包括在内，包括全局配置文件。
+
+|===
+
+NOTE: 尽管配置文件是 scdump 的输入，但实用程序会收集父配置文件中所有配置的信息。
+
+. 在配置文件和配置窗格中，选择一个配置文件，然后单击 * 操作 * > * scdump* 。
++
+scdump 会将日志和其他文件收集到压缩文件归档中。
+
+. 在下载对话框中，根据需要单击 * 打开 * 或 * 保存 * 。
+

@@ -1,0 +1,19 @@
+---
+permalink: administration/task_viewing_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: snap, creator, profile, view 
+summary: 您可以列出现有的 Snap Creator 配置文件。 
+---
+= 查看配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以列出现有的 Snap Creator 配置文件。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
++
+现有的 Snap Creator 配置文件将在配置文件和配置窗格中列出。
+
+

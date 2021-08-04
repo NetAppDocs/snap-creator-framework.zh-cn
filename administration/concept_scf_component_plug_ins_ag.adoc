@@ -1,0 +1,53 @@
+---
+permalink: administration/concept_scf_component_plug_ins_ag.html 
+sidebar: sidebar 
+keywords: plug-in, applications, databases, snap, creator, plug-ins, binary, installation, integration, db2, ibm, domino, maxdb, mysql 
+summary: 插件用于将应用程序或数据库置于一致状态。Snap Creator 包含多个插件，这些插件属于二进制文件的一部分，不需要任何额外安装。 
+---
+= 用于应用程序集成的插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+插件用于将应用程序或数据库置于一致状态。Snap Creator 包含多个插件，这些插件属于二进制文件的一部分，不需要任何额外安装。
+
+支持的应用程序类型包括数据库，电子邮件，虚拟机管理程序和自定义应用程序。支持在 Snap Creator 中使用以下插件：
+
+* 应用程序和数据库插件：
++
+** DB2
+** IBM Domino （ Domino ）
+** 最大数据库数
+** MySQL
++
+
+NOTE: MySQL 插件不支持对多个数据库执行备份和还原操作。
+
+** Oracle
+** SAP 高性能分析设备（ HANA ）
+** Sybase Adaptive Server Enterprise （ ASE ）
+
+
+* SnapManager 插件：
++
+** 适用于 Microsoft Exchange 的 SnapManager
+** 适用于 Microsoft SQL Server 的 SnapManager
+
+
+* 虚拟机管理程序插件：
++
+** Citrix XenServer
+** Red Hat 基于内核的虚拟机（ KVM ）
+** VMware （ vSphere 用于单个虚拟机备份， vCloud Director 用于 vApp 备份）
+
+
+
+
+有关详细信息，请参见配置 Snap Creator 所需的插件信息。自定义插件（也称为 " 社区插件 " ）由开发人员社区创建，可通过 Snap Creator 启用；但是，不支持自定义插件。这些插件利用 Snap Creator 提供的界面。
+
+有关详细信息，请参见 http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework 讨论社区论坛"]。
+
+* 相关信息 *
+
+xref:reference_information_required_to_configure_snap_creator.adoc[配置 Snap Creator 所需的插件信息]

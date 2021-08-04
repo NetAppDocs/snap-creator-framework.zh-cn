@@ -1,0 +1,34 @@
+---
+permalink: administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, backup, vcloud, vapp, vmware, director, api, vsphere, director, vcenter, vdc 
+summary: Snap Creator 支持通过 VMware 插件备份 vCloud vApp 。vApp 和虚拟机备份副本由 VMware 插件通过 vCloud Director API 和 vSphere API 创建，这些 API 分别在 VMware vCloud Director 和 VMware vCenter 服务器上调用。 
+---
+= 使用 VMware 插件执行 vCloud vApp 备份和还原操作的要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 支持通过 VMware 插件备份 vCloud vApp 。vApp 和虚拟机备份副本由 VMware 插件通过 vCloud Director API 和 vSphere API 创建，这些 API 分别在 VMware vCloud Director 和 VMware vCenter 服务器上调用。
+
+要成功执行 vApp 备份和还原操作，您必须在配置文件中提供以下详细信息：
+
+* vCloud IP 和凭据
+* vCloud 组织，虚拟数据中心（ vDC ）和 vApp 名称
+
+
+
+NOTE: 如果将多个 vCenter 连接到 vCloud ，则所有 vCenter 服务器的密码都应相同。
+
+执行 vCloud 备份和还原操作时，必须考虑以下事项：
+
+* VMware 和 vCloud 的备份和还原过程非常相似，但发现过程除外，在发现过程中， vCloud 备份需要使用表示状态传输（ Representational State Transfer ， REST ） API 额外发现 vCloud Director 元数据。
+* 您应提供 vCloud 以及要备份的组织， VDC 和 vApp 的详细信息。
+* 如果列出了 VDC ，则会备份 VDC 中的所有 vApp 。
+* vCloud 模块可发现与任何必须备份的 vApp 关联的虚拟机，并将其置于备份列表中。
+* 如果选择用于备份的 vApp 包含在某个组织中，或者也包含用于备份的 VDC 中，则此 vApp 只会备份一次。
+
+
+
+NOTE: 对于使用 VMware 插件的虚拟机文件系统（ VMFS ）还原操作，卷中必须有足够的空间来创建与 LUN 大小相等的 LUN 克隆。

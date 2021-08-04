@@ -1,0 +1,37 @@
+---
+permalink: installation/concept_what_snap_creator_does.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, description 
+summary: 通过 Snap Creator Framework ，您可以使用预打包和自定义插件，以便为 Windows 和 UNIX \ （ AIX ， HP-UX ， Linux 和 Solaris\ ）环境中的各种第三方应用程序，数据库和虚拟机管理程序实现标准化和简化数据保护。 
+---
+= Snap Creator Framework 的功能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 Snap Creator Framework ，您可以使用预打包和自定义插件，对 Windows 和 UNIX （ AIX ， HP-UX ， Linux 和 Solaris ）环境中各种第三方应用程序，数据库和虚拟机管理程序的数据保护进行标准化和简化。
+
+Snap Creator 可通过利用 Snapshot ， SnapVault ， Open Systems SnapVault 和 SnapMirror 功能以及 NetApp 管理控制台数据保护功能， Operations Manager 控制台和 FlexClone 提供以下功能：
+
+* 应用程序一致的数据保护
++
+用于备份关键信息的集中式解决方案，可与现有应用程序架构集成以确保数据一致性并降低运营成本。
+
+* 可扩展性
++
+使用模块化架构和基于策略的自动化实现快速集成。
+
+* 云就绪
++
+一种与操作系统无关的 Snap Creator 功能，支持物理和虚拟平台，并可与 IT 即服务和云环境互操作。
+
+* 克隆功能
++
+支持节省空间的数据克隆以用于开发和测试目的。
+
+
+
+下图显示了 Snap Creator Framework 的组件：
+
+image::../media/scfw_overview_41_refresh_installation.gif[scfw overview 41 刷新安装]

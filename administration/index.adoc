@@ -1,0 +1,13 @@
+---
+permalink: administration/index.html 
+sidebar: sidebar 
+keywords: administration, guide, snap, creator, server, agent, profiles, policies, schedule, jobs, backup, recovery 
+summary: 介绍 Snap Creator 服务器和代理的热管理，包括用户访问和配置文件，策略，计划作业以及备份和恢复操作 
+---
+= 管理指南
+:icons: font
+:imagesdir: ../media/
+
+
+[role="Lead"]
+本指南介绍如何管理 Snap Creator Server 和 Agent for Snap Creator 4.3.3 ，包括用户访问和配置文件，策略，计划作业以及备份和恢复操作。

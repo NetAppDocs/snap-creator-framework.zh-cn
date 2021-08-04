@@ -1,0 +1,21 @@
+---
+permalink: administration/task_editing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: edit, schedule, job, snap, creator, gui 
+summary: 您可以编辑已计划的作业。 
+---
+= 编辑已计划作业
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以编辑已计划的作业。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 计划 * 。
+. 从计划选项卡中，从已计划作业列表中选择一个作业，然后单击 * 编辑 * 。
+. 修改所需字段，然后单击 * 保存 * 。
++
+计划的作业将随修改一起保存。
+
+

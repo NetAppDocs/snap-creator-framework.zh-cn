@@ -1,0 +1,56 @@
+---
+permalink: administration/reference_parameters_to_set_up_operations_manager_console.html 
+sidebar: sidebar 
+keywords: parameter, required, operation, manager, host, user, pwd, port 
+summary: 设置 Operations Manager 控制台需要多个参数。 
+---
+= 用于设置 Operations Manager 控制台的参数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+设置 Operations Manager 控制台需要多个参数。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+OM_host
+ a| 
+ a| 
+Operations Manager 控制台主机的名称或 IP 地址。
+
+
+
+ a| 
+OM_user
+ a| 
+ a| 
+有权创建事件的 Operations Manager 控制台用户的用户名。
+
+
+
+ a| 
+OM_PWD
+ a| 
+ a| 
+Operations Manager 控制台用户的密码。* 注： * 密码必须至少包含两个字符。
+
+
+
+ a| 
+OM_port
+ a| 
+ a| 
+用于与 Operations Manager 控制台通信的端口； 8088 是默认 HTTP 端口， 8488 是 Operations Manager 控制台使用的默认 HTTPS 端口。
+
+
+
+ a| 
+OM_event_generate
+ a| 
+Y
+| 不包括 
+|===

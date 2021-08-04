@@ -1,0 +1,20 @@
+---
+permalink: domino-ops/task_disconnecting_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, disconnecting, disconnect, snapshot, copy 
+summary: 还原操作完成后，您需要断开已挂载的 Snapshot 副本的连接。 
+---
+= 正在断开 Snapshot 副本的连接
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+还原操作完成后，您需要断开已挂载的 Snapshot 副本的连接。
+
+以下操作步骤显示了如何断开 Windows Server 2008 主机上挂载的 Snapshot 副本的连接。主机上必须运行 SnapDrive for Windows 和 Snap Creator 代理。
+
+. 在服务器管理器中，单击 * 存储 * > * SnapDrive * > * 物理服务器名称 * > * 磁盘 * 。
+. 在磁盘标识窗格中，选择已挂载的磁盘，然后单击右键菜单中的 * 断开磁盘 * 。
+. 在断开磁盘连接对话框中，单击 * 是 * 。
+

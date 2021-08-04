@@ -1,0 +1,121 @@
+---
+permalink: installation/concept_snap_creator_installation_and_configuration_requirements.html 
+sidebar: sidebar 
+keywords: snap, creator, install, installation, configuration, requirements 
+summary: 在安装 Snap Creator Framework 之前，您应了解许可证，软件和硬件的某些安装和配置要求。 
+---
+= Snap Creator 安装和配置要求
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装 Snap Creator Framework 之前，您应了解许可证，软件和硬件的某些安装和配置要求。
+
+
+
+== 许可证要求
+
+尽管 Snap Creator 不需要许可证，但根据您要在使用 Snap Creator 时执行的操作，可能需要以下许可证：
+
+* FlexClone （用于卷克隆）
+* Active IQ Unified Manager 核心软件包（适用于 NetApp 管理控制台数据保护功能和 Operations Manager 控制台）
+* Open Systems SnapVault （适用于 OSSV 操作）
+* SnapDrive （用于 SnapDrive 操作）
+* SnapMirror （用于 SnapMirror 操作）
+* SnapRestore （用于还原）
+* SnapVault （用于 SnapVault 操作）
+
+
+请参见互操作性表，其网址为 http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]，了解有关受支持软件的详细信息。
+
+
+
+== 软件信息
+
+根据您的环境，可能需要以下软件：
+
+* Java （必需）
++
+
+NOTE: Snap Creator Framework 4.3.3 仅支持 OpenJDK 和 Oracle Java 1.8 Update 72 及更高版本。
+
+* Data ONTAP （必需）
+* Microsoft .NET Framework
+* 操作系统
++
+
+NOTE: 目前仅支持基于美国的操作系统。
+
++
+** UNIX 平台：
++
+
+NOTE: 对于所有 UNIX 平台， Snap Creator 仅支持 Bash Shell 。
+
++
+*** AIX
+*** HP-UX
+*** Linux
+*** Solaris
+
+
+** Microsoft Windows
+
+
+* Web 浏览器：
++
+** Internet Explorer
+** Firefox
+
+
+
+
+请参见互操作性表，其网址为 http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]，了解有关受支持软件的详细信息。
+
+
+
+== 硬件要求
+
+Snap Creator 硬件要求如下：
+
+* Snap Creator 服务器要求：
++
+|===
+| 硬件组件 | 最小值 | 建议 
+
+
+ a| 
+处理器
+ a| 
+1 个核心
+ a| 
+4 核， 2 GHz 或更快
+
+
+
+ a| 
+内存（用于 Snap Creator 和操作系统）
+ a| 
+2 GB RAM
+ a| 
+4 GB RAM
+
+
+
+ a| 
+磁盘空间
+ a| 
+5 GB
+ a| 
+50 GB 或更大（取决于要存储的日志数量）
+
+|===
+* Snap Creator 代理要求：
++
+如果未部署插件或使用预打包的插件，则至少需要 256 MB 内存。
+
++
+预打包的插件不需要任何额外的内存要求。其他插件可能还有其他要求。
+
+

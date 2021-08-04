@@ -1,0 +1,13 @@
+---
+permalink: installation/concept_creating_a_snap_creator_user_for_data_ontap.html 
+sidebar: sidebar 
+keywords: creating, create, snap, creator, user 
+summary: 在安装 Snap Creator 之前，您应创建一个适用于 Data ONTAP 的 Snap Creator 用户。创建 Snap Creator 用户所遵循的过程取决于您的系统是在 7- 模式下运行 Data ONTAP 还是在集群模式 Data ONTAP 下运行。 
+---
+= 为 Data ONTAP 创建 Snap Creator 用户
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装 Snap Creator 之前，您应创建一个适用于 Data ONTAP 的 Snap Creator 用户。创建 Snap Creator 用户所遵循的过程取决于您的系统是在 7- 模式下运行 Data ONTAP 还是在集群模式 Data ONTAP 下运行。

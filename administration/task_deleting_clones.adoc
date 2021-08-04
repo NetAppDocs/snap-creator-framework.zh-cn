@@ -1,0 +1,21 @@
+---
+permalink: administration/task_deleting_clones.html 
+sidebar: sidebar 
+keywords: unmount, delete, clone, gui, snap, creator, management, configuration, action, snapshot, copy, controller, volume 
+summary: 您可以卸载（或删除）克隆。 
+---
+= 正在卸载克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以卸载（或删除）克隆。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
+. 从 * 配置 * 选项卡中，选择一个配置文件，然后选择 * 操作 * > * 卸载 * 。
+. 从 Additional parameters 窗口中，选择包含已挂载备份的控制器，卷， Snapshot 副本策略以及创建克隆的特定 Snapshot 副本名称；然后单击 * 确定 * 。
++
+克隆已卸载；不会删除 Snapshot 副本。
+
+

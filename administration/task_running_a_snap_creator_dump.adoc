@@ -1,0 +1,42 @@
+---
+permalink: administration/task_running_a_snap_creator_dump.html 
+sidebar: sidebar 
+keywords: collect, support, information, perform, snap, creator, dump, gui 
+summary: 您可以使用 Snap Creator GUI 中的 scdump 收集支持信息。 
+---
+= 执行 Snap Creator 转储
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 Snap Creator 图形用户界面使用 * scdump* 来收集支持信息。
+
+Snap Creator 转储（ scdump ）会在配置文件级别收集以下支持信息，并将其放置在 .zip 文件中：
+
+* 配置文件的配置文件
+* 日志文件（ Ouptut 和调试）
+* 其他日志文件（ server.log ， guI.log 和 SC_server.log ）
+* 环境信息（ scdump.txt ），例如以下各项：
++
+** Snap Creator 版本（构建信息，日期等）
+** 主机操作系统和架构
+** 数据库和版本
+** SnapDrive 版本
++
+... 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
+... 从配置文件和配置窗格中，展开配置文件并选择一个配置文件。
+... 选择 * 操作 * > * scdump* 。
++
+
+NOTE: 此过程可能需要几分钟时间。请勿多次选择 scdump 选项。
+
+... 保存 .zip 文件。
++
+zip 文件（ scdump_profile_date/time.zip ）将保存到引擎子目录中的 Snap Creator Server 安装目录中。
+
+
+
+
+
+

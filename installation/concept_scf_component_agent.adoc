@@ -1,0 +1,17 @@
+---
+permalink: installation/concept_scf_component_agent.html 
+sidebar: sidebar 
+keywords: snap, creator, agent 
+summary: Snap Creator 代理通常安装在安装应用程序或数据库的同一主机上。代理是插件所在位置。有时，在 Snap Creator 中，此代理会缩短为 scAgent 。 
+---
+= Snap Creator 代理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 代理通常安装在安装应用程序或数据库的同一主机上。代理是插件所在位置。有时，在 Snap Creator 中，此代理会缩短为 scAgent 。
+
+代理可从 Snap Creator 服务器接受应用程序暂停和取消暂停命令以及其他预 / 后命令。使用插件时需要 Snap Creator 代理。
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["《 Snap Creator Framework 4.3.3 管理指南》"]

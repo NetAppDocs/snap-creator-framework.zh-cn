@@ -1,0 +1,23 @@
+---
+permalink: administration/task_deleting_backups.html 
+sidebar: sidebar 
+keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui, data 
+summary: 您可以删除配置文件的备份副本。 
+---
+= 删除备份
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除配置文件的备份副本。
+
+. 从 Snap Creator 图形用户界面（ GUI ）的主菜单中，选择 * 数据 * > * 备份 *
+. 从备份选项卡的配置文件和配置窗格中，展开配置文件并选择配置文件。
+. 选择要删除的备份，然后单击 * 删除 * 。
++
+
+NOTE: 如果配置文件包含多个 Data ONTAP 卷，则必须选择要在每个 Data ONTAP 卷上删除的 Snapshot 副本。
+
+. 单击确认窗口中的 * 是 * 。
+

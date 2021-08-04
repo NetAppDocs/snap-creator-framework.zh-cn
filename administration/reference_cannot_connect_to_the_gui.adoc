@@ -1,0 +1,36 @@
+---
+permalink: administration/reference_cannot_connect_to_the_gui.html 
+sidebar: sidebar 
+keywords: unix, snap, creator, gui, https 
+summary: 在 UNIX 环境中，您可能无法连接到 Snap Creator 图形用户界面；在调查问题的根源时，您必须验证是否存在某些情况。 
+---
+= 无法连接到 Snap Creator GUI
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 UNIX 环境中，您可能无法连接到 Snap Creator 图形用户界面；在调查问题的根源时，您必须验证是否存在某些情况。
+
+* * 问题描述 *
++
+在 UNIX 环境中，您无法连接到 Snap Creator GUI 。
+
+* * 更正操作 *
++
+验证以下内容：
+
++
+** URL 必须以 HTTPS 开头。
++
+
+NOTE: 如果使用 HTTP 而不是 HTTPS ，则结果将为页面上无任何内容或 "` ？` " 取决于您使用的浏览器。
+
+** 此 URL 中使用的端口号正确，而其他任何端口均未使用此选定端口。
++
+您可以尝试选择其他端口。
+
+** 允许通过操作系统的防火墙进行通信。
+
+
+

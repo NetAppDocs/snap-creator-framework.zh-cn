@@ -1,0 +1,18 @@
+---
+permalink: installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html 
+sidebar: sidebar 
+keywords: configuring, configure, unix, settings, create, creating, symbolic, links 
+summary: 如果要在 UNIX 操作系统（ AIX ， Linux 和 Solaris ）上安装 Snap Creator 代理，则要使 IBM Domino 插件正常工作，必须创建三个符号链接（符号链接）来链接到 Domino 的共享对象文件。 
+---
+= 配置 UNIX 专用设置：创建符号链接
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要在 UNIX 操作系统（ AIX ， Linux 和 Solaris ）上安装 Snap Creator 代理，则要使 IBM Domino 插件正常工作，必须创建三个符号链接（符号链接）来链接到 Domino 的共享对象文件。
+
+安装过程因操作系统而略有不同。请参阅适用于您的操作系统的操作步骤。
+
+
+NOTE: Domino 不支持 HP-UX 操作系统。

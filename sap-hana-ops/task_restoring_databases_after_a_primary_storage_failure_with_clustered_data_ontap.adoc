@@ -1,0 +1,43 @@
+---
+permalink: sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: sap, hana, restore, restoring, databases, primary, storage, failure, clustered, data, ontap 
+summary: 您可以在运行集群模式 Data ONTAP 的主存储系统出现故障后还原 SAP HANA 数据库。 
+---
+= 使用集群模式 Data ONTAP 在主存储发生故障后还原数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在运行集群模式 Data ONTAP 的主存储系统出现故障后还原 SAP HANA 数据库。
+
+假设主卷完全丢失，您需要创建一个新的主卷，然后从备份卷进行还原。
+
+. 创建类型为数据保护的主卷。
++
+[listing]
+----
+hana::> volume create -vserver hana1a -volume hana_data -aggregate aggr_sas_101 -size 300G -state online -type DP -policy default -autosize-mode grow_shrink -space-guarantee none
+-snapshot-policy none -foreground true
+[Job 6744] Job is queued: Create hana_data.
+[Job 6744] Job succeeded: Successful
+----
+. 从备份卷还原所有数据。
++
+[listing]
+----
+hana::> snapmirror restore -destination-path hana1a:hana_data -source-path hana2b:backup_hana_data -source-snapshot sc-backup-daily_20140505121000
+[Job 6746] Job is queued: snapmirror restore from source "hana2b:backup_hana_data" for the
+snapshot sc-backup-daily_20140505121000.
+
+hana::> job show -id 6746
+Owning
+Job ID Name                 Vserver    Node           State
+------ -------------------- ---------- -------------- ----------
+6746   SnapMirror restore   hana        hana01        Running
+       Description: snapmirror restore from source "hana2b:backup_hana_data" for the snapshot sc-backup-daily_20140505121000
+----
+
+
+还原过程完成后，您可以使用 SAP HANA 执行恢复。

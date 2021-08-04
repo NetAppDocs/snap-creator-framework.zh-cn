@@ -1,0 +1,20 @@
+---
+permalink: administration/task_viewing_assigned_configuration_files_for_a_profile.html 
+sidebar: sidebar 
+keywords: configuration, file, assign, profile 
+summary: 您可以查看分配给配置文件的配置文件列表。 
+---
+= 查看分配给配置文件的配置文件列表
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看分配给配置文件的配置文件列表。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
+. 从配置文件和配置窗格中，展开配置文件的内容。
++
+分配给配置文件的配置文件列在配置文件名称下方。
+
+

@@ -1,0 +1,21 @@
+---
+permalink: domino-ops/concept_create_a_domino_backup_using_snap_creator.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases 
+summary: 您可以按需或按计划备份数据库。您可以使用 Snap Creator GUI 或 Snap Creator CLI 备份数据库。 
+---
+= 备份数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以按需或按计划备份数据库。您可以使用 Snap Creator GUI 或 Snap Creator CLI 备份数据库。
+
+
+NOTE: 本指南介绍如何使用 GUI 备份数据库。有关如何使用命令行界面的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+* 相关信息 *
+
+link:task_creating_a_domino_backup_using_the_snap_creator_gui.adoc["按需备份数据库"]
+

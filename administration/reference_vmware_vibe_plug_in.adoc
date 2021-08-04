@@ -1,0 +1,185 @@
+---
+permalink: administration/reference_vmware_vibe_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, virtual, machine, vmware, windows, linux, vcenter, ha 
+summary: Snap Creator 支持通过 VMware Vibe 插件备份 VMware 虚拟机和 vApp 。VMware 插件是一个集成插件，适用于运行 vSphere 的虚拟机以及运行 vCloud Director 的 vApp 。 
+---
+= VMware Vibe 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 支持通过 VMware Vibe 插件备份 VMware 虚拟机和 vApp 。VMware 插件是一个集成插件，适用于运行 vSphere 的虚拟机以及运行 vCloud Director 的 vApp 。
+
+使用 VMware Vibe 插件时，必须考虑以下事项：
+
+* VMware 插件仅在 Windows 和 Linux 上受支持。
++
+如果您使用的是非 Windows 或非 Linux Snap Creator 服务器，则需要使用 Snap Creator Windows 或 Linux 代理来运行 VMware 插件。
+
+* 不支持将 Unified Manager 服务器用作代理。
+* 不支持使用 Open Systems SnapVault 和归档日志管理执行挂载，卸载和备份操作。
+* VMware 插件中的 VMware 高可用性（ HA ）未经过测试，因此不受支持。
+* VMware 插件的 VMware vCenter 链接模式未经过测试，因此不受支持。
+* VMware 插件不支持原始设备映射（ RDM ）。
+* 使用自动检测发现卷。
++
+如果发现的目标卷不是 SnapMirror 关系，则无法查看它。您可以使用 dpstatus 命令检查 SnapMirror 关系。如果 SnapMirror 关系不存在，则必须先创建 SnapMirror 关系。
+
+* 在执行还原操作之前，您必须删除所有 VMware Snapshot 副本。
+* 还原操作完成后，您必须对已还原的虚拟机和 vApp 运行 Snap Creator 备份，以便清理新环境并删除所有 VMware Snapshot 副本。
++
+如果 VMware 插件无法清理 VMware Snapshot 副本并显示错误，则必须手动删除 VMware Snapshot 副本。VMware 插件不保证完全删除 VMware Snapshot 副本。这是一个已知的 VMware 问题描述。
+
+* VMware 插件仅支持 32 位 Linux 系统中的 32 位 Snap Creator 和 64 位 Linux 系统中的 64 位 Snap Creator 。
+* 无法还原已删除的虚拟机。
+* 不支持卷还原操作；仅支持应用程序定义的还原操作。
+* sc_agent_timeout 参数的值应设置为 1800 或更高。
+* vibe vmware_snapshot 参数（ VMware snapshot 选项）的默认值为 N
+* 如果 app_defined_restore 的值为 Y ，则不支持使用图形用户界面（ GUI ）执行 SnapVault 还原操作。
+* 在使用图形用户界面创建 SnapMirror 和 SnapVault 配置时，您必须手动输入 SnapMirror 和 SnapVault 参数，因为不会自动检测到 SnapMirror 和 SnapVault 关系。
+* VMware 插件会将 ISO 挂载路径发现为数据存储库。
+
+
+下表列出了 VMware VIBE 插件参数，提供了参数设置并对这些参数进行了说明。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+vIBE_dynamic_volumes_update
+ a| 
+Y 或 nDefault ：未设置
+ a| 
+如果此参数设置为 N ，则不会执行动态卷更新，这意味着您必须手动设置 volumes ， snapvault_volumes ， snapmirror_volumes 和 NTAP_dFM_data_set 参数。
+
+
+
+ a| 
+VIBE_NOPING
+ a| 
+默认值： n
+ a| 
+指定不使用 Internet 控制消息协议（ Internet Control Message Protocol ， ICMP ）对 VMware 插件或存储控制器执行 ping 操作。
+
+
+
+ a| 
+VIBE_vCloud_IPADDR
+ a| 
+不适用
+ a| 
+指定用于登录到的 vCloud Director 的 IP 地址或主机名（仅限 vCloud ）。
+
+
+
+ a| 
+VIBE_vCloud_user
+ a| 
+不适用
+ a| 
+指定用于登录到 vCloud Director 的用户名（仅限 vCloud ）。您必须设置 @组织或 @系统（顶级 vCloud 数据库）。
+
+
+NOTE: 必须使用 vCloud Director 系统管理员用户名执行备份和还原操作。如果使用组织管理员凭据或任何其他用户凭据，则这些操作将失败。
+
+示例： `administrator@system`
+
+
+
+ a| 
+VIBE_vCloud_passwd
+ a| 
+不适用
+ a| 
+指定与指定 VIBE_vCloud_user 关联的密码（仅限 vCloud ）。
+
+
+
+ a| 
+VIBE_VCENTER_USER
+ a| 
+不适用
+ a| 
+指定用于登录到 vCenter 的用户名。
+
+
+
+ a| 
+vibe vCenter_passwd
+ a| 
+不适用
+ a| 
+指定与指定 VIBE_VCENTER_USER 关联的密码。
+
+
+
+ a| 
+VIBE_vCloud_Names
+ a| 
+不适用
+ a| 
+列出应备份的组织，虚拟数据中心和 vApp 对象名称（仅限 vCloud ）。示例： `ORG ： VDC1 ， VDC2 ： VAPP1 ， VAPP2 ； ORG2 ： VDC3 ：； ORG3 ：： VAPP6`
+
+
+
+ a| 
+vIBE_vsphere_names
+ a| 
+不适用
+ a| 
+列出了每个 vCenter 应备份的数据存储库和虚拟机（仅限 vSphere ）。示例： `VENTER1 ： DS1 ： VM1 ； VENTER2 ； DS2 ， DS3 ：； VENTER3 ：：：： VM4`
+
+
+
+ a| 
+vibe ， trim_vsphere_names
+ a| 
+不适用
+ a| 
+列出每个 vCenter 中应从备份中删除的虚拟机（仅限 vSphere ）。示例： `VENTER1 ： VM99 ； VENTER2 ： VM5 ， vm12`
+
+
+
+ a| 
+vIBE_restore_interval
+ a| 
+默认值： `30 秒`
+ a| 
+指定每次还原检查之间的时间。
+
+
+
+ a| 
+vIBE_restore_time
+ a| 
+默认值： `3600 seconds`
+ a| 
+指定等待完成还原操作完成的总时间。
+
+
+
+ a| 
+VIBE_VMware_snapshot
+ a| 
+默认值： n
+ a| 
+在备份期间创建 VMware Snapshot 副本。
+
+
+
+ a| 
+VIBE_ignore_exportfs=Y 或 N
+ a| 
+默认值： n
+ a| 
+您必须手动将此参数添加到 Snap Creator Vibe 配置文件中。
+
+如果此值设置为 Y ，则在 7- 模式下运行的 Data ONTAP 配置将忽略控制器上的任何 exportfs 值。相反， Data ONTAP 会将卷导出路径映射为 /vol/datastore_name ，其中指定了用于备份的数据存储库名称。使用 vFiler 单元的旧环境可能会使用此方法，因为 vFiler 单元无法提供各个数据存储库的导出信息。相反，配置需要根据查询将路径映射到 vfiler0 。
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

@@ -1,0 +1,41 @@
+---
+permalink: administration/task_changing_the_snap_creator_server_port.html 
+sidebar: sidebar 
+keywords: snap, creator, server, snapcreator, properties, file, restart, server, installation, unix 
+summary: 要更改 Snap Creator 服务器使用的端口，您可以编辑 snapcreator.properties 文件并重新启动服务器。 
+---
+= 安装后更改 Snap Creator 服务器端口
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更改 Snap Creator 服务器使用的端口，您可以编辑 snapcreator.properties 文件并重新启动服务器。
+
+用于更改 Snap Creator 服务器端口的操作步骤对于 Windows 和 UNIX 是相同的。以下操作步骤使用 UNIX 环境中的示例。
+
+. 登录到运行 Snap Creator 服务器的系统，然后切换到安装目录中的 etc 子目录。
++
+[listing]
+----
+cd /install_path/scServer4.3.0/engine/etc
+----
+. 使用文本编辑器打开 snapcreator.properties 文件。
+. 将以下参数中的端口值（默认为 8443 ）更改为新端口：
++
+[listing]
+----
+...
+SNAPCREATOR_STARTUP_PORT=8443
+...
+SNAPCREATOR_STORAGE_URL=https\://localhost\:8443/services/v1/StorageService
+...
+----
+. 保存并关闭 snapcreator.properties 文件。
+. 重新启动 Snap Creator 服务器。
++
+[listing]
+----
+/install_path/scServer4.3.0/bin/scServer restart
+----
+

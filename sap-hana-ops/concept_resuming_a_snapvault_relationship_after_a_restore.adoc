@@ -1,0 +1,17 @@
+---
+permalink: sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html 
+sidebar: sidebar 
+keywords: resuming, resume, restart, snapvault, relationship, after, restore 
+summary: 如果未使用最新的 Snapshot 备份执行任何还原，则会删除主存储系统上的 SnapVault 关系。 
+---
+= 还原后恢复 SnapVault 关系
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果未使用最新的 Snapshot 备份执行任何还原，则会删除主存储系统上的 SnapVault 关系。
+
+还原和恢复过程完成后，必须恢复 SnapVault 关系，以便可以使用 Snap Creator 再次执行备份。否则， Snap Creator 将问题描述显示一条错误消息，因为它在主存储系统上找不到 SnapVault 关系。
+
+如果源卷和目标卷之间仍存在通用 Snapshot 副本，则所需的数据传输将基于增量传输。

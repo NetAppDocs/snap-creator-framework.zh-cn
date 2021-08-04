@@ -1,0 +1,32 @@
+---
+permalink: domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, creating, create, backup, restore, configuration 
+summary: 您可以在配置文件中指定备份和还原操作所需的大多数信息。此配置文件是 Snap Creator 备份和还原操作的输入。 
+---
+= 创建备份和还原配置
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在配置文件中指定备份和还原操作所需的大多数信息。此配置文件是 Snap Creator 备份和还原操作的输入。
+
+您可以根据需要创建任意数量的配置文件，但只能指定一个配置文件作为操作的输入。您可以使用 Snap Creator GUI 或 Snap Creator CLI 创建配置文件。
+
+
+NOTE: 本指南介绍如何使用 GUI 创建配置文件。有关如何使用命令行界面的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+您可以在 Snap Creatorprofiles 中组织配置文件。配置文件和配置文件位于 Snap Creator 安装目录的 \enginer\conconfigs 子目录中：
+
+* 在 UNIX 主机上，将安装文件解压缩到的目录
+* 默认情况下，在 Windows 主机上， C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x
+
+
+* 相关信息 *
+
+link:concept_general_configuration_file_information.adoc["登录到 Snap Creator GUI"]
+
+
+
+

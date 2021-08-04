@@ -1,0 +1,18 @@
+---
+permalink: administration/task_viewing_permissions_assigned_to_a_role_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, permission, gui, role, management 
+summary: 您可以使用 Snap Creator GUI 查看分配给角色的所有 Snap Creator 权限的列表。 
+---
+= 查看分配给角色的 Snap Creator 权限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 查看分配给角色的所有 Snap Creator 权限的列表。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 用户和角色 * > * 角色管理 * 。
+. 在 "* 角色管理 "* 选项卡中，选择所需的角色。
+. 选择所需角色，然后在角色和已分配权限窗格中查看已分配的权限。
+

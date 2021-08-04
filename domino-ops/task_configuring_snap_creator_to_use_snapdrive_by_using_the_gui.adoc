@@ -1,0 +1,86 @@
+---
+permalink: domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, supplemental, commands 
+summary: 您可以在创建配置文件后向配置中添加补充命令。您可以在 Snap Creator 服务器或代理上运行命令。 
+---
+= 向配置中添加补充命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在创建配置文件后向配置中添加补充命令。您可以在 Snap Creator 服务器或代理上运行命令。
+
+要对代理运行补充命令，您应已将该命令添加到代理上的 allowed_commands.config 文件中。
+
+默认情况下，补充命令在代理上运行。您可以在服务器上运行补充命令，方法是在命令前面加上文本 Server ，后跟冒号（：）。例如，服务器： C ： \mysnt.bat 。无需在服务器上允许此命令。
+
+您可以使用 Snap Creator GUI 或 Snap Creator CLI 向备份和还原配置中添加命令。
+
+
+NOTE: 本指南介绍如何使用 GUI 添加命令。有关如何使用命令行界面的信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+. 在配置文件和配置窗格中，选择配置文件并单击 * 命令 * 选项卡。
++
+可以使用以下命令类型：
+
++
+|===
+| 命令类型 | Description 
+
+
+ a| 
+应用程序暂停
+ a| 
+仅供非插件使用。忽略此命令类型。
+
+
+
+ a| 
+应用程序取消暂停
+ a| 
+仅供非插件使用。忽略此命令类型。
+
+
+
+ a| 
+预退出
+ a| 
+使用此类型可运行命令，告知 Snap Creator 发生致命错误后应执行的操作。
+
+
+
+ a| 
+创建 Snapshot 副本
+ a| 
+使用此类型可以运行您自己的 Snapshot 副本创建命令。
+
+|===
++
+
+NOTE: 图形用户界面中仅提供了部分受支持的命令。有关应用程序，归档，挂载 / 卸载和 POST 命令的信息，请参见 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+
+. 在 * 命令 * 选项卡上，滚动到要使用的命令类型对应的部分，然后单击 * 添加 * 。
+. 键入文本 * 在此添加命令 * 以输入命令。
++
+要使用 SnapDrive for Windows 创建备份，您可以在 Snapshot 副本创建命令类型部分中输入以下内容：
+
++
+[listing]
+----
+"C:\Program Files\NetApp\SnapDrive\sdcli.exe" snap create -s %SNAME-%SNAP_TYPE_%SNAP_TIME -D F G H
+----
++
+其中：
+
++
+** C ： \Program Files\NetApp\SnapDrive\sdcli.exe 是 SnapDrive 命令行界面的默认安装路径。
+** %SNAME-%SNAP_type_%SNAP_time 用于指定 Snapshot 副本名称的格式，包括配置文件名称， Snapshot 策略（每小时，每天或每月）以及创建 Snapshot 副本的时间和日期。
+** d 表示交换机， F G H 表示要备份的数据的挂载点。提示：要在服务器上运行命令，请在命令前面加上文本 Server ，后跟一个冒号（：）。
+
+
+. 如果您对输入内容感到满意，请按 * 输入 * 。
+. 重复步骤 <<STEP_3F9C83DD05D84075AD0277213FD67C56,#sted_3F9C83DD05D84075AD0277213FD67C56>> 到 <<STEP_FBEDD7AE105F42138EB35315EA9FA7CC,#sted_FBEDD7AE105F42138EB35315EA9FA7CC>> 添加其他命令。
+. 单击配置内容窗格中的 * 保存 * 以保存所做的更改。
+

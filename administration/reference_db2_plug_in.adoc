@@ -1,0 +1,65 @@
+---
+permalink: administration/reference_db2_plug_in.html 
+sidebar: sidebar 
+keywords: db2, plug-in, communicate, database 
+summary: DB2 插件使用 DB2 命令与数据库进行通信。 
+---
+= DB2 插件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+DB2 插件使用 DB2 命令与数据库进行通信。
+
+下表列出了 DB2 插件参数，提供了参数设置并对参数进行了说明。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+应用程序名称
+ a| 
+DB2
+ a| 
+提供应用程序名称。
+
+
+
+ a| 
+DB2_Databases
+ a| 
+DB_name ： user_name
+ a| 
+列出 DB2 数据库和用户名。可以将多个数据库和用户名指定为分号分隔的列表：例如， `dB1 ：用户 1 ； DB2 ：用户 2` 。
+
+
+
+ a| 
+DB2_CMD
+ a| 
+path_to_db2cli_cmd
+ a| 
+指定用于初始化数据库连接的路径，以便可以对数据库执行更多命令。
+
+* 基于 UNIX 的环境：``db2_install_directory/sqllib/bin/DB2``
++
+例如： ` home/db2inst1/sqllib/bin/DB2`
+
+* Windows ： `db2_install_directory\SQLIB\bin\db2cmd.exe`
++
+例如： `C ： \\"Program Files"\IBM\SQLIB\bin\db2cmd.exe`
+
+
+
+如果未指定路径，则使用 sqllib/DB2 作为路径。
+
+|===
+* 注意： * 默认情况下， DB2 插件处理任意位置写入文件布局（ Write Anywhere File Layout ， WAFL ）操作。如果要使用 DB2 插件备份一致性组备份，应将参数设置为 NTAP_consistent_Group_WAFL_sync 参数如果将此参数设置为 Y ，则会执行其他冗余同步操作。
+
+有关支持的最新信息或要查看兼容性列表，请参见互操作性表。
+
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具： mysupport.netapp.com/matrix"]

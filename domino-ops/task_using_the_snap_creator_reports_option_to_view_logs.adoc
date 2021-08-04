@@ -1,0 +1,30 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, logs, report pane 
+summary: 您可以在 Snap CreatorReports 窗格中查看日志，查看格式与在控制台窗格中显示日志相同。您可以在报告窗格中查看错误日志以及标准日志。 
+---
+= 在报告窗格中查看日志
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Snap CreatorReports 窗格中查看日志，查看格式与在控制台窗格中显示日志相同。您可以在报告窗格中查看错误日志以及标准日志。
+
+. 在 Snap Creator Framework 窗口顶部，单击 * 报告 * > * 日志 * 。
+. 在报告窗格中，选择配置文件，配置文件，日志类型和日志文件， 其中日志类型如下：
++
+** * 出日志 * 可为作业提供详细级别的信息。
+** * 调试日志 * 可提供详细级别的信息以及在调试中有用的信息。
+** * stderr Logs* 提供了有关写入标准错误的错误的信息。
+** * 错误日志 * 提供所有错误信息。* 注： * 根据作业大小，选择 * 调试日志 * 可以使浏览器发生原因变得较慢或无响应。
+
+
+. 单击
++
+** * 下载选定日志 * 以下载选定日志。
+** * 下载图形用户界面日志 * 以下载图形用户界面日志。在下载对话框中，根据需要单击 * 打开 * 或 * 保存 * 。
+
+
+

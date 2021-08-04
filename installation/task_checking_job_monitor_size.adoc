@@ -1,0 +1,28 @@
+---
+permalink: installation/task_checking_job_monitor_size.html 
+sidebar: sidebar 
+keywords: checking, check, job, monitor, size 
+summary: 在升级到 Snap Creator 的最新版本之前，您应检查当前安装的 Snap Creator 版本的作业监控器大小。 
+---
+= 正在检查作业监控器大小
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在升级到 Snap Creator 的最新版本之前，您应检查当前安装的 Snap Creator 版本的作业监控器大小。
+
+升级 Snap Creator 时，请确保将作业监控器大小设置为等于或大于先前设置，以避免作业监控器数据库中的数据丢失。Snap Creator 仅检索到更新后的作业监控器大小限制范围内的作业。
+
+例如，如果 Snap Creator 4.0 中的作业监控器大小为 500 ，请确保在升级到最新的 Snap Creator 时将作业监控器大小设置为等于或大于 500 的数字。
+
+. 执行以下选项之一，检查作业监控器大小：
++
+** 打开 Snap Creator 服务器属性文件（ /install_path/scServer4.1.x/enginer/etc/snapcreator.properties ）并检查 SNAPCREATOR_job_monitor_size 变量。
+** 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 作业监控器 * ，然后单击 * 大小 * 。
++
+此时将显示作业监控器大小对话框，并在顶部字段中显示当前大小。
+
+
+
+

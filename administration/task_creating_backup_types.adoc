@@ -1,0 +1,21 @@
+---
+permalink: administration/task_creating_backup_types.html 
+sidebar: sidebar 
+keywords: backup, snap, creator, gui, policy, creating, type 
+summary: 您可以选择使用 Snap Creator GUI 创建备份类型，以帮助确定策略的用途。 
+---
+= 创建备份类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以选择使用 Snap Creator GUI 创建备份类型，以帮助确定策略的用途。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 策略 * > * 备份类型 * 。
+. 在 * 备份类型 * 选项卡中，单击 * 添加 * 。
+. 输入新的备份类型名称，然后单击 * 确定 * 。
++
+新备份类型列在 * 备份类型 * 下。
+
+

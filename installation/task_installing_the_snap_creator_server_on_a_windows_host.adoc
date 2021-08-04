@@ -1,0 +1,112 @@
+---
+permalink: installation/task_installing_the_snap_creator_server_on_a_windows_host.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server, windows, hosts 
+summary: 您可以使用 Windows 安装程序在 Windows 主机上安装 Snap Creator Server 。 
+---
+= 在 Windows 主机上安装 Snap Creator 服务器
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Windows 安装程序在 Windows 主机上安装 Snap Creator Server 。
+
+* 必须安装 JRE 1.8 Update 72 或更高版本。
+* 执行安装的人员必须具有管理员级别的权限才能执行安装。
+* Snap Creator 服务器的默认端口必须为 8443 。
++
+您可以使用 netstat 或类似工具来验证要使用的网络端口（只要该端口支持 HTTPS ）是否可用且尚未使用（例如， Windows ： `netstat -na | find "8443"` ）。
+
+* 您必须已下载 Snap Creator 。
++
+.. 双击 Snap_Creator_Frameworkrelease-Windowsversion.exe 文件。
++
+要启动 Snap Creator 安装程序，您应使用 Snap_Creator_Framework4.1.0-Windows64.exe 。
+
+.. 在欢迎页面上，单击 * 下一步 * 开始安装。
+.. 阅读并接受许可协议的条款。
+.. 在 * 选择安装类型 * 页面上，根据各种安装类型更改设置，然后单击 * 下一步 * 。
++
+image::../media/choose_install_type_page.gif[选择安装类型页面]
+
++
+*** * 选择安装类型 *
++
+选择 * 服务器 * 。如果希望 Snap Creator 服务器和 Snap Creator 代理同时安装在同一系统上，则可以同时安装这两个服务器。
+
+*** * 启动服务器作为服务 *
++
+选择此选项可在安装过程完成后立即自动安装并启动 snapcreatorserverservice 服务。如果未选中此选项，则会禁用 * 服务器端口 * 字段。
+
++
+
+NOTE: 如果不选择此选项，则不会安装此服务，您需要通过从命令提示符运行批处理脚本来手动启动 Snap Creator 服务器。
+
+*** * 输入系统 IP*
++
+选择此选项可提供安装 Snap Creator Server 或 Snap Creator Agent 的系统的 IP 地址。此选项用于在 Snap Creator 安装期间生成 SSL 证书。
+
+*** * 输入 Java 文件箱路径 *
++
+选择此选项可提供 Java 文件箱路径以查找 keytool 实用程序。Keytool 用于在 Snap Creator 安装期间生成 SSL 证书。
+
+*** * 服务器端口 *
++
+接受默认端口 `8443` 或指定端口号。
+
+
+
+.. 配置 * 配置文件设置 * 页面，然后单击 * 下一步 * 。
++
+在 * 配置文件设置 * 页面上输入的信息用于设置 Snap Creator 图形用户界面所需的配置文件。
+
++
+*** * 存储控制器序列号 *
++
+此参数是可选的。输入一个存储控制器的序列号。如果提供了此信息，则控制器序列号将嵌入到 Snap Creator 属性文件中，并包含在支持和日志输出中。此信息可用于帮助您对将来发生的任何问题进行故障排除。
+
+*** * 用户名 *
++
+输入 Snap Creator 服务器管理员的名称。
+
+*** * 密码和确认 *
++
+输入 Snap Creator 服务器管理员的密码。
+
+*** * 启用作业监控器 *
++
+如果要启用作业监控，请选中 * 启用作业监控 * 复选框。作业监控器是 GUI 中的一个单独部分，用于监控 Snap Creator 运行的所有作业以及这些作业的状态。
+
+*** * 作业日志大小 *
++
+输入要保留在作业日志历史记录中的作业数。默认值为 `100` ；大小应介于 1 到 1000 之间。
+
++
+
+NOTE: 尽管 * 作业日志大小 * 的最大可接受值为 10 ， 000 ，但建议的最大大小为 1000 。
+
+
+
+.. 在 * 选择安装位置 * 页面上，输入 Snap Creator 安装路径或接受默认值（ C ： \Program Files\NetApp\Snap_Creator_Framework ），然后单击 * 下一步 * 。
+.. 在 * 选择开始菜单文件夹 * 页面上，自定义 Snap Creator 应显示在 Windows 开始菜单中的文件夹或接受默认值，然后单击 * 安装 * 。
+.. 安装完成后，单击 * 下一步 * 。
++
+在 Snap Creator Server 服务安装期间，如果在安装选项中选择了某个服务，则会显示一个命令提示符。此过程会尝试启动现有服务；因此，在此步骤中通常会列出失败消息。
+
+.. 单击 * 完成 * 关闭 Windows 安装程序。
+.. 导航到指定端口上的本地主机，以验证 Snap Creator Framework 图形用户界面的启动情况 (https://IP_address:gui_port)[]。
++
+您必须使用 HTTPS 进行连接；否则，此连接不会自动重定向到 HTTPS 连接，并且图形用户界面将不起作用。
+
+
+
+
+
+* 相关信息 *
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[在 Snap Creator 主机上安装 Java]
+
+xref:task_downloading_the_snap_creator_software.adoc[下载 Snap Creator 软件]
+
+xref:task_starting_the_server_from_a_command_prompt.adoc[从命令提示符启动服务器]

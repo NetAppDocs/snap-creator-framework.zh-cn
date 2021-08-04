@@ -1,0 +1,26 @@
+---
+permalink: administration/task_deleting_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: delete, snap, creator, profile 
+summary: 您可以删除 Snap Creator 配置文件。 
+---
+= 正在删除配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除 Snap Creator 配置文件。
+
+删除配置文件还会删除与此配置文件关联的任何配置文件。
+
+. 从 Snap Creator GUI 主菜单中，选择 * 管理 * > * 配置 * 。
++
+现有的 Snap Creator 配置文件将在配置文件和配置窗格中列出。
+
+. 右键单击要删除的配置文件并选择 * 删除 * 。
+. 单击确认消息中的 * 是 *
++
+配置文件和关联的配置文件将从 Snap Creator 中永久删除。
+
+

@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_self_signed_ssl_certificate.html 
+sidebar: sidebar 
+keywords: self-signed, ssl, certificate, url, issue, cause, corrective, action, system, ip, parameter 
+summary: 自签名 SSL 证书与 URL 不匹配 
+---
+= 自签名 SSL 证书与 URL 不匹配
+:icons: font
+:imagesdir: ../media/
+
+
+* * 问题描述 *
++
+随 Snap Creator Framework 提供的自签名 SSL 证书与 URL 不匹配。
+
+* * 发生原因 *
++
+Snap Creator 服务上提供的 SSL 证书的公用名（ Common Name ， CN ）用于其他计算机，因此与主机名不匹配。
+
+* * 更正操作 *
++
+在安装 Snap Creator Server 和 Snap Creator Agent 期间引入了系统 IP 参数来解析主机名。
+
++
+.. 在 System IP 选项中输入要安装 Snap Creator Framework 的系统 IP 地址。
++
+*** 可以使用相同的 IP 地址创建 SSL 证书的公用名。
+
+
+
+
+

@@ -1,0 +1,66 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: creating, create, snap, creator, user, ontap, 7-mode 
+summary: Snap Creator 使用 Data ONTAP API 与存储系统进行通信。要确保用户帐户仅被授予对 Snap Creator 的访问权限，请在每个存储控制器上创建一个新角色，组和用户。该角色将分配给该组，而该组包含该用户。此选项用于控制 Snap Creator 帐户的访问并限制其范围。 
+---
+= 为 7- 模式 Data ONTAP 创建 Snap Creator 用户
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 使用 Data ONTAP API 与存储系统进行通信。要确保用户帐户仅被授予对 Snap Creator 的访问权限，请在每个存储控制器上创建一个新角色，组和用户。该角色将分配给该组，而该组包含该用户。此选项用于控制 Snap Creator 帐户的访问并限制其范围。
+
+必须对安装了 Snap Creator 的每个存储控制器执行一次此操作步骤。
+
+要使用 Data ONTAP 命令行界面（ SSH ，控制台连接或 Telnet ）为在 7- 模式下运行的 Data ONTAP 创建 Snap Creator 用户，请完成以下步骤。
+
+
+NOTE: 您不应直接从本文档中复制和粘贴命令；可能会出现错误，例如换行符和硬返回导致字符传输不正确。将此操作步骤中的命令复制并粘贴到文本编辑器中，验证这些命令，然后在命令行界面中输入它们。
+
+. 运行以下命令，创建一个角色，定义 Snap Creator 在存储系统上所需的权限：
++
+[listing]
+----
+useradmin role add rolename -a login-\*,api-snapshot-\*,api-system-\*,
+api-ems-\*,api-snapvault-\*,api-snapmirror-\*,api-volume-\*,
+api-lun-\*,api-cg-\*,api-nfs-\*,api-file-\*,api-license-\*,
+api-net-\*api-clone-\*, api-options-get, api-wafl-sync
+----
++
+
+NOTE: 此步骤中显示的命令包括 Snap Creator 使用的所有 API 角色。但是，您可以通过仅包含所需角色来限制用户访问（例如，如果不使用 SnapMirror ，则不需要 API-snapmirror-* ）。
+
++
+[listing]
+----
+useradmin role add sc_role -a login-*,api-snapshot-*,api-system-*,api-ems-*,api-snapvault-*,api-snapmirror-*,api-volume-*,
+api-lun-*,api-cg-*,api-nfs-*,api-file-*,api-license-*, api-net-*, api-clone-*, api-options-get, api-wafl-sync
+----
+. 在存储系统上创建一个新组，并运行以下命令将新创建的角色分配给该组：
++
+[listing]
+----
+useradmin group add groupname -r rolename
+----
++
+[listing]
+----
+useradmin group add snap_creator_group -r snap_creator_role
+----
+. 运行以下命令创建用户帐户：
++
+[listing]
+----
+useradmin user add username -g groupname
+----
++
+[listing]
+----
+useradmin user add snap_creator_user -g snap_creator_group
+----
+. 输入帐户的密码。
+
+
+在为 Snap Creator 创建配置文件时，请使用此受限帐户。

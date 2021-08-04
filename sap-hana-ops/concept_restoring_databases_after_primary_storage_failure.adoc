@@ -1,0 +1,13 @@
+---
+permalink: sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html 
+sidebar: sidebar 
+keywords: restoring, restore, database, primary, storage, failure 
+summary: 在主存储发生故障或从主存储的卷中删除所有 Snapshot 副本后， Snap Creator 将无法处理还原，因为主存储系统上将不再存在 SnapVault 关系。 
+---
+= 在主存储发生故障后还原数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在主存储发生故障或从主存储的卷中删除所有 Snapshot 副本后， Snap Creator 将无法处理还原，因为主存储系统上将不再存在 SnapVault 关系。

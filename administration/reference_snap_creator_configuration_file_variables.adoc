@@ -1,0 +1,29 @@
+---
+permalink: administration/reference_snap_creator_configuration_file_variables.html 
+sidebar: sidebar 
+keywords: variable, parameter, snap, creator, configuration, file, snapshot 
+summary: 您可以在 Snap Creator 配置文件中定义变量，参数和命令。 
+---
+= Snap Creator 配置文件变量，参数和命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Snap Creator 配置文件中定义变量，参数和命令。
+
+Snap Creator 配置文件是动态的，这意味着您可以在配置文件中创建和设置变量。
+
+例如，使用 SnapDrive for Windows 而不是 ONTAPI 创建 Snapshot 副本时。由于 Snapshot 副本名称必须是唯一的，因此您必须设置一个动态变量。以下示例来自适用于 Windows 的 SnapDrive 配置：
+
+ntap_snapshot_create_cmd1="c ： /Program Files/NetApp/SnapDrive/sdcli.exe snap create -m fx1b4 -s %SNAME-%snap_type_%snap_time -D E ：
+
+或
+
+ntap_snapshot_create_cmd1="c ： /Program Files/NetApp/SnapDrive/sdcli.exe snap create -m fx1b4 -s %SNAME-%snap_type_recent -D E ：
+
+如果使用 SnapDrive for Windows 而不是 Data ONTAP 来删除 Snapshot 副本，则可以使用 NTAP_snapshot_delete_CMD参数 。必须在 SnapDrive for Windows 命令中使用 %SNAPNAME 参数来替代 Snapshot 副本名称。
+
+以下示例来自适用于 Windows 的 SnapDrive 配置：
+
+ntap_snapshot_delete_CMD01 = "C ： \Program Files\NetApp\SnapDrive\sdcli" snap delete -s %SNAPNAME -D I ：

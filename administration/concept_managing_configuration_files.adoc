@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_managing_configuration_files.html 
+sidebar: sidebar 
+keywords: create, copy, download, list, delete, configuration, managing, files 
+summary: 您可以创建，复制，下载，列出和删除配置文件。 
+---
+= 管理配置文件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建，复制，下载，列出和删除配置文件。
+
+配置文件是 Snap Creator 的中心，由设置为影响 Snap Creator 行为的参数组成，例如启用受支持的插件运行，指定所需变量以及定义在 Snapshot 副本中捕获的卷。

@@ -1,0 +1,73 @@
+---
+permalink: administration/reference_pre_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap, clone, exit 
+summary: Snap Creator 服务器包括多个配置文件预处理命令。 
+---
+= 预处理命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 服务器包括多个配置文件预处理命令。
+
+
+NOTE: 对于 Windows ，在执行任何 PRE 命令之前，必须包含 `cmd.exe /c` 。
+
+|===
+| 命令 | Description 
+
+
+ a| 
+Pre_app_quiesce_CMD ##
+ a| 
+这是应用程序前备份启动命令，其中 ## 是一个介于 01-99 之间的数字。
+
+
+
+ a| 
+PRE_NTAP_CMD ##
+ a| 
+此命令为 pre-Snapshot 命令，其中 ## 是一个介于 01-99 之间的数字；它会在所有操作之前运行。
+
+
+
+ a| 
+PRE_APP_UNquiesce_CMD ##
+ a| 
+这是应用程序前备份停止命令，其中 ## 是一个介于 01-99 之间的数字。
+
+
+
+ a| 
+PRE_NTAP_clone_delete_CMD ##
+ a| 
+这是克隆前删除命令，其中 ## 是一个介于 01-99 之间的数字。* 注： * clone delete 命令的目的是调用挂载脚本或命令，以便挂载克隆的 LUN 以进行备份（可能是备份到磁带）。
+
+
+
+ a| 
+PRE_EXITE_CMD ##
+ a| 
+这是一个可选命令，在发生致命错误后但在 Snap Creator 退出之前运行。这对于还原到 Snap Creator 运行之前的状态非常有用。 * 注： *
+
+* 此命令会在 Snap Creator 因错误退出之前将应用程序返回到正常操作模式。
+* 如果使用 APP_NAME ，则会忽略此设置，因为它在 Snap Creator 中进行内部处理。
+
+
+
+
+ a| 
+Pre_restore_CMD ##
+ a| 
+这是一个可选命令，可以在输入交互式还原之前运行。这样，您就可以与要还原的应用程序进行交互。例如，您可能希望在执行还原之前关闭应用程序。* 注意： * MySQL 插件不支持此功能。
+
+
+
+ a| 
+Pre_clone_create _ CMD ##
+ a| 
+这是一个可选命令，可以在执行 ONTAPI 克隆操作之前运行，其中 ## 是一个介于 01-99 之间的数字。
+
+|===

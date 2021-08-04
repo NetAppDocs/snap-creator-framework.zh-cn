@@ -1,0 +1,62 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_clustered_ontap.html 
+sidebar: sidebar 
+keywords: creating, create, snap, center, user, ontap 
+summary: 对于集群模式 Data ONTAP ，您应为 Snap Creator 创建用户。但是，您创建的用户类型取决于集群模式 Data ONTAP 的版本。这两种类型的用户是集群用户和 Storage Virtual Machine （ SVM ）用户。 
+---
+= 为集群模式 Data ONTAP 创建 Snap Creator 用户
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于集群模式 Data ONTAP ，您应为 Snap Creator 创建用户。但是，您创建的用户类型取决于集群模式 Data ONTAP 的版本。这两种类型的用户是集群用户和 Storage Virtual Machine （ SVM ）用户。
+
+使用 _Snap Creator Framework 管理指南 _ 中定义的适当角色为您的 Data ONTAP 版本创建以下用户：
+
+* 集群模式 Data ONTAP 8.2 之前的 Data ONTAP 版本：创建集群和 SVM 用户。
+* 集群模式 Data ONTAP 8.2 或更高版本：创建 SVM 用户。
+
+
+为了提高安全性，您应专门为 Snap Creator 创建一个 Data ONTAP 用户和角色。或者，您也可以使用其他用户帐户，例如 admin 或 vsadmin 。
+
+有关使用命令行界面创建 Snap Creator 角色的详细信息，请参见相关参考。
+
+这两种类型的用户都需要访问 Data ONTAPI 库。此外，无论版本如何，集群模式 Data ONTAP 也需要管理 LIF 。
+
+这两个用户不可互换。例如，集群用户无权访问所需的 API 来执行某些操作，例如创建 Snapshot 副本。即使使用默认集群管理员帐户，也是如此。要使 Snap Creator 正常工作， SVM 帐户应使用 * vsadmin* 角色或客户创建的角色。
+
+必须在使用 Snap Creator 的每个 SVM 和集群上执行一次此操作步骤。
+
+为了便于使用，以下说明会提及管理员和 vsadmin 角色；但是，您可以将这些角色名称替换为您创建的角色。
+
+
+NOTE: 您不应直接从本文档中复制和粘贴命令；可能会出现错误（例如，换行符和硬返回导致字符传输不正确）。将此操作步骤中的命令复制并粘贴到文本编辑器中，验证这些命令，然后在命令行界面中输入它们。
+
+. 在 SVM_name SVM 上创建具有适当角色（ vsadmin 或为用户创建的角色）的 SVM 用户 SVM_username01 ，并输入以下命令和用户密码以启用对 ONTAPI 库的访问：
++
+[listing]
+----
+security login create -username svm_username01
+-vserver svm_name -application ontapi
+-authmethod password -role vsadmin
+
+Please enter a password for user 'svm_username01':
+Please enter it again:
+----
+. _ （仅适用于集群模式 Data ONTAP 8.2 之前的版本） _ 输入以下命令和用户密码以创建集群用户：
++
+[listing]
+----
+security login create -username svm_username02
+-vserver svm_clustername -application ontapi
+-authmethod password -role admin
+
+Please enter a password for user 'svm_username02':
+Please enter it again:
+----
+
+
+* 相关信息 *
+
+xref:reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.adoc[用于在集群模式 Data ONTAP 中为 Snap Creator 用户创建角色的命令行界面命令]

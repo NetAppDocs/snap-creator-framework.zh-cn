@@ -1,0 +1,64 @@
+---
+permalink: sap-hana-ops/task_restoring_and_recovering_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: sap, hana, restoring, restore, recovering, recover, databases 
+summary: 您可以使用 SAP HANA Studio 和 Snap Creator 还原和恢复 SAP HANA 数据库。 
+---
+= 还原和恢复 SAP HANA 数据库
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SAP HANA Studio 和 Snap Creator 还原和恢复 SAP HANA 数据库。
+
+. 在 SAP HANA Studio 中：
++
+.. 为 SAP HANA 系统选择恢复。
+.. SAP HANA 系统已关闭。
+.. 选择恢复类型。
+.. 提供日志备份位置。
+.. 此时将显示数据备份列表
+.. 选择 backup 可查看外部备份 ID 。
+
+
+. 对于仅运行集群模式 Data ONTAP 的存储系统：
++
+.. 只有在使用最新备份以外的任何其他备份进行还原时才需要此备份。
+.. 仅主存储中的 "`Volume SnapRestore` " 才需要此功能。
+.. 停用 SnapVault 关系
+
+
+. 在 Snap Creator 中：
++
+.. 为 SAP HANA 系统选择 "`Restore` " 。
+.. 根据主存储备份的可用性，选择从主存储或二级存储还原。
+.. 选择存储控制器，卷名称和 Snapshot 副本名称。Snapshot 副本名称与先前的备份 ID 相关。
+.. 对于多节点 SAP HANA 系统，需要还原多个卷：
++
+... 选择 * 添加更多还原项 * 。
+... 选择存储控制器，卷名称和 Snapshot 副本名称。
+... 对所有所需卷重复此过程。
+
+
+.. 对于多租户数据库容器（ MDC ）单租户数据库系统，系统和租户数据库都将还原。
+.. 还原过程已启动
+.. 已完成所有卷的还原。
+
+
+. 在数据库节点上，卸载并挂载所有数据卷以清理 " 陈旧的 NFS 句柄 " 。
+. 在 SAP HANA Studio 中：
++
+.. 在备份列表中选择 * 刷新 * 。
+.. 选择可用于恢复的备份（绿色项目）。
+.. 启动恢复过程。
+.. 对于多租户数据库容器（ MDC ）单租户数据库系统，首先为系统数据库启动恢复过程，然后为租户数据库启动恢复过程。
+.. SAP HANA 系统已启动。
+
+
+. （可选）恢复所有已还原卷的 SnapVault 关系。
++
+
+NOTE: 在存储系统中，只有在使用最新备份以外的备份进行还原时，才需要执行此步骤。
+
+

@@ -1,0 +1,67 @@
+---
+permalink: administration/reference_logs.html 
+sidebar: sidebar 
+keywords: snap, creator, error, troubleshoot, cmd, output, debug, warn, error, out, debug, stderr 
+summary: Snap Creator 可提供有用的错误消息和故障排除日志。 
+---
+= 错误消息和故障排除日志的类型
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 可提供有用的错误消息和故障排除日志。
+
+Snap Creator 提供了以下类型的错误消息：
+
+* * 信息 *
++
+对于正常发生的标准操作。
+
+* * CMD*
++
+Snap Creator 运行的外部命令或脚本（根据配置），并记录命令或脚本的返回代码。通常，这些命令包括 PRE ， POST 或 APP quiesce 或 unquiesce 命令。
+
+* * 输出 *
++
+数据 ONTAPI 库调用。
+
+* * 调试 *
++
+有关调试信息，请参见。
+
+* * 警告 *
++
+为了引起您的注意，但通常会将其视为正常活动，不需要执行任何操作（例如，删除 Snapshot 副本时）
+
+* * 错误 *
++
+表示存在问题，很可能需要手动操作来修复此错误。任何错误消息均会退出 Snap Creator 。在重新运行之前修复发生的任何问题非常重要。Snap Creator 不会自动修复问题，但您可以使用配置文件中定义的 PRE_EXITE_CMD 指定退出 Snap Creator 之前要执行的操作。
+
+
+
+故障排除日志包含 Snap Creator 运行的任何外部命令或脚本（例如 SnapDrive ）的输出。如果您通过 Snap Creator 调用其他脚本，请务必正确设置这些脚本的退出代码和输出。如果出现问题，则不应以 0 状态退出。
+
+每个 Snap Creator 配置文件和配置均可使用以下日志：
+
+* * 出 *
++
+仅包含详细日志记录信息。
+
+* * 调试 *
++
+包含详细和调试日志记录信息。如果在配置文件中启用了跟踪消息（这是默认设置），则跟踪信息将显示在此日志中。用于启用跟踪消息的参数为 log_trace_enable - （ Y_N ）。
+
+* * 错误 *
++
+包含给定配置的所有错误事件的历史记录。错误日志有助于查看有关过去错误的信息，以便用户可以关联事件并获得历史视角。可以对其进行监控，并将其用作将 Snap Creator 与监控应用程序集成的一种方式。
+
+* * stderr*
++
+如果 Snap Creator 代码出现问题，请提供相关信息；但是，标准错误流日志通常为空。
+
+
+
+输出，调试和 stderr 日志会按照配置文件中的 log_nUM 值的定义保留，而错误日志始终会附加。所有日志都会写入 /scServer_install_path/enginer/logs/profile 目录。
+
+Snap Creator Agent 还可以选择创建输出，调试和 stderr 日志，默认情况下会启用，并设置以下参数： sc_agent_log_enable=Y

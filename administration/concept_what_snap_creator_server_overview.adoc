@@ -1,0 +1,59 @@
+---
+permalink: administration/concept_what_snap_creator_server_overview.html 
+sidebar: sidebar 
+keywords: snap, creator, server, framework, overview, gui 
+summary: Snap Creator 服务器是 Snap Creator Framework 的主要引擎。 
+---
+= Snap Creator 服务器概述
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 服务器是 Snap Creator Framework 的主要引擎。
+
+通常， Snap Creator 服务器安装在物理或虚拟主机上。该服务器托管 Snap Creator 图形用户界面（ GUI ）以及用于存储有关作业，计划，用户，角色，配置文件， 配置文件以及插件中的元数据。在 Snap Creator 中， Snap Creator 服务器有时会缩短为 scServer 。
+
+下图展示了 Snap Creator 服务器的架构：
+
+image::../media/scfw_server_architecture.gif[scfw 服务器架构]
+
+使用 Java 编写的 Snap Creator Server 组件通常安装在中央备份服务器上。在较小的环境中，此组件可以安装在安装了要管理的应用程序或数据库的主机上。Snap Creator 服务器组件包括以下部分：
+
+* * 工作流引擎 *
++
+运行所有 Snap Creator 任务和命令。XML 驱动的多线程工作流引擎是 Snap Creator 的核心组件。
+
+* * Snap Creator 应用程序编程接口（ API ） *
++
+由 Snap Creator GUI 和命令行界面（ CLI ）使用。
+
+* * Snap Creator 存储库 *
++
+包含有关 Snap Creator 配置文件和配置文件的信息，包括全局配置和配置文件级别的全局配置。
+
+* * Snap Creator 扩展存储库 *
++
+为在 Snap Creator 中运行的每个作业提供一个数据库位置，其中包括有关该作业的重要信息以及插件生成的元数据。
+
+* * Snap Creator 数据库 *
++
+存储有关 Snap Creator 计划和作业以及基于角色的访问控制（ Role-Based Access Control ， RBAC ）用户和角色的信息。
+
+* * 存储接口 *
++
+用作 NetApp 存储系统的通用 Snap Creator 界面，该界面使用 Data ONTAP API 处理创建 Snapshot 副本， SnapVault 更新和 SnapMirror 更新等操作。
+
+* * Active IQ Unified Manager 接口 *
++
+要与 NetAppActive IQ Unified Manager 进行可选通信，此接口将使用 Unified Manager API 而不是 Data ONTAP API 来执行创建 Snapshot 副本， SnapVault 更新和 SnapMirror 更新等操作。
+
+* * 代理接口 *
++
+与 Snap Creator 代理通信。虽然 Snap Creator 代理和 Snap Creator 服务器通常安装在不同的物理或虚拟主机上，但两者都可以安装在同一主机上。
+
++
+
+NOTE: Snap Creator Server 4.3.0 仅支持 Snap Creator Agent4.1.x 和 4.3.xSnap Creator Server 4.3.0 不支持 4.1.x 之前的 Snap Creator Agent 版本
+
+

@@ -1,0 +1,40 @@
+---
+permalink: sap-hana-ops/task_configuring_sap_hana_for_san_environments.html 
+sidebar: sidebar 
+keywords: configuring, sap, hana, san, environments 
+summary: 配置数据备份后，在使用光纤通道存储区域网络（ SAN ）将 SAP HANA 系统连接到存储控制器的环境中，您需要向 Snap Creator 配置文件添加一个新命令。 
+---
+= 为 SAN 环境配置 SAP HANA
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+配置数据备份后，在使用光纤通道存储区域网络（ SAN ）将 SAP HANA 系统连接到存储控制器的环境中，您需要向 Snap Creator 配置文件添加一个新命令。
+
+当 SAP HANA 中的 Snap Creator 触发全局同步备份保存点时，最后一步发生在 SAP HANA 写入 /HA/data/SID/mnt001/hdb00001/snapshot_databasup_0_1 文件时。此文件是存储上数据卷的一部分，因此是存储 Snapshot 副本的一部分。在还原备份时执行恢复时，此文件是必需的。由于在 Linux 主机上使用 "X" 文件系统（ XFS ）缓存元数据，因此该文件在存储层不会立即可见。元数据缓存的标准 XFS 配置为 30 秒。
+
+在 Snap Creator 中，您需要添加应用程序后暂停命令，该命令会等待 XFS 元数据缓存转储到磁盘层。
+
+您可以使用以下命令检查元数据缓存的配置：
+
+[listing]
+----
+stlrx300s8-2:/ # sysctl -A | grep xfssyncd_centisecs
+fs.xfs.xfssyncd_centisecs = 3000
+----
+. 在配置文件（ install_path/scServerversion_number/engin/configs ）中，将 /bin/leep 命令添加到 POST 命令部分，如以下示例所示：
++
+[listing]
+----
+############################################################
+#     Post Commands      ############################################
+POST_NTAP_DATA_TRANSFER_CMD01=
+POST_APP_QUIESCE_CMD01=/bin/sleep 60
+POST_CLONE_CREATE_CMD01=
+----
++
+
+NOTE: 等待时间应是 fs.xfs.xfssyncd_centis 参数值的两倍。例如，如果默认值为 30 秒，则应将休眠命令配置为 60 秒。
+
+

@@ -1,0 +1,21 @@
+---
+permalink: sap-hana-ops/task_modifying_the_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: sap, hana, modifying, modify, housekeeping, log, backups 
+summary: 如果要禁用日志清理操作，您可以修改为日志备份的管理配置的参数。 
+---
+= 修改日志备份的管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要禁用日志清理操作，您可以修改为日志备份的管理配置的参数。
+
+. 选择要修改的 SAP HANA 配置文件。
+. 选择要修改的配置，然后单击 * SAP HANA 设置 * 。
+. 编辑 Enable log cleanup 参数，然后单击 * 保存 * 。
++
+image::../media/modifying_housekeeping_of_logs.gif[修改日志备份的管理]
+
+

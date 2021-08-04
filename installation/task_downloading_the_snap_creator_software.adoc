@@ -1,0 +1,28 @@
+---
+permalink: installation/task_downloading_the_snap_creator_software.html 
+sidebar: sidebar 
+keywords: downloading, download, snap, creator, software 
+summary: 您可以从 NetApp 支持站点下载 Snap Creator 软件。Snap Creator 列在 Snap Creator Framework 下的 " 软件下载 " 部分中。 
+---
+= 下载 Snap Creator 软件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 NetApp 支持站点下载 Snap Creator 软件。Snap Creator 列在 `SSnap Creator Framework 下的 " 软件下载` " 部分中。
+
+. 转到 NetApp 支持站点上的软件页面。
++
+Snap Creator 在 * 下载 * > * 软件 * 部分中列为 * Snap Creator Framework* 。
+
+. 选择一个平台，然后单击 * 执行 * 。
+. 单击 * 查看并下载 * ，选择要下载的 Snap Creator 版本。
+. 在软件下载说明中，单击 * 继续 * 。
+. 阅读并接受最终用户许可协议。
+. 选择软件包的操作系统和位级别。
+
+
+* 相关信息 *
+
+http://mysupport.netapp.com/["NetApp 支持站点： mysupport.netapp.com"]

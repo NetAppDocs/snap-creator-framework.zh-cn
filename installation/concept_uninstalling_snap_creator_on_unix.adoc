@@ -1,0 +1,13 @@
+---
+permalink: installation/concept_uninstalling_snap_creator_on_unix.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, unix 
+summary: 在 UNIX 上卸载 Snap Creator 时，请先卸载 Snap Creator 代理，然后卸载 Snap Creator 服务器。 
+---
+= 在 UNIX 上卸载 Snap Creator
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 UNIX 上卸载 Snap Creator 时，请先卸载 Snap Creator 代理，然后卸载 Snap Creator 服务器。

@@ -1,0 +1,61 @@
+---
+permalink: sap-hana-ops/concept_backup_solution_components.html 
+sidebar: sidebar 
+keywords: backup, solution, components, sap, hana 
+summary: 适用于 SAP HANA 的 Snap Creator 备份解决方案包括使用基于存储的 Snapshot 副本的 SAP HANA 数据文件备份，将数据文件备份复制到二级异地备份位置，使用 HANA 数据库日志备份功能的 SAP HANA 日志文件备份，使用基于文件的备份检查数据库块完整性， 以及数据文件，日志文件备份和 SAP HANA 备份目录的管理。 
+---
+= 备份解决方案组件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 SAP HANA 的 Snap Creator 备份解决方案包括使用基于存储的 Snapshot 副本的 SAP HANA 数据文件备份，将数据文件备份复制到二级异地备份位置，使用 HANA 数据库日志备份功能的 SAP HANA 日志文件备份，使用基于文件的备份检查数据库块完整性， 以及数据文件，日志文件备份和 SAP HANA 备份目录的管理。
+
+数据库备份由 Snap Creator 与适用于 SAP HANA 的插件一起执行。此插件可确保数据库一致性，以便在主存储系统上创建的 Snapshot 副本基于 SAP HANA 数据库的一致映像。
+
+使用 Snap Creator ，您可以使用 SnapVault 将一致的数据库映像复制到二级存储。通常，为主存储上的备份和二级存储上的备份定义不同的保留策略。Snap Creator 可处理主存储和二级存储上的保留。
+
+日志备份由 SAP HANA 数据库工具自动执行。日志备份目标不应与数据库的日志卷位于同一存储系统上。建议在使用 SnapVault 复制数据库备份的同一二级存储上配置日志备份目标。在这种配置下，二级存储与主存储具有类似的可用性要求，因此可以确保始终将日志备份写入二级存储。
+
+image::../media/sap_hana_database_log_backup.gif[SAP HANA 数据库和日志备份]
+
+备份计划和保留策略必须根据客户要求进行定义。下表显示了不同计划和保留策略的配置示例。
+
+|===
+|  | 由 Snap Creator 执行 | 主存储 | 二级存储 
+
+
+ a| 
+数据库备份
+ a| 
+计划 1 ：每 4 小时执行一次
+ a| 
+保留： 6 个（ <=>6 个每小时 Snapshot 副本）
+ a| 
+保留： 6 个（ <=>6 个每小时 Snapshot 副本）
+
+
+
+ a| 
+计划 2 ：每天一次
+ a| 
+保留： 3 个（ <=>3 个每日 Snapshot 副本）
+ a| 
+保留期限： 28 （ 4 周）（ <=>28 个每日 Snapshot 副本）
+ a| 
+日志备份
+
+
+
+ a| 
+SAP HANA 数据库工具计划：每 15 分钟一次
+ a| 
+不适用
+ a| 
+保留期限： 28 天（ 4 周）
+ a| 
+块完整性检查
+
+|===
+在此示例中，主存储会保留六个每小时备份和三个每日备份。在二级存储上，数据库备份会保留四周。要恢复任何数据备份，您必须为日志备份设置相同的保留。

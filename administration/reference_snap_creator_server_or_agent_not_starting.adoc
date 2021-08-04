@@ -1,0 +1,33 @@
+---
+permalink: administration/reference_snap_creator_server_or_agent_not_starting.html 
+sidebar: sidebar 
+keywords: snap, creator, server, agent, java 
+summary: Snap Creator 服务器或 Snap Creator 代理可能无法启动。 
+---
+= Snap Creator 服务器或代理未启动
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 服务器或 Snap Creator 代理可能无法启动。
+
+* * 问题描述 *
++
+Snap Creator 服务器或 Snap Creator 代理无法启动。
+
+* * 发生原因 *
++
+此问题描述的一般原因是未安装 Java ，安装的 Java 位级别错误或安装的 Java 版本错误。
+
+* * 更正操作 *
++
+运行以下命令以验证是否已安装 Java ： java -version
+
++
+验证是否已安装受支持的 Java 版本。
+
++
+此外，验证所安装的 Java 的位级别是否与 Snap Creator 的位级别匹配。例如，如果安装了 64 位 Snap Creator ，则还必须安装 64 位 Java 。
+
+

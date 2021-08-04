@@ -1,0 +1,52 @@
+---
+permalink: installation/task_creating_symbolic_links_for_domino_plug_in_on_aix_hosts.html 
+sidebar: sidebar 
+keywords: creating, create, symbolic, links, domino, plug-in, aix, hosts 
+summary: 要为 AIX 主机上的 Domino 插件添加符号链接，必须执行此操作步骤。 
+---
+= 在 AIX 主机上为 Domino 插件创建符号链接
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要为 AIX 主机上的 Domino 插件添加符号链接，必须执行此操作步骤。
+
+您不应直接从本文档中复制和粘贴命令；可能会出现错误（例如，换行符和硬返回导致字符传输不正确）。将这些命令复制并粘贴到文本编辑器中，验证这些命令，然后在 CLI 控制台中输入它们。
+
+
+NOTE: 以下步骤中提供的路径是指 32 位系统； 64 位系统必须创建指向 /usr/lib64 而不是 /usr/lib 的 simlinks 。
+
+. 为以下文件添加指向 /usr/lib 的链接：
++
+** libxmlproc_r.a
+** libngts_r.a
+** libnotes_r.a
+** libgsk8iccs_r.a （仅适用于 Domino 9.0 或更高版本）创建符号链接的典型方法是使用 ln 命令：
+
+
++
+ln -s /path/to_source_file /usr/lib/Linked_file
+
++
++ 其中：
+
++
+** -s 指示操作系统创建符号链接。
+** /path/to_source_file 是其中一个 Domino 库文件的路径，包括文件名。
+** Linked_file 是要链接的文件的名称。
++
+[listing]
+----
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libxmlproc_r.a /usr/lib/libxmlproc_r.a
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libndgts_r.a /usr/lib/libndgts_r.a
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libnotes_r.a /usr/lib/libnotes_r.a
+ln -s /opt/ibm/domino/notes/latest/linux/libgsk8iccs.so /usr/lib/libgsk8iccs_r.a
+----
+
+
+. 验证步骤 1 中列出的文件的路径。
++
+此示例中的命令使用 AIX 的默认路径，但安装可能会有所不同。
+
+

@@ -1,0 +1,13 @@
+---
+permalink: administration/concept_managing_clones.html 
+sidebar: sidebar 
+keywords: managing, clones, creating, backup, deleting, unmounting 
+summary: 您可以创建备份副本，查看备份副本列表以及在不再需要备份副本时删除这些副本。 
+---
+= 管理克隆
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过创建克隆（使用 * 操作 * 设置或将备份副本挂载为源），删除克隆或卸载克隆来管理克隆。

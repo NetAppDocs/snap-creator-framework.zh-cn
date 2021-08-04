@@ -1,0 +1,19 @@
+---
+permalink: sap-hana-ops/concept_configuring_data_backups.html 
+sidebar: sidebar 
+keywords: configuring, configure, data, backups, back-ups 
+summary: 安装所需组件后，您必须配置数据备份 
+---
+= 配置数据备份
+:icons: font
+:imagesdir: ../media/
+
+
+安装所需的软件组件后，请按照以下步骤完成配置：
+
+. 配置专用数据库用户和 SAP HANA 用户存储。
+. 在所有存储控制器上准备 SnapVault 复制。
+. 在二级存储控制器上创建卷。
+. 初始化数据库卷的 SnapVault 关系。
+. 配置 Snap Creator 。
+

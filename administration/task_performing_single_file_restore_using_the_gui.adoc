@@ -1,0 +1,37 @@
+---
+permalink: administration/task_performing_single_file_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, file, restore, wizard 
+summary: 您可以使用 Snap Creator GUI 执行单个文件还原操作。 
+---
+= 执行单个文件还原操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator GUI 执行单个文件还原操作。
+
+. 从 Snap Creator 图形用户界面的主菜单中，选择 * 管理 * > * 配置 * 。
+. 从配置文件和配置窗格的配置选项卡中，选择配置文件。
+. 选择 * 操作 * > * 还原 * 。
++
+此时将在右侧窗格中打开还原向导。
+
+. 完成还原向导：
++
+.. 在 "`还原详细信息` " 部分中，选择控制器或 Vserver 名称，还原卷名称，策略和还原 Snapshot 副本名称，然后从还原类型列表中选择 * 单个文件还原 * 。
++
+image::../media/restore_wizard_restore_details.gif[还原向导还原详细信息]
+
+.. 选择要还原的文件。
+.. 选择应将文件还原到的位置。
+.. 查看摘要并单击 * 完成 * 。
+
+
++
+此时将显示一条警告消息，询问是否还有其他项目需要还原。
+
+. 如果没有其他要还原的项目，请单击 * 否 * ，然后单击还原确认页面上的 * 确定 * 。
+. 在控制台窗格中，通过查看显示的消息来验证选定的文件是否已成功还原。
+

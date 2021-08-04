@@ -1,0 +1,62 @@
+---
+permalink: administration/reference_parameters_to_set_up_event_management.html 
+sidebar: sidebar 
+keywords: parameter, management, snap, creator, server, event, ntap, asup, error, failure, msg, sendtrap 
+summary: 要为 Snap Creator 服务器设置事件管理，需要使用多个参数。 
+---
+= 用于设置事件管理的参数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要为 Snap Creator 服务器设置事件管理，需要使用多个参数。
+
+|===
+| 参数 | 正在设置 ... | Description 
+
+
+ a| 
+ntap_asUP_error_ enable
+ a| 
+"`Y` " 或 "`N` "
+ a| 
+EnablesSnap Creator 错误消息，用于同时在存储控制器上记录 AutoSupport 消息。在备份开始后以及备份完成后， Snap Creator 始终会创建一条信息 AutoSupport 消息。
+
+
+
+ a| 
+failure_msg
+ a| 
+ a| 
+记录在 Snap Creator 出现故障时定义的故障消息。如果定义了 SENDTRAP ，也可以将此失败消息发送到 SENDTRAP 。
+
+
+
+ a| 
+传感器
+ a| 
+ a| 
+与监控软件或电子邮件连接，使您能够将从 Snap Creator 生成的警报传递到您自己的监控基础架构中。%MSG 变量是从 Snap Creator 发送的消息。以下是如何在 UNIX 系统上发送电子邮件的示例： sendtRAP=/usr/bin/mailx -s %MSG myaddress@mydomain.com /dev/null
+
+要在 Windows 系统上发送电子邮件，您必须在任何命令之前添加 `cmd.exe /c` 。例如： sedtRAP= cmd.exe /c echo %how
+
+
+
+ a| 
+success 陷阱
+ a| 
+ a| 
+与监控软件或电子邮件连接，使您能够将从 Snap Creator 生成的成功消息传递到您自己的监控基础架构中。%SUCCES_MSG 变量是 Snap Creator 的成功消息。以下是如何在 UNIX 系统上发送电子邮件的示例： success 陷阱 =/usr/bin/mailx -s %success _msg myaddress@mydomain.com /dev/null
+
+要在 Windows 系统上发送电子邮件，您必须在任何命令之前添加 `cmd.exe /c` 。例如： success 陷阱 = cmd.exe /c echo %Hello
+
+
+
+ a| 
+success MSG
+ a| 
+ a| 
+成功备份 Snap Creator 后，此设置将记录定义的消息。如果定义了 success 陷阱，则此消息也会发送到 success 陷阱；如果定义了 s_dapp ，则此消息也会发送到 s_dapp 。
+
+|===

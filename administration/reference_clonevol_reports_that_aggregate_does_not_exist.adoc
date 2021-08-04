@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_clonevol_reports_that_aggregate_does_not_exist.html 
+sidebar: sidebar 
+keywords: clustered, data, ontap, storage, virtual, machine, svm, cloning, clonevol 
+summary: 对于集群模式 Data ONTAP ，必须将聚合分配给 Storage Virtual Machine （ SVM ）以进行克隆。否则， cloneVol 操作可能会返回错误。 
+---
+= cloneVol 报告聚合不存在
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于集群模式 Data ONTAP ，必须将聚合分配给 Storage Virtual Machine （ SVM ）以进行克隆。否则， cloneVol 操作可能会返回错误。
+
+* * 问题描述 *
++
+cloneVol 操作将返回类似于以下示例的错误：
+
++
+[listing]
+----
+ERROR: com.netapp.snapcreator.storage.executor.ZapiExecutorException: netapp.manage.NaAPIFailedException: Aggregate [aggregate name] does not exist (errno=14420)
+----
+* * 发生原因 *
++
+未将聚合分配给 SVM 进行克隆。
+
+* * 更正操作 *
++
+将聚合分配给 SVM 以进行克隆： vserver modify -vserver vserver_name] -aggr-list [aggregate_name]
+
+

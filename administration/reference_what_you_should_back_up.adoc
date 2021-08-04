@@ -1,0 +1,36 @@
+---
+permalink: administration/reference_what_you_should_back_up.html 
+sidebar: sidebar 
+keywords: create, backup, copy, snap, creator, directories, information, server, snapcreator 
+summary: 最佳实践是为特定 Snap Creator 目录创建备份副本，以帮助确保 Snap Creator 数据可以在不丢失的情况下进行还原。 
+---
+= 应备份哪些 Snap Creator 信息
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+最佳实践是为特定 Snap Creator 目录创建备份副本，以帮助确保 Snap Creator 数据可以在不丢失的情况下进行还原。
+
+您应创建以下目录的备份副本：
+
+* Snap Creator Server 4.3 引擎子目录：
++
+** Snap Creator 数据库（ .\snapcreator ）
+** Snap Creator 服务器属性（ .\etc ）
+** 配置文件和配置（ .\configs ）
+** 日志（ .\logs ）
+** 插件存储库（如果已启用）（ .\snapcreatorPlugin ）
+
+
+* Snap Creator Agent 目录：
++
+** Snap Creator 代理属性（ .\etc ）
+** 日志，如果已启用（ .\logs ）
+** 插件（ .\plugins ）
+
+
+
+
+
+NOTE: 最佳情况下，应计划在可以停止 Snap Creator 服务或进程时进行备份，以确保一致地备份 Snap Creator 数据。

@@ -1,0 +1,62 @@
+---
+permalink: domino-ops/task_running_snap_creator_by_using_the_custom_action.html 
+sidebar: sidebar 
+keywords: domino, ibm,using, use, snap, creator, custom, action complete, restore 
+summary: 您可以使用 Snap Creator 自定义操作来完成从 Snap Creator 外部进行的恢复的处理。 
+---
+= 使用 Snap Creator 自定义操作完成还原处理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Snap Creator 自定义操作来完成从 Snap Creator 外部进行的恢复的处理。
+
+您只能在 Snap Creator CLI 中执行此操作。
+
+. 在 Snap Creator 命令行界面中，输入以下命令： snapcreator.exe -action custom -server server -port port -user -passwd password -profile config -params snapname=snapshot_name datapath=datapath restorettype=u2 米 | Suererestoretime="MM/DD/YYYY HH ： 2 米： MM=SS=Y
++
+其中：
+
++
+** server 是 Snap Creator 服务器的主机名或 IP 地址。
+** port 是运行 Snap Creator 服务器的端口号。
+** user 是 Snap Creator 用户的名称。
+** password 是 Snap Creator 用户的密码。
++
+
+NOTE: 如果不想以明文形式键入密码，可以省略 -passwd 选项。执行命令时， Snap Creator 将提示输入密码
+
+** profile 是 Snap Creator 配置文件的名称。
+** config 是 Snap Creator 配置文件的名称。
+** snapshot_name 是要从中还原文件的 Snapshot 副本的名称。
+** datapath 是要将文件还原到的目录的路径名。
+** restoretype 是要执行的还原类型：
++
+*** u2 米可执行即时还原。
+*** su2 米可执行可选的最新还原。在 -restoretime 选项中，以 MM/DD/YYYY HH ： MM ： SS 格式指定要对 Domino 事务日志进行转发的日期和时间。例如， 2014 年 1 月 23 日 12 ： 45 ： 00 。
+
+
+** 禁用重新复制将禁用 Domino 复制：
++
+*** 输入 N （默认值）以允许 Domino 复制。此插件会将现有 Domino 副本 ID 用于已还原的数据库文件。
++
+
+NOTE: 允许 Domino 复制的另一种方法是，将此参数保留在命令之外。
+
+*** 输入 Y 以禁用 Domino 复制。此插件会为已还原的数据库文件设置新的 Domino 副本 ID 。注意：在命令中附加 -verbose 将显示有关还原操作的追加信息。否则，在命令执行完毕后，您将立即返回到命令提示符。
+
+
+
+
++
+[listing]
+----
+snapcreator.exe --action custom --server Tampico --port 8443
+--user admin --profile Domino --config Nantes
+--params snapname=Nantes-Test_Policy_20140123121459
+datapath=F:\Domino\data\restore\mail\t04.nsf
+restoretype=su2m restoretime="01/23/2014 12:45:00"
+disablereplication=y
+----
+

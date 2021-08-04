@@ -1,0 +1,591 @@
+---
+permalink: installation/reference_cli_command_for_creating_cluster_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, cluster, roles, role create 
+summary: 下表列出了为新集群用户创建角色所需的命令。 
+---
+= 用于创建集群角色的 CLI 命令
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出了为新集群用户创建角色所需的命令。
+
+|===
+| 命令目录名称 | 要运行的命令 
+
+
+ a| 
+cluster identity show
+ a| 
+role create -role CRBAC_New -cmddirname "cluster identity show" -vserver clus3240rre
+
+
+
+ a| 
+事件
+ a| 
+role create -role CRBAC_New -cmddirname "event" -vserver clus3240rre
+
+
+
+ a| 
+事件配置
+ a| 
+role create -role CRBAC_New -cmddirname "event config" -vserver clus3240rre
+
+
+
+ a| 
+事件目标
+ a| 
+role create -role CRBAC_New -cmddirname "event destination" -vserver clus3240rre
+
+
+
+ a| 
+事件日志
+ a| 
+role create -role CRBAC_New -cmddirname "event log" -vserver clus3240rre
+
+
+
+ a| 
+事件邮件历史记录
+ a| 
+role create -role CRBAC_New -cmddirname "event mailhistory" -vserver clus3240rre
+
+
+
+ a| 
+事件路由
+ a| 
+role create -role CRBAC_New -cmddirname "event route" -vserver clus3240rre
+
+
+
+ a| 
+事件历史记录
+ a| 
+role create -role CRBAC_New -cmddirname "event snmphistory" -vserver clus3240rre
+
+
+
+ a| 
+事件状态
+ a| 
+role create -role CRBAC_New -cmddirname "event status" -vserver clus3240rre
+
+
+
+ a| 
+LUN 注释
+ a| 
+role create -role CRBAC_New -cmddirname "lun comment" -vserver clus3240rre
+
+
+
+ a| 
+创建 LUN
+ a| 
+role create -role CRBAC_New -cmddirname "lun create" -vserver clus3240rre
+
+
+
+ a| 
+LUN 删除
+ a| 
+role create -role CRBAC_New -cmddirname "lun delete" -vserver clus3240rre
+
+
+
+ a| 
+LUN 几何结构
+ a| 
+role create -role CRBAC_New -cmddirname "lun geometer" -vserver clus3240rre
+
+
+
+ a| 
+lun igroup add
+ a| 
+role create -role CRBAC_New -cmddirname "lun igroup add" -vserver clus3240rre
+
+
+
+ a| 
+lun igroup create
+ a| 
+role create -role CRBAC_New -cmddirname "lun igroup create" -vserver clus3240rre
+
+
+
+ a| 
+已设置 LUN igroup
+ a| 
+role create -role CRBAC_New -cmddirname "lun igroup set" -vserver clus3240rre
+
+
+
+ a| 
+lun igroup show
+ a| 
+role create -role CRBAC_New -cmddirname "lun igroup show" -vserver clus3240rre
+
+
+
+ a| 
+LUN 映射
+ a| 
+role create -role CRBAC_New -cmddirname "lun map" -vserver clus3240rre
+
+
+
+ a| 
+lun mapping show
+ a| 
+role create -role CRBAC_New -cmddirname "lun mapping show" -vserver clus3240rre
+
+
+
+ a| 
+修改 LUN
+ a| 
+role create -role CRBAC_New -cmddirname "lun modify" -vserver clus3240rre
+
+
+
+ a| 
+LUN 移动
+ a| 
+role create -role CRBAC_New -cmddirname "lun move" -vserver clus3240rre
+
+
+
+ a| 
+LUN 脱机
+ a| 
+role create -role CRBAC_New -cmddirname "lun offline" -vserver clus3240rre
+
+
+
+ a| 
+LUN 联机
+ a| 
+role create -role CRBAC_New -cmddirname "lun online" -vserver clus3240rre
+
+
+
+ a| 
+调整 LUN 大小
+ a| 
+role create -role CRBAC_New -cmddirname "lun resize" -vserver clus3240rre
+
+
+
+ a| 
+lun show
+ a| 
+role create -role CRBAC_New -cmddirname "lun show" -vserver clus3240rre
+
+
+
+ a| 
+LUN 取消映射
+ a| 
+role create -role CRBAC_New -cmddirname "lun unmap" -vserver clus3240rre
+
+
+
+ a| 
+网络
+ a| 
+role create -role CRBAC_New -cmddirname "network" -vserver clus3240rre
+
+
+
+ a| 
+network fcp adapter show
+ a| 
+role create -role CRBAC_New -cmddirname "network fcp adapter show" -vserver clus3240rre
+
+
+
+ a| 
+network interface show
+ a| 
+role create -role CRBAC_New -cmddirname "network interface show" -vserver clus3240rre
+
+
+
+ a| 
+security login role show
+ a| 
+role create -role CRBAC_New -cmddirname "security login role show" -vserver clus3240rre
+
+
+
+ a| 
+security login show
+ a| 
+role create -role CRBAC_New -cmddirname "security login show" -vserver clus3240rre
+
+
+
+ a| 
+SnapMirror
+ a| 
+role create -role CRBAC_New -cmddirname "snapmirror" -vserver clus3240rre
+
+
+
+ a| 
+存储聚合
+ a| 
+role create -role CRBAC_New -cmddirname "storage aggregate" -vserver clus3240rre
+
+
+
+ a| 
+system license show
+ a| 
+role create -role CRBAC_New -cmddirname "system license show" -vserver clus3240rre
+
+
+
+ a| 
+系统节点
+ a| 
+role create -role CRBAC_New -cmddirname "system node" -vserver clus3240rre
+
+
+
+ a| 
+系统节点 AutoSupport
+ a| 
+role create -role CRBAC_New -cmddirname "system node AutoSupport "-vserver clus3240rre
+
+
+
+ a| 
+系统节点 AutoSupport 调用
+ a| 
+role create -role CRBAC_New -cmddirname "system node AutoSupport invoke" -vserver clus3240rre
+
+
+
+ a| 
+system node show
+ a| 
+role create -role CRBAC_New -cmddirname "system node show" -vserver clus3240rre
+
+
+
+ a| 
+系统节点运行
+ a| 
+role create -role CRBAC_New -cmddirname "system node run" -vserver clus3240rre
+
+
+
+ a| 
+系统服务 NDMP
+ a| 
+role create -role CRBAC_New -cmddirname "system services ndmp" -vserver clus3240rre
+
+
+
+ a| 
+version
+ a| 
+role create -role CRBAC_New -cmddirname "version" -vserver clus3240rre
+
+
+
+ a| 
+version
+ a| 
+security login role create -role bainew1 -vserver SnapCreator -cmddirname "version" -access readonly
+
+
+
+ a| 
+创建 SVM 导出策略规则
+ a| 
+role create -role CRBAC_New -cmddirname "vserver export-policy rule create" -vserver clus3240rre
+
+
+
+ a| 
+vserver export-policy rule show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver export-policy rule show" -vserver clus3240rre
+
+
+
+ a| 
+vserver export-policy show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver export-policy show" -vserver clus3240rre
+
+
+
+ a| 
+Vserver FCP
+ a| 
+role create -role CRBAC_New -cmddirname "vserver fcp" -vserver snapcreator -vserver clus3240rre
+
+
+
+ a| 
+vserver fcp initiator show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver fcp initiator show" -vserver clus3240rre
+
+
+
+ a| 
+vserver fcp show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver fcp show" -vserver clus3240rre
+
+
+
+ a| 
+SVM FCP 状态
+ a| 
+role create -role CRBAC_New -cmddirname "vserver fcp status" -vserver clus3240rre
+
+
+
+ a| 
+vserver iscsi connection show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi connection show" -vserver clus3240rre
+
+
+
+ a| 
+SVM iSCSI
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi" -vserver Snapcreator -vserver clus3240rre
+
+
+
+ a| 
+添加 SVM iSCSI 接口访问列表
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi interface accesslist add" -vserver clus3240rre
+
+
+
+ a| 
+vserver iscsi interface accesslist show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi interface accesslist show" -vserver clus3240rre
+
+
+
+ a| 
+SVM iSCSI 节点名称
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi nodename " -vserver clus3240rre
+
+
+
+ a| 
+vserver iscsi session show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi session" show -vserver clus3240rre
+
+
+
+ a| 
+vserver iscsi show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi show" -vserver clus3240rre
+
+
+
+ a| 
+SVM iSCSI 状态
+ a| 
+role create -role CRBAC_New -cmddirname "vserver iscsi status" -vserver clus3240rre
+
+
+
+ a| 
+Vserver NFS
+ a| 
+role create -role CRBAC_New -cmddirname "vserver nfs" -vserver Snapcreator -vserver clus3240rre
+
+
+
+ a| 
+Vserver NFS 状态
+ a| 
+role create -role CRBAC_New -cmddirname "vserver nfs status" -vserver clus3240rre
+
+
+
+ a| 
+SVM 选项
+ a| 
+role create -role CRBAC_New -cmddirname "vserver options" -vserver clus3240rre
+
+
+
+ a| 
+vserver services unix-group create
+ a| 
+role create -role CRBAC_New -cmddirname "vserver services name-service unix-group create" -vserver clus3240rre
+
+
+
+ a| 
+vserver services unix-user create
+ a| 
+role create -role CRBAC_New -cmddirname "vserver services name-service unix-user create" -vserver clus3240rre
+
+
+
+ a| 
+vserver services unix-group show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver services name-service unix-group show" -vserver clus3240rre
+
+
+
+ a| 
+vserver services unix-user show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver services name-service unix-user show" -vserver clus3240rre
+
+
+
+ a| 
+vserver show
+ a| 
+role create -role CRBAC_New -cmddirname "vserver show" -vserver clus3240rre
+
+
+
+ a| 
+卷自动调整大小
+ a| 
+role create -role CRBAC_New -cmddirname "volume autosize" -vserver clus3240rre
+
+
+
+ a| 
+创建卷克隆
+ a| 
+role create -role CRBAC_New -cmddirname "volume clone create" -vserver clus3240rre
+
+
+
+ a| 
+卷创建
+ a| 
+role create -role CRBAC_New -cmddirname "volume create" -vserver clus3240rre
+
+
+
+ a| 
+卷销毁
+ a| 
+role create -role CRBAC_New -cmddirname "volume destroy" -vserver clus3240rre
+
+
+
+ a| 
+卷效率关闭
+ a| 
+role create -role CRBAC_New -cmddirname "volume efficiency off" -vserver clus3240rre
+
+
+
+ a| 
+卷效率打开
+ a| 
+role create -role CRBAC_New -cmddirname "volume efficiency on" -vserver clus3240rre
+
+
+
+ a| 
+volume efficiency show
+ a| 
+role create -role CRBAC_New -cmddirname "volume efficiency show" -vserver clus3240rre
+
+
+
+ a| 
+卷效率启动
+ a| 
+role create -role CRBAC_New -cmddirname "volume efficiency start" -vserver clus3240rre
+
+
+
+ a| 
+卷文件
+ a| 
+role create -role CRBAC_New -cmddirname "volume file" -vserver clus3240rre
+
+
+
+ a| 
+创建卷文件克隆
+ a| 
+role create -role CRBAC_New -cmddirname "volume file clone create" -vserver clus3240rre
+
+
+
+ a| 
+volume file show-disk-usage
+ a| 
+role create -role bainew1 -vserver SnapCreator -cmddirname "volume file show-disk-usage" -access all
+
+
+
+ a| 
+卷修改
+ a| 
+role create -role CRBAC_New -cmddirname "volume modify" -vserver clus3240rre
+
+
+
+ a| 
+卷脱机
+ a| 
+role create -role CRBAC_New -cmddirname "volume offline" -vserver clus3240rre
+
+
+
+ a| 
+volume show
+ a| 
+role create -role CRBAC_New -cmddirname "volume show" -vserver clus3240rre
+
+
+
+ a| 
+卷大小
+ a| 
+role create -role CRBAC_New -cmddirname "volume size" -vserver clus3240rre
+
+
+
+ a| 
+创建卷快照
+ a| 
+role create -role CRBAC_New -cmddirname "volume snapshot create" -vserver clus3240rre
+
+
+
+ a| 
+卷卸载
+ a| 
+role create -role CRBAC_New -cmddirname "volume unmount "-vserver clus3240rre
+
+|===

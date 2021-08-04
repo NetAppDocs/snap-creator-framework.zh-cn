@@ -1,0 +1,13 @@
+---
+permalink: installation/concept_uninstalling_snap_creator.html 
+sidebar: sidebar 
+keywords: unstalling, snap, creator 
+summary: 您可以从 Windows 和 UNIX 系统卸载 Snap Creator 。 
+---
+= 卸载 Snap Creator
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 Windows 和 UNIX 系统卸载 Snap Creator 。
