@@ -2,7 +2,7 @@
 permalink: installation/task_downloading_the_snap_creator_software.html 
 sidebar: sidebar 
 keywords: downloading, download, snap, creator, software 
-summary: 您可以从 NetApp 支持站点下载 Snap Creator 软件。Snap Creator 列在 Snap Creator Framework 下的 " 软件下载 " 部分中。 
+summary: '您可以从 NetApp 支持站点下载 Snap Creator 软件。Snap Creator 列在 Snap Creator Framework 下的 " 软件下载 " 部分中。' 
 ---
 = 下载 Snap Creator 软件
 :icons: font

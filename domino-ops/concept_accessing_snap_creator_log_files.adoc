@@ -2,7 +2,7 @@
 permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
 sidebar: sidebar 
 keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
-summary: 您可以在 Snap Creator 作业监控器中查看作业状态。您可以在作业运行时在控制台窗格中查看作业操作日志，也可以在作业的 " 输出日志 " 中查看作业操作日志。此外，还提供了许多专用日志。 
+summary: '您可以在 Snap Creator 作业监控器中查看作业状态。您可以在作业运行时在控制台窗格中查看作业操作日志，也可以在作业的 " 输出日志 " 中查看作业操作日志。此外，还提供了许多专用日志。' 
 ---
 = 查看作业状态和日志
 :icons: font
