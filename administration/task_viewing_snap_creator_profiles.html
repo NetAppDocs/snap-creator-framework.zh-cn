@@ -157,7 +157,12 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
+  <script src='/zh-cn/snap-creator-framework/js/version-dropdown.js'></script>
   <script src='/zh-cn/snap-creator-framework/js/product-family.js'></script>
+  <script src='/zh-cn/snap-creator-framework/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/snap-creator-framework/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/snap-creator-framework/js/jszip.min.js'></script>
+  <script src='/zh-cn/snap-creator-framework/js/pdf-ux.js'></script>
 </head>
 
 
@@ -273,9 +278,6 @@
       </div>
       <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
         <div class="n-language-selector-menu">
-          <div class="n-language-selector-menu__header">
-            <span class="n-language-selector-menu__title">选择您的语言</span>
-          </div>
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
@@ -287,10 +289,6 @@
                 </li></ul>
             </li>
           </ul>
-          <div class="menu__footer">
-            <p>当前语言: 简体中文
-            </p>
-          </div>
         </div>
       </div>
     </div><!-- End Language Selector -->
@@ -327,31 +325,6 @@
   <!-- End property bar -->
 </header>
 
-        <div class="ie-utility">
-  <div class="ie-menu">
-    <div class="n-breadcrumb">
-      <ul class="n-breadcrumb__list">
-        <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
-        
-
-        <li class="n-breadcrumb__list-item">
-          <a href="/zh-cn/snap-creator-framework/">Snap&nbsp;Creator&nbsp;Framework</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          查看配置文件
-        </li>
-      </ul>
-    </div>
-
-    <div style="clear: both"></div><!-- Main needs to have height -->
-  </div>
-</div>
-
 
         <main id="n-main-content" class="n-main-content">
           <!-- Start Documentation Content -->
@@ -360,98 +333,77 @@
   
   <div class="col-md-3" >
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDF<span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">站点</span>
-    </div>
-    <li>
-      <a target="_blank" href="/zh-cn/snap-creator-framework/pdfs/fullsite-sidebar/Snap_Creator_Framework_4_3_3.pdf" >
-        <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
-        Snap Creator Framework 4.3.3
-      </a>
-    </li>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/zh-cn/snap-creator-framework/pdfs/fullsite-sidebar/Snap_Creator_Framework_4_3_3.pdf" >
+          <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
 
 
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              小节
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             安装
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework_的功能.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator Framework 的功能
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_架构.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 架构
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -459,19 +411,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_的预安装要求.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 的预安装要求
           </a>
-        </li>
-        <span>
           
 
 
@@ -479,29 +428,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/为_Data_ONTAP_创建_Snap_Creator_用户.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             为 Data ONTAP 创建 Snap Creator 用户
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -513,67 +458,58 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置_Domino_插件的设置.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             配置 Domino 插件的设置
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置_UNIX_专用设置_创建符号链接.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             配置 UNIX 专用设置：创建符号链接
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -581,43 +517,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装_Snap_Creator_服务器.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             安装 Snap Creator 服务器
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_Windows_主机上安装_Snap_Creator_服务器.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             在 Windows 主机上安装 Snap Creator 服务器
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -626,10 +555,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -637,43 +565,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装_Snap_Creator_代理.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             安装 Snap Creator 代理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_Windows_上安装_Snap_Creator_Agent.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             在 Windows 上安装 Snap Creator Agent
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -684,10 +605,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -695,19 +615,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/正在升级_Snap_Creator.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             正在升级 Snap Creator
           </a>
-        </li>
-        <span>
           
 
 
@@ -715,33 +632,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/从_Snap_Creator_3_6_x_升级.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             从 Snap Creator 3.6.x 升级
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -749,33 +662,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/从_Snap_Creator_4_0_x_升级.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             从 Snap Creator 4.0.x 升级
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -783,33 +692,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/从_Snap_Creator_4_1_x_升级.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             从 Snap Creator 4.1.x 升级
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -818,10 +723,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -829,57 +733,49 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/卸载_Snap_Creator.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             卸载 Snap Creator
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_UNIX_上卸载_Snap_Creator.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             在 UNIX 上卸载 Snap Creator
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -887,65 +783,56 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/CLI_参考.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             CLI 参考
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/用于在集群模式_Data_ONTAP_中为_Snap_Creator_用户创建角色的命令行界面命令.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             用于在集群模式 Data ONTAP 中为 Snap Creator 用户创建角色的命令行界面命令
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -953,51 +840,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              小节
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/IBM___Domino___插件操作.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             IBM ® Domino ® 插件操作
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/IBM_Domino_插件概述.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             IBM Domino 插件概述
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1007,57 +881,49 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/准备_IBM_Domino_备份和还原.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             准备 IBM Domino 备份和还原
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SnapMirror_和_SnapVault_设置.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SnapMirror 和 SnapVault 设置
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1065,19 +931,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/创建备份和还原配置.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             创建备份和还原配置
           </a>
-        </li>
-        <span>
           
 
 
@@ -1085,29 +948,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/向备份和还原配置添加命令.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             向备份和还原配置添加命令
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1118,10 +977,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1129,29 +987,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/备份数据库.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             备份数据库
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1159,19 +1013,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/还原数据库.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             还原数据库
           </a>
-        </li>
-        <span>
           
 
 
@@ -1179,43 +1030,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_SAN_环境中执行单文件还原.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             在 SAN 环境中执行单文件还原
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1223,31 +1069,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/查看作业状态和日志.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             查看作业状态和日志
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1258,10 +1100,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1269,57 +1110,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              小节
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SAP_HANA___插件操作.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA ® 插件操作
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SAP_HANA_备份和还原解决方案概述.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA 备份和还原解决方案概述
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1327,29 +1155,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装和配置所需的软件组件.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             安装和配置所需的软件组件
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1357,19 +1181,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置数据备份.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             配置数据备份
           </a>
-        </li>
-        <span>
           
 
 
@@ -1377,29 +1198,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/启动_SnapVault_关系.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             启动 SnapVault 关系
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1408,10 +1225,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1421,29 +1237,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置日志备份.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             配置日志备份
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1451,33 +1263,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/执行数据库备份.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             执行数据库备份
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1485,41 +1293,37 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SAP_HANA_基于文件的备份和数据库完整性检查.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA 基于文件的备份和数据库完整性检查
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1527,19 +1331,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/还原和恢复_SAP_HANA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             还原和恢复 SAP HANA 数据库
           </a>
-        </li>
-        <span>
           
 
 
@@ -1547,29 +1348,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/还原后恢复_SnapVault_关系.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             还原后恢复 SnapVault 关系
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1577,39 +1374,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在主存储发生故障后还原数据库.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             在主存储发生故障后还原数据库
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1622,10 +1414,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1633,49 +1424,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              小节
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework_的功能.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator Framework 的功能
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1683,31 +1461,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_架构.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 架构
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1715,33 +1489,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理_Snap_Creator_服务器.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理 Snap Creator 服务器
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1749,19 +1519,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理_Snap_Creator_代理.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理 Snap Creator 代理
           </a>
-        </li>
-        <span>
           
 
 
@@ -1771,39 +1538,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_Agent_安全性.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator Agent 安全性
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1811,19 +1573,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/备份和恢复工作流.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             备份和恢复工作流
           </a>
-        </li>
-        <span>
           
 
 
@@ -1841,35 +1600,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/正在创建保留策略.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             正在创建保留策略
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1877,29 +1632,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/创建克隆.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             创建克隆
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1907,41 +1658,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/执行还原操作.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             执行还原操作
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1949,47 +1695,43 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理用户访问.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理用户访问
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1997,44 +1739,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理配置文件.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理配置文件
           </a>
-        </li>
-        <span>
           
 
 
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">此页面</span>
-</div>
-
-<li class="active">
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/zh-cn/snap-creator-framework/pdfs/pages/administration/task_viewing_snap_creator_profiles.pdf" >
-    <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
-    查看配置文件
+    <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
-
+</ul>
   
-
 
 
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2042,35 +1776,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理配置文件.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理配置文件
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2078,37 +1808,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理保留策略.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理保留策略
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2116,33 +1842,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理备份.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理备份
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2150,35 +1872,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理已计划作业.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理已计划作业
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2186,31 +1904,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理克隆.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理克隆
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2218,19 +1932,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置_Snap_Creator_所需的插件信息.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             配置 Snap Creator 所需的插件信息
           </a>
-        </li>
-        <span>
           
 
 
@@ -2258,29 +1969,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/VMware_Vibe_插件.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             VMware Vibe 插件
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2291,10 +1998,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2302,43 +2008,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对_Snap_Creator_问题进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             对 Snap Creator 问题进行故障排除
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/错误消息和故障排除日志的类型.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             错误消息和故障排除日志的类型
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2346,29 +2045,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对_Snap_Creator_GUI_错误进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             对 Snap Creator GUI 错误进行故障排除
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2378,31 +2073,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对安全问题进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             对安全问题进行故障排除
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2410,31 +2101,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对_Snap_Creator_服务器或_Snap_Creator_代理问题进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             对 Snap Creator 服务器或 Snap Creator 代理问题进行故障排除
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2442,33 +2129,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对命令行界面命令错误进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             对命令行界面命令错误进行故障排除
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2478,45 +2161,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/错误消息.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             错误消息
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2524,55 +2202,51 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_配置文件变量_参数和命令.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 配置文件变量，参数和命令
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2582,29 +2256,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/使用_Snap_Creator_命令行界面的准则.pdf" 
             
           >
-            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             使用 Snap Creator 命令行界面的准则
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
+      </ul>
+    
+
+  
+
+
+
           
-
-
-
-
-
-
-          
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2612,25 +2291,44 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-</ul>
-
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-cn/snap-creator-framework/images/pdf-zip.png" width="16" height="16"/>
+      <pre>收集单独的 PDF 文档<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
 <script>
-  $("#toggleContainerPdf li.active").parents('li').toggle('display');
-  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/snap-creator-framework/index.html">
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/snap-creator-framework/index.html">
         主页
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snap-creator-framework/releasenotes.html">
         发行说明
@@ -3279,7 +2977,7 @@
       </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/snap-creator-framework/reference_legal_notices.html">
         法律声明
       </a></li></ul>
-
+</div>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -3289,6 +2987,30 @@
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
     <!-- Begin of page container -->
     <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">主页</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">文档</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-cn/snap-creator-framework/">Snap&nbsp;Creator&nbsp;Framework</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          查看配置文件
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
       <div class="ie-nmt-disclaimer">
   <span>
     <div class="ie-nmt-disclaimer-container">
@@ -3311,7 +3033,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-08-04 23:23:06 +0000">08/04/2021</time>
+    <time datetime="2022-01-17 14:12:19 +0000">01/17/2022</time>
     
   
 
@@ -3325,12 +3047,6 @@
   </a>
   
 </span>
-
-
-  <span>
-    <a target="_blank" href="/zh-cn/snap-creator-framework/pdfs/pages/administration/task_viewing_snap_creator_profiles.pdf" role="button">
-      <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="20" height="20"/>下载此页面的 PDF</a>
-  </span>
 
 
 </p>
@@ -3357,11 +3073,11 @@
   
   <!-- Start Page Toolbar -->
   <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <div class="page-nav-contribute-title">提供</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/administration/task_viewing_snap_creator_profiles.adoc" class="btn btn-default githubEditButton" role="button"><img src="/zh-cn/snap-creator-framework/images/github.png" class="github-icon" />编辑这个页面</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[查看配置文件](https://docs.netapp.com/zh-cn/snap-creator-framework/administration/task_viewing_snap_creator_profiles.html)" class="btn btn-default githubEditButton" role="button"><img src="/zh-cn/snap-creator-framework/images/github.png" class="github-icon" />请求文档更改</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >了解如何贡献</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[查看配置文件](https://docs.netapp.com/zh-cn/snap-creator-framework/administration/task_viewing_snap_creator_profiles.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snap-creator-framework/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/administration/task_viewing_snap_creator_profiles.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snap-creator-framework/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/snap-creator-framework/images/article-sm.svg" class="github-icon" />提供者指南</a>
     </div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
@@ -3386,7 +3102,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
 
 </ul>
