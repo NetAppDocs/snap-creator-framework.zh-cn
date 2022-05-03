@@ -16,20 +16,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="Snap Creator 具有一个功能完备的服务器和代理架构，其中包括三个主要组件： Snap Creator Server ， Snap Creator Agent 和插件。">
-  <meta name="keywords" content=" snap, creator, architecture">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Snap Creator 具有一个功能完备的服务器和代理架构，其中包括三个主要组件： Snap Creator Server ， Snap Creator Agent 和插件。">
+  <meta name="keywords" content=" snap, creator, architecture"><!-- Icons -->
   <link rel="icon" href="/zh-cn/snap-creator-framework/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -54,52 +45,65 @@
   <link rel="stylesheet" href='/zh-cn/snap-creator-framework/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/zh-cn/snap-creator-framework/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/custom-dropdown.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/na-pagenav.css' type='text/css'>
 
   
   <link rel="stylesheet" href="/zh-cn/snap-creator-framework/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/snap-creator-framework/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/snap-creator-framework/css/product-family.css' type="text/css">
-  
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
 
-  
-  <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/na-feature.css' type='text/css'>
-  
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
 
+    function OptanonWrapper() { }
 
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/snap-creator-framework/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/snap-creator-framework/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/snap-creator-framework/js/na-search.js'></script><script src='/zh-cn/snap-creator-framework/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/snap-creator-framework/css/prism-netapp.css' type='text/css'>
 
 
   <script src='/zh-cn/snap-creator-framework/js/na-utility.js'></script>
   <script src='/zh-cn/snap-creator-framework/js/clouddocs.js'></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    var head = document.getElementsByTagName('head')[0];
-    var adobe = document.createElement("script");
-    adobe.type = "text/javascript";
-    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-    head.appendChild(adobe);
-  }
-  </script>
   <script src='/zh-cn/snap-creator-framework/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/snap-creator-framework/js/toc.js'></script>
-  <script src='/zh-cn/snap-creator-framework/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/snap-creator-framework/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,17 +152,8 @@
               $("#tg-sb-icon").toggleClass('fa-toggle-off');
           });
       });
-  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-81697994-3');
-  }
   </script>
-  <script src='/zh-cn/snap-creator-framework/js/version-dropdown.js'></script>
-  <script src='/zh-cn/snap-creator-framework/js/product-family.js'></script>
+  <script src='/zh-cn/snap-creator-framework/js/custom-dropdown.js'></script>
   <script src='/zh-cn/snap-creator-framework/js/FileSaver.min.js'></script>
   <script src='/zh-cn/snap-creator-framework/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/snap-creator-framework/js/jszip.min.js'></script>
@@ -166,11 +161,26 @@
 </head>
 
 
-  <body class role="document">
+  <body class role="document" data-flavor="">
     <div id="page" class="n-off-canvas-menu">
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[Snap Creator 架构](https://docs.netapp.com/zh-cn/snap-creator-framework/installation/concept_snap_creator_architecture.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snap-creator-framework/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/installation/concept_snap_creator_architecture.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snap-creator-framework/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/snap-creator-framework/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -253,7 +263,8 @@
           data-did-you-mean="搜索 {suggestion}。" 
           data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
           data-results-found="找到 {hitCount} 个结果"  
-          data-sk-es-pf-indexes=""></div>
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
@@ -281,13 +292,15 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snap-creator-framework/installation/concept_snap_creator_architecture.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
                   <a href="https://docs.netapp.com/us-en/snap-creator-framework/installation/concept_snap_creator_architecture.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
                   <a href="https://docs.netapp.com/ja-jp/snap-creator-framework/installation/concept_snap_creator_architecture.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
                   <a href="https://docs.netapp.com/ko-kr/snap-creator-framework/installation/concept_snap_creator_architecture.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/snap-creator-framework/installation/concept_snap_creator_architecture.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/snap-creator-framework/installation/concept_snap_creator_architecture.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -342,6 +355,9 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
         <a target="_blank" href="/zh-cn/snap-creator-framework/pdfs/fullsite-sidebar/Snap_Creator_Framework_4_3_3.pdf" >
           <img src="/zh-cn/snap-creator-framework/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
 
@@ -352,6 +368,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装.pdf" 
@@ -365,6 +384,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework_的功能.pdf" 
@@ -378,6 +400,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_架构.pdf" 
@@ -424,6 +449,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_的预安装要求.pdf" 
@@ -441,6 +469,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/为_Data_ONTAP_创建_Snap_Creator_用户.pdf" 
@@ -471,6 +502,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置_Domino_插件的设置.pdf" 
@@ -486,6 +520,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置_UNIX_专用设置_创建符号链接.pdf" 
@@ -530,6 +567,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装_Snap_Creator_服务器.pdf" 
@@ -543,6 +583,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_Windows_主机上安装_Snap_Creator_服务器.pdf" 
@@ -578,6 +621,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装_Snap_Creator_代理.pdf" 
@@ -591,6 +637,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_Windows_上安装_Snap_Creator_Agent.pdf" 
@@ -628,6 +677,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/正在升级_Snap_Creator.pdf" 
@@ -645,6 +697,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/从_Snap_Creator_3_6_x_升级.pdf" 
@@ -675,6 +730,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/从_Snap_Creator_4_0_x_升级.pdf" 
@@ -705,6 +763,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/从_Snap_Creator_4_1_x_升级.pdf" 
@@ -746,6 +807,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/卸载_Snap_Creator.pdf" 
@@ -761,6 +825,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_UNIX_上卸载_Snap_Creator.pdf" 
@@ -796,6 +863,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/CLI_参考.pdf" 
@@ -809,6 +879,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/用于在集群模式_Data_ONTAP_中为_Snap_Creator_用户创建角色的命令行界面命令.pdf" 
@@ -853,6 +926,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/IBM___Domino___插件操作.pdf" 
@@ -866,6 +942,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/IBM_Domino_插件概述.pdf" 
@@ -894,6 +973,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/准备_IBM_Domino_备份和还原.pdf" 
@@ -909,6 +991,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SnapMirror_和_SnapVault_设置.pdf" 
@@ -944,6 +1029,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/创建备份和还原配置.pdf" 
@@ -961,6 +1049,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/向备份和还原配置添加命令.pdf" 
@@ -1000,6 +1091,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/备份数据库.pdf" 
@@ -1026,6 +1120,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/还原数据库.pdf" 
@@ -1043,6 +1140,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在_SAN_环境中执行单文件还原.pdf" 
@@ -1082,6 +1182,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/查看作业状态和日志.pdf" 
@@ -1123,6 +1226,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SAP_HANA___插件操作.pdf" 
@@ -1136,6 +1242,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SAP_HANA_备份和还原解决方案概述.pdf" 
@@ -1168,6 +1277,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/安装和配置所需的软件组件.pdf" 
@@ -1194,6 +1306,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置数据备份.pdf" 
@@ -1211,6 +1326,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/启动_SnapVault_关系.pdf" 
@@ -1250,6 +1368,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置日志备份.pdf" 
@@ -1276,6 +1397,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/执行数据库备份.pdf" 
@@ -1306,6 +1430,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/SAP_HANA_基于文件的备份和数据库完整性检查.pdf" 
@@ -1344,6 +1471,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/还原和恢复_SAP_HANA_数据库.pdf" 
@@ -1361,6 +1491,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/还原后恢复_SnapVault_关系.pdf" 
@@ -1387,6 +1520,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/在主存储发生故障后还原数据库.pdf" 
@@ -1437,6 +1573,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理.pdf" 
@@ -1450,6 +1589,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework_的功能.pdf" 
@@ -1474,6 +1616,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_架构.pdf" 
@@ -1502,6 +1647,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理_Snap_Creator_服务器.pdf" 
@@ -1532,6 +1680,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理_Snap_Creator_代理.pdf" 
@@ -1551,6 +1702,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_Agent_安全性.pdf" 
@@ -1586,6 +1740,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/备份和恢复工作流.pdf" 
@@ -1613,6 +1770,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/正在创建保留策略.pdf" 
@@ -1645,6 +1805,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/创建克隆.pdf" 
@@ -1671,6 +1834,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/执行还原操作.pdf" 
@@ -1708,6 +1874,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理用户访问.pdf" 
@@ -1752,6 +1921,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理配置文件.pdf" 
@@ -1780,6 +1952,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理配置文件.pdf" 
@@ -1812,6 +1987,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理保留策略.pdf" 
@@ -1846,6 +2024,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理备份.pdf" 
@@ -1876,6 +2057,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理已计划作业.pdf" 
@@ -1908,6 +2092,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/管理克隆.pdf" 
@@ -1936,6 +2123,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/配置_Snap_Creator_所需的插件信息.pdf" 
@@ -1973,6 +2163,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/VMware_Vibe_插件.pdf" 
@@ -2012,6 +2205,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对_Snap_Creator_问题进行故障排除.pdf" 
@@ -2025,6 +2221,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/错误消息和故障排除日志的类型.pdf" 
@@ -2049,6 +2248,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对_Snap_Creator_GUI_错误进行故障排除.pdf" 
@@ -2077,6 +2279,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对安全问题进行故障排除.pdf" 
@@ -2105,6 +2310,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对_Snap_Creator_服务器或_Snap_Creator_代理问题进行故障排除.pdf" 
@@ -2133,6 +2341,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/对命令行界面命令错误进行故障排除.pdf" 
@@ -2165,6 +2376,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/错误消息.pdf" 
@@ -2206,6 +2420,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/Snap_Creator_配置文件变量_参数和命令.pdf" 
@@ -2260,6 +2477,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/snap-creator-framework/pdfs/sidebar/使用_Snap_Creator_命令行界面的准则.pdf" 
@@ -2990,30 +3210,27 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
+
   </div>
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/snap-creator-framework/">Snap&nbsp;Creator&nbsp;Framework</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          Snap Creator 架构
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -3042,16 +3259,12 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 15:51:02 +0000">01/31/2022</time>
+    <time datetime="2022-05-03 10:40:20 +0000">05/03/2022</time>
     
   
 
-<span>提供者
-</span>
-
 
 </p>
-
 
 <div class="paragraph lead">
 <p>Snap Creator 具有一个功能完备的服务器和代理架构，其中包括三个主要组件： Snap Creator Server ， Snap Creator Agent 和插件。</p>
@@ -3072,27 +3285,7 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[Snap Creator 架构](https://docs.netapp.com/zh-cn/snap-creator-framework/installation/concept_snap_creator_architecture.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snap-creator-framework/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/installation/concept_snap_creator_architecture.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/snap-creator-framework/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/snap-creator-framework/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -3100,103 +3293,125 @@
   <div class="n-footer__bottom">
     <div class="n-container">
       <div class="n-footer__bottom-left">
-
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
-
-</ul>
-</div>
-<div class="n-footer__social-links">
-<ul class="n-footer__social-link-list">
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
-<span class="n-footer__social-link-text">blog</span>
-<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
-  <title>blog@</title>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#blog"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
-<span class="n-footer__social-link-text">community</span>
-<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
-<title>community@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#comments"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
-<span class="n-footer__social-link-text">twitter</span>
-<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
-<title>twitter@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#twitter"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
-<span class="n-footer__social-link-text">facebook</span>
-<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
-<title>facebook@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#facebook"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
-<span class="n-footer__social-link-text">linkedin</span>
-<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
-<title>linkedin@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#linkedin"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
-<span class="n-footer__social-link-text">youtube</span>
-<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
-<title>youtube@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#youtube"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
-<span class="n-footer__social-link-text">slideshare</span>
-<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
-<title>slideshare@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#slideshare"></use>
-</svg>
-
-</a>
-</li>
-</ul>
-</div>
-
-</div>
-<div class="n-footer__bottom-right">
-  <p class="n-footer__fine-print">想就我们的网站提供反馈?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">请告诉我们</a>
-  <a href="https://docs.netapp.com/zh-cn/announcements/" class="n-footer__copyright">通知</a>
-  </p>
-</div>
-</div>
-</div>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">条款和条件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隐私政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 设置</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">想就我们的网站提供反馈?</span>
+              <a target="_self" href="javascript:netapp_mailto()">请告诉我们</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-cn/announcements/">通知</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/snap-creator-framework/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/snap-creator-framework/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -3211,7 +3426,4 @@
     </script>
     <script src='/zh-cn/snap-creator-framework/js/www-ntap.js'></script>
     <script src='/zh-cn/snap-creator-framework/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>
