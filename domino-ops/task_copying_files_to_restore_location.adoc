@@ -5,6 +5,7 @@ keywords: domino, ibm, copy, copying, file, data restore directory
 summary: 挂载要还原的文件的 Snapshot 副本后，您可以将该文件复制到备份和还原配置文件中指定的数据还原目录。 
 ---
 = 将文件复制到数据还原目录
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

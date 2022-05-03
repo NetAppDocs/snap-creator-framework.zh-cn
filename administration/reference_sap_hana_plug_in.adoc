@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, backup, point-in-time, recovery, sql
 summary: 通过 SAP HANA 插件，您可以根据存储 Snapshot 副本创建 SAP HANA 数据库的备份并执行时间点恢复。 
 ---
 = SAP HANA 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, service, server, start, verify, stop, unix
 summary: 您可以启动和停止 Snap Creator 服务器服务，并验证 Snap Creator 服务器服务是否正在 UNIX 系统上运行。 
 ---
 = 在 UNIX 上启动，验证和停止 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

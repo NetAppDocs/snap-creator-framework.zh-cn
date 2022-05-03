@@ -5,6 +5,7 @@ keywords: parameter, snap, creator, agent, host, client, port
 summary: 您必须了解用于配置 Snap Creator 代理主机客户端和 Snap Creator 服务器的参数。 
 ---
 = 用于配置 Snap Creator 代理主机客户端和 Snap Creator 服务器的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

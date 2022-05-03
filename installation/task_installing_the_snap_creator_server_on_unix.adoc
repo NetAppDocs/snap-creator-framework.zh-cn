@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, server, unix, unix-based
 summary: 对于 UNIX 平台（ AIX ， HP-UX ， Linux 和 Solaris ），安装 Snap Creator 的过程包括提取 Snap Creator 软件包（一个包含 Snap Creator 服务器和 Snap Creator 代理的 .tar 文件），运行设置脚本，启动服务以及验证端口。 
 ---
 = 在基于 UNIX 的系统上安装 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

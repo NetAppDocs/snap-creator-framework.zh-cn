@@ -5,6 +5,7 @@ keywords: snap, creator, server, framework, overview, gui
 summary: Snap Creator 服务器是 Snap Creator Framework 的主要引擎。 
 ---
 = Snap Creator 服务器概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

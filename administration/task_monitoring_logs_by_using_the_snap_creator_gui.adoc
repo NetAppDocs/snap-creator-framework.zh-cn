@@ -5,6 +5,7 @@ keywords: profile, configuration, snap, creator, gui, monitor, log, out, debug, 
 summary: 您可以使用 Snap Creator GUI 查看每个配置文件和配置的日志。 
 ---
 = 监控日志
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

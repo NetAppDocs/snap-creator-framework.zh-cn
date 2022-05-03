@@ -5,6 +5,7 @@ keywords: domino, ibm, more, information, snap creator
 summary: 您可以在 NetApp 支持站点上找到有关 Snap Creator 的详细信息，包括特定于版本的信息。 
 ---
 = 下一步行动
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

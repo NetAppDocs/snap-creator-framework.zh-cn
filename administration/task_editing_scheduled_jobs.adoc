@@ -5,6 +5,7 @@ keywords: edit, schedule, job, snap, creator, gui
 summary: 您可以编辑已计划的作业。 
 ---
 = 编辑已计划作业
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

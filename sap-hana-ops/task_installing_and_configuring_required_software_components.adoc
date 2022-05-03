@@ -5,6 +5,7 @@ keywords: installing, install, configuring, configure, required, software
 summary: 对于使用 Snap Creator Framework 和 SAP HANA 插件的 SAP HANA 备份和还原解决方案，您需要安装 Snap Creator 软件组件和 SAP HANA hdbsql. 客户端软件。 
 ---
 = 安装和配置所需的软件组件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

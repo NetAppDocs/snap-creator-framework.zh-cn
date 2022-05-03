@@ -5,6 +5,7 @@ keywords: security, issues, snap, creator, troubleshoot, troubleshooting
 summary: 您必须了解 Snap Creator 中的某些安全问题，并知道如何对其进行故障排除。 
 ---
 = 对安全问题进行故障排除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

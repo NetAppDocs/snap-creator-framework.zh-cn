@@ -5,6 +5,7 @@ keywords: hypervisoer, virtualization, plug-in, vmware, vcloud, multilevel, appl
 summary: 如果您正在使用虚拟机管理程序（也称为虚拟化）插件（ VMware （ VMware vCloud Director 和 VMware vSphere ）， KVM 和 Citrix XenServer ）并希望执行多级应用程序暂停和备份操作，则需要为此类设置配置 Snap Creator 。 
 ---
 = 使用虚拟机管理程序插件时，为多级别应用程序配置 Snap Creator 将暂停操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

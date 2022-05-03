@@ -5,6 +5,7 @@ keywords: create, backup, snap, creator, gui, configuration, backup, action, par
 summary: 您可以使用 Snap Creator GUI 创建备份。 
 ---
 = 创建备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

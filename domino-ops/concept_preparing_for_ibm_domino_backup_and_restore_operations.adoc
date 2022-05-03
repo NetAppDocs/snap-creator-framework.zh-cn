@@ -5,6 +5,7 @@ keywords: domino, ibm, preparing, prepare, ibm, domino, backup, restore
 summary: 在部署 IBM Domino 插件之前，请确保存储系统和主机满足最低资源要求。您还需要为数据库配置存储系统布局，并可选择设置 SnapMirror 和 SnapVault 关系。 
 ---
 = 准备 IBM Domino 备份和还原
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

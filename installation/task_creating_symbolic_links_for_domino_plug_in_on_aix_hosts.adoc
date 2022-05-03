@@ -5,6 +5,7 @@ keywords: creating, create, symbolic, links, domino, plug-in, aix, hosts
 summary: 要为 AIX 主机上的 Domino 插件添加符号链接，必须执行此操作步骤。 
 ---
 = 在 AIX 主机上为 Domino 插件创建符号链接
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

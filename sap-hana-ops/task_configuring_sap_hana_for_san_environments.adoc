@@ -5,6 +5,7 @@ keywords: configuring, sap, hana, san, environments
 summary: 配置数据备份后，在使用光纤通道存储区域网络（ SAN ）将 SAP HANA 系统连接到存储控制器的环境中，您需要向 Snap Creator 配置文件添加一个新命令。 
 ---
 = 为 SAN 环境配置 SAP HANA
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, agent, service, verify, start, stop, unix
 summary: 您可以启动和停止 Snap Creator Agent 服务，并验证 Snap Creator Agent 服务是否正在 UNIX 系统上运行。 
 ---
 = 在 UNIX 上启动，验证和停止 Snap Creator 代理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

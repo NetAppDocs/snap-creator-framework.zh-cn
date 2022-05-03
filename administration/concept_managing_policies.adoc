@@ -5,6 +5,7 @@ keywords: managing, retention, policies, list, delete, policies, snapshot, snapv
 summary: 您可以创建保留策略，以及列出和删除这些策略。 
 ---
 = 管理保留策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

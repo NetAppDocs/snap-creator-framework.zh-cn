@@ -5,6 +5,7 @@ keywords: clone, volume, lun, snapshot, copy, create, profile, configuration
 summary: 您可以从新 Snapshot 副本克隆卷或 LUN 。 
 ---
 = 从新备份创建克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

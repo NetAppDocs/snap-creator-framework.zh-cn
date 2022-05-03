@@ -5,6 +5,7 @@ keywords: backing, up, database, snap, creator, gui, user, interface, ui
 summary: 您可以使用 Snap Creator GUI 备份数据库。 
 ---
 = 使用 Snap Creator GUI 备份数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

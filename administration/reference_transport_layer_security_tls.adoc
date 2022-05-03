@@ -5,6 +5,7 @@ keywords: cryptographic, flaw, transport, layer, security, tls, protocol
 summary: 传输层安全性中的加密缺陷 
 ---
 = 传输层安全性中的加密缺陷
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

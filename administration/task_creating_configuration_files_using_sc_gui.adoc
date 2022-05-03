@@ -5,6 +5,7 @@ keywords: configuration, file, wizard, gui, management
 summary: 您可以使用配置向导创建配置文件。 
 ---
 = 正在创建配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, disconnecting, disconnect, snapshot, copy
 summary: 还原操作完成后，您需要断开已挂载的 Snapshot 副本的连接。 
 ---
 = 正在断开 Snapshot 副本的连接
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

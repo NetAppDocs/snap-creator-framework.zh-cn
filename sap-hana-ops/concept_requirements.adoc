@@ -5,6 +5,7 @@ keywords: requirements, sap, hana, plug-in, create, backups, point-in-time, reco
 summary: 您可以通过 SAP HANA 插件创建备份并对 HANA 数据库执行时间点恢复。 
 ---
 = 要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

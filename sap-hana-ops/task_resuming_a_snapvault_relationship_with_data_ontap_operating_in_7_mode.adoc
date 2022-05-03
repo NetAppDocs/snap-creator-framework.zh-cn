@@ -5,6 +5,7 @@ keywords: sap,hana, resuming, resume, snapvault, relationship, data, ontap, oper
 summary: 如果使用最新的 Snapshot 备份以外的 Snapshot 备份进行还原，则需要恢复 SnapVault 关系，以便 Snap Creator 可以继续运行备份。 
 ---
 = 恢复与 7- 模式 Data ONTAP 的 SnapVault 关系
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

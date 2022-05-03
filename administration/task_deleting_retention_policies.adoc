@@ -5,6 +5,7 @@ keywords: delete, retention, policy, snap, creator, gui
 summary: 您可以删除保留策略。 
 ---
 = 正在删除保留策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sap, hana, backup, restore, solution, overview
 summary: 如今，企业要求 SAP 应用程序每周七天，每天 24 小时可用。无论数据量不断增加，系统备份等日常维护任务如何，性能都应保持一致。 
 ---
 = SAP HANA 备份和还原解决方案概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

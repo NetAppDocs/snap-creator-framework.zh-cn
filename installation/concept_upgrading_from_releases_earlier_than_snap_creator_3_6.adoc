@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, releases, earlier, before, snap, creator, 3.6
 summary: 如果要从 Snap Creator 3.6 之前的版本升级，则必须先一次升级到一个版本的 Snap Creator 3.6 。 
 ---
 = 从 Snap Creator 3.6 之前的版本升级
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

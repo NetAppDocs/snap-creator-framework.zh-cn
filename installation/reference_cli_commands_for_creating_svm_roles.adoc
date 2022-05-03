@@ -5,6 +5,7 @@ keywords: cli, commands, creating, svm, roles, role create
 summary: 下表列出了为新 SVM 用户创建角色所需的命令。 
 ---
 = 用于创建 SVM 角色的 CLI 命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

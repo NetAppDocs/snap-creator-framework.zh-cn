@@ -5,6 +5,7 @@ keywords: performing, perform, file-based, backup, snap, creator, gui, graphical
 summary: 您可以从 Snap Creator 图形用户界面（ GUI ）执行基于文件的备份。 
 ---
 = 从 Snap Creator GUI 执行基于文件的备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

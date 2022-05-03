@@ -5,6 +5,7 @@ keywords: domino, ibm, performing, single-file, restore, single, file, san
 summary: 对于 SAN 环境中的单文件还原，您可以使用 SnapDrive 在 Snap Creator 代理主机上挂载 Snapshot 副本。 
 ---
 = 在 SAN 环境中执行单文件还原
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

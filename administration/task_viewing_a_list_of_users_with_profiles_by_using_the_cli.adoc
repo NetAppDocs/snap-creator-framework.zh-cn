@@ -5,6 +5,7 @@ keywords: snap, creator, command, line, interface, cli
 summary: 您只能使用命令行界面（ CLI ）查看具有配置文件的所有 Snap Creator 用户帐户的列表。 
 ---
 = 使用命令行界面查看 Snap Creator 用户和已分配配置文件的列表
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

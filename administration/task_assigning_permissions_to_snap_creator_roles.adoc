@@ -5,6 +5,7 @@ keywords: assign, permission, snap, creator, gui, role, gui, permission
 summary: 您可以使用 Snap Creator GUI 为 Snap Creator 角色分配权限。 
 ---
 = 为 Snap Creator 角色分配权限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

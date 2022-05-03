@@ -5,6 +5,7 @@ keywords: sap, hana, modifying, modify, change, changing, configuration, file-ba
 summary: 您可以修改为基于文件的备份配置的参数。后续计划的或按需的基于文件的备份操作会反映更新后的信息。 
 ---
 = 修改基于文件的备份的配置
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

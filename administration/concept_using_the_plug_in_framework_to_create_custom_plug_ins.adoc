@@ -5,6 +5,7 @@ keywords: plug-in, framework, snap, creator, reuse, quiesce, unquiesce, discover
 summary: 通过此插件框架，您可以为 Snap Creator 创建自己的插件或重复使用现有插件。该插件为 Snap Creator 提供了处理给定应用程序备份和恢复的步骤。 
 ---
 = 使用插件框架创建自定义插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

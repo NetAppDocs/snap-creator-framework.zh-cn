@@ -5,6 +5,7 @@ keywords: sap, hana, starting, start, snapvault, relationship, clustered, data, 
 summary: 在启动 SnapVault 关系之前，您需要定义 SnapMirror 策略。 
 ---
 = 使用集群模式 Data ONTAP 启动 SnapVault 关系
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

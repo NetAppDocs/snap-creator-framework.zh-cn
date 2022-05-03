@@ -5,6 +5,7 @@ keywords: snap, creator, error, troubleshoot, cmd, output, debug, warn, error, o
 summary: Snap Creator 可提供有用的错误消息和故障排除日志。 
 ---
 = 错误消息和故障排除日志的类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

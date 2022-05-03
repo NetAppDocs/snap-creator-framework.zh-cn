@@ -5,6 +5,7 @@ keywords: snap, creator, server, snapcreator, properties, file, restart, server,
 summary: 要更改 Snap Creator 服务器使用的端口，您可以编辑 snapcreator.properties 文件并重新启动服务器。 
 ---
 = 安装后更改 Snap Creator 服务器端口
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

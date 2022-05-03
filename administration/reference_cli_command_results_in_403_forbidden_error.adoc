@@ -5,6 +5,7 @@ keywords: unix, cli, command, 403, forbidden, error, username, password, incorre
 summary: 在 UNIX 环境中，运行 CLI 命令时可能会遇到 403 For禁用 错误。 
 ---
 = CLI 命令会导致 403 For禁用 错误
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

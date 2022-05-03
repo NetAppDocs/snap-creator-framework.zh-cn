@@ -5,6 +5,7 @@ keywords: db2, plug-in, communicate, database
 summary: DB2 插件使用 DB2 命令与数据库进行通信。 
 ---
 = DB2 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

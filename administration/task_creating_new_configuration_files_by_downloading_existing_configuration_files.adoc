@@ -5,6 +5,7 @@ keywords: configuration, file, downloading, gui, snap, creator
 summary: 您可以通过下载现有文件并使用 Snap Creator 图形用户界面以新文件名导入这些文件来创建新配置文件。 
 ---
 = 通过下载现有配置文件创建新配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

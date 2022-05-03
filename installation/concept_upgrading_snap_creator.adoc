@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator
 summary: 您可以从各种受支持的版本升级到最新版本的 Snap Creator 。 
 ---
 = 正在升级 Snap Creator
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

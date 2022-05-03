@@ -5,6 +5,7 @@ keywords: command-line, interface, cli, snap, creator, workflow, command, backup
 summary: 您可以使用命令行界面（ CLI ）命令执行基于图形用户界面（ GUI ）的各种 Snap Creator 工作流操作。 
 ---
 = 用于执行工作流操作的 Snap Creator CLI 命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

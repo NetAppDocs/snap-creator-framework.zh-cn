@@ -5,6 +5,7 @@ keywords: configuring, configure, settings
 summary: 只有在计划使用作为 Snap Creator Agent 安装一部分提供的 IBM Domino 插件时，才需要配置特定设置。 
 ---
 = 配置 Domino 插件的设置
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

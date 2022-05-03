@@ -5,6 +5,7 @@ keywords: mysql, plug-in, net-mysql, interoperability, matrix
 summary: MySQL 插件使用 Net-MySQL 与数据库进行通信。 
 ---
 = MySQL 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

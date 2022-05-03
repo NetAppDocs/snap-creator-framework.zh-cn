@@ -5,6 +5,7 @@ keywords: unix, 500, error, connect, failed
 summary: 在 UNIX 环境中，运行 CLI 命令时可能会遇到 500 Connect Failed 错误。 
 ---
 = CLI 命令导致出现 500 连接失败错误
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

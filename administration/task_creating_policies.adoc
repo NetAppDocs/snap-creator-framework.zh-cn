@@ -5,6 +5,7 @@ keywords: create, retention, policy, snap, creator, gui, guideline, policy, mana
 summary: 您可以使用 Snap Creator 图形用户界面创建一个新的保留策略，以便使用不同的保留计数配置多个 Snapshot 策略。 
 ---
 = 正在创建策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

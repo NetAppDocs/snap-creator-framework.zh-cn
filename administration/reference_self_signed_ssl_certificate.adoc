@@ -5,6 +5,7 @@ keywords: self-signed, ssl, certificate, url, issue, cause, corrective, action, 
 summary: 自签名 SSL 证书与 URL 不匹配 
 ---
 = 自签名 SSL 证书与 URL 不匹配
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

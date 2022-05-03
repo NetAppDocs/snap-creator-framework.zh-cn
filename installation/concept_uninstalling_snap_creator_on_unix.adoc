@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, unix
 summary: 在 UNIX 上卸载 Snap Creator 时，请先卸载 Snap Creator 代理，然后卸载 Snap Creator 服务器。 
 ---
 = 在 UNIX 上卸载 Snap Creator
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

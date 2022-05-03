@@ -5,6 +5,7 @@ keywords: domino, ibm, allowing, allow, additional, commands, snap, creator, age
 summary: 如果要在 Snap Creator 代理上运行补充命令，则必须明确允许执行该命令，方法是将其包含在该代理上的 allowed_commands.config 文件中。 
 ---
 = 允许对 Snap Creator 代理执行补充命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

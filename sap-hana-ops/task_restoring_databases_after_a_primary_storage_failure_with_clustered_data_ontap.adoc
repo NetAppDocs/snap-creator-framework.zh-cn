@@ -5,6 +5,7 @@ keywords: sap, hana, restore, restoring, databases, primary, storage, failure, c
 summary: 您可以在运行集群模式 Data ONTAP 的主存储系统出现故障后还原 SAP HANA 数据库。 
 ---
 = 使用集群模式 Data ONTAP 在主存储发生故障后还原数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

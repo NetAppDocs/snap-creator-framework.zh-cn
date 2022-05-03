@@ -5,6 +5,7 @@ keywords: snap, creator, agent, quiesce, server, plug-in, multi-tenant
 summary: Snap Creator 代理通常安装在安装应用程序或数据库的同一主机上，用于处理从 Snap Creator 服务器到给定应用程序的静默和取消静默命令，并且是插件所在位置。有时，在 Snap Creator 中， Agent 会缩短为 scAgent 。 
 ---
 = Snap Creator Agent 概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

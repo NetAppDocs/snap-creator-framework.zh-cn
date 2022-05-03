@@ -5,6 +5,7 @@ keywords: backup, snap, creator, gui, policy, creating, type
 summary: 您可以选择使用 Snap Creator GUI 创建备份类型，以帮助确定策略的用途。 
 ---
 = 创建备份类型
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, creating, create, backup, restore, configuration
 summary: 您可以在配置文件中指定备份和还原操作所需的大多数信息。此配置文件是 Snap Creator 备份和还原操作的输入。 
 ---
 = 创建备份和还原配置
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -26,7 +27,7 @@ NOTE: 本指南介绍如何使用 GUI 创建配置文件。有关如何使用命
 * 相关信息 *
 
 link:concept_general_configuration_file_information.adoc["登录到 Snap Creator GUI"]
-
-
-
-
+link:task_using_the_gui_to_create_a_configuration_file.adoc["创建配置文件"]
+link:concept_adding_commands_to_the_backup_and_restore_configuration.adoc["向备份和还原配置添加命令"]
+link:task_setting_the_snap_creator_archive_log_management_settings.adoc["清除 Domino 事务日志的归档副本"]
+link:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc["备份 changeinfo 目录"]

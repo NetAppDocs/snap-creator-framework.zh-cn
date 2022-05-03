@@ -5,6 +5,7 @@ keywords: domino, ibm, adding, commands, backup, restore, configuration, supplem
 summary: 您可能更喜欢使用 SnapDrive 命令进行备份，而不是使用原生 Snap Creator 命令，以确保操作系统级别的文件系统一致性。 
 ---
 = 向备份和还原配置添加命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -32,4 +33,4 @@ NOTE: 本指南介绍如何使用 GUI 添加命令。有关如何使用命令行
 * 相关信息 *
 
 link:concept_allowing_additional_commands_through_the_snap_creator_agent.adoc["允许对 Snap Creator 代理执行补充命令"]
-
+link:task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.adoc["向配置中添加补充命令"]

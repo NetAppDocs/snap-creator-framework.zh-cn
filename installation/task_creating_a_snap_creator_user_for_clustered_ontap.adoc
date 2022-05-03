@@ -5,6 +5,7 @@ keywords: creating, create, snap, center, user, ontap
 summary: 对于集群模式 Data ONTAP ，您应为 Snap Creator 创建用户。但是，您创建的用户类型取决于集群模式 Data ONTAP 的版本。这两种类型的用户是集群用户和 Storage Virtual Machine （ SVM ）用户。 
 ---
 = 为集群模式 Data ONTAP 创建 Snap Creator 用户
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

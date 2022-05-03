@@ -5,6 +5,7 @@ keywords: domino, ibm, storage, layout, requirements,
 summary: 典型的 IBM Domino 环境至少具有三个 Domino 卷，每个卷分别用于 Domino 数据， Domino 事务日志和插件 changeinfo 目录。许多站点还为 Domino DAOS 和 View 重建提供了卷。 
 ---
 = 存储布局要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

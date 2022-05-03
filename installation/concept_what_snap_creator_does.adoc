@@ -5,6 +5,7 @@ keywords: snap, creator, framework, description
 summary: 通过 Snap Creator Framework ，您可以使用预打包和自定义插件，以便为 Windows 和 UNIX \ （ AIX ， HP-UX ， Linux 和 Solaris\ ）环境中的各种第三方应用程序，数据库和虚拟机管理程序实现标准化和简化数据保护。 
 ---
 = Snap Creator Framework 的功能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

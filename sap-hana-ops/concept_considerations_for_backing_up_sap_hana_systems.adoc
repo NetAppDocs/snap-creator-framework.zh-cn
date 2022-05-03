@@ -5,6 +5,7 @@ keywords: considerations, backup, backing, up, sap, hana
 summary: SAP HANA 管理员必须提供可靠级别的服务，最大限度地减少备份导致的停机或性能下降。 
 ---
 = 备份 SAP HANA 系统的注意事项
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

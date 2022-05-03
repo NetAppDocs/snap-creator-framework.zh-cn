@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, agent, windows
 summary: 您可以使用 Windows 安装程序在 Windows 主机上安装 Snap Creator Agent 。 
 ---
 = 在 Windows 上安装 Snap Creator Agent
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

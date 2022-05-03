@@ -5,6 +5,7 @@ keywords: snap, creator, agent, server, manage, security, install, snapdrive
 summary: 您可以通过添加可由 Snap Creator 使用的命令来管理 Snap Creator 代理的安全设置。您还可以限制与特定 Snap Creator 服务器的通信。 
 ---
 = 管理 Snap Creator 代理安全性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

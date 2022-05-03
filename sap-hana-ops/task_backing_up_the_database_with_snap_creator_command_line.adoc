@@ -5,6 +5,7 @@ keywords: backing up, database, snap, creator, command, line
 summary: 您也可以使用 Snap Creator 命令行备份数据库。 
 ---
 = 使用 Snap Creator 命令行备份数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

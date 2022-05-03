@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, server
 summary: 您可以在 Windows 和 UNIX 主机上安装 Snap Creator 服务器。 
 ---
 = 安装 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

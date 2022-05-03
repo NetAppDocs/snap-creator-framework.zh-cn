@@ -5,6 +5,7 @@ keywords: snap, creator, built-in, native, plug-in, oracle, db2, mysql, sybase, 
 summary: Snap Creator 支持以下内置（或原生）插件： Oracle ， DB2 ， MySQL ， Sybase ASE ， Domino ， 适用于 Microsoft SQL Server 的 SnapManager ，适用于 Microsoft Exchange 的 SnapManager ， MaxDB ， VMware （ vSphere 和 vCloud Director ）， Red Hat KVM ， Citrix XenServer 和 SAP HANA 。社区插件不包含在此软件包中，必须单独下载。 
 ---
 = 配置 Snap Creator 所需的插件信息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, terminology,action, backup, lun, clone, volume, agent, 
 summary: Snap Creator 由几种不同的构造组成，了解语言和概念非常重要。 
 ---
 = Snap Creator 术语
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

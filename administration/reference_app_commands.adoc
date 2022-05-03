@@ -5,6 +5,7 @@ keywords: app, command
 summary: 下表列出了应用程序（ APP ）命令 
 ---
 = 应用程序命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

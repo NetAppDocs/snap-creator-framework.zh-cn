@@ -5,6 +5,7 @@ keywords: snap creator, ibm, domino, plug-in, perfomring, single-file, single, f
 summary: 您可以使用 IBM Domino 插件为 NFS 环境中的数据库执行时间点，即时或可选的即时单文件还原。 
 ---
 = 执行单文件还原
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

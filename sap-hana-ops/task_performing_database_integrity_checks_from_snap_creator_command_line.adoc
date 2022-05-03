@@ -5,6 +5,7 @@ keywords: sap, hana, performing, perform, database, integrity, checks, snap, cre
 summary: 您可以使用 Snap Creator 命令行执行数据库完整性检查。 
 ---
 = 从 Snap Creator 命令行执行数据库完整性检查
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

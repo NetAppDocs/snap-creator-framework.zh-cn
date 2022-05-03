@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, agent, unix
 summary: 您可以通过删除 Snap Creator Agent 安装文件夹从 UNIX 卸载 Snap Creator Agent 。 
 ---
 = 在 UNIX 上卸载 Snap Creator Agent
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

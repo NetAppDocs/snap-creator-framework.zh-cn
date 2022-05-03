@@ -5,6 +5,7 @@ keywords: schedule, job, view, list, snap, creator, gui
 summary: 您可以查看已计划作业的列表。 
 ---
 = 查看已计划作业的列表
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

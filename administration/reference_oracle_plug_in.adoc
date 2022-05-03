@@ -5,6 +5,7 @@ keywords: oracle, plug-in, sql, plus, database, quiesce, unquiesce, oracle, data
 summary: Oracle 插件使用 SQL* Plus 与数据库进行通信，并暂停和取消暂停 Oracle 数据库以进行备份。 
 ---
 = Oracle 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: setup, sap, hana, clustered, data, ontap
 summary: 与集群模式 Data ONTAP 结合使用的设置 
 ---
 = 与集群模式 Data ONTAP 结合使用的设置
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

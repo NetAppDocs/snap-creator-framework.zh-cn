@@ -5,6 +5,7 @@ keywords: modifying, modify, configuration, database, integrity, checks, sap, ha
 summary: 您可以修改为数据库完整性检查配置的参数。后续计划或按需完整性检查操作将反映更新后的信息。 
 ---
 = 修改数据库完整性检查的配置
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

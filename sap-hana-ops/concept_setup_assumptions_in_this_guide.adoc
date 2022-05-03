@@ -5,6 +5,7 @@ keywords: setup, assumptions
 summary: 虽然典型的 Snap Creator 安装假定服务器安装在一台主机上，而代理安装在另一台主机上，但本指南中使用的设置基于 SAP HANA 多节点设备。 
 ---
 = 本指南中的设置假设
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

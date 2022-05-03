@@ -5,6 +5,7 @@ keywords: snap, creator, server, service, start, verify, stop, windows
 summary: 您可以启动和停止 Snap Creator 服务器服务，并验证 Snap Creator 服务器服务是否正在 Windows 系统上运行。 
 ---
 = 在 Windows 上启动，验证和停止 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

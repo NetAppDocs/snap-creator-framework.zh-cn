@@ -5,6 +5,7 @@ keywords: parameter, required, operation, manager, host, user, pwd, port
 summary: 设置 Operations Manager 控制台需要多个参数。 
 ---
 = 用于设置 Operations Manager 控制台的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

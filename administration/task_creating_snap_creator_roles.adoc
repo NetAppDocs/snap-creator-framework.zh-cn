@@ -5,6 +5,7 @@ keywords: snap, creator, gui, creating, role
 summary: 您可以使用 Snap Creator GUI 创建 Snap Creator 角色。 
 ---
 = 创建 Snap Creator 角色
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

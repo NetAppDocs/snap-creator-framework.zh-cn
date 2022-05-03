@@ -5,6 +5,7 @@ keywords: unix, 500, locate, error, cli, ssl, libraries
 summary: 在 UNIX 环境中，运行 CLI 命令后，您可能会遇到 500 无法找到对象错误。 
 ---
 = CLI 命令导致 500 无法找到对象错误
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

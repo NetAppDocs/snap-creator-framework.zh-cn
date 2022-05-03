@@ -5,6 +5,7 @@ keywords: domino, ibm, viewing, view, job, status, logs, monitor
 summary: Snap Creator 作业监控器是一个类似于信息板的界面，可用于 Snap Creator 作业。您可以使用作业监控器查看作业状态和下载日志。 
 ---
 = 在作业监控器中查看作业状态和日志
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sybase, ase, plug-in, isql, command, database, parameter, user, server
 summary: Sybase ASE 插件使用 isql 命令与 Sybase 数据库进行交互。 
 ---
 = Sybase ASE 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

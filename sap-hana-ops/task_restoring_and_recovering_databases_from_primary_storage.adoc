@@ -5,6 +5,7 @@ keywords: sap, hana, restore, restoring, recover, recovering, database, primary,
 summary: 您可以从主存储还原和恢复数据库。 
 ---
 = 从主存储还原和恢复数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

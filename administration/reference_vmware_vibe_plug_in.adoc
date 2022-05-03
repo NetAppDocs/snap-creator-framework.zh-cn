@@ -5,6 +5,7 @@ keywords: snap, creator, support, backup, virtual, machine, vmware, windows, lin
 summary: Snap Creator 支持通过 VMware Vibe 插件备份 VMware 虚拟机和 vApp 。VMware 插件是一个集成插件，适用于运行 vSphere 的虚拟机以及运行 vCloud Director 的 vApp 。 
 ---
 = VMware Vibe 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

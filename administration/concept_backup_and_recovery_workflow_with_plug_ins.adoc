@@ -5,6 +5,7 @@ keywords: backup, recovery, workflow, snap, creator, framework
 summary: 您可以使用 Snap Creator GUI 将此工作流作为备份和恢复过程的参考。 
 ---
 = 备份和恢复工作流
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

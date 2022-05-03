@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, windows
 summary: '您可以使用 Windows 的 " 开始 " 菜单卸载 Snap Creator 。Windows 卸载程序会删除已安装的 Snap Creator 组件 \ （例如，如果同时安装了 Snap Creator Server 和 Snap Creator Agent ，则两者都将被卸载 \ ）。同样，如果仅安装了其中一个组件，则该组件将被卸载。' 
 ---
 = 在 Windows 上卸载 Snap Creator
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

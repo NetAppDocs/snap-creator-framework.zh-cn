@@ -5,6 +5,7 @@ keywords: domino, ibm, scheduling, schedule, backups
 summary: 您可以在执行初始备份后计划重复的备份作业。 
 ---
 = 计划备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -3,6 +3,7 @@ permalink: index.html
 sidebar: sidebar 
 ---
 = Snap Creator Framework 4.3.3
+:allow-uri-read: 
 
 
 欢迎使用 Snap Creator Framework 信息库。此处提供了有关 Snap Creator Framework 4.3.3 软件的文档，其中包括如何安装和设置 Snap Creator ，如何管理 Snap Creator Sever 和 Agent 以及如何配置和使用 IBM Domino 插件。

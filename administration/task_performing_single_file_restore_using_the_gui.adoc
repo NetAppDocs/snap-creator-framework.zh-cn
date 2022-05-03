@@ -5,6 +5,7 @@ keywords: snap, creator, gui, file, restore, wizard
 summary: 您可以使用 Snap Creator GUI 执行单个文件还原操作。 
 ---
 = 执行单个文件还原操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: managing, clones, creating, backup, deleting, unmounting
 summary: 您可以创建备份副本，查看备份副本列表以及在不再需要备份副本时删除这些副本。 
 ---
 = 管理克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, built-in, variable, parameter, basic, configuration, de
 summary: Snap Creator 包括基本配置所需的内置变量和参数。 
 ---
 = Snap Creator 变量和参数说明
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

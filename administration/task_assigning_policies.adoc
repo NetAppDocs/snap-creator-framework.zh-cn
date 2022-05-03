@@ -5,6 +5,7 @@ keywords: assign, retention, policy, configuration, snap, creator, gui, assignme
 summary: 您可以使用 Snap Creator GUI 为配置文件分配保留策略。 
 ---
 = 正在分配策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

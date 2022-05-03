@@ -5,6 +5,7 @@ keywords: delete, snap, creator, profile
 summary: 您可以删除 Snap Creator 配置文件。 
 ---
 = 正在删除配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

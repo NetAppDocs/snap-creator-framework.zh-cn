@@ -5,6 +5,7 @@ keywords: encounter, issues, snap, creator, server, agent, troubleshoot, issues,
 summary: Snap Creator 服务器或 Snap Creator 代理可能会遇到一些问题。您应了解这些问题并知道如何对其进行故障排除。 
 ---
 = 对 Snap Creator 服务器或 Snap Creator 代理问题进行故障排除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

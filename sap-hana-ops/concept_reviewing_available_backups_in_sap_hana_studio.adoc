@@ -5,6 +5,7 @@ keywords: reviewing, review, available, backups, sap, hana, studio
 summary: 您可以在 SAP HANA Studio 中查看存储 Snapshot 备份列表。 
 ---
 = 在 SAP HANA Studio 中查看可用备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

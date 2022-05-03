@@ -5,6 +5,7 @@ keywords: cloning, mount_cmd, unmount_cmd, command, snap, creator, pre, post
 summary: 克隆时，应使用 mount_CMD 和 umount_CMD 命令，而不是 Snap Creator PRE 或 POST 命令。 
 ---
 = mount 和 unmount 命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: checking, check, job, monitor, size
 summary: 在升级到 Snap Creator 的最新版本之前，您应检查当前安装的 Snap Creator 版本的作业监控器大小。 
 ---
 = 正在检查作业监控器大小
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: retention, policy, view, list, snap, creator, gui
 summary: 您可以查看保留策略列表。 
 ---
 = 查看保留策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

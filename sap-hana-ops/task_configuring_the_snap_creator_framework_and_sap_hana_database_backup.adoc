@@ -5,6 +5,7 @@ keywords: configuring, configure, snap, creator, framework, sap, hana, database,
 summary: 您必须配置 Snap Creator Framework 和 SAP HANA 数据库备份。 
 ---
 = 配置 Snap Creator Framework 和 SAP HANA 数据库备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

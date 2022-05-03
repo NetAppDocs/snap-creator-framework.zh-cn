@@ -5,6 +5,7 @@ keywords: snap, creator, command-line, interface, cli
 summary: 您只能使用命令行界面（ CLI ）查看分配给每个角色的所有 Snap Creator 用户的列表。 
 ---
 = 使用命令行界面查看分配给角色的 Snap Creator 用户
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

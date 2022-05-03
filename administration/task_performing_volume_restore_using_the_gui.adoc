@@ -5,6 +5,7 @@ keywords: volume, restore, snap, creator, gui, perform, wizard
 summary: 您可以使用 Snap Creator GUI 执行卷还原。 
 ---
 = 正在执行卷还原
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

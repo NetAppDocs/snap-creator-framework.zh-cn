@@ -5,6 +5,7 @@ keywords: configuring, configure, unix, settings, create, creating, symbolic, li
 summary: 如果要在 UNIX 操作系统（ AIX ， Linux 和 Solaris ）上安装 Snap Creator 代理，则要使 IBM Domino 插件正常工作，必须创建三个符号链接（符号链接）来链接到 Domino 的共享对象文件。 
 ---
 = 配置 UNIX 专用设置：创建符号链接
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

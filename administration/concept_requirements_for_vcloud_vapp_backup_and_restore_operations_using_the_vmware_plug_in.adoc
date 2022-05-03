@@ -5,6 +5,7 @@ keywords: snap, creator, backup, vcloud, vapp, vmware, director, api, vsphere, d
 summary: Snap Creator 支持通过 VMware 插件备份 vCloud vApp 。vApp 和虚拟机备份副本由 VMware 插件通过 vCloud Director API 和 vSphere API 创建，这些 API 分别在 VMware vCloud Director 和 VMware vCenter 服务器上调用。 
 ---
 = 使用 VMware 插件执行 vCloud vApp 备份和还原操作的要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

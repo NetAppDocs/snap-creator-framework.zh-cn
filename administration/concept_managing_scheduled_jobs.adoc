@@ -5,6 +5,7 @@ keywords: manage, scheduled, jobs, listing, running, deleting, managing
 summary: 您可以通过创建计划作业 \ （以自动执行备份操作 \ ）以及列出以及编辑，列出，运行和删除这些计划作业来管理这些作业。 
 ---
 = 管理已计划作业
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

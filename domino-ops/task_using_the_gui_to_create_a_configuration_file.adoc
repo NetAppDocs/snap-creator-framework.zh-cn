@@ -5,6 +5,7 @@ keywords: domino, ibm,creating, create, configuraiton, file
 summary: 在备份 IBM Domino 数据库之前，您需要先创建一个配置文件。此配置文件是 Snap Creator 备份和还原操作的输入。 
 ---
 = 创建配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

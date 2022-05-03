@@ -5,6 +5,7 @@ keywords: creating, retention, policies, local, configuration
 summary: 如果您计划使用策略对象而不是本地保留策略（此策略包含在配置文件中），则可以创建保留策略。 
 ---
 = 正在创建保留策略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, server, agent, https, multitenant, environment, self-si
 summary: Snap Creator 服务器仅通过 HTTPS 与 Snap Creator Agent 进行通信，从而确保安全且加密的通信。此功能在多租户环境中非常重要。通过自签名证书，您可以将自己生成的证书与 Snap Creator Agent 结合使用。 
 ---
 = Snap Creator Agent 安全性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

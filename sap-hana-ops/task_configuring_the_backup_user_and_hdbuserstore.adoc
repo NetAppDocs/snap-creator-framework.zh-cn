@@ -5,6 +5,7 @@ keywords: configuring, configure, backup, user, hdbususerstore
 summary: 您应在 HANA 数据库中配置一个专用数据库用户，以便使用 Snap Creator 运行备份操作。第二步，您应该为此备份用户配置 SAP HANA 用户存储密钥。此用户存储密钥用于配置 Snap Creator SAP HANA 插件。 
 ---
 = 配置备份用户和 hdbuserstore
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

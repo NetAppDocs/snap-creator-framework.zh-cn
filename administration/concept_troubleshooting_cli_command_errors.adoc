@@ -5,6 +5,7 @@ keywords: errors, cli, troubleshoot, troubleshooting, command
 summary: 您应了解在尝试运行 CLI 命令时可能会遇到的一些错误，并了解如何对这些问题进行故障排除。 
 ---
 = 对命令行界面命令错误进行故障排除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

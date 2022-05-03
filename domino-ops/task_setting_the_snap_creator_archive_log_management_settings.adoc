@@ -5,6 +5,7 @@ keywords: domino, ibm, cleaning up, purging, archives, archived, copies, transac
 summary: 如果您使用的是 Domino 事务日志记录，则 IBM Domino 插件会将 Domino 事务日志的副本归档到 changeinfo 目录，以便在即时还原操作中使用。在 Snap Creator 清理不再需要的事务日志副本之前，您需要启用事务日志管理。 
 ---
 = 清除 Domino 事务日志的归档副本
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

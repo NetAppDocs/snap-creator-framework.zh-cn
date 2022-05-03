@@ -5,6 +5,7 @@ keywords: managing, snap, creator, server, start, veridy, stop, port, windows, u
 summary: 您可以在 Windows 和 UNIX 系统上启动，验证和停止 Snap Creator 服务器，以及更改服务器端口。 
 ---
 = 管理 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror,
 summary: IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库文件。Snapshot 还原完成后，此插件将应用在 changeinfo 目录中记录的任何更改。 
 ---
 = 还原数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -44,5 +45,5 @@ NOTE: 本指南介绍如何在 SAN 环境中仅使用命令行界面进行单文
 * 相关信息 *
 
 link:task_performing_point_in_time_volume_restore.adoc["执行卷还原"]
-
-
+link:task_performing_point_in_time_single_file_restore_with_nfs.adoc["执行单文件还原"]
+link:concept_single_file_restore_in_fc_iscsi_environments.adoc["在 SAN 环境中执行单文件还原"]

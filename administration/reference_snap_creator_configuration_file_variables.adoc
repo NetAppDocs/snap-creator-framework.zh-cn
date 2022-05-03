@@ -5,6 +5,7 @@ keywords: variable, parameter, snap, creator, configuration, file, snapshot
 summary: 您可以在 Snap Creator 配置文件中定义变量，参数和命令。 
 ---
 = Snap Creator 配置文件变量，参数和命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

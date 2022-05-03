@@ -5,6 +5,7 @@ keywords: configuring, configure, windows, settings, adding, add, path, environm
 summary: 如果要在 Windows 上安装 Snap Creator 代理，则必须将 Domino 二进制文件的路径添加到 Windows 的环境变量中。 
 ---
 = 配置 Windows 专用设置：添加环境变量的路径
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

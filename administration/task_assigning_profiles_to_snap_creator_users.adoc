@@ -5,6 +5,7 @@ keywords: snap, creator, gui, profile, menu, assign
 summary: 您可以使用 Snap Creator 图形用户界面为 Snap Creator 用户分配配置文件。 
 ---
 = 将配置文件分配给 Snap Creator 用户
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

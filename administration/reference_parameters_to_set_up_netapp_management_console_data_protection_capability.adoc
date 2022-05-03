@@ -5,6 +5,7 @@ keywords: parameter, netapp, management, console, protection, capability, ntap, 
 summary: 要设置 NetApp 管理控制台数据保护功能，需要使用多个参数。 
 ---
 = 用于设置 NetApp 管理控制台数据保护功能的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

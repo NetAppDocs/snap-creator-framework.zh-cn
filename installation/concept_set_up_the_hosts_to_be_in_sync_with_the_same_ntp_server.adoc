@@ -5,6 +5,7 @@ keywords: synchronizing, synchronize, time, snap, creator, server, agent, hosts
 summary: 安装 Snap Creator 之前，应确保 Snap Creator 服务器主机上的时间与 Agent 主机上的时间同步。为此，您可以将主机的时间与同一个网络时间协议（ NTP ）服务器同步。 
 ---
 = 同步 Snap Creator 服务器和代理主机上的时间
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

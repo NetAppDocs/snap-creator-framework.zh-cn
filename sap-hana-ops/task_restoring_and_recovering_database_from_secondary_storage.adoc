@@ -5,6 +5,7 @@ keywords: sap, hana, restore, restoring, recover, recovering, databases, seconda
 summary: 您可以从二级存储还原和恢复数据库。 
 ---
 = 从二级存储还原和恢复数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, security, features, rbac, snapcreator
 summary: Snap Creator 提供了一些安全功能，例如基于角色的访问控制 \ （ RBAC ），您可以通过这些功能在 Snap Creator 中管理用户访问。 
 ---
 = 管理用户访问
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

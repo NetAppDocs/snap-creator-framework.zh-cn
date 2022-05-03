@@ -5,6 +5,7 @@ keywords: snap, creator, support, backup, restore, citrix, xenserver, virtual, m
 summary: Snap Creator 支持使用 Citrix XenServer 插件备份和还原 Citrix XenServer 虚拟机（ VM ）。 
 ---
 = Citrix XenServer 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

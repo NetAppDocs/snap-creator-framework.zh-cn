@@ -5,6 +5,7 @@ keywords: snap, creator, gui, snapdrive, windows
 summary: 您可以使用 Snap Creator GUI 执行卷还原，单个文件还原和应用程序定义的还原操作。 
 ---
 = 执行还原操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

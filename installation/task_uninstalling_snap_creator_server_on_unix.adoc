@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, server, unix
 summary: 您可以通过删除 Snap Creator Server 安装文件夹从 UNIX 卸载 Snap Creator Server 。 
 ---
 = 在 UNIX 上卸载 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

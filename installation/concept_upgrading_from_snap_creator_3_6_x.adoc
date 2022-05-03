@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, 3.6
 summary: 从 Snap Creator 3.6.x 升级时，系统会升级数据库架构，并更新所有配置文件密码，以确保与最新的 Snap Creator 兼容。 
 ---
 = 从 Snap Creator 3.6.x 升级
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

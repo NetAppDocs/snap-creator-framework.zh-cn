@@ -5,6 +5,7 @@ keywords: domino, ibm, backup, operations, ibm, understanding
 summary: 与其他备份技术不同， IBM Domino 插件允许在备份操作期间将数据写入数据库。它可通过将备份操作期间对数据库所做的任何更改记录在名为 changeinfo 的临时目录中来确保备份与应用程序数据一致。在还原时，它会在从 Snapshot 副本还原数据后将这些更改应用于数据库。 
 ---
 = 了解 IBM Domino 插件备份操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

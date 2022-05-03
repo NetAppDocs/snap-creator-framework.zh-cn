@@ -5,6 +5,7 @@ keywords: housekeeping, log, backups
 summary: SAP HANA 中日志备份的管理基于 HANA Studio 中的一项功能，或者基于允许删除选定备份之前的所有备份的 SQL 语句。 
 ---
 = 日志备份的管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

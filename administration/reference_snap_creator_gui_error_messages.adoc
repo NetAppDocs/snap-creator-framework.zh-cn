@@ -5,6 +5,7 @@ keywords: snap, creator, gui, error, message, gui
 summary: 下表列出了 Snap Creator GUI 错误消息。 
 ---
 = Snap Creator GUI 错误消息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

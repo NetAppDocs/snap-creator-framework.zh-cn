@@ -5,6 +5,7 @@ keywords: sap, hana, starting, snapvault, relationship, data, ontap, operating, 
 summary: 您可以使用在二级存储系统上执行的命令启动 SnapVault 关系。 
 ---
 = 使用在 7- 模式下运行的 Data ONTAP 启动 SnapVault 关系
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

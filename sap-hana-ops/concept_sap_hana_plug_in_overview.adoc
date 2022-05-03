@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, overview
 summary: SAP HANA 插件可与 Snap Creator Framework 结合使用，为依赖 NetApp 存储后端的 SAP HANA 数据库提供一个备份解决方案Snap Creator 创建的 Snapshot 备份会注册到 HANA 目录中，并可在 HANA Studio 中查看。 
 ---
 = SAP HANA 插件概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

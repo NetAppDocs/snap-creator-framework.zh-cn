@@ -5,6 +5,7 @@ keywords: snap, creator, agent, error, message, aft, sc_agentconfiguration, para
 summary: 下表列出了 Snap Creator 代理错误消息。 
 ---
 = Snap Creator 代理错误消息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: delete, schedule, job, management
 summary: 您可以删除已计划的作业。 
 ---
 = 正在删除已计划的作业
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

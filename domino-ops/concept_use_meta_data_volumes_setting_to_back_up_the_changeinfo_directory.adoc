@@ -5,6 +5,7 @@ keywords: domino, ibm, backing up, backup, changeinfo, directory
 summary: 如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷。这样做会指示 IBM Domino 插件在为数据库文件创建 Snapshot 副本之后为 changeinfo 卷创建 Snapshot 副本。 
 ---
 = 备份 changeinfo 目录
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, agent, 4.1.x, unix, unix-based
 summary: 您可以在基于 UNIX 的系统上从 Snap Creator Agent 4.1.x 进行升级。 
 ---
 = 在基于 UNIX 的系统上升级 Snap Creator Agent 4.1.x
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

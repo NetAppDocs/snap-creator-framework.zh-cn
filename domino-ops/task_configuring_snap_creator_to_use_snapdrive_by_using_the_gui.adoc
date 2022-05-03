@@ -5,6 +5,7 @@ keywords: domino, ibm, adding, supplemental, commands
 summary: 您可以在创建配置文件后向配置中添加补充命令。您可以在 Snap Creator 服务器或代理上运行命令。 
 ---
 = 向配置中添加补充命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

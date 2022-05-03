@@ -5,6 +5,7 @@ keywords: sap, hana, scheduling, file-based, backup
 summary: 对于 SAP HANA 配置，您可以计划其他操作，例如基于文件的备份和数据库完整性检查。您可以计划按特定间隔执行基于文件的备份操作。 
 ---
 = 计划基于文件的备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

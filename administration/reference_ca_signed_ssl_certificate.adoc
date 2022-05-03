@@ -5,6 +5,7 @@ keywords: ca-signed, ssl, certificate, snap, creator, framework
 summary: Snap Creator Framework 需要 CA 签名的 SSL 证书 
 ---
 = Snap Creator Framework 需要 CA 签名的 SSL 证书
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

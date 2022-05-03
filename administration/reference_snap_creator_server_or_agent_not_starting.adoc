@@ -5,6 +5,7 @@ keywords: snap, creator, server, agent, java
 summary: Snap Creator 服务器或 Snap Creator 代理可能无法启动。 
 ---
 = Snap Creator 服务器或代理未启动
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

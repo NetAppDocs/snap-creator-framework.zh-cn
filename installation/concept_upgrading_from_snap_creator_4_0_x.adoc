@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, 4.0.x
 summary: 从 Snap Creator 4.0.x 升级时，系统会升级数据库架构。 
 ---
 = 从 Snap Creator 4.0.x 升级
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

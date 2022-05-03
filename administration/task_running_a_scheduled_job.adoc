@@ -5,6 +5,7 @@ keywords: schedule, job, run, snap, creator, gui
 summary: 您可以运行已计划的作业。 
 ---
 = 正在运行计划作业
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

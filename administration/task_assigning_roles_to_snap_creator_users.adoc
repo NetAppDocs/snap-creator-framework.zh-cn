@@ -5,6 +5,7 @@ keywords: snap, creator, user, gui, role, management
 summary: 您可以使用 Snap Creator 图形用户界面为 Snap Creator 用户分配角色。 
 ---
 = 为 Snap Creator 用户分配角色
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

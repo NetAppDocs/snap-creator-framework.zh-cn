@@ -5,6 +5,7 @@ keywords: sap, hana, restoring, restore, recovering, recover, databases
 summary: 您可以使用 SAP HANA Studio 和 Snap Creator 还原和恢复 SAP HANA 数据库。 
 ---
 = 还原和恢复 SAP HANA 数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

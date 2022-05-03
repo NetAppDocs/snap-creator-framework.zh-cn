@@ -5,6 +5,7 @@ keywords: storage troubleshoot, error, message
 summary: 与存储相关的错误消息可帮助您对发生的任何问题进行故障排除。 
 ---
 = 存储错误消息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

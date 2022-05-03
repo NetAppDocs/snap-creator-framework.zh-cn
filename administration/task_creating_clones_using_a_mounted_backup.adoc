@@ -5,6 +5,7 @@ keywords: clone, volume, lun, existing, backup, server, snap, creator, configura
 summary: 您可以将现有备份中的卷或 LUN 克隆为源。 
 ---
 = 从现有备份创建克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

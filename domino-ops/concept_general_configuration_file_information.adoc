@@ -5,6 +5,7 @@ keywords: domino, ibm, logging into, Snap Creator, GUI, login
 summary: 您可以使用 Web 浏览器登录到 Snap Creator GUI 。请向管理员咨询 Snap Creator 服务器的 IP 地址，端口和登录凭据。 
 ---
 = 登录到 Snap Creator GUI
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

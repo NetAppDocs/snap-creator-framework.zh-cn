@@ -5,6 +5,7 @@ keywords: cli, commands, create, creating, role
 summary: 在集群模式 Data ONTAP 中创建 Snap Creator 用户时，必须运行各种命令为新的集群用户或 SVM 用户创建一个角色。 
 ---
 = 用于在集群模式 Data ONTAP 中为 Snap Creator 用户创建角色的命令行界面命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

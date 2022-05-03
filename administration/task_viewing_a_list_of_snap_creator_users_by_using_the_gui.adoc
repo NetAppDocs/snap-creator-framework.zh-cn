@@ -5,6 +5,7 @@ keywords: snap, creator, user, gui, assign, profile, role
 summary: 您可以使用 Snap Creator GUI 查看 Snap Creator 用户及其分配的角色的列表。 
 ---
 = 查看 Snap Creator 用户和已分配角色的列表
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: parameter, snapvault, update, volume, relationship
 summary: 设置 SnapVault 需要多个参数。 
 ---
 = 用于设置 SnapVault 的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: creating, clones, lunes, volumes, cloning, snapshot
 summary: 克隆卷或 LUN 的方法有两种：从新备份和从现有备份。 
 ---
 = 创建克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

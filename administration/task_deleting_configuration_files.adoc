@@ -5,6 +5,7 @@ keywords: delete, configuration, file, profile, management
 summary: 您可以从配置文件中删除配置文件。 
 ---
 = 从配置文件中删除配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

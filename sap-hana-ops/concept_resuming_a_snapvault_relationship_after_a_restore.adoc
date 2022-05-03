@@ -5,6 +5,7 @@ keywords: resuming, resume, restart, snapvault, relationship, after, restore
 summary: 如果未使用最新的 Snapshot 备份执行任何还原，则会删除主存储系统上的 SnapVault 关系。 
 ---
 = 还原后恢复 SnapVault 关系
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

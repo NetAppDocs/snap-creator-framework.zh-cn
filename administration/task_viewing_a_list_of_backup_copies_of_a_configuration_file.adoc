@@ -5,6 +5,7 @@ keywords: backup, copy, ontap, volume, configuration, file, data
 summary: 您可以查看配置文件中定义的 ONTAP 卷的备份副本列表。您还可以获取有关可用备份的详细信息，并根据需要重命名特定备份。 
 ---
 = 查看配置文件的备份副本列表
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

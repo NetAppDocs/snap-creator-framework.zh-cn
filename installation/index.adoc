@@ -5,6 +5,7 @@ keywords: install, setup, set, up, Snap, reference_snap_creator_framework_error_
 summary: 介绍如何安装和设置 Snap Creator 。 
 ---
 = 安装指南
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

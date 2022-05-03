@@ -5,6 +5,7 @@ keywords: vmware, kvm, xen, plug-in, snap, creator, gui
 summary: 如果您使用的是 VMware ， KVM 和 Xen 插件，则可以使用 Snap Creator GUI 执行应用程序定义的还原操作。 
 ---
 = 执行应用程序定义的还原操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

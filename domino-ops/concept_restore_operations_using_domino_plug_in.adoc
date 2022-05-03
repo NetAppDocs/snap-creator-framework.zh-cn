@@ -5,6 +5,7 @@ keywords: domino, ibm, understanding, plug-in, restore
 summary: IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库文件。Snapshot 还原操作完成后，此插件将应用在 changeinfo 目录中记录的任何更改。 
 ---
 = 了解 IBM Domino 插件还原操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

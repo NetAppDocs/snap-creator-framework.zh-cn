@@ -5,6 +5,7 @@ keywords: monitor, job, snap, creator, gui
 summary: 您可以使用 Snap Creator GUI 监控 Snap Creator 正在执行的作业的状态。 
 ---
 = 监控作业
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, profile, view
 summary: 您可以列出现有的 Snap Creator 配置文件。 
 ---
 = 查看配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

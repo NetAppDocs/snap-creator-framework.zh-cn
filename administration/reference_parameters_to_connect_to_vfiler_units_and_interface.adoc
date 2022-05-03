@@ -5,6 +5,7 @@ keywords: several, parameter, snap, creator, sefver, vfiler, unit, interface, ma
 summary: 要将 Snap Creator 服务器连接到 vFiler 单元和接口，需要使用多个参数。 
 ---
 = 用于连接到 vFiler 单元和接口的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

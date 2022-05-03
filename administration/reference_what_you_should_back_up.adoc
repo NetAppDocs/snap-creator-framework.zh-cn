@@ -5,6 +5,7 @@ keywords: create, backup, copy, snap, creator, directories, information, server,
 summary: 最佳实践是为特定 Snap Creator 目录创建备份副本，以帮助确保 Snap Creator 数据可以在不丢失的情况下进行还原。 
 ---
 = 应备份哪些 Snap Creator 信息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

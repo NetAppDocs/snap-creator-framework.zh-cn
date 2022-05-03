@@ -5,6 +5,7 @@ keywords: parameter, snapmirror, snap, creator, server, update, cascading, volum
 summary: 要为 Snap Creator 服务器设置 SnapMirror ，需要使用多个参数。 
 ---
 = 用于设置 SnapMirror 的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

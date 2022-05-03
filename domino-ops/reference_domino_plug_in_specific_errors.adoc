@@ -5,6 +5,7 @@ keywords: domino, ibm, troubleshooting, plug-ins, errors
 summary: 常见的 Snap Creator 错误分为两类：通用 Snap Creator 错误和 Domino 插件特定错误。Domino 插件专用错误通常涉及安装前问题，数据库损坏或自定义还原操作出现问题。 
 ---
 = 排除 Domino 插件特定错误
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: local, retention, policy, configuration, snap, creator, gui, copy, lun
 summary: 如果您使用的是本地保留策略（位于配置文件中），则可以使用 Snap Creator 图形用户界面（ GUI ）计划程序创建计划并运行任务。Snap Creator 服务器中的计划程序可以计划备份（ Snapshot 副本）， LUN 克隆，卷克隆，应用程序定义的克隆， Open Systems SnapVault （ OSSV ）传输，归档作业和自定义操作。 
 ---
 = 正在创建计划作业
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

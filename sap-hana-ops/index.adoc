@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, operations, guide, configure, use, backup, back, u
 summary: 介绍如何配置和使用 SAP HANA 插件来备份和还原 SAP HANA 数据库。 
 ---
 = 《 SAP HANA ® 插件操作指南》
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

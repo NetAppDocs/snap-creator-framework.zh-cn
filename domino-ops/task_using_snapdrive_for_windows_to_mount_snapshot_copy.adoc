@@ -5,6 +5,7 @@ keywords: domino, ibm, using, snapdrive, mount, snapshot, copy
 summary: 您可以使用 SnapDrive 挂载要还原的文件的 Snapshot 副本。然后，您可以手动将文件复制到数据还原目录。 
 ---
 = 使用 SnapDrive 挂载 Snapshot 副本
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

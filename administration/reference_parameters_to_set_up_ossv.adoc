@@ -5,6 +5,7 @@ keywords: parameter, open, system, snapvault, ossv, enable, homedir, snapshot
 summary: 要设置 Open Systems SnapVault （ OSSV ），需要使用多个参数。 
 ---
 = 用于设置 OSSV 的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

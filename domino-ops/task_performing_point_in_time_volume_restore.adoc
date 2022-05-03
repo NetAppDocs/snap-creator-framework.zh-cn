@@ -5,6 +5,7 @@ keywords: domino, ibm, volume, restore
 summary: 您可以使用 IBM Domino 插件对所有主要存储类型执行时间点，即时或可选的即时卷还原。 
 ---
 = 执行卷还原
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

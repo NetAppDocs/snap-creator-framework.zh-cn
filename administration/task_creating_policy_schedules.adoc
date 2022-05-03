@@ -5,6 +5,7 @@ keywords: policy, schedule, snap, creator, gui
 summary: 您可以选择使用 Snap Creator GUI 创建策略计划。 
 ---
 = 正在创建策略计划
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

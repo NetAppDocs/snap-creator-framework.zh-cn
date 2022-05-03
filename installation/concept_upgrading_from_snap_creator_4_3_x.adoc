@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, 4.3
 summary: 您可以从 Snap Creator 4.3.x 进行升级，包括所有当前可用的修补程序版本。 
 ---
 = 从 Snap Creator 4.3.x 升级
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

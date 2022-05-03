@@ -5,6 +5,7 @@ keywords: installing, install, java, snap, creator, hosts
 summary: 任何 Snap Creator 服务器和代理主机上都必须安装 OpenJDK 和 Oracle Java Runtime Environment （ JRE ） 1.8 Update 72 或更高版本。为了避免传输层安全漏洞（ TLS\ ），最好在 Snap Creator 服务器和代理主机上安装任何更高版本的 JRE 1.8 Update 72 。 
 ---
 = 在 Snap Creator 主机上安装 Java
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

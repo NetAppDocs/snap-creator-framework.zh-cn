@@ -5,6 +5,7 @@ keywords: configuration, file, assign, profile
 summary: 您可以查看分配给配置文件的配置文件列表。 
 ---
 = 查看分配给配置文件的配置文件列表
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

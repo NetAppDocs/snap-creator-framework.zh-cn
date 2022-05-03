@@ -5,6 +5,7 @@ keywords: snap, creator, backing, up, database,
 summary: 在 Snap Creator 备份数据库时，将执行以下步骤。 
 ---
 = 数据库备份概述
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

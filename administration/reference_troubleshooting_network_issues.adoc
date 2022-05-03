@@ -5,6 +5,7 @@ keywords: network, issues, snap, creator, authorization, failure, troubleshoot, 
 summary: 您可能会在 Snap Creator 中遇到网络问题，例如授权失败。您应了解这些问题并知道如何对其进行故障排除。 
 ---
 = 对网络问题进行故障排除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

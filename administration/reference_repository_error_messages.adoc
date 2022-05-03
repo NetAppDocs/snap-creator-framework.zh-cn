@@ -5,6 +5,7 @@ keywords: table, repository, error, message, global, configuration, repo
 summary: 下表列出了存储库错误消息。 
 ---
 = 存储库错误消息
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

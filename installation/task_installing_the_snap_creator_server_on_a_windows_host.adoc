@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, server, windows, hosts
 summary: 您可以使用 Windows 安装程序在 Windows 主机上安装 Snap Creator Server 。 
 ---
 = 在 Windows 主机上安装 Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

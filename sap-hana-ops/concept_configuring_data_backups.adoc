@@ -5,6 +5,7 @@ keywords: configuring, configure, data, backups, back-ups
 summary: 安装所需组件后，您必须配置数据备份 
 ---
 = 配置数据备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

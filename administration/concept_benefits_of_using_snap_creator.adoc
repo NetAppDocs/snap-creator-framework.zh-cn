@@ -5,6 +5,7 @@ keywords: benefits, using, snap, creator, framework, hypervisors, applications, 
 summary: Snap Creator Framework 提供了一个简单灵活的软件框架，可满足各种存储要求。 
 ---
 = 使用 Snap Creator 的优势
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

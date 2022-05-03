@@ -5,6 +5,7 @@ keywords: troubleshoot, snap, creator, information, log, error
 summary: 您可以使用 Snap Creator 日志和错误消息中的信息对 Snap Creator 问题进行故障排除。 
 ---
 = 对 Snap Creator 问题进行故障排除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

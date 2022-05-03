@@ -5,6 +5,7 @@ keywords: domino, ibm, viewing, view, logs, report pane
 summary: 您可以在 Snap CreatorReports 窗格中查看日志，查看格式与在控制台窗格中显示日志相同。您可以在报告窗格中查看错误日志以及标准日志。 
 ---
 = 在报告窗格中查看日志
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

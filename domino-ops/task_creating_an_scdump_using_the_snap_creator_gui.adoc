@@ -5,6 +5,7 @@ keywords: domino, ibm, using scdump, gathering, logs, compressed, format
 summary: 您可以使用 Snap Creatorscdump 操作将日志收集到压缩文件归档中。然后，您可以将归档发送给技术支持或 Snap Creator 专家进行审核。 
 ---
 = 使用 scdump 以压缩格式收集日志
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, rbac, cli, command, user, access
 summary: 您可以使用命令行界面命令执行 Snap Creator RBAC 操作。 
 ---
 = 用于管理 Snap Creator 用户访问的命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

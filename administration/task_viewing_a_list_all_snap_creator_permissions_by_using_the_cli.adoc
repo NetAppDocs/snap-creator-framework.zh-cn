@@ -5,6 +5,7 @@ keywords: snap, creator, snapcreator, permission, cli
 summary: 您只能使用命令行界面（ CLI ）创建可分配给角色的所有 Snap Creator 权限列表。 
 ---
 = 使用命令行界面创建所有 Snap Creator 权限的列表
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

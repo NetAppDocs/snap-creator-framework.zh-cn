@@ -5,6 +5,7 @@ keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap
 summary: Snap Creator 服务器包括多个配置文件预处理命令。 
 ---
 = 预处理命令
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

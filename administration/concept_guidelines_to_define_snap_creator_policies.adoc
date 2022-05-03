@@ -5,6 +5,7 @@ keywords: snap, creator, policies, guidelines, retendtion, snapshot
 summary: Snap Creator 策略是用户定义的 Snapshot 副本保留，适用于主存储上的 Snapshot 副本以及二级存储上的 SnapVault 和 SnapMirror 副本。您可以使用策略定义要保留的 Snapshot 副本数量以及 Snapshot 副本使用期限。 
 ---
 = 定义 Snap Creator 策略的准则
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

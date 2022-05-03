@@ -5,6 +5,7 @@ keywords: kernel, kvm, virtualization, linux, snap, creator, virsh, command, plu
 summary: 基于内核的虚拟机（ KVM ）是 Linux 内核的虚拟化解决方案。Snap Creator 使用 KVM 插件备份和还原子虚拟机。 
 ---
 = Red Hat KVM 插件准则
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

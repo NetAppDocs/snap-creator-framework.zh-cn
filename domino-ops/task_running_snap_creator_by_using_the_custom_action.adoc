@@ -5,6 +5,7 @@ keywords: domino, ibm,using, use, snap, creator, custom, action complete, restor
 summary: 您可以使用 Snap Creator 自定义操作来完成从 Snap Creator 外部进行的恢复的处理。 
 ---
 = 使用 Snap Creator 自定义操作完成还原处理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

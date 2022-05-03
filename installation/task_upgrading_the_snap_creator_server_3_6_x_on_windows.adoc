@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, server, 3.6.x, windows
 summary: 您可以直接从 Windows 上的 Snap Creator Server 3.6.x 进行升级。 
 ---
 = 在 Windows 上升级 Snap Creator Server 3.6.x
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

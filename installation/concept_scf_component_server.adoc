@@ -5,6 +5,7 @@ keywords: snap, creator, server
 summary: Snap Creator 操作由 Snap Creator 服务器启动。 
 ---
 = Snap Creator 服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

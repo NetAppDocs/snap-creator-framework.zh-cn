@@ -5,6 +5,7 @@ keywords: netapp, solution, sap, hana
 summary: 使用 NetApp Snapshot ® 技术，只需几分钟即可创建数据库备份。创建 Snapshot 副本所需的时间与数据库大小无关，因为 Snapshot 副本不会移动任何数据块。 
 ---
 = NetApp 解决方案
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

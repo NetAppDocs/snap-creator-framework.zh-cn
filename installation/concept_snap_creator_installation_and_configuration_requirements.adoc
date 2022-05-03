@@ -5,6 +5,7 @@ keywords: snap, creator, install, installation, configuration, requirements
 summary: 在安装 Snap Creator Framework 之前，您应了解许可证，软件和硬件的某些安装和配置要求。 
 ---
 = Snap Creator 安装和配置要求
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: cli, reference
 summary: 本节介绍了从命令行界面使用 Snap Creator 的参考信息。 
 ---
 = CLI 参考
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

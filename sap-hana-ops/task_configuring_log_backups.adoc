@@ -5,6 +5,7 @@ keywords: configuring, log, backups
 summary: 日志备份应存储在与主存储不同的存储系统上。用于数据备份的存储系统也可用于日志备份。 
 ---
 = 配置日志备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

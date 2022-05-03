@@ -5,6 +5,7 @@ keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui,
 summary: 您可以删除配置文件的备份副本。 
 ---
 = 删除备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

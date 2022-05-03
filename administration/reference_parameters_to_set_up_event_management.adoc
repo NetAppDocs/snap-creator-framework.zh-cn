@@ -5,6 +5,7 @@ keywords: parameter, management, snap, creator, server, event, ntap, asup, error
 summary: 要为 Snap Creator 服务器设置事件管理，需要使用多个参数。 
 ---
 = 用于设置事件管理的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

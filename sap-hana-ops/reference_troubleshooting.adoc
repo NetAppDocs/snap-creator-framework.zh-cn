@@ -5,6 +5,7 @@ keywords: troubleshooting
 summary: 故障排除部分提供了有关错误代码和错误消息的信息，并提供了用于解决问题描述的问题描述或解决方案。 
 ---
 = 故障排除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

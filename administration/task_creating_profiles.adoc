@@ -5,6 +5,7 @@ keywords: profile, snap, creator, gui, configuration
 summary: 您可以使用 Snap Creator GUI 创建配置文件来组织配置文件。 
 ---
 = 正在创建配置文件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

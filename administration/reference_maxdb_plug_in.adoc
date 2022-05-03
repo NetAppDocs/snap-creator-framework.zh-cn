@@ -5,6 +5,7 @@ keywords: maxdb, plug-in, automates, backup, restore, operations
 summary: MaxDB 插件可自动对 MaxDB 数据库执行备份和还原操作。 
 ---
 = MaxDB 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

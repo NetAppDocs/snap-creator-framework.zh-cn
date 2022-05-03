@@ -5,6 +5,7 @@ keywords: starting, start, server, command, prompt
 summary: 您可以通过运行批处理脚本（ scServer.bat ）从命令提示符手动启动 Snap Creator 服务器。 
 ---
 = 从命令提示符启动服务器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

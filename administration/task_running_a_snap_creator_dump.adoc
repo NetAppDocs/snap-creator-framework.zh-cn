@@ -5,6 +5,7 @@ keywords: collect, support, information, perform, snap, creator, dump, gui
 summary: 您可以使用 Snap Creator GUI 中的 scdump 收集支持信息。 
 ---
 = 执行 Snap Creator 转储
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

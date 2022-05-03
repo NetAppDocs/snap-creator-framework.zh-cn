@@ -5,6 +5,7 @@ keywords: unix, snap, creator, gui, https
 summary: 在 UNIX 环境中，您可能无法连接到 Snap Creator 图形用户界面；在调查问题的根源时，您必须验证是否存在某些情况。 
 ---
 = 无法连接到 Snap Creator GUI
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

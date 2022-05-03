@@ -5,6 +5,7 @@ keywords: parameter, snapshot, copy, snap, creator, server, retention, snapdrive
 summary: 要为 Snap Creator 服务器设置 Snapshot 副本，需要使用多个配置文件参数。 
 ---
 = 用于设置 Snapshot 副本的参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

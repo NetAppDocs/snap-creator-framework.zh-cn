@@ -5,6 +5,7 @@ keywords: backup, solution, components, sap, hana
 summary: 适用于 SAP HANA 的 Snap Creator 备份解决方案包括使用基于存储的 Snapshot 副本的 SAP HANA 数据文件备份，将数据文件备份复制到二级异地备份位置，使用 HANA 数据库日志备份功能的 SAP HANA 日志文件备份，使用基于文件的备份检查数据库块完整性， 以及数据文件，日志文件备份和 SAP HANA 备份目录的管理。 
 ---
 = 备份解决方案组件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

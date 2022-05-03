@@ -5,6 +5,7 @@ keywords: domino, ibm, backing up, backup, databases, on-demand, on, demand
 summary: 您应在 NetApp 存储中提供数据库后立即对其进行备份。您可以计划在初始备份之后进行重复备份。 
 ---
 = 按需备份数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

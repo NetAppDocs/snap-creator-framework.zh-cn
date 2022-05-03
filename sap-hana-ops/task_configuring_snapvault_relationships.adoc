@@ -5,6 +5,7 @@ keywords: configuring, configure snapvault, relationships, snaprestore
 summary: 配置 SnapVault 关系时，主存储控制器必须安装有效的 SnapRestore 和 SnapVault 许可证。二级存储必须安装有效的 SnapVault 许可证。 
 ---
 = 配置 SnapVault 关系
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

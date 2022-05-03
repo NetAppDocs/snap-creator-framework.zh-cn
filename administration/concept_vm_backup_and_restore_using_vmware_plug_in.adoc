@@ -5,6 +5,7 @@ keywords: snap, creator, support, backup, vmware, virtual, machines, vsphere, ap
 summary: Snap Creator 支持通过 VMware 插件备份 VMware 虚拟机。虚拟机备份通过 VMware vCenter 服务器上的 vSphere API 进行。 
 ---
 = 使用 VMware 插件备份和还原虚拟机
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

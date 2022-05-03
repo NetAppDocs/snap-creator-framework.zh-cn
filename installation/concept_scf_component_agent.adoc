@@ -5,6 +5,7 @@ keywords: snap, creator, agent
 summary: Snap Creator 代理通常安装在安装应用程序或数据库的同一主机上。代理是插件所在位置。有时，在 Snap Creator 中，此代理会缩短为 scAgent 。 
 ---
 = Snap Creator 代理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: executing, database, backups
 summary: 您可以使用 Snap Creator GUI 或命令行备份 SAP HANA 数据库。要计划备份，您可以在 GUI 中使用计划程序，也可以将命令行与 cron 等外部计划程序结合使用。 
 ---
 = 执行数据库备份
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

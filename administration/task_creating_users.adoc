@@ -5,6 +5,7 @@ keywords: snap, creator, profile, role, gui, user
 summary: 您可以使用 Snap Creator 图形用户界面创建 Snap Creator 用户并执行多种操作，例如为用户分配配置文件和角色。 
 ---
 = 创建 Snap Creator 用户
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

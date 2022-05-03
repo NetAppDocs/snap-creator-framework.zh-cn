@@ -5,6 +5,7 @@ keywords: unix, cli, command, port, 404, error
 summary: 在 UNIX 环境中，运行 CLI 命令时可能会遇到 404 not found 错误。 
 ---
 = CLI 命令导致出现 404 not found 错误
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

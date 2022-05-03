@@ -5,6 +5,7 @@ keywords: creating, create, symbolic, links, domino, plug-in, linux, solaris, ho
 summary: 如果要在 Linux 和 Solaris 主机上为 Domino 插件创建符号链接，则需要执行此操作步骤。 
 ---
 = 在 Linux 和 Solaris 主机上为 Domino 插件创建符号链接
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, permission, gui, role, management
 summary: 您可以使用 Snap Creator GUI 查看分配给角色的所有 Snap Creator 权限的列表。 
 ---
 = 查看分配给角色的 Snap Creator 权限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

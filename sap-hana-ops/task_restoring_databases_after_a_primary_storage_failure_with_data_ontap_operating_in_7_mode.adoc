@@ -5,6 +5,7 @@ keywords: restoring, restore, databases, primary, storage, failure, data, ontap,
 summary: 在运行 7- 模式 Data ONTAP 的主存储系统出现故障后，您可以还原 SAP HANA 数据库。 
 ---
 = 使用在 7- 模式下运行的 Data ONTAP 在主存储发生故障后还原数据库
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

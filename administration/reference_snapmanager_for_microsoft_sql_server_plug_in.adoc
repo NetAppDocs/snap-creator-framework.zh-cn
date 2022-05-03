@@ -5,6 +5,7 @@ keywords: snapmanager, microsoft, sql, server, plug-in, backup, operation, progr
 summary: SnapManager for Microsoft SQL Server 插件用于通过 Snap Creator 集中管理 Microsoft SQL Server 的备份操作。使用此插件，您可以通过 Snap Creator 为 Microsoft SQL 服务器配置几十个或数百个 SnapManager ，从而可以从一个界面查看所有 SnapManager for Microsoft SQL 备份作业和状态。 
 ---
 = 适用于 Microsoft SQL Server 的 SnapManager 插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

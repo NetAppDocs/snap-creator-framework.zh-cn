@@ -5,6 +5,7 @@ keywords: starting, start, snapvault, relationships
 summary: 您需要与 7- 模式 Data ONTAP 和集群模式 Data ONTAP 启动 SnapVault 关系。 
 ---
 = 启动 SnapVault 关系
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

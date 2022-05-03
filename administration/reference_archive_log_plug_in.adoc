@@ -5,6 +5,7 @@ keywords: archive, log, plug-in, snap, creator, archive
 summary: 归档日志插件可与 Snap Creator 归档日志结合使用，而不能与任何应用程序或数据库的日志结合使用。 
 ---
 = 归档日志插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

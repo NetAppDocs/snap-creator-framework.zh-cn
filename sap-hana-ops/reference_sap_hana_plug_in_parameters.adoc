@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, parameters
 summary: SAP HANA 插件参数 
 ---
 = SAP HANA 插件参数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

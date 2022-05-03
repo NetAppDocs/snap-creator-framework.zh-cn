@@ -5,6 +5,7 @@ keywords: snap, creator, agent, creatoragent, properties, unix, default, port
 summary: 要更改 Snap Creator 代理正在侦听的端口，您可以更改 Snap Creatoragent.properties 文件并重新启动代理。 
 ---
 = 安装后更改 Snap Creator 代理端口
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: starting, start, agent, command, prompt
 summary: 您可以通过运行批处理脚本（ scAgent.bat ）从命令提示符处手动启动 Snap Creator Agent 。 
 ---
 = 从命令提示符启动代理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

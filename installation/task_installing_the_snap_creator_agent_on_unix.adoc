@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, agent, unix
 summary: Snap Creator 代理可在任何开放式系统平台（ AIX ， HP-UX ， Linux 和 Solaris ）上运行。 
 ---
 = 在基于 UNIX 的系统上安装 Snap Creator 代理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

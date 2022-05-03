@@ -5,6 +5,7 @@ keywords: plug-in, application, integration
 summary: 插件用于将应用程序或数据库置于一致状态。Snap Creator 包含多个插件，这些插件已包含在二进制文件中，不需要进行任何其他安装。 
 ---
 = 用于应用程序集成的插件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

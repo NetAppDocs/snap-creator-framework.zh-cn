@@ -5,6 +5,7 @@ keywords: unmount, delete, clone, gui, snap, creator, management, configuration,
 summary: 您可以卸载（或删除）克隆。 
 ---
 = 正在卸载克隆
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, architecture
 summary: Snap Creator 具有一个功能完备的服务器和代理架构，其中包括三个主要组件： Snap Creator Server ， Snap Creator Agent 和插件。 
 ---
 = Snap Creator 架构
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
