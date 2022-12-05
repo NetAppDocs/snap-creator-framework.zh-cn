@@ -13,27 +13,28 @@ summary: 设置 SnapVault 需要多个参数。
 [role="lead"]
 设置 SnapVault 需要多个参数。
 
+[cols="20,30,50"]
 |===
 | 参数 | 正在设置 ... | Description 
 
 
- a| 
-ntap_snapvault_update
- a| 
-Y
-| 不包括 
+| ntap_snapvault_update | （ Y/N ） | 用于打开和关闭 SnapVault 更新功能。 
 
 
  a| 
-用于打开和关闭 SnapVault 更新功能。
+ntap_allow_MIRRORVAULT_AS_mirror
+ a| 
+（ Y/N ）
+ a| 
+用于将mirror_vault保护策略类型用作SnapVault 或SnapMirror。(默认值) N：为SnapVault 启用mirror_vault保护策略类型。Y：为SnapMirror启用mirror_vault保护策略类型。
+
+
+
  a| 
 SnapVault 卷
  a| 
-
-
-
  a| 
-列出要执行 SnapVault 更新的源存储系统和卷（例如， controller1 ： vol1 ， vol2 ， vol3 ； controller2 ： vol1 ； controller3 ： vol2 ， vol3 ）。* 注： *
+列出要执行 SnapVault 更新的源存储系统和卷（例如， controller1 ： vol1 ， vol2 ， vol3 ； controller2 ： vol1 ； controller3 ： vol2 ， vol3 ）。
 
 * 要使 SnapVault 和 SnapMirror 更新正常运行，必须存在这些关系。
 +
@@ -43,47 +44,47 @@ Snap Creator 不会创建关系。
 * 对于 vSphere 或 vCloud ，此值应设置为 auto ： detect 。
 * 主机名应为短主机名（存储控制器命令提示符上显示的名称），而不是 FQDN 。
 
+
+
+
  a| 
 snapvault_qtree_include
  a| 
-
-
-
  a| 
 列出了应包含在 SnapVault 更新中的源存储系统和 qtree 路径。如果没有此选项，则 SnapVault 将存储卷下的所有 qtree （如果存在关系）。以下示例中列出的 qtree 由 SnapVault 存储，其余的则由 SnapVault 忽略： Controller1 ： /vol/qtree/qtree1 ， /vol/volume/qtre2 ； controller2 ： /vol/volume/qtre1 。
+
+
+
  a| 
 ntap_snapvault_rerettents.
  a| 
-
-
-
  a| 
 确定 SnapVault 二级系统上要为给定策略保留的 Snapshot 副本数（例如， daily ： 21 ， weekly ： 12 ， monthly ： 3 ）。
+
+
+
  a| 
 ntap_snapvault_retention_age
  a| 
-
-
-
  a| 
 用于定义 SnapVault Snapshot 副本的保留期限（以天为单位）。如果进行了配置，则只有当 SnapVault Snapshot 副本超过 NTAP_SnapVault_Rettention 中定义的数量且超过保留期限（以天为单位）时，这些副本才会被删除。
+
+
+
  a| 
 ntap_snapvault_snapshot
  a| 
-Y
-
-
-
-| 不包括  a| 
+（ Y/N ）
+ a| 
 允许使用 SnapVault Snapshot 副本；即与存储控制器 SnapVault 计划程序兼容的 Snapshot 副本。使用此选项时， Snapshot 副本删除由存储控制器处理，而不是由 Snap Creator 处理。此外， Snapshot 副本的名称如下： sv_<policy>.<##> 。策略名称来自 NTAP_snapshot_retention 参数，保留集也会应用于存储控制器 SnapVault 计划。
+
+
+
  a| 
 NTAP_SnapVault_NODELETE
-
-
-
  a| 
-Y
-| 不包括  a| 
+（ Y/N ）
+ a| 
 覆盖 NTAP_SnapVault_retties 并防止删除 Snapshot 副本。如果不启用此选项，则可以发生原因您的卷以填满。
 
 
@@ -91,22 +92,24 @@ Y
  a| 
 ntap_snapvault_restore_wait
  a| 
-Y
-| 不包括 
-
-
+（ Y/N ）
  a| 
 在 SnapVault 还原的情况下，它会强制 Snap Creator 等待操作完成。建议执行此操作，因为在 SnapVault 还原完成后， Snap Creator 会提示用户删除在主存储上创建且不再需要的还原 Snapshot 副本。
+
+
+
  a| 
 ntap_snapvault_wait
  a| 
-
-
-
  a| 
 在 SnapVault 二级系统上创建 Snapshot 副本之前， SnapVault 更新过程完成的等待时间（以分钟为单位）。
+
+
+
  a| 
 ntap_snapvault_MAX_transfer
  a| 
+ a| 
+允许使用的最大带宽SnapVault 、以KBps为单位。如果未设置、SnapVault 将使用最大可用带宽。
 
 |===

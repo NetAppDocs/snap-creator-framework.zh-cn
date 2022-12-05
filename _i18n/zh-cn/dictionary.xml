@@ -3193,7 +3193,6 @@
   <block id="fecc8aff3c88a0445bf428ef692f1cea" category="paragraph">ntap_snapvault_update</block>
   <block id="dbd64b7506acb36055eca79b8b364a18" category="paragraph">用于打开和关闭 SnapVault 更新功能。</block>
   <block id="d1ba6e7eb95663aa596dd570add83f9a" category="paragraph">SnapVault 卷</block>
-  <block id="a1fc7f749c5ea5718722bdebdc587614" category="paragraph">列出要执行 SnapVault 更新的源存储系统和卷（例如， controller1 ： vol1 ， vol2 ， vol3 ； controller2 ： vol1 ； controller3 ： vol2 ， vol3 ）。* 注： *</block>
   <block id="487eb327be46517fae6f993840d60362" category="list-text">要使 SnapVault 和 SnapMirror 更新正常运行，必须存在这些关系。</block>
   <block id="b3b87058bbcfac523b85dde91deb1c09" category="paragraph">Snap Creator 不会创建关系。</block>
   <block id="1ea062b82f2f00248618134e362b06c1" category="list-text">SnapMirror 或 SnapVault 关系中的主机名必须与 volumes ， snapmirror_volumes 和 snapvault_volumes 选项中指定的主机名相同。此外，运行 Snap Creator 的主机必须能够解析主机名。</block>
@@ -4597,4 +4596,9 @@
   <block id="3fa7ec916163970da88e2e2759209761" category="sidebar">IBM ® Domino ® 插件操作</block>
   <block id="3cc13999b80491b390e27e7298102ccb" category="sidebar">SAP HANA ® 插件操作</block>
   <block id="7258e7251413465e0a3eb58094430bde" category="sidebar">管理</block>
+  <block id="eae66b4b74b6b82ce35a83d2757f6d46" category="cell">（ Y/N ）</block>
+  <block id="0fed4fd40330e62e1aa81d896b62ecb5" category="paragraph">ntap_allow_MIRRORVAULT_AS_mirror</block>
+  <block id="069d4fc9438ae257bab719c9b98b55ff" category="paragraph">用于将mirror_vault保护策略类型用作SnapVault 或SnapMirror。(默认值) N：为SnapVault 启用mirror_vault保护策略类型。Y：为SnapMirror启用mirror_vault保护策略类型。</block>
+  <block id="6235e974fbd5143adbb2a8573ca76e9a" category="paragraph">列出要执行 SnapVault 更新的源存储系统和卷（例如， controller1 ： vol1 ， vol2 ， vol3 ； controller2 ： vol1 ； controller3 ： vol2 ， vol3 ）。</block>
+  <block id="2a8806d1dbd2f7d98c2367f622afe0f8" category="paragraph">允许使用的最大带宽SnapVault 、以KBps为单位。如果未设置、SnapVault 将使用最大可用带宽。</block>
 </blocks>
