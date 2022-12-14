@@ -299,7 +299,7 @@ TIP: Domino 环境可能包含数百或数千个数据库。即使一个数据�
 
 .. 单击 * 快照 * 以归档 SnapVault 副本。
 .. 指定归档 Snapshot 副本的策略。
-.. 有关说明，请参见以下步骤,13。
+.. 有关说明，请参见以下步骤<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13>>。
 .. 在 * SnapVault 等待时间 * 中，输入希望 Snap Creator 等待 SnapVault 操作完成的分钟数。
 .. 在向二级存储执行复制之前，您需要已设置 SnapMirror 和 SnapVault 关系。有关详细信息，请参见 xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror 和 SnapVault 设置]。
 
