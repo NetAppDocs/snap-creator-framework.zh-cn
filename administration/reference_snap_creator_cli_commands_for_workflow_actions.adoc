@@ -15,6 +15,7 @@ summary: 您可以使用命令行界面（ CLI ）命令执行基于图形用户
 
 下表提供了用于执行基于 Snap Creator GUI 的工作流操作的命令行界面命令：
 
+[cols="15,40,45"]
 |===
 | 工作流区域 | 操作 / 说明 | 命令和关联参数 
 
@@ -26,8 +27,7 @@ summary: 您可以使用命令行界面（ CLI ）命令执行基于图形用户
  a| 
 [listing]
 ----
-
-                  snapcreator
+snapcreator
 --server IP
 --port Port
 --user User
@@ -40,8 +40,8 @@ summary: 您可以使用命令行界面（ CLI ）命令执行基于图形用户
 ----
 
 
- a| 
-创建 Open Systems SnapVault 备份。使用 Open Systems SnapVault 执行备份操作。这需要 Snap Creator 代理。Snap Creator 服务器与 Snap Creator 代理进行通信并执行 SnapVault 更新。不会创建主备份副本。
+|   a| 
+创建Open Systems SnapVault 备份。使用Open Systems SnapVault 执行备份操作。这需要 Snap Creator 代理。Snap Creator 服务器与 Snap Creator 代理进行通信并执行 SnapVault 更新。不会创建主备份副本。
  a| 
 [listing]
 ----
@@ -55,13 +55,11 @@ snapcreator
 --action ossv
 --policy Policy
 --verbose
----- a| 
-备份（续 ... ）
+----
 
 
-
- a| 
-删除备份副本（手动）。手动删除现有备份。此操作由菜单驱动。
+|   a| 
+删除备份副本(手动)。手动删除现有备份。此操作由菜单驱动。
  a| 
 [listing]
 ----
@@ -75,11 +73,11 @@ snapcreator
 --action backupDel
 --policy Policy
 --verbose
----- a| 
+----
+
+
+|   a| 
 删除备份副本（自动）。
-
-
-
  a| 
 [listing]
 ----
@@ -97,8 +95,11 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
----- a| 
-列出备份副本。列出主存储系统和二级存储系统上的 Snap Creator 备份副本。
+----
+
+
+|   a| 
+列出备份副本。列出了主存储系统和二级存储系统上的Snap Creator备份副本。
  a| 
 [listing]
 ----
@@ -115,7 +116,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 挂载备份副本。对现有备份执行挂载操作。根据备份创建卷克隆，并使用 mount_CMD 命令通过 Snap Creator Agent 挂载此克隆。
  a| 
 [listing]
@@ -130,12 +131,10 @@ snapcreator
 --action mount
 --backupName name
 --verbose
----- a| 
-备份（续 ... ）
+----
 
 
-
- a| 
+|   a| 
 卸载备份副本。对现有备份执行卸载操作。根据备份删除卷克隆，并使用 umount_cmds 命令通过 Snap Creator Agent 卸载此克隆。
  a| 
 [listing]
@@ -150,11 +149,11 @@ snapcreator
 --action umount
 --backupName name
 --verbose
----- a| 
+----
+
+
+ a| 
 备份类型
-
-
-
  a| 
 创建新的备份类型。
  a| 
@@ -168,11 +167,11 @@ snapcreator
 --action backupTypeAdd
 --backupTypeName name
 --verbose
----- a| 
+----
+
+
+|   a| 
 更新现有备份类型。
-
-
-
  a| 
 [listing]
 ----
@@ -185,7 +184,10 @@ snapcreator
 --backupTypeId 1
 --backupTypeName name
 --verbose
----- a| 
+----
+
+
+|   a| 
 删除现有备份类型。
  a| 
 [listing]
@@ -197,12 +199,11 @@ snapcreator
 --passwd Password
 --action backupTypeDelete
 --backupTypeId 1
-
 --verbose
 ----
 
 
- a| 
+|   a| 
 列出备份类型。
  a| 
 [listing]
@@ -214,13 +215,13 @@ snapcreator
 --passwd Password
 --action backupTypeList
 --verbose
----- a| 
-克隆
-
+----
 
 
  a| 
-克隆 LUN 。备份主存储系统，然后使用 LUN 克隆克隆备份。此外，还会处理 igroup 的卷映射。这需要 SAN 或 Isan 环境。
+克隆
+ a| 
+克隆LUN。备份主存储系统、然后使用LUN克隆克隆备份。此外，还会处理 igroup 的卷映射。这需要 SAN 或 Isan 环境。
  a| 
 [listing]
 ----
@@ -234,11 +235,11 @@ snapcreator
 --action cloneLun
 --policy Policy
 --verbose
----- a| 
-克隆卷。备份主存储系统，然后使用卷克隆克隆备份。此外，还会处理 igroup ， NFS 或 CIFS 的卷映射。这需要 SAN ， Isan 或 NAS 环境。
+----
 
 
-
+|   a| 
+克隆卷。备份主存储系统、然后使用卷克隆克隆备份。此外，还会处理 igroup ， NFS 或 CIFS 的卷映射。这需要 SAN ， Isan 或 NAS 环境。
  a| 
 [listing]
 ----
@@ -252,7 +253,10 @@ snapcreator
 --action cloneVol
 --policy Policy
 --verbose
----- a| 
+----
+
+
+|   a| 
 删除克隆。根据指定的保留策略执行克隆删除操作。此 LUN 克隆仅保留一个副本。卷克隆具有与策略关联的使用情况。
  a| 
 [listing]
@@ -270,8 +274,8 @@ snapcreator
 ----
 
 
- a| 
-列出 Snap Creator 克隆。列出给定配置的 Snap Creator 卷克隆。
+|   a| 
+列出Snap Creator克隆。列出了给定配置的Snap Creator卷克隆。
  a| 
 [listing]
 ----
@@ -284,11 +288,11 @@ snapcreator
 --config Config
 --action cloneList
 --verbose
----- a| 
-列出 Snap Creator 卷。列出主存储系统上指定配置的 Snap Creator 卷。
+----
 
 
-
+|   a| 
+列出Snap Creator卷。列出了主存储系统上指定配置的Snap Creator卷。
  a| 
 [listing]
 ----
@@ -301,13 +305,13 @@ snapcreator
 --config Config
 --action volumeList
 --verbose
----- a| 
+----
+
+
+ a| 
 配置文件
  a| 
 导入配置。
-
-
-
  a| 
 [listing]
 ----
@@ -321,7 +325,10 @@ snapcreator
 --action configImport
 --importFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 导出配置。
  a| 
 [listing]
@@ -339,7 +346,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 导入全局配置文件。
  a| 
 [listing]
@@ -352,11 +359,11 @@ snapcreator
 --action globalImport
 --importFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 导出全局配置文件。
-
-
-
  a| 
 [listing]
 ----
@@ -368,7 +375,10 @@ snapcreator
 --action globalExport
 --ExportFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 从存储库中删除全局配置文件。
  a| 
 [listing]
@@ -384,7 +394,6 @@ snapcreator
 
 
  a| 
-配置文件（续 ... ）
  a| 
 将特定配置文件的全局配置文件导入到存储库中。
  a| 
@@ -402,7 +411,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 从存储库中导出特定配置文件的全局配置文件。
  a| 
 [listing]
@@ -416,11 +425,11 @@ snapcreator
 --action profileglobalExport
 --exportFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 从存储库中删除特定配置文件的全局配置。
-
-
-
  a| 
 [listing]
 ----
@@ -432,7 +441,10 @@ snapcreator
 --profile Profile
 --action profileglobalDelete
 --verbose
----- a| 
+----
+
+
+|   a| 
 升级配置文件中的旧配置文件。将新引入的参数添加到旧配置文件中。执行此命令之前，必须将所有旧配置文件以及配置文件文件夹复制到 scServer/enginer/configs 文件夹。
  a| 
 [listing]
@@ -489,7 +501,6 @@ snapcreator
 
 
  a| 
-策略（续 ... ）
  a| 
 添加新的 SnapMirror 策略。
  a| 
@@ -511,7 +522,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 添加新的 SnapVault 策略。
  a| 
 [listing]
@@ -531,11 +542,11 @@ snapcreator
 --secondaryCount 30
 --secondaryAge 0
 --verbose
----- a| 
+----
+
+
+|   a| 
 更新 SnapMirror 策略。
-
-
-
  a| 
 [listing]
 ----
@@ -553,13 +564,12 @@ snapcreator
 --primaryCount 7
 --primaryAge 0
 --verbose
----- a| 
-策略（续 ... ）
+----
+
+
+ a| 
  a| 
 更新 SnapVault 策略。
-
-
-
  a| 
 [listing]
 ----
@@ -579,7 +589,10 @@ snapcreator
 --secondaryCount 30
 --secondaryAge 0
 --verbose
----- a| 
+----
+
+
+|   a| 
 删除策略。
  a| 
 [listing]
@@ -595,7 +608,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 列出所有策略。
  a| 
 [listing]
@@ -607,11 +620,11 @@ snapcreator
 --passwd Password
 --action policyList
 --verbose
----- a| 
+----
+
+
+|   a| 
 显示特定策略的其他详细信息。
-
-
-
  a| 
 [listing]
 ----
@@ -623,7 +636,10 @@ snapcreator
 --action policyDetails
 --policyId 1
 --verbose
----- a| 
+----
+
+
+|   a| 
 为配置文件分配策略。
  a| 
 [listing]
@@ -641,7 +657,6 @@ snapcreator
 
 
  a| 
-策略（续 ... ）
  a| 
 撤消配置文件的策略分配。
  a| 
@@ -658,7 +673,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 列出分配给配置文件的所有策略。
  a| 
 [listing]
@@ -671,11 +686,11 @@ snapcreator
 --profile Profile
 --action policyListForProfile
 --verbose
----- a| 
+----
+
+
+ a| 
 策略计划
-
-
-
  a| 
 创建每小时策略计划。
  a| 
@@ -693,11 +708,11 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 创建每日策略计划。
-
-
-
  a| 
 [listing]
 ----
@@ -714,13 +729,12 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
-策略计划（续 ... ）
+----
+
+
+ a| 
  a| 
 创建每周策略计划。
-
-
-
  a| 
 [listing]
 ----
@@ -738,7 +752,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 创建 cron 策略计划。
  a| 
 [listing]
@@ -758,7 +775,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 更新每小时策略计划。
  a| 
 [listing]
@@ -776,11 +793,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
-策略计划（续 ... ）
+----
 
 
-
+ a| 
  a| 
 更新每日策略计划。
  a| 
@@ -800,11 +816,11 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 更新每周策略计划。
-
-
-
  a| 
 [listing]
 ----
@@ -823,7 +839,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 更新 cron 策略计划。
  a| 
 [listing]
@@ -845,7 +864,6 @@ snapcreator
 
 
  a| 
-策略计划（续 ... ）
  a| 
 删除策略计划。
  a| 
@@ -862,7 +880,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 列出策略计划。
  a| 
 [listing]
@@ -874,11 +892,11 @@ snapcreator
 --passwd Password
 --action policySchedList
 --verbose
----- a| 
+----
+
+
+|   a| 
 显示有关策略计划的追加信息。
-
-
-
  a| 
 [listing]
 ----
@@ -890,13 +908,13 @@ snapcreator
 --action policySchedDetails
 --schedId 1
 --verbose
----- a| 
+----
+
+
+ a| 
 配置文件
  a| 
 创建新配置文件。
-
-
-
  a| 
 [listing]
 ----
@@ -908,8 +926,11 @@ snapcreator
 --profile Profile
 --action profileCreate
 --verbose
----- a| 
-删除配置文件。 * 注意： * 配置文件中的配置文件也会被删除。
+----
+
+
+|   a| 
+删除配置文件。*注意：*配置文件中的配置文件也会被删除。
  a| 
 [listing]
 ----
@@ -944,7 +965,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 执行非交互式卷还原。执行非交互式卷还原。
  a| 
 [listing]
@@ -963,11 +984,11 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
----- a| 
+----
+
+
+|   a| 
 执行非交互式文件还原。执行非交互式文件还原。
-
-
-
  a| 
 [listing]
 ----
@@ -985,14 +1006,14 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
---files file_path1,file_path2,etc.
----- a| 
+--fileNames file_path1,file_path2,etc.
+----
+
+
+ a| 
 Schedules
  a| 
 创建新的每小时计划。
-
-
-
  a| 
 [listing]
 ----
@@ -1012,7 +1033,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 创建新的每日计划。
  a| 
 [listing]
@@ -1037,7 +1061,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 创建新的每周计划。
  a| 
 [listing]
@@ -1060,11 +1084,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-计划（续 ... ）
+----
 
 
-
+ a| 
  a| 
 创建新的 cron 计划。
  a| 
@@ -1086,12 +1109,11 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-运行计划。
-
+----
 
 
  a| 
+| 运行计划。  a| 
 [listing]
 ----
 snapcreator
@@ -1102,7 +1124,10 @@ snapcreator
 --action schedRun
 --schedId 1
 --verbose
----- a| 
+----
+
+
+|   a| 
 删除计划
  a| 
 [listing]
@@ -1118,7 +1143,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 更新每小时计划。
  a| 
 [listing]
@@ -1140,11 +1165,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-计划（续 ... ）
+----
 
 
-
+ a| 
  a| 
 更新每日计划。
  a| 
@@ -1168,11 +1192,11 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 更新每周计划。
-
-
-
  a| 
 [listing]
 ----
@@ -1195,7 +1219,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 更新 cron 计划。
  a| 
 [listing]
@@ -1221,7 +1248,6 @@ snapcreator
 
 
  a| 
-计划（续 ... ）
  a| 
 列出所有计划。
  a| 
@@ -1237,7 +1263,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 列出支持的计划程序操作。
  a| 
 [listing]
@@ -1249,11 +1275,11 @@ snapcreator
 --passwd Password
 --action schedActionList
 --verbose
----- a| 
+----
+
+
+|   a| 
 列出支持的计划程序频率。
-
-
-
  a| 
 [listing]
 ----
@@ -1264,7 +1290,10 @@ snapcreator
 --passwd Password
 --action schedFreqList
 --verbose
----- a| 
+----
+
+
+|   a| 
 显示计划 ID 的其他详细信息。
  a| 
 [listing]
@@ -1318,7 +1347,6 @@ snapcreator
 
 
  a| 
-Snap Creator 服务器和代理（续 ... ）
  a| 
 对 Snap Creator 服务器执行 Ping 操作。
  a| 
@@ -1334,7 +1362,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 对 Snap Creator 代理执行 Ping 操作。
  a| 
 [listing]
@@ -1348,11 +1376,11 @@ snapcreator
 --agentName host_name
 --agentPort port
 --verbose
----- a| 
+----
+
+
+ a| 
 归档
-
-
-
  a| 
 根据配置文件中的设置执行归档日志管理。此操作需要 Snap Creator 代理。
  a| 
@@ -1367,11 +1395,11 @@ snapcreator
 --config Config
 --action arch
 --verbose
----- a| 
+----
+
+
+ a| 
 数据保护功能
-
-
-
  a| 
 为给定配置配置配置 NetApp 管理控制台数据保护功能数据集。
  a| 
@@ -1386,11 +1414,11 @@ snapcreator
 --config Config
 --action pmsetup
 --verbose
----- a| 
+----
+
+
+|   a| 
 显示控制器的 SnapVault 和 SnapMirror 关系的数据保护状态。如果未配置 SnapVault 或 SnapMirror ，则不会显示结果。
-
-
-
  a| 
 [listing]
 ----
@@ -1403,13 +1431,13 @@ snapcreator
 --config Config
 --action dpstatus
 --verbose
----- a| 
+----
+
+
+ a| 
 暂停 / 取消静默
  a| 
 对给定应用程序执行暂停操作。此操作需要 Snap Creator 代理。
-
-
-
  a| 
 [listing]
 ----
@@ -1422,7 +1450,10 @@ snapcreator
 --config Config
 --action quiesce
 --verbose
----- a| 
+----
+
+
+|   a| 
 对给定应用程序执行取消静默操作。此操作需要 Snap Creator 代理。
  a| 
 [listing]

@@ -22,7 +22,7 @@ summary: 您可以使用命令行界面命令执行 Snap Creator RBAC 操作。
  a| 
 用户
  a| 
-创建新用户：
+创建新用户
  a| 
 [listing]
 ----
@@ -38,9 +38,7 @@ snapcreator
 ----
 
 
- a| 
-删除用户。
- a| 
+|  | 删除用户  a| 
 [listing]
 ----
 snapcreator
@@ -51,12 +49,11 @@ snapcreator
 --action userDelete
 --username user_name
 --verbose
----- a| 
-列出所有用户。
-
+----
 
 
  a| 
+| 列出所有用户  a| 
 [listing]
 ----
 snapcreator
@@ -66,9 +63,11 @@ snapcreator
 --passwd Password
 --action userList
 --verbose
----- a| 
-列出为某个角色分配的所有用户。
+----
+
+
  a| 
+| 列出为某个角色分配的所有用户  a| 
 [listing]
 ----
 snapcreator
@@ -83,8 +82,7 @@ snapcreator
 
 
  a| 
-列出已分配配置文件的所有用户。
- a| 
+| 列出已分配配置文件的所有用户  a| 
 [listing]
 ----
 snapcreator
@@ -95,13 +93,13 @@ snapcreator
 --profile Profile
 --action userListForProfile
 --verbose
----- a| 
-角色
-
+----
 
 
  a| 
-创建新角色。
+角色
+ a| 
+创建新角色
  a| 
 [listing]
 ----
@@ -114,12 +112,11 @@ snapcreator
 --roleName role_name
 --roleDesc role_description
 --verbose
----- a| 
-删除角色。
-
+----
 
 
  a| 
+| 删除角色  a| 
 [listing]
 ----
 snapcreator
@@ -130,9 +127,11 @@ snapcreator
 --action roleDelete
 --roleName role_name
 --verbose
----- a| 
-为用户分配角色。
+----
+
+
  a| 
+| 为用户分配角色  a| 
 [listing]
 ----
 snapcreator
@@ -148,8 +147,7 @@ snapcreator
 
 
  a| 
-从用户取消分配角色。
- a| 
+| 从用户取消分配角色  a| 
 [listing]
 ----
 snapcreator
@@ -161,12 +159,11 @@ snapcreator
 --userName user_name
 --roleName role_name
 --verbose
----- a| 
-列出为用户分配的所有角色。
-
+----
 
 
  a| 
+| 列出为用户分配的所有角色  a| 
 [listing]
 ----
 snapcreator
@@ -177,13 +174,13 @@ snapcreator
 --action roleListAssigned
 --userName user_name
 --verbose
----- a| 
+----
+
+
+ a| 
 权限
  a| 
-创建新权限。
-
-
-
+创建新权限
  a| 
 [listing]
 ----
@@ -196,9 +193,11 @@ snapcreator
 --permName permission_name
 --permDesc permission_description
 --verbose
----- a| 
-删除权限。
+----
+
+
  a| 
+| 删除权限  a| 
 [listing]
 ----
 snapcreator
@@ -213,8 +212,7 @@ snapcreator
 
 
  a| 
-为用户分配权限。
- a| 
+| 为用户分配权限  a| 
 [listing]
 ----
 snapcreator
@@ -226,12 +224,11 @@ snapcreator
 --permName permission_name
 --roleName role_name
 --verbose
----- a| 
-从用户取消分配权限。
-
+----
 
 
  a| 
+| 从用户取消分配权限  a| 
 [listing]
 ----
 snapcreator
@@ -243,9 +240,11 @@ snapcreator
 --permName
 --roleName role_name
 --verbose
----- a| 
-列出所有权限。
+----
+
+
  a| 
+| 列出所有权限  a| 
 [listing]
 ----
 snapcreator
@@ -259,8 +258,7 @@ snapcreator
 
 
  a| 
-列出分配给角色的所有权限。
- a| 
+| 列出分配给角色的所有权限  a| 
 [listing]
 ----
 snapcreator
@@ -271,13 +269,13 @@ snapcreator
 --action permListAssigned
 --roleName role_name
 --verbose
----- a| 
-操作
-
+----
 
 
  a| 
-为权限分配操作。
+操作
+ a| 
+为权限分配操作
  a| 
 [listing]
 ----
@@ -290,12 +288,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-从权限中取消分配操作。
-
+----
 
 
  a| 
+| 从权限中取消分配操作。  a| 
 [listing]
 ----
 snapcreator
@@ -307,9 +304,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-列出所有操作。
+----
+
+
  a| 
+| 列出所有操作  a| 
 [listing]
 ----
 snapcreator
@@ -323,8 +322,7 @@ snapcreator
 
 
  a| 
-列出分配给权限的所有操作。
- a| 
+| 列出分配给权限的所有操作  a| 
 [listing]
 ----
 snapcreator
@@ -335,11 +333,11 @@ snapcreator
 --action opListAssigned
 --permName permission_name
 --verbose
----- a| 
+----
+
+
+ a| 
 配置文件
-
-
-
  a| 
 将配置文件分配给用户。
  a| 
@@ -354,12 +352,11 @@ snapcreator
 --action profileAssign
 --userName user_name
 --verbose
----- a| 
-从用户取消分配配置文件。
-
+----
 
 
  a| 
+| 从用户取消分配配置文件  a| 
 [listing]
 ----
 snapcreator
@@ -371,9 +368,11 @@ snapcreator
 --action profileUnassign
 --userName user_name
 --verbose
----- a| 
-列出分配给用户的所有配置文件。
+----
+
+
  a| 
+| 列出分配给用户的所有配置文件  a| 
 [listing]
 ----
 snapcreator
