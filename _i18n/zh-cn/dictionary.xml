@@ -4221,8 +4221,6 @@
   <block id="d9e901cf2c8dec3fb3d0a7115e2d0830" category="paragraph">在远程主机上，您可以通过运行 &lt; scAgent_v&lt;#&gt;/bin/scAgent start 命令来启动 Snap Creator Agent 。</block>
   <block id="24dc7278962bcfc76401499b9f6546e8" category="paragraph">sc_clone_target</block>
   <block id="6fe7225c6d56708f0f47a722220c713a" category="paragraph">克隆目标： port 的主机名或 IP_address</block>
-  <block id="e21428a82408feee3859e8c90b5ba7de" category="paragraph">启用克隆操作。将参数 * cloneVol* 与 ｛ pre</block>
-  <block id="542e9598c7bf93bbfd9d7a9f90ab9c8a" category="cell">POST ｝ _clone_create_CMDxx 参数时，您可以管理远程端的远程存储对象（例如挂载或卸载文件系统）。要指定克隆目标，应输入其名称或 IP 地址，后跟一个冒号以及 Snap Creator Agent 正在侦听的端口。</block>
   <block id="d13dab8170b57ba54dad29406ffbbdde" category="paragraph">sc_agent_timeout</block>
   <block id="5f92829937e7b13ea1de0f9f1aed0d46" category="paragraph">指定代理服务的超时时间（以秒为单位）。实施的客户端 / 服务器架构使用超时机制。这意味着，如果客户端在指定的时间间隔内未响应，则服务器将失败并显示超时消息。但是，客户端上的任务不会中止，需要进一步调查。</block>
   <block id="1c90fe4424751b5cd95d5dfd902965d8" category="paragraph">默认情况下，超时设置为 300 秒。在负载较高或已知任务运行时间较长的服务器（例如，用户创建的脚本或复杂的 SnapDrive 操作）上，您应延长超时时间并根据需要修改此值。</block>
@@ -4601,4 +4599,8 @@
   <block id="a12965abf2d093ba56a99fab1157cba1" category="cell">从用户取消分配配置文件</block>
   <block id="7cdc2fb941238c11489c31f937f6aa23" category="cell">列出分配给用户的所有配置文件</block>
   <block id="81f196059d7908700f35e535c573135d" category="admonition">必须至少向配置中添加一个存储控制器或 SVM 。要使用vsim通道功能、请选中* IP通道*复选框(仅适用于集群)。</block>
+  <block id="7fc1d1689b46d654668ac4666069e9ce" category="paragraph">您应在 HANA 数据库中配置一个专用数据库用户，以便使用 Snap Creator 运行备份操作。第二步、您应该为此备份用户配置SAP HANA用户存储密钥。此用户存储密钥用于配置 Snap Creator SAP HANA 插件。</block>
+  <block id="5951214569068cd75f070997baaf8545" category="paragraph">启用克隆操作。使用参数* cloneVol*和｛pre/post｝_clone_create_CMDxx参数、您可以管理远程端的远程存储对象(例如挂载或卸载文件系统)。</block>
+  <block id="536365244f2630ddcece364e33664d40" category="paragraph">要指定克隆目标，应输入其名称或 IP 地址，后跟一个冒号以及 Snap Creator Agent 正在侦听的端口。</block>
+  <block id="0dda1c02ea357a92a449c913a623f7be" category="paragraph">允许为Snap Creator Server到Snap Creator Agent执行的所有操作创建日志。如果发生故障、您可以检查这些日志。Snap Creator服务器将操作发送到Snap Creator代理。如果在Snap Creator代理向Snap Creator服务器发送回调之前发生错误、Snap Creator代理消息可能会丢失。此参数有助于将Snap Creator Agent消息记录在Snap Creator Agent上、以便这些消息不会丢失。</block>
 </blocks>

@@ -41,17 +41,16 @@ sc_clone_target
  a| 
 克隆目标： port 的主机名或 IP_address
  a| 
-启用克隆操作。将参数 * cloneVol* 与 ｛ pre
+启用克隆操作。使用参数* cloneVol*和｛pre/post｝_clone_create_CMDxx参数、您可以管理远程端的远程存储对象(例如挂载或卸载文件系统)。
+
+要指定克隆目标，应输入其名称或 IP 地址，后跟一个冒号以及 Snap Creator Agent 正在侦听的端口。
 
 
 
-| POST ｝ _clone_create_CMDxx 参数时，您可以管理远程端的远程存储对象（例如挂载或卸载文件系统）。要指定克隆目标，应输入其名称或 IP 地址，后跟一个冒号以及 Snap Creator Agent 正在侦听的端口。  a| 
+ a| 
 sc_agent_timeout
  a| 
 时间（以秒为单位）
-
-
-
  a| 
 指定代理服务的超时时间（以秒为单位）。实施的客户端 / 服务器架构使用超时机制。这意味着，如果客户端在指定的时间间隔内未响应，则服务器将失败并显示超时消息。但是，客户端上的任务不会中止，需要进一步调查。
 
@@ -61,13 +60,13 @@ sc_agent_timeout
 
 
 NOTE: 某些插件具有特定的 sc_agent_timeout 值要求。
+
+
+
  a| 
 sc_agent_watchdog 启用
  a| 
 "`Y` " 或 "`N` "
-
-
-
  a| 
 只有在 Snap Creator Agent 版本低于 4.1 时， SC_AGENT_watchdox_enable 参数才适用。此参数用于启用或禁用 watchdog 进程。对于 Snap Creator Agent 4.1 或更高版本，此参数将被忽略，因为 watchdog 进程始终处于启用状态。如果参数已启用（即设置为 Y ），并且 Snap Creator Agent 版本为 4.1 或更高版本，则在 Snap Creator 代理收到暂停请求时， watchdog 进程将启动。
 
@@ -75,27 +74,32 @@ watchdog 进程使用 sc_agent_unquiesce_timeout 参数作为超时参数来取�
 
 
 NOTE: 对于 Snap Creator Agent 4.1 ， SC_AGENT_watchdog 启用参数已弃用，并且仅适用于 Snap Creator Agent 4.0 。从 Snap Creator Agent 4.1 开始，无论为此参数设置的值如何，都会启用 watchdog 进程（因为它是硬编码的）。
+
+
+
  a| 
 sc_agent_unquiesce_timeout
  a| 
 时间（以秒为单位）
-
-
-
  a| 
 指定静默超时（以秒为单位）。对于 Snap Creator Agent 4.1 之前的版本，只有在将 SC_AGENT_watchdox_enable 设置为 Y 时，才会使用此参数对于 Snap Creator Agent 4.1 或更高版本，此参数始终适用，因为 Snap Creator Agent watchdog 进程始终处于打开状态。如果无法与 Snap Creator Agent 进行通信，并且某个应用程序处于静默状态， Snap Creator Agent 会自动将应用程序返回到其正常运行模式，而无需服务器进行通信。默认情况下， unquiesce 超时设置为 sc_agent_timeout 参数值加 5 秒。
+
+
+
  a| 
 SC_TMP_DIR
  a| 
 "`Y` " 或 "`N` "
-
-
-
  a| 
 允许使用用户定义的备用临时目录来存储 Snap Creator 相关文件。用户创建目录并管理用户访问。插件使用临时文件与数据库进行交互。临时文件创建在主机的默认临时目录中，该目录对所有用户都具有写入访问权限。如果临时目录已满，则 Snap Creator 会在创建临时文件时显示错误。
+
+
+
  a| 
 sc_agent_log_enable
  a| 
 "`Y` " 或 "`N` "
+ a| 
+允许为Snap Creator Server到Snap Creator Agent执行的所有操作创建日志。如果发生故障、您可以检查这些日志。Snap Creator服务器将操作发送到Snap Creator代理。如果在Snap Creator代理向Snap Creator服务器发送回调之前发生错误、Snap Creator代理消息可能会丢失。此参数有助于将Snap Creator Agent消息记录在Snap Creator Agent上、以便这些消息不会丢失。
 
 |===
