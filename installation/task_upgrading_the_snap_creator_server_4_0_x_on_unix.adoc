@@ -67,7 +67,7 @@ summary: 您可以在基于 UNIX 的系统上直接从 Snap Creator Server 4.0.x
 
 IMPORTANT: 在确定不需要还原到旧版本之前，请勿删除备份副本。
 
-此外，您还必须导航到指定端口上的本地主机来验证 Snap Creator Framework 图形用户界面的启动情况 (https://IP_address:gui_port)[]。
+此外，您还必须导航到指定端口上的本地主机来验证 Snap Creator Framework 图形用户界面的启动情况 。
 
 您必须使用 HTTPS 进行连接；否则，此连接不会自动重定向到 HTTPS 连接，并且图形用户界面将不起作用。
 

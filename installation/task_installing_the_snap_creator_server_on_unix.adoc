@@ -164,7 +164,7 @@ INFO: To access NetApp Snap Creator Framework release-version GUI goto https://h
 Checking Status of scServer:
 Running
 ----
-. 导航到指定端口上的本地主机（例如 https://10.12.123.123:8443)[]。
+. 导航到指定端口上的本地主机（例如。
 +
 您必须使用 HTTPS 进行连接；否则，图形用户界面将不起作用。
 
