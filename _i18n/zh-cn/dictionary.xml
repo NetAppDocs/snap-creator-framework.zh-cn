@@ -383,14 +383,10 @@
   <block id="540edaf4389bd35edfa8fa3151f27fd8" category="list-text">要实际重新启动 SnapVault 传输，需要手动创建 Snapshot 副本。</block>
   <block id="46c99798aa0460278810abb417868424" category="list-text">验证 SnapVault 关系是否显示在目标列表中。</block>
   <block id="5b3df86caff0ed84d5406907a8e0790f" category="summary">介绍如何配置和使用 SAP HANA 插件来备份和还原 SAP HANA 数据库。</block>
-  <block id="692115423201e22849bdeabbf9ff7062" category="doc">《 SAP HANA ® 插件操作指南》</block>
-  <block id="d3938dfe42202c326833fdfff39c7ff7" category="paragraph">本指南介绍如何配置和使用适用于 Snap Creator 4.3.3 的 SAP HANA 插件来备份和还原 SAP HANA 数据库。</block>
   <block id="04325964845984b062819fbeb5613bf0" category="summary">使用 NetApp Snapshot ® 技术，只需几分钟即可创建数据库备份。创建 Snapshot 副本所需的时间与数据库大小无关，因为 Snapshot 副本不会移动任何数据块。</block>
   <block id="c8d591b036c6345c614160fd9eb8e2b7" category="doc">NetApp 解决方案</block>
   <block id="071af596f89d1ebeeefa6e4c1c41b146" category="paragraph">使用 Snapshot 技术也不会影响生产 SAP 系统的性能。因此，可以计划创建 Snapshot 副本，而无需考虑活动高峰期。SAP 和 NetApp 客户通常会在一天内计划多个联机 Snapshot 备份。例如，备份可能每四小时进行一次。这些 Snapshot 备份通常在主存储系统上保留三到五天。</block>
-  <block id="51c60f3b9cd56c81c81d782bd24ba37f" category="paragraph">Snapshot 副本还为还原和恢复操作提供了主要优势。通过 NetApp SnapRestore ® 功能，可以将整个数据库或数据库的部分内容还原到创建任何可用 Snapshot 副本时的时间点。此还原过程只需几分钟即可完成，与数据库大小无关。恢复过程所需的时间也显著减少，因为一天中创建了多个 Snapshot 副本，需要应用的日志更少。</block>
   <block id="3eb0f3a04996c76f86b1c7c7ac2edf21" category="paragraph">Snapshot 备份与活动的联机数据存储在同一磁盘系统上。因此， NetApp 建议使用 Snapshot 备份作为补充，而不是替代备份到磁盘或磁带等二级位置。尽管仍需要备份到二级位置，但还原和恢复只需要这些备份的极小可能性。大多数还原和恢复操作都通过在主存储系统上使用 SnapRestore 来处理。只有当存放 Snapshot 副本的主存储系统损坏或需要还原不再可从 Snapshot 副本使用的备份时，才需要从二级位置进行还原。例如，您可能需要从两周前还原备份。</block>
-  <block id="3a150be2095b787600f9a7d829ddf0c5" category="paragraph">备份到二级位置始终基于在主存储上创建的 Snapshot 副本。因此，可以直接从主存储系统读取数据，而不会在 SAP 数据库服务器上生成负载。主存储直接与二级存储通信，并使用 SnapVault ® 磁盘到磁盘备份将备份数据发送到目标。与传统备份相比， NetApp SnapVault 功能具有显著优势。在必须将所有数据从源传输到目标的初始数据传输之后，所有后续备份仅会将更改过的块复制到二级存储。这样可以显著降低主存储系统上的负载以及完整备份所需的时间。由于 SnapVault 仅在目标上存储更改过的块，因此完整的数据库备份所需的磁盘空间更少。</block>
   <block id="2e96d7ab8e8f5fe210dbfe2055daf4fb" category="paragraph">可能仍需要将数据备份到磁带作为长期备份。例如，这可能是每周备份，保留一年。在这种情况下，磁带基础架构可以直接连接到二级存储，数据可以使用网络数据管理协议（ Network Data Management Protocol ， NDMP ）写入磁带。</block>
   <block id="cc122cb506b560736d7f7e5e0e2dafa4" category="image-alt">介绍 Snap Creator SAP HANA 解决方案概述</block>
   <block id="5049ce63b0cad5968925ef3ae7b1a4df" category="doc">恢复与 7- 模式 Data ONTAP 的 SnapVault 关系</block>
@@ -1509,11 +1505,8 @@
   <block id="048dcc44ddae739f17a6629986271f8b" category="summary">您可以按需或按计划备份数据库。您可以使用 Snap Creator GUI 或 Snap Creator CLI 备份数据库。</block>
   <block id="0ba7491209eff42b44e5b09d3f197fba" category="doc">备份数据库</block>
   <block id="0b91c79a809d2f2c169597d91d13f93c" category="inline-link">《 Snap Creator Framework 4.1.2 管理指南》</block>
-  <block id="ad73d215b4068f86a2168bb00365aa4b" category="admonition">本指南介绍如何使用 GUI 备份数据库。有关如何使用命令行界面的信息，请参见<block ref="532a3900f75badacc0e81c54213a5176" category="inline-link-rx"></block>。</block>
   <block id="bca0aee87ef36633d99e45277f3b105a" category="inline-link-macro">按需备份数据库</block>
   <block id="7972a2702811e61123cb7047cd446e47" category="inline-link-macro">计划备份</block>
-  <block id="e19b088d506e1543600ef88f3c2dc29d" category="paragraph"><block ref="bccc93100305f81ed5222f7d2c994a98" category="inline-link-macro-rx"></block>
-<block ref="eeecaa0a7e94a6df0bf227ac0c175759" category="inline-link-macro-rx"></block></block>
   <block id="6724e79d6c8667f92067d0c79f454141" category="summary">您可以在执行初始备份后计划重复的备份作业。</block>
   <block id="c4417f01115fe5cd665c9c07eb358b4e" category="inline-xref-macro">创建配置文件</block>
   <block id="45a726e6b5fbd2e087c0702f77204d3c" category="paragraph">您应已为备份创建配置文件，如中所述 <block ref="140ff5fab23254f1902ca39fa92c862d" category="inline-xref-macro-rx"></block>。</block>
@@ -1912,8 +1905,6 @@
   <block id="42665350f351370a6c756ee2658c3426" category="list-text">在磁盘标识窗格中，选择已挂载的磁盘，然后单击右键菜单中的 * 断开磁盘 * 。</block>
   <block id="c1edfe963b4fa892eb084acddefa100e" category="list-text">在断开磁盘连接对话框中，单击 * 是 * 。</block>
   <block id="6ab3c031640de9f051fd3053d9ef25d0" category="summary">介绍如何配置和使用 IBM Domino 插件来备份和还原 IBM Domino 数据库。</block>
-  <block id="a4c0ef56255949441dd09edc12f41371" category="doc">《 IBM ® Domino ® 插件操作指南》</block>
-  <block id="cc3a19846ca6e33308cf189700ad91ff" category="paragraph">介绍如何配置和使用适用于 Snap Creator 4.3.3 的 IBM Domino 插件来备份和还原 IBM Domino 数据库。</block>
   <block id="fefaacc44466723ca5f85607e0bf711f" category="summary">IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库文件。Snapshot 还原操作完成后，此插件将应用在 changeinfo 目录中记录的任何更改。</block>
   <block id="d17c0718e54b8c110b0dcbd5259b758d" category="doc">了解 IBM Domino 插件还原操作</block>
   <block id="665aad93a0cac1bed1a39beaa70d6492" category="list-text">从 Snapshot 副本还原数据库文件。</block>
@@ -4551,8 +4542,6 @@
   <block id="8cf04a9734132302f96da8e113e80ce5" category="sidebar">主页</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="sidebar">安装</block>
-  <block id="3fa7ec916163970da88e2e2759209761" category="sidebar">IBM ® Domino ® 插件操作</block>
-  <block id="3cc13999b80491b390e27e7298102ccb" category="sidebar">SAP HANA ® 插件操作</block>
   <block id="7258e7251413465e0a3eb58094430bde" category="sidebar">管理</block>
   <block id="eae66b4b74b6b82ce35a83d2757f6d46" category="cell">（ Y/N ）</block>
   <block id="0fed4fd40330e62e1aa81d896b62ecb5" category="paragraph">ntap_allow_MIRRORVAULT_AS_mirror</block>
@@ -4603,4 +4592,15 @@
   <block id="5951214569068cd75f070997baaf8545" category="paragraph">启用克隆操作。使用参数* cloneVol*和｛pre/post｝_clone_create_CMDxx参数、您可以管理远程端的远程存储对象(例如挂载或卸载文件系统)。</block>
   <block id="536365244f2630ddcece364e33664d40" category="paragraph">要指定克隆目标，应输入其名称或 IP 地址，后跟一个冒号以及 Snap Creator Agent 正在侦听的端口。</block>
   <block id="0dda1c02ea357a92a449c913a623f7be" category="paragraph">允许为Snap Creator Server到Snap Creator Agent执行的所有操作创建日志。如果发生故障、您可以检查这些日志。Snap Creator服务器将操作发送到Snap Creator代理。如果在Snap Creator代理向Snap Creator服务器发送回调之前发生错误、Snap Creator代理消息可能会丢失。此参数有助于将Snap Creator Agent消息记录在Snap Creator Agent上、以便这些消息不会丢失。</block>
+  <block id="51be88021ba9d8479fd3db824b232a95" category="admonition">您可以使用GUI备份数据库。有关如何使用命令行界面的信息，请参见<block ref="9c6fee504ba6f4e3cdf48b013fcc9205" category="inline-link-rx"></block>。</block>
+  <block id="bccc93100305f81ed5222f7d2c994a98" category="list-text"><block ref="bccc93100305f81ed5222f7d2c994a98" category="inline-link-macro-rx"></block></block>
+  <block id="eeecaa0a7e94a6df0bf227ac0c175759" category="list-text"><block ref="eeecaa0a7e94a6df0bf227ac0c175759" category="inline-link-macro-rx"></block></block>
+  <block id="c0e9c32b291af530f8baeb6c5d003126" category="doc">IBM Domino插件操作</block>
+  <block id="3fce5d11cc667ab536dda3b5efa02fc0" category="paragraph">您可以配置和使用适用于Snap Creator 4.3.3的IBM Domino插件来备份和还原IBM Domino数据库。</block>
+  <block id="4ff49151ecc7b311b935b44393cb1817" category="paragraph">使用NetApp快照技术、只需几分钟即可创建数据库备份。创建 Snapshot 副本所需的时间与数据库大小无关，因为 Snapshot 副本不会移动任何数据块。</block>
+  <block id="4ec821c3afee07e7a10c59cb24aba9e8" category="paragraph">Snapshot 副本还为还原和恢复操作提供了主要优势。通过NetApp SnapRestore功能、可以将整个数据库或部分数据库还原到创建任何可用Snapshot副本的时间点。此还原过程只需几分钟即可完成，与数据库大小无关。恢复过程所需的时间也显著减少，因为一天中创建了多个 Snapshot 副本，需要应用的日志更少。</block>
+  <block id="8fadff52f43bec1c2c213bd4047b08a1" category="paragraph">备份到二级位置始终基于在主存储上创建的 Snapshot 副本。因此，直接从主存储系统读取数据，而不会在 SAP 数据库服务器上生成负载。主存储直接与二级存储通信、并使用SnapVault磁盘到磁盘备份将备份数据发送到目标。与传统备份相比， NetApp SnapVault 功能具有显著优势。在必须将所有数据从源传输到目标的初始数据传输之后，所有后续备份仅会将更改过的块复制到二级存储。这样可以显著降低主存储系统上的负载以及完整备份所需的时间。完整数据库备份所需的磁盘空间较少、因为SnapVault仅会将更改过的块存储在目标位置。</block>
+  <block id="91b5d4f93ff87a8d44feaabae5e745d1" category="doc">《SAP HANA插件操作指南》</block>
+  <block id="367423d79cfdd3fdc216a55f4bcd023d" category="paragraph">您可以配置和使用适用于Snap Creator 4.3.3的SAP HANA插件来备份和还原SAP HANA数据库。</block>
+  <block id="fbd81bedca700187dabfca4bf4718312" category="sidebar">SAP HANA插件操作</block>
 </blocks>

@@ -4,11 +4,11 @@ sidebar: sidebar
 keywords: domino, ibm, plug-in, operations, guide, configure, use, backup, back up, restore, databases 
 summary: 介绍如何配置和使用 IBM Domino 插件来备份和还原 IBM Domino 数据库。 
 ---
-= 《 IBM ® Domino ® 插件操作指南》
+= IBM Domino插件操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="Lead"]
-介绍如何配置和使用适用于 Snap Creator 4.3.3 的 IBM Domino 插件来备份和还原 IBM Domino 数据库。
+您可以配置和使用适用于Snap Creator 4.3.3的IBM Domino插件来备份和还原IBM Domino数据库。
