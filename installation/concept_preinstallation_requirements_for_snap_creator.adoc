@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: preinstallation, requirements, before, install 
 summary: 在安装 Snap Creator 之前，您应考虑系统许可证，软件和硬件要求。 
 ---
-= Snap Creator 的预安装要求
+= ONTAP Snap Creator的预安装要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ summary: 在安装 Snap Creator 之前，您应考虑系统许可证，软件和
 
 * 下载 Snap Creator 软件。
 * 创建 Data ONTAP 用户。
-* 在 Snap Creator 服务器和代理主机上安装 Oracle Java 或 OpenJDK 。
+* 在Snap Creator服务器和代理主机上安装Oracle Java或OpenJDK Java Runtime Environment (JRE) 1.8 Update 72或更高版本。
 * 同步 Snap Creator 服务器和代理主机上的时间。
 * 配置 IBM Domino 插件的设置（只有在使用 Domino 插件时才需要）。
 * 为 UNIX 环境添加安全套接字层（ SSL ）库（只有在 UNIX 平台上使用 CLI 运行 Snap Creator 时才需要）。

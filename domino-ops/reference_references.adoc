@@ -49,18 +49,6 @@ summary: 您可以在 NetApp 支持站点上找到有关 Snap Creator 的详细�
 +
 介绍 IBM Domino 插件的最佳实践。
 
-* http://www.netapp.com/us/media/tr-3588.pdf["技术报告 3588 ：《将适用于 Windows 2008 的 Domino 8.5 与 NetApp 存储系统集成》"]
-+
-介绍如何将适用于 Windows 2008 的 IBM Domino 8.5 与 NetApp 存储系统集成。
-
-* http://www.netapp.com/us/media/tr-3691.pdf["技术报告 3691 ：《将适用于 Linux 的 IBM Domino 8.5 与 NetApp 存储系统相集成》"]
-+
-介绍如何将适用于 Linux 的 IBM Domino 8.0.2 与 NetApp 存储系统集成。
-
-* http://www.netapp.com/us/media/tr-3723.pdf["技术报告 3723 ：《使用 NFS 在 AIX 和 NetApp 环境中部署 Domino 8.0.2 》"]
-+
-介绍如何将 IBM Domino 8.0.2 for AIX 与 NetApp 存储系统集成。
-
 * http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework 讨论"]
 +
 让您可以与同行保持联系，提出问题，交流想法，查找资源以及分享 Snap Creator 最佳实践。
