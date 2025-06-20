@@ -656,4 +656,4 @@ sidebar:
       - title: 用于管理 Snap Creator 用户访问的命令
         url: "/administration/reference_cli_command_for_snap_creator_rbac_actions.html"
   - title: 法律声明
-    url: "/reference_legal_notices.html"
+    url: "/legal-notices.html"
