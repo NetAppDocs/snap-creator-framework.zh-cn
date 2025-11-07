@@ -1670,7 +1670,6 @@
   <block id="eebc3428ccc0ecbbdb033907afba12f1" category="paragraph">此时将在浏览器中显示 Snap Creator 图形用户界面。如果您是首次启动 GUI ，则屏幕上将显示欢迎消息。单击 * 确定 * 以取消此消息。</block>
   <block id="823fd69164963be6529d5ea1b02cbfce" category="summary">常见的 Snap Creator 错误分为两类：通用 Snap Creator 错误和 Domino 插件特定错误。Domino 插件专用错误通常涉及安装前问题，数据库损坏或自定义还原操作出现问题。</block>
   <block id="4f4e96588318879b2e5c291b19557de6" category="doc">排除 Domino 插件特定错误</block>
-  <block id="614f7ecf115d81d8a01dc4b6717a82be" category="admonition">有关常规 Snap Creator 错误的信息，请参见 <block ref="399bd91a6650953c6fe4851b3dba0f37" category="inline-link-macro-rx"></block>。</block>
   <block id="a8923c43f724405f693d83285c0a2fa0" category="section-title">此平台不支持 Domino 插件</block>
   <block id="36c6b4422b24bc73a86ca134e4e46ebf" category="paragraph">通常，如果未满足 Domino 插件的前提条件，则会收到此错误。通常，此错误消息类似于以下内容：</block>
   <block id="790cdc3394c61c58a0005bf343e94df0" category="paragraph">已知还会显示以下错误消息：</block>
@@ -1679,7 +1678,6 @@
   <block id="512d257d0bc656d012a1968376b32132" category="list-text">未执行预安装步骤或未正确执行安装步骤：</block>
   <block id="33f3a0cdc618b254e4f98a446500da5b" category="list-text">在 UNIX 主机上，必须创建指向 IBM Domino 共享对象文件的符号链接。</block>
   <block id="0a2656ef06ed70792bfee61010dd4d5a" category="inline-link-macro">《 Snap Creator Framework 4.1.2 安装指南》</block>
-  <block id="52b6c74b7dbccc8de6a8f088084dbcbf" category="list-text">在 Windows 主机上，必须将 IBM Domino 安装路径添加到 path 环境变量。有关详细信息，请参见 <block ref="53bd5e8cff945f51f28434f5020e5ffb" category="inline-link-macro-rx"></block>。</block>
   <block id="9ad524478b1e43346db798b7df29ca7d" category="list-text">Domino 的位级别与 Snap Creator 的位级别不同。例如，如果您使用的是 32 位 Domino ，则应使用 32 位 Snap Creator 。</block>
   <block id="fab2d7050c1fb6ae0a19b0c4085dc9b9" category="section-title">Snap Creator 备份因数据库损坏而失败</block>
   <block id="3039512c0a947e1baa63b77622d683fc" category="inline-link-macro">使用 GUI 创建配置文件的任务</block>
@@ -4600,4 +4598,7 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="1608083cf52ae1340c41228aed06ee43" category="paragraph">Active IQ、 AltaVault、Arch Design、ASUP、 AutoSupport、Campaign Express、集群模式Data ONTAP、Customer Fitness、 Data ONTAP、DataMotion、Fitness、 Flash Accel、Flash Cache、Flash Pool、 FlexCache、 FlexClone、 FlexGroup、 FlexPod、FlexScale、FlexShare、 FlexVol、FPolicy、Fueled by SolidFire、GetSuccessful、Helix Design、LockVault、Manage ONTAP、 MetroCluster、 MultiStore、 NetApp、 NetApp Insight、 OnCommand、 ONTAP、ONTAPI、 RAID DP、 RAID-TEC、 SANscreen、 SANshare、 SANtricity、 SecureShare、Simplicity、Simulate ONTAP、Snap Creator、 SnapCenter、 SnapCopy、 SnapDrive、 SnapIntegrator、 SnapLock、 SnapManager、 SnapMirror、 SnapMover、 SnapProtect、 SnapRestore、Snapshot、 SnapValidator、 SnapVault、 SolidFire、 SolidFire Helix、 StorageGRID、 SyncMirror、 Tech OnTap、Unbound Cloud 和WAFL以及其他名称是NetApp, Inc. 在美国和/或其他国家/地区的商标或注册商标。所有其他品牌或产品均为其各自所有者的商标或注册商标，应予同样对待。  NetApp商标的最新列表可在网上查阅。</block>
+  <block id="b76926cf8f58acc96af344359c5d2b2c" category="admonition">有关 Snap Creator 通用错误的信息，请参阅<block ref="3b0c025e228e0d658ee39b24066f4d94" category="inline-link-macro-rx"></block>。</block>
+  <block id="1d7ce8621814d7cbb17fc470a4344f97" category="inline-link-macro">Snap Creator Framework安装指南 - 将路径添加到环境变量</block>
+  <block id="b407da2907a6b37afb80f35075ea8531" category="list-text">在 Windows 主机上，必须将 IBM Domino 安装路径添加到 PATH 环境变量中。欲了解更多信息，请参阅<block ref="48a25fc471122170a85c7c8edf958c44" category="inline-link-macro-rx"></block>。</block>
 </blocks>

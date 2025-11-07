@@ -14,7 +14,7 @@ summary: 常见的 Snap Creator 错误分为两类：通用 Snap Creator 错误�
 常见的 Snap Creator 错误分为两类：通用 Snap Creator 错误和 Domino 插件特定错误。Domino 插件专用错误通常涉及安装前问题，数据库损坏或自定义还原操作出现问题。
 
 
-NOTE: 有关常规 Snap Creator 错误的信息，请参见 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["《 Snap Creator Framework 4.1.2 管理指南》"]。
+NOTE: 有关 Snap Creator 通用错误的信息，请参阅link:../administration/index.html["《 Snap Creator Framework 4.3.3 管理指南》"]。
 
 
 
@@ -47,7 +47,7 @@ ERROR: [scf-00094] Application environment set for plug-in domino failed
 * 未执行预安装步骤或未正确执行安装步骤：
 +
 ** 在 UNIX 主机上，必须创建指向 IBM Domino 共享对象文件的符号链接。
-** 在 Windows 主机上，必须将 IBM Domino 安装路径添加到 path 环境变量。有关详细信息，请参见 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["《 Snap Creator Framework 4.1.2 安装指南》"]。
+** 在 Windows 主机上，必须将 IBM Domino 安装路径添加到 PATH 环境变量中。欲了解更多信息，请参阅link:https://docs.netapp.com/us-en/snap-creator-framework/installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html["Snap Creator Framework安装指南 - 将路径添加到环境变量"]。
 
 
 * Domino 的位级别与 Snap Creator 的位级别不同。例如，如果您使用的是 32 位 Domino ，则应使用 32 位 Snap Creator 。
