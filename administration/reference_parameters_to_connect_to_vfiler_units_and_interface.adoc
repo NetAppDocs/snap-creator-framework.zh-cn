@@ -47,15 +47,17 @@ NOTE: 必须将 SnapVault 和 SnapMirror 关系配置为使用此二级接口。
  a| 
 use_proxy
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 允许 API 调用通过 Active IQ Unified Manager 服务器代理进行，而不是直接通过存储控制器进行。如果使用此选项，则不需要 NTAP_Users 。
+
+
+
  a| 
 允许 _IP_ADDR
  a| 
-Y
+（是|否）
+ a| 
+允许将 IP 地址用于存储系统。这适用于SnapVault、 SnapMirror和NetApp管理控制台的数据保护功能。使用 IP 地址可能会造成问题，因此只能在特定条件下使用。
 
 |===

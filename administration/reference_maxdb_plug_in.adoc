@@ -43,26 +43,23 @@ MaxDB 插件提供以下功能：
  a| 
 XUSER_ENABLE
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 启用或禁用对 MaxDB 使用 xuser ，以便数据库用户不需要密码。
+
+
+
  a| 
 Handle_LOGWRITER
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 执行暂停日志写入程序（ N ）或恢复日志写入程序（ Y ）操作。
+
+
+
  a| 
 DBMCLICMD
-
-
-
  a| 
 path_to_dbmcli_cmd
  a| 
@@ -70,23 +67,23 @@ path_to_dbmcli_cmd
 
 
 NOTE: 如果在 Windows 环境中，则路径需要包含在双引号（ "..." ）中。
+
+
+
  a| 
 SQLCLICMD
-
-
-
  a| 
 path_to_sqlcli_cmd
  a| 
 指定 MaxDB sqlcli 命令的路径。如果未设置，则在搜索路径上使用 sqlcli 。
+
+
+
  a| 
 MaxDB_update_HIST_LOG
-
-
-
  a| 
-Y
-| 不包括  a| 
+（是|否）
+ a| 
 指示 MaxDB 备份程序是否更新 MaxDB 历史记录日志。
 
 

@@ -75,11 +75,8 @@ ora_临时
  a| 
 archive_log_only
  a| 
-Y
-| 不包括 
-
-
-| 策略： <Y | 不包括  a| 
+（Y|N|策略：<Y|N>）
+ a| 
 通知 Oracle 插件仅执行交换机日志操作如果要处理归档日志备份而不是数据备份，则此设置非常有用。
 
 
@@ -103,24 +100,31 @@ ORACLE_HOME_SID
  a| 
 ORACLE_export_parameters
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 使用 export 命令导出 ORACLE_HOME 和 ORACLE_SID 环境参数。这仅适用于 UNIX 或基于 Linux 的环境。
+
+
+
  a| 
 ORACLE_BACKUPMODE
  a| 
-
-
-
  a| 
 可选择使用 Snap Creator 策略配置脱机或联机备份。默认选项为联机。ORACLE_BACKUPMODE=hourly ：联机， daily ：脱机
+
+
+
  a| 
 ORACLE_SHUTDOWNABORT
  a| 
-Y
+（是|否）
+ a| 
+如果在执行 Oracle 离线备份时设置为 Y，则会使用关闭中止机制来确保数据库在一致的状态下关闭。ORACLE_SHUTDOWNABORT 参数的关机步骤如下：
+
+* 关闭中止
+* 启动限制
+* 立即关闭
+
 
 |===
 * 相关信息 *

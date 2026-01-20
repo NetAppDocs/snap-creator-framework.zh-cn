@@ -20,30 +20,47 @@ summary: 要设置 NetApp 管理控制台数据保护功能，需要使用多个
  a| 
 ntap_PM_update
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 用于打开和关闭在 NetApp 管理控制台数据保护功能中注册 Snap Creator Snapshot 副本的 NetApp 管理控制台数据保护功能更新。* 注意： * 如果启用了 NTAP_PM_update ，则必须配置 NTAP_dFM_DATA_SET 。
+
+
+
  a| 
 ntap_dfm_data_set
  a| 
-
-
-
  a| 
 列出存储系统以及与卷关联的 NetApp 管理控制台数据保护功能数据集；即， controller1 ： dataset1/vol1 ， vol2 ； controller1 ： dataset2/vol3 。
+
+
+
  a| 
 ntap_PM_run_backup
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 启动 NetApp 管理控制台数据保护功能备份，检查进度和状态，然后等待其完成。
+
+
+
  a| 
 ntap_dfm_snapshot_format
+ a| 
+ a| 
+使用NetApp管理控制台数据保护功能时，辅助快照副本格式的可选设置。此选项需要OnCommand 5.0 或更高版本。必填变量：
+
+* 时间戳：%T
+
+
+可选变量：
+
+* 保留类型：%R
+* 数据集标签：%L
+* 存储控制器：%H
+* 卷名：%N
+* 应用特定数据：%A
+
+
+如果未设置此选项，则使用NetApp管理控制台数据保护功能的默认命名约定。命名规则只能在创建数据集时设置。
 
 |===

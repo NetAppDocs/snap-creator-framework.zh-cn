@@ -43,29 +43,26 @@ Oracle
  a| 
 app_ignore_error
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 确定 Snap Creator 是否应忽略应用程序插件中的错误。如果您希望备份多个数据库，而不希望在一个数据库的静默或取消静默操作失败时停止备份，则此功能非常有用。
+
+
+
  a| 
 app_defined_backup
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 应用程序插件应执行整个备份操作，包括暂停，创建 Snapshot 副本和取消暂停。内置插件不支持此类备份。
+
+
+
  a| 
 app_defined_restore
-
-
-
  a| 
-Y
-| 不包括  a| 
+（是|否）
+ a| 
 启用基于应用程序的还原操作。在执行还原操作时， Snap Creator 会向应用程序插件发送请求，此插件将处理此请求。
 
 
@@ -73,29 +70,26 @@ Y
  a| 
 app_defined_mount
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 将忽略 Snap Creator 的内置挂载功能。而是由插件负责所有挂载活动，包括创建卷或 LUN 克隆。内置插件不支持此类挂载。
+
+
+
  a| 
 app_defined_umount
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 将忽略 Snap Creator 的内置卸载功能。相反，该插件负责处理所有卸载活动，包括卷或 LUN 克隆删除。内置插件不支持此类卸载操作。
+
+
+
  a| 
 APP_AUTO_DISCOVERY
-
-
-
  a| 
-Y
-| 不包括  a| 
+（是|否）
+ a| 
 启用应用程序自动发现。Snap Creator 会向应用程序插件发送发现请求，然后该插件负责发现存储配置。如果要将此信息保存到配置文件中，则可以使用 APP_CONF_PERSISTENT 参数动态执行此操作，也可以将此操作永久执行。
 
 
@@ -103,102 +97,110 @@ Y
  a| 
 APP_CONF_persistence
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 使自动发现持久，这意味着更改会在配置文件中动态更新。
+
+
+
  a| 
 app_defined_clone
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 将忽略 Snap Creator 的内置克隆功能。相反，该插件负责处理所有克隆活动，包括创建和删除卷或 LUN 克隆。内置插件不支持此类克隆。
+
+
+
  a| 
 fs_name
-
-
-
  a| 
 插件
  a| 
 确定用于文件系统操作的插件。
+
+
+
  a| 
 java_home
-
-
-
  a| 
 文本
  a| 
 此设置指向应用于执行 .class 和 .jar 文件的 Java 虚拟机（ JVM ）。
+
+
+
  a| 
 jvm_args
-
-
-
  a| 
 文本
  a| 
 此设置用于控制执行原生 java .class 或 .jar 文件时的 JVM 设置。默认设置为 -Xms32M -Xmx128M 。
+
+
+
  a| 
 JAVA_CLASSPATH
-
-
-
  a| 
 文本
  a| 
 此设置用于定义 Java 类路径。默认情况下，插件 / 本机配置为已配置，并且可以使用附加到默认值的环境变量来完成。
+
+
+
  a| 
 meta_data_volume
-
-
-
  a| 
  a| 
 允许在取消静默操作后创建指定卷的 Snapshot 副本。对于某些插件来说，这一点非常重要，因为这些插件必须在不同时间创建数据的 Snapshot 副本。参数不仅要指定卷，还要指定控制器（例如， `controller1 ： volume1 ， volume2 ； controller2 ： volume3 ， volume4 ； controller3 ： volume5 ， volume6` ）。
+
+
+
  a| 
 perl_home
-
-
-
  a| 
 文本
  a| 
 此设置指向执行 .pl 文件时应使用的 Perl 解释器。
+
+
+
  a| 
 perl_opts
-
-
-
  a| 
 文本
  a| 
 此设置用于控制执行原生 Perl 文件时的 Perl 解释器设置。其他设置选项包括可传递给 Perl 解释器的目录（ -I ）。
+
+
+
  a| 
 Python_home
-
-
-
  a| 
 文本
  a| 
 此设置指向应用于执行 .py 文件的 Python 解释器。
+
+
+
  a| 
 Python_opts
-
-
-
  a| 
 文本
  a| 
 此设置用于控制执行原生 Python 文件时的 Python 解释器设置。
+
+
+
  a| 
 validate_volumes
+ a| 
+数据
+ a| 
+验证数据库所在的所有卷是否都包含在备份操作中。目前存在一些局限性：
+
+* 仅支持网络文件系统（NFS）。
+* 仅检查受支持数据库的数据文件。
+
 
 |===

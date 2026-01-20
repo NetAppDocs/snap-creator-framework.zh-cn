@@ -22,47 +22,44 @@ summary: 归档日志插件可与 Snap Creator 归档日志结合使用，而不
  a| 
 archive_log_enable
  a| 
-Y
-| 不包括 
-
-
-| 策略：期限）  a| 
+（Y|N|policy:age）
+ a| 
 启用归档日志管理（删除旧归档日志）。
+
+
+
  a| 
 archive_log_retention
-
-
-
  a| 
 天数
  a| 
 指定保留归档日志的天数。此设置必须等于或大于 NTAP_snapshot_ 保留值。
+
+
+
  a| 
 Archive_log_DIR
-
-
-
  a| 
 change_info_directory/logs
  a| 
 指定归档日志所在目录的路径。
+
+
+
  a| 
 archive_log_EXT
-
-
-
  a| 
 file_extension
  a| 
 指定归档日志的文件扩展名。例如，如果归档日志为 10192091019.log ，请将此参数设置指定为 log 。
+
+
+
  a| 
 archive_log_recursive_search
-
-
-
  a| 
-Y
-| 不包括  a| 
+（是|否）
+ a| 
 用于管理子目录中的归档日志。如果归档日志位于子目录下，则应使用此参数。
 
 |===

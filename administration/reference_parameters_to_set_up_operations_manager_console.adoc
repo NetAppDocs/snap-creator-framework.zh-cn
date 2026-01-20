@@ -52,6 +52,8 @@ OM_port
  a| 
 OM_event_generate
  a| 
-Y
-| 不包括 
+（是|否）
+ a| 
+启用或禁用 Operations Manager 控制台中的事件创建。
+
 |===

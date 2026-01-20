@@ -53,57 +53,54 @@ ntap_clone_igroup_map
  a| 
 ntap_clone_for_backup
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 如果启用此选项，则会创建克隆（卷和 LUN ），然后在其他操作完成后将其删除。否则，克隆将在操作完成之前被删除。* 注： * 如果要将克隆备份到磁带，则应将其设置为 Y如果正在执行数据库刷新，则应将其设置为 N
+
+
+
  a| 
 ntap_clone_secondary
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 如果启用此选项，则在 SnapMirror 更新完成后，将在 SnapMirror 目标上创建克隆。* 注： * 此设置应与 NTAP_snapmirror_use_snapshot ， NTAP_snapmirror_wait 和 NTAP_clone_secondary 卷以及 cloneVol 操作结合使用。
+
+
+
  a| 
 ntap_clone_secondary 卷
-
-
-
  a| 
  a| 
 这是主存储系统或二级存储系统与二级卷的映射。要使 Snap Creator 能够找到二级卷（例如， controller1 ： controller1-sec/vol1 ； controller1 ： controller1-sec/vol2 ），必须执行此操作。
+
+
+
  a| 
 NTAP_NUM_VOL_CLEN克 隆
-
-
-
  a| 
  a| 
 这是要保留的卷克隆的数量。这与 Snapshot 副本保留策略类似。* 注： * 此功能仅适用于需要在存储控制器上安装 FlexClone 许可证的卷克隆。
+
+
+
  a| 
 ntap_nfs_export_host
-
-
-
  a| 
 主机 IP
  a| 
 应导出克隆的主机名或 IP 地址。此主机是使用 NFS 挂载克隆卷的主机。
+
+
+
  a| 
 ntap_nfs_export_access
-
-
-
  a| 
 root
-| 读写 | 只读 
+| 读写 
 
 
- a| 
+| 只读  a| 
 在 NTAP_NFS_export_host 中指定的主机可接收对克隆卷的访问权限或权限。
 
 * root
@@ -121,21 +118,21 @@ root
 
  a| 
 ntap_nfs_export_persistent
+
+
+
  a| 
 true
-
-
-
 | false  a| 
 确定 NFS 导出是否持久。如果选择 true ，则会导出克隆卷，并更新存储控制器上的 /etc/exports 文件。
+
+
+
  a| 
 ntap_cifs_export_enable
-
-
-
  a| 
-Y
-| 不包括  a| 
+（是|否）
+ a| 
 设置以使用 CIFS 共享克隆的卷。
 
 |===

@@ -2523,8 +2523,6 @@
   <block id="70752e3d7d4fb032fbe0bfc7f608b259" category="list-text">%T = 唯一的时间戳</block>
   <block id="b1503a8c8cc7db5f05947dc22ec16a6b" category="paragraph">以下是一个示例： ` %S_%D_%T.log`</block>
   <block id="1663c45679303f56792e3727ef91fb00" category="paragraph">Sybase Tran 转储压缩</block>
-  <block id="b3ece1f3eecb9db7cbfc880c8f76c58d" category="paragraph">Y</block>
-  <block id="6cf67f81440dbb166c74c36ba4c92808" category="cell">不包括</block>
   <block id="aa282c218f8de50d8c07e673a3efba9b" category="paragraph">启用或禁用原生 Sybase 事务转储压缩。</block>
   <block id="5b00a3c4e4d7e5113c17f1cd4ed0a251" category="paragraph">Sybase ISQL_CMD</block>
   <block id="3232ae4761663da903b11e8fe8fefd4b" category="paragraph">示例： /opt/sybase/OS-15_0/bin/isql</block>
@@ -3128,7 +3126,6 @@
   <block id="a49f27ed85d7cc90f7976cd39ec12a78" category="doc">归档日志插件</block>
   <block id="8c7dc9b130a71ed7c1a47474378707c8" category="paragraph">下表列出了归档日志插件参数，提供了这些参数的设置并对其进行了说明：</block>
   <block id="96611acf5bf8bf22163153db770f7f60" category="paragraph">archive_log_enable</block>
-  <block id="2fb33ec1462b9029d75715a12e44964a" category="cell">策略：期限）</block>
   <block id="3291ad0946050f7aa4f9a9380b2bec20" category="paragraph">启用归档日志管理（删除旧归档日志）。</block>
   <block id="0012a5e5e44a9bf77fffdc82e8b485cd" category="paragraph">archive_log_retention</block>
   <block id="21f2f76c313df826d6e15803c794ee11" category="paragraph">天数</block>
@@ -4394,8 +4391,6 @@
   <block id="3420213108d85f921270d8bf4116781c" category="paragraph">ora_临时</block>
   <block id="122ad43559cb7c871a7232ce20c529b1" category="paragraph">用于存储临时文件的目录的路径，例如 /tmp.The Oracle user must have appropriate permissions to this directory 。</block>
   <block id="f5078f21f47485897c87d1fbf5d9e19f" category="paragraph">archive_log_only</block>
-  <block id="971063cd9d6a788d0c6a3fe3ea0df2ff" category="cell">策略： &lt;Y</block>
-  <block id="ed6602eb57ddaa11f48abca427c60f87" category="cell">不包括</block>
   <block id="101f18023eaa7790ef6ba727af65d6be" category="paragraph">通知 Oracle 插件仅执行交换机日志操作如果要处理归档日志备份而不是数据备份，则此设置非常有用。</block>
   <block id="e1f651debac4f720c13ae930ff3ca14a" category="paragraph">ORACLE_HOME</block>
   <block id="84f63854b03bc743e9613cb2423fba8f" category="paragraph">Oracle 主目录的路径</block>
@@ -4601,4 +4596,32 @@
   <block id="b76926cf8f58acc96af344359c5d2b2c" category="admonition">有关 Snap Creator 通用错误的信息，请参阅<block ref="3b0c025e228e0d658ee39b24066f4d94" category="inline-link-macro-rx"></block>。</block>
   <block id="1d7ce8621814d7cbb17fc470a4344f97" category="inline-link-macro">Snap Creator Framework安装指南 - 将路径添加到环境变量</block>
   <block id="b407da2907a6b37afb80f35075ea8531" category="list-text">在 Windows 主机上，必须将 IBM Domino 安装路径添加到 PATH 环境变量中。欲了解更多信息，请参阅<block ref="48a25fc471122170a85c7c8edf958c44" category="inline-link-macro-rx"></block>。</block>
+  <block id="a4b10ba4184c91876de7584578453006" category="paragraph">（Y|N|policy:age）</block>
+  <block id="6c66b4d2e5944ca886c4b9a9893da0b7" category="paragraph">（是|否）</block>
+  <block id="8d777f385d3dfec8815d20f7496026dc" category="paragraph">数据</block>
+  <block id="29052802445f7d4f3d102b5c718b66ce" category="paragraph">验证数据库所在的所有卷是否都包含在备份操作中。目前存在一些局限性：</block>
+  <block id="44d74d7cf83cd1c3bf4ab4bb1ae30dc5" category="list-text">仅支持网络文件系统（NFS）。</block>
+  <block id="26a3433cdd66ec88654d1ebf84e4d35b" category="list-text">仅检查受支持数据库的数据文件。</block>
+  <block id="9585cd9ea994c167725cd420361fa76e" category="paragraph">（是|否）</block>
+  <block id="798b04090e54a1cdf065909a17bb574e" category="paragraph">该参数适用于 MySQL 主从数据库设置。</block>
+  <block id="ec33ae0eab0cbcf0f68a1beeebab63c0" category="paragraph">如果设置为 Y，则会将二进制日志清除到最新的可用二进制日志文件中。</block>
+  <block id="489a578ac452aa637e84a849df71b5f0" category="paragraph">如果设置为 N，则使用最近的时间戳进行清除查询。</block>
+  <block id="dcf1732d7559ab7b8aa81bdea2e96a8c" category="paragraph">（Y|N|策略：&lt;Y|N&gt;）</block>
+  <block id="757be32f0616f9f740892c8c0fc80776" category="paragraph">如果在执行 Oracle 离线备份时设置为 Y，则会使用关闭中止机制来确保数据库在一致的状态下关闭。ORACLE_SHUTDOWNABORT 参数的关机步骤如下：</block>
+  <block id="5d1c258a7bd4c15972e657524837311b" category="list-text">关闭中止</block>
+  <block id="672525866c66061a202ac9dd9e123406" category="list-text">启动限制</block>
+  <block id="89e2c99b632a7bfeb86bb5d15d993ac7" category="list-text">立即关闭</block>
+  <block id="ea9053cb7d9a5295733a4c597e3c402f" category="paragraph">允许将 IP 地址用于存储系统。这适用于SnapVault、 SnapMirror和NetApp管理控制台的数据保护功能。使用 IP 地址可能会造成问题，因此只能在特定条件下使用。</block>
+  <block id="fc663145389e04ad399fafe44ed4e642" category="paragraph">使用NetApp管理控制台数据保护功能时，辅助快照副本格式的可选设置。此选项需要OnCommand 5.0 或更高版本。必填变量：</block>
+  <block id="b3d419be703283d1c8ff46f1a9162193" category="list-text">时间戳：%T</block>
+  <block id="2f865c4db2240014a15a1afb9250d27e" category="paragraph">可选变量：</block>
+  <block id="ba7a8922105719869fea7de673955831" category="list-text">保留类型：%R</block>
+  <block id="811cf16f1a1fba73bff1d3e73cc09894" category="list-text">数据集标签：%L</block>
+  <block id="c5995da4091638026ed9470567f8c933" category="list-text">存储控制器：%H</block>
+  <block id="cbe2e8252606346bc2a477117e7c22db" category="list-text">卷名：%N</block>
+  <block id="b49c482aa020f7e97d705602777a831b" category="list-text">应用特定数据：%A</block>
+  <block id="936fd30e8735631071cb62e403722ec4" category="paragraph">如果未设置此选项，则使用NetApp管理控制台数据保护功能的默认命名约定。命名规则只能在创建数据集时设置。</block>
+  <block id="388306add449258c47380d6b7db98378" category="paragraph">启用或禁用 Operations Manager 控制台中的事件创建。</block>
+  <block id="957338adada6845bcc51f661d173fbb3" category="paragraph">在 OSSV 备份过程中或之前执行这些脚本或命令，其中 ## 是 01 到 99 之间的数字。这可以通过使用 OSSV 执行备份文件系统快照副本。</block>
+  <block id="17c3a9f520927a583d184a69999e24cf" category="paragraph">启用或禁用 32 位版本的 PowerShell。</block>
 </blocks>

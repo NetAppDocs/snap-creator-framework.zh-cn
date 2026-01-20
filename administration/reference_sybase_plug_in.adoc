@@ -92,55 +92,52 @@ Sybase Tran 转储格式
  a| 
 Sybase Tran 转储压缩
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 启用或禁用原生 Sybase 事务转储压缩。
+
+
+
  a| 
 Sybase ISQL_CMD
  a| 
 示例： /opt/sybase/OS-15_0/bin/isql
-
-
-
  a| 
 定义 isql 命令的路径。
+
+
+
  a| 
 Sybase
  a| 
 示例： /Sybase
-
-
-
  a| 
 指定 Sybase 安装的位置。
+
+
+
  a| 
 sybase_logdir
  a| 
 示例： /usr/local/ntap/scServer/logs
-
-
-
  a| 
 定义放置 Snap Creator 日志的目录。
+
+
+
  a| 
 Sybase 清单
  a| 
 示例： `dBAtest2 ： /t_inf_nZL_devs/`
-
-
-
  a| 
 指定应创建清单文件的数据库以及应放置清单文件的位置。
+
+
+
  a| 
 Sybase 清单格式
  a| 
 %S_%D_%T.Manifest 示例： ` %S_%D_%T.Manifest`
-
-
-
  a| 
 用于指定清单文件命名约定。可以指定以下密钥：
 
@@ -148,23 +145,23 @@ Sybase 清单格式
 * %d = Sybase 数据库中的数据库
 * %T = 唯一的时间戳，与 Snapshot 副本命名所使用的时间戳相同
 
+
+
+
  a| 
 sybase_manifest_delete
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 允许在创建 Snapshot 副本后删除清单。清单文件应捕获到 Snapshot 副本中，以便始终可用于备份。
+
+
+
  a| 
 sybase_exclude_tempdb
-
-
-
  a| 
-Y
-| 不包括  a| 
+（是|否）
+ a| 
 自动排除用户创建的临时数据库。
 
 |===

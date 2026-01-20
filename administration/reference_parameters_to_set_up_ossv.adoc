@@ -20,34 +20,37 @@ summary: 要设置 Open Systems SnapVault （ OSSV ），需要使用多个参�
  a| 
 ntap_OSSV_enable
  a| 
-Y
-| 不包括 
-
-
+（是|否）
  a| 
 启用 OSSV 集成。此参数必须与 NTAP_OSSV_HOMEDR 参数结合使用。运行 Snap Creator 的主机也需要使用 OSSV 。在 OSSV 中，策略保留逻辑仅根据预定义的 Snap Creator 策略处理策略。它不支持任何策略对象。
 
 
 NOTE: 启用此 OSSV 参数后，此路径将指定为卷。在 Windows 中为 OSSV 指定路径时，不应使用冒号（：）。例如，如果路径为 E ： \DB ，则应将其用作 E\DB 。
+
+
+
  a| 
 NTTA_OSSV_HOMEDR
  a| 
 /usr/snapvault
-
-
-
  a| 
 设置 OSSV 主目录（ /usr/snapvault ）的路径。
+
+
+
  a| 
 ntap_OSSV_FS_snapshot
  a| 
-Y
-
-
-
-| 不包括  a| 
+（是|否）
+ a| 
 要设置 NTAP_OSSV_FS_snapshot_create_CMD 参数，需要此许可证。使用 Open System 或文件系统命令可以创建文件系统 Snapshot 副本。然后，使用 SnapVault 将文件系统 Snapshot 副本传输到存储系统。
+
+
+
  a| 
 NTTA_OSSV_FS_snapshot_create_CMD
+ a| 
+ a| 
+在 OSSV 备份过程中或之前执行这些脚本或命令，其中 ## 是 01 到 99 之间的数字。这可以通过使用 OSSV 执行备份文件系统快照副本。
 
 |===
