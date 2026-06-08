@@ -230,7 +230,7 @@ Controller/Vserver 密码
 IMPORTANT: 如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷，如中所述 xref:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc[备份 changeinfo 目录]。此选项指示 IBM Domino 插件为 changeinfo 卷 _after_ 创建 Snapshot 副本，以便为数据库文件创建 Snapshot 副本。
 
 . 如果要指定 SVM 详细信息以及要为另一个主存储系统备份的卷，请在控制器 /Vserver 凭据页面上单击 * 添加 * 。
-. 在 Snapshot 详细信息页面上，指定 Snapshot 配置信息：
+. [[thirteenth-step]]在 Snapshot 详细信息页面上，指定 Snapshot 配置信息：
 +
 |===
 | 对于此字段 ... | 执行此操作 ... 
@@ -299,7 +299,7 @@ TIP: Domino 环境可能包含数百或数千个数据库。即使一个数据�
 
 .. 单击 * 快照 * 以归档 SnapVault 副本。
 .. 指定归档 Snapshot 副本的策略。
-.. 有关说明，请参见以下步骤<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13>>。
+.. 说明在以下步骤中<<thirteenth-step,13>>。
 .. 在 * SnapVault 等待时间 * 中，输入希望 Snap Creator 等待 SnapVault 操作完成的分钟数。
 .. 在向二级存储执行复制之前，您需要已设置 SnapMirror 和 SnapVault 关系。有关详细信息，请参见 xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror 和 SnapVault 设置]。
 

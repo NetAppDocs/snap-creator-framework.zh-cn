@@ -57,7 +57,7 @@ ERROR: [scf-00094] Application environment set for plug-in domino failed
 
 == Snap Creator 备份因数据库损坏而失败
 
-默认情况下，如果一个或多个数据库处于不一致或损坏状态，备份操作将失败。您可以强制插件在出现错误的情况下继续执行备份操作，如步骤中所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["使用 GUI 创建配置文件的任务"]。
+默认情况下，如果一个或多个数据库处于不一致或损坏状态，则备份操作将失败。您可以强制插件在出现错误时继续进行备份操作，如步骤 link:task_using_the_gui_to_create_a_configuration_file.html["使用 GUI 创建配置文件的任务"] 中所述。
 
 
 
@@ -97,7 +97,7 @@ LTD 00001
  a| 
 Domino 插件无法与 snap_timestamp_only = N 结合使用snap_timestamp_only 应设置为 Y
  a| 
-有关详细信息，请参见第步 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3["task_Using_the_guI_to_create_a_configuration_file.md#sted_81795CF9D6294AC891BC3D0CE4827CA3"]。
+有关详细信息，请参见步骤 link:task_using_the_gui_to_create_a_configuration_file.html["使用 GUI 创建配置文件的任务"]。
 
 
 

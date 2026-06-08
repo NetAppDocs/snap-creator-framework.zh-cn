@@ -55,7 +55,7 @@ NOTE: 要进行最新且可选择的时间点还原，必须启用 Domino 事务
 
 +
 
-NOTE: 如果要从 SnapVault 副本还原，系统会提示您从主存储或二级存储还原。您的选择取决于您如何处理中所述的限制 link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["概念 _Domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"]。
+NOTE: 如果要从 SnapVault 副本还原，系统会提示您从主存储或辅助存储还原。您的选择取决于您如何处理 link:concept_domino_database_restore_overview.html["概念 _Domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"] 中所述的限制。
 
 . 在还原详细信息页面上，指定还原详细信息：
 +

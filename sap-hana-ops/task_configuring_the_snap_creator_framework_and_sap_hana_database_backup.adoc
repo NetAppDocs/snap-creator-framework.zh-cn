@@ -13,7 +13,7 @@ summary: 您必须配置 Snap Creator Framework 和 SAP HANA 数据库备份。
 [role="lead"]
 您必须配置 Snap Creator Framework 和 SAP HANA 数据库备份。
 
-. 连接到 Snap Creator 图形用户界面（ GUI ）： https://host:8443/ui/[]。
+. 连接到 Snap Creator Framework 图形用户界面 (GUI)：+https://host:8443/ui/+。
 . 使用安装期间配置的用户名和密码登录。单击 * 登录 * 。
 +
 image::../media/snap_creator_gui.gif[显示了 Snap Creator GUI 登录]

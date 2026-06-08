@@ -22,7 +22,7 @@ summary: 与其他备份技术不同， IBM Domino 插件允许在备份操作�
 . 检查数据库是否不一致或已损坏。
 +
 
-NOTE: 您可以强制插件在出现错误的情况下继续执行备份操作，如步骤中所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["task_Using_the_gui_to_create_a_configuration_file.mc#sted_AA41331683A24598B7845367CB967F99"]。
+NOTE: 即使出现错误，也可以强制插件继续执行备份操作，如步骤 link:task_using_the_gui_to_create_a_configuration_file.html["使用 GUI 创建配置文件的任务"] 中所述。
 
 . 为每个卷创建一个 Snapshot 副本。
 . 如果正在使用 Domino 事务日志记录，请对 Domino 事务日志的副本进行归档，以便在最新的还原操作中使用。

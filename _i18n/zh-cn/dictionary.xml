@@ -83,7 +83,6 @@
   <block id="f29c416e1abc3d611351721e7f110dd7" category="list-text">删除文件系统和 SAP HANA 备份目录中早于最早数据备份的所有日志备份。</block>
   <block id="d0485c7814c605733673c3eb73b6d38b" category="summary">您必须配置 Snap Creator Framework 和 SAP HANA 数据库备份。</block>
   <block id="e62168db839f7eced532152bd538a398" category="doc">配置 Snap Creator Framework 和 SAP HANA 数据库备份</block>
-  <block id="02910bd24028b122233e4482d05964fd" category="list-text">连接到 Snap Creator 图形用户界面（ GUI ）：<block ref="9dc9badd5cd8ab37fd392481173e134c" category="inline-link-rx"></block>。</block>
   <block id="9c570b1c700912cd7b2e96ed902081dc" category="list-text">使用安装期间配置的用户名和密码登录。单击 * 登录 * 。</block>
   <block id="ebe42e5e31c12cacd2dd99c2a7331bab" category="image-alt">显示了 Snap Creator GUI 登录</block>
   <block id="00ae7e41c9df04aef30fcd6c4ea3c8e5" category="list-text">输入配置文件名称并单击 * 确定 * 。</block>
@@ -641,7 +640,6 @@
   <block id="bd2bccd6198bdccd22e66e9485fa2289" category="paragraph">/install_path/scServer4.1.x/bin/scServer start</block>
   <block id="ef425eaddb04838ede8034d5ce0eb177" category="paragraph">此外，还应删除 Snap Creator 3.6.x 安装目录。</block>
   <block id="5150edb9c1bf87eeedd8a4f61d2a2256" category="admonition">在确定不需要还原到旧版本之前，请勿删除备份副本。</block>
-  <block id="60423eb91f721e0a33aed7e4eac50e20" category="paragraph">此外，您还必须导航到指定端口上的本地主机来验证 Snap Creator Framework 图形用户界面的启动情况 <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>。</block>
   <block id="82e84f69df06c74df48a9fb785545b73" category="paragraph">您必须使用 HTTPS 进行连接；否则，此连接不会自动重定向到 HTTPS 连接，并且图形用户界面将不起作用。</block>
   <block id="aeef8fa1b8a133bc9bece4161d0545bb" category="inline-xref-macro">在基于 UNIX 的系统上安装 Snap Creator 服务器</block>
   <block id="4158b3408fd5cbc02c13a182201195cd" category="paragraph"><block ref="4158b3408fd5cbc02c13a182201195cd" category="inline-xref-macro-rx"></block></block>
@@ -708,7 +706,6 @@
   <block id="c54ee80e8593e201f44b1a6e9c01d904" category="list-text">安装完成后，单击 * 下一步 * 。</block>
   <block id="01903e3b334cdd16d2701b61eda9e874" category="paragraph">在 Snap Creator Server 服务安装期间，如果在安装选项中选择了某个服务，则会显示一个命令提示符。此过程会尝试启动现有服务；因此，在此步骤中通常会列出失败消息。</block>
   <block id="5b3c9afe30619ae787968e6b584f143f" category="list-text">单击 * 完成 * 关闭 Windows 安装程序。</block>
-  <block id="50e4c75af866aed1b9452d9e9751d5e1" category="list-text">导航到指定端口上的本地主机，以验证 Snap Creator Framework 图形用户界面的启动情况 <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>。</block>
   <block id="fb8aa4b12859d5b695ec05f6ccfac840" category="inline-xref-macro">在 Snap Creator 主机上安装 Java</block>
   <block id="95686cc5f9e33dd2af1fe6459eee615c" category="paragraph"><block ref="95686cc5f9e33dd2af1fe6459eee615c" category="inline-xref-macro-rx"></block></block>
   <block id="6243ac489739fe1c5ff6fb4aa928097d" category="inline-xref-macro">下载 Snap Creator 软件</block>
@@ -792,7 +789,6 @@
   <block id="861e2216b40ab2c148fa5dc35daecdac" category="list-text">打开命令提示符并将目录更改为 Snap Creator 安装路径（ C ： \Program Files\NetApp\Snap_Creator_Frider\scServer4.1.x\engine ）中的 engine 子目录。</block>
   <block id="67e6a8afa377814d428d285906805661" category="paragraph">升级过程完成后，通过执行以下操作之一启动 Snap Creator 服务器服务：</block>
   <block id="2fbafc4b4a85cfb4134cc539b4ba70e1" category="list-text">在命令提示符处，输入以下命令： `sc start snapcreatorserverservice`</block>
-  <block id="442e9767828a85b26ac377a4071f0799" category="paragraph">此外，您还必须通过导航到指定端口上的本地主机来验证 Snap Creator Framework 图形用户界面的启动情况 <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>。</block>
   <block id="7fc79d4b9f950b7f52a866be52616019" category="inline-xref-macro">安装 Snap Creator 服务器</block>
   <block id="c9143915a0a3e586dd4f0c977fe4093e" category="paragraph"><block ref="c9143915a0a3e586dd4f0c977fe4093e" category="inline-xref-macro-rx"></block></block>
   <block id="0174b7a1fbe00bf0a3c164279098e5fe" category="summary">Snap Creator 代理可在任何开放式系统平台（ AIX ， HP-UX ， Linux 和 Solaris ）上运行。</block>
@@ -1384,7 +1380,6 @@
   <block id="250387257b482e82243fcc2912148272" category="list-text">输入服务器端口，系统 IP 和 Java 文件箱路径，然后按照提示继续操作。</block>
   <block id="05d1639bb77ce574920dce6d4b2862fc" category="admonition">尽管 * 作业监控器大小 * 的最大可接受值为 10 ， 000 ，但建议的最大大小为 1000 。</block>
   <block id="bbf93e416f960162a1c199472da774e1" category="list-text">启动 Snap Creator Framework 服务器：</block>
-  <block id="5d160ed8ae07687a00086523c3503a4e" category="list-text">导航到指定端口上的本地主机（例如<block ref="4c1ad3a67f3cf2eeb8131c381a9574c4" category="inline-link-rx"></block>。</block>
   <block id="bbb6a1e01690e523a1f4ab3c70489eae" category="paragraph">您必须使用 HTTPS 进行连接；否则，图形用户界面将不起作用。</block>
   <block id="da12800860861c59633dbfc17ffe6d2a" category="paragraph">如果通信通过防火墙，请打开网络端口。</block>
   <block id="24364de3c05b647b7985958878079df8" category="summary">要为 AIX 主机上的 Domino 插件添加符号链接，必须执行此操作步骤。</block>
@@ -1491,8 +1486,6 @@
   <block id="1653f8d09197faddd964f0eb6e719c65" category="list-text">列出要备份的卷中的数据库，模板和邮箱。</block>
   <block id="fa1251539c7cc5324177b6f6745a3d99" category="list-text">将文件置于备份模式，一次一个数据库。</block>
   <block id="a6b13afc8745a813586f4caf09ae7961" category="list-text">检查数据库是否不一致或已损坏。</block>
-  <block id="064a52274f32140c04205f882712fd78" category="inline-link-macro">task_Using_the_gui_to_create_a_configuration_file.mc#sted_AA41331683A24598B7845367CB967F99</block>
-  <block id="0913569dece5fad64895431cefcba650" category="admonition">您可以强制插件在出现错误的情况下继续执行备份操作，如步骤中所述 <block ref="acadadf5aacd131fbb7a4816c7029d73" category="inline-link-macro-rx"></block>。</block>
   <block id="e46a0dd5d1c9ef41b0d2f406e51dca97" category="list-text">为每个卷创建一个 Snapshot 副本。</block>
   <block id="e17d26fc621a96f9d352fae8af3cb983" category="list-text">如果正在使用 Domino 事务日志记录，请对 Domino 事务日志的副本进行归档，以便在最新的还原操作中使用。</block>
   <block id="e5f46f136d89dd33c0ff8c6dfcb09236" category="list-text">使文件脱离备份模式，一次一个数据库。</block>
@@ -1573,7 +1566,6 @@
   <block id="50aaf22c31cd5a034a44905a602cf38e" category="list-text">在配置文件和配置窗格中，选择配置文件，然后单击 * 操作 * &gt; * 还原 * 。</block>
   <block id="3e5e0d72f574d33f42a3a54dc2f68a21" category="paragraph">选择 * 还原 * 将自动启动 Snap Creator Framework 还原向导。在整个还原向导中，单击 * 下一步 * 进入下一页，然后单击 * 返回 * 返回上一页。</block>
   <block id="0026be306327635206bae50042c4079d" category="inline-link-macro">概念 _Domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9</block>
-  <block id="790db2e499d327d9a188c2688b4b0ad7" category="admonition">如果要从 SnapVault 副本还原，系统会提示您从主存储或二级存储还原。您的选择取决于您如何处理中所述的限制 <block ref="0ffc1830d80e572080cbd8ec075981fd" category="inline-link-macro-rx"></block>。</block>
   <block id="d12fe3333ddf65e2514bd1ce60f2e5ef" category="list-text">在还原详细信息页面上，指定还原详细信息：</block>
   <block id="d3fb9ca7c42a294269c72ef6bd26adb7" category="paragraph">Controller/Vserver name</block>
   <block id="28756ee618b489d09d61436ea38eac5f" category="paragraph">选择要从中还原的存储系统上的 SVM 。</block>
@@ -1681,7 +1673,6 @@
   <block id="9ad524478b1e43346db798b7df29ca7d" category="list-text">Domino 的位级别与 Snap Creator 的位级别不同。例如，如果您使用的是 32 位 Domino ，则应使用 32 位 Snap Creator 。</block>
   <block id="fab2d7050c1fb6ae0a19b0c4085dc9b9" category="section-title">Snap Creator 备份因数据库损坏而失败</block>
   <block id="3039512c0a947e1baa63b77622d683fc" category="inline-link-macro">使用 GUI 创建配置文件的任务</block>
-  <block id="169bde998ccd22889a188ad2688e9636" category="paragraph">默认情况下，如果一个或多个数据库处于不一致或损坏状态，备份操作将失败。您可以强制插件在出现错误的情况下继续执行备份操作，如步骤中所述 <block ref="68713facb150aaf8a16ec3bc033545b5" category="inline-link-macro-rx"></block>。</block>
   <block id="ac083052e450f94307ce17bfb9e4c0f0" category="section-title">使用自定义操作还原 Domino 失败</block>
   <block id="b35b37e5dfd02fb2c4f68017ce62f3cf" category="paragraph">如果还原路径设置不正确，通常会发生还原错误。检查路径中是否存在额外字符和反斜杠。此外，验证是否已正确设置数据还原目录。</block>
   <block id="d5d3b5388b67bf2822cc7c1e49259268" category="paragraph">错误如下所示：</block>
@@ -1690,8 +1681,6 @@
   <block id="6aa45615f90b81da480a83a0cb38fdcd" category="cell">说明 / 解决方法</block>
   <block id="db72f16b2e63a3aac561590ad879345b" category="paragraph">LTD 00001</block>
   <block id="0d0770cb57fe9fb140dff3bd4b362c28" category="paragraph">Domino 插件无法与 snap_timestamp_only = N 结合使用snap_timestamp_only 应设置为 Y</block>
-  <block id="8147fc928886ba91d35a3899022159e5" category="inline-link-macro">task_Using_the_guI_to_create_a_configuration_file.md#sted_81795CF9D6294AC891BC3D0CE4827CA3</block>
-  <block id="26f81fcc7c8f5bf64ccf1abad19d3885" category="paragraph">有关详细信息，请参见第步 <block ref="1dfb6713ea8755b74139965c9df333ce" category="inline-link-macro-rx"></block>。</block>
   <block id="8a273526af815a83f5749723414ec744" category="paragraph">LTC-00002</block>
   <block id="b4cd68010b738e02134627a7be58a2c2" category="paragraph">数据库暂停已完成，但出现错误</block>
   <block id="edd5c8c3a27f07220e438eacc5042616" category="paragraph">Domino 插件无法将所有数据库置于备份模式。检查日志以查找错误的确切原因，或者在调试模式下运行 Snap Creator 以查找错误。</block>
@@ -1730,8 +1719,6 @@
   <block id="2e906a1fc4d6a16c8e26307bd6cbb910" category="paragraph">您不能使用 Snap Creator 还原数据的 SnapMirror 副本。如果要还原镜像副本，则需要先中断镜像，然后手动还原数据。有关详细信息，请参见 <block ref="77ae7c406b27cd3b7525056c4177e7bc" category="inline-link-macro-rx"></block>。</block>
   <block id="9ee26bc2d4a82589202bf23e8d486bfa" category="paragraph">从二级存储还原 SnapVault 副本时，只能进行时间点卷还原。您不能执行最新的卷还原或单个文件还原。您可以通过首先从二级存储还原到主存储来解决此限制。然后，您可以根据需要从主存储执行最新的卷还原或单个文件还原。</block>
   <block id="46e54b4752f39069f3449eca307220cf" category="section-title">了解目标目录</block>
-  <block id="ef0b3823b79ebf9bb3590e86169e315f" category="inline-link-macro">task_Using_the_gui_to_create_a_configuration_file.md#sted_E6C507729B3647FD8B2E8D0818F22D3B</block>
-  <block id="3fc45d4ffd0c24ca01102983a71df3fd" category="paragraph">卷还原和单文件还原通常具有不同的目标目录。您可以在备份和还原配置文件的 Data Restore Directory 参数中指定目标目录（请参见第步 <block ref="67143f3be6464ba99ce577b07c16b02e" category="inline-link-macro-rx"></block>）：</block>
   <block id="f8b4c0dcfaae97b701b513a39f4bf73f" category="list-text">对于卷还原，您需要将 Data Restore Directory 设置为 Domino 数据目录。</block>
   <block id="99f35710a15900a2a9fa6811f679f67f" category="list-text">对于单文件还原，您需要将 Data Restore Directory 设置为 Domino 数据卷上的子目录。</block>
   <block id="9565a7ad06ece04d3f20f5adecdadda9" category="paragraph">这意味着，如果您选择其他还原类型，则需要修改数据还原目录，使其指向每种还原类型的正确设置。否则，更改信息将无法正确应用，并且数据与要还原到的数据库状态不一致。当然，如果愿意，您可以为卷和单文件还原创建不同的配置。</block>
@@ -1913,7 +1900,6 @@
   <block id="c9e9233de9450524363733c7dcb64b52" category="summary">如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷。这样做会指示 IBM Domino 插件在为数据库文件创建 Snapshot 副本之后为 changeinfo 卷创建 Snapshot 副本。</block>
   <block id="528f591c9fce803647c99e04c216ba50" category="paragraph">如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷。这样做会指示 IBM Domino 插件为 changeinfo 卷 _after_ 创建 Snapshot 副本，以便为数据库文件创建 Snapshot 副本。</block>
   <block id="805179e4a7f11d19d7cd612c2379d246" category="inline-link-macro">使用 GUI 创建配置的任务</block>
-  <block id="c4a9b25f3868fd8e8d03e3aed8aa5ddc" category="paragraph">您应已将 changeinfo 卷标识为在创建配置文件时要备份的卷。有关详细信息，请参见第步 <block ref="47c62e0ad4db2535299629d225b69b91" category="inline-link-macro-rx"></block>。</block>
   <block id="c867ca66c93d3fa2afedd9a86d4962a4" category="paragraph">您可以在配置文件中使用 meta_data_volume 参数将 changeinfo 卷标识为元数据卷。此参数在图形用户界面中不可用。</block>
   <block id="d5ed1725653091705c56d535ed18e9a3" category="list-text">在文本编辑器中打开配置文件。</block>
   <block id="4d06ba727c36904a50e5cc898cc0946f" category="paragraph">配置文件位于 Snap Creator 安装目录中为配置文件命名的子目录中。例如，在 Windows 主机上， C ： \Program Files\NetApp\Snap_Creator_Frame\scServer4.1.x\enginer\configs\Domino\Fuji15.conf ，其中 Domino 是配置文件的名称，而 Fuji15.conf 是配置文件的名称。</block>
@@ -1942,9 +1928,6 @@
   <block id="c65b651594cbe290578ca53308ef1569" category="list-text">%SNAME-%SNAP_type_%SNAP_time 用于指定 Snapshot 副本名称的格式，包括配置文件名称， Snapshot 策略（每小时，每天或每月）以及创建 Snapshot 副本的时间和日期。</block>
   <block id="0ae2161f56fadd7adc1b267bd110fa66" category="list-text">d 表示交换机， F G H 表示要备份的数据的挂载点。提示：要在服务器上运行命令，请在命令前面加上文本 Server ，后跟一个冒号（：）。</block>
   <block id="16bd5c3a470a850289f84a3609e8cbdc" category="list-text">如果您对输入内容感到满意，请按 * 输入 * 。</block>
-  <block id="8d59aaca41546d470ad46ddacfd14ff2" category="inline-xref">#sted_3F9C83DD05D84075AD0277213FD67C56</block>
-  <block id="a912e7fa35c4b085dbefa935ce952134" category="inline-xref">#sted_FBEDD7AE105F42138EB35315EA9FA7CC</block>
-  <block id="9bef9a9588579445462a340a5ab8f1c9" category="list-text">重复步骤 <block ref="54cf7e79e142d6e0d2e79d5ce4457f91" category="inline-xref-macro-rx"></block> 到 <block ref="24344f94f5c5aa5c497bbae13d30cbab" category="inline-xref-macro-rx"></block> 添加其他命令。</block>
   <block id="5c5a090ca8a56393e6164962c36c3df5" category="summary">如果要在 Snap Creator 代理上运行补充命令，则必须明确允许执行该命令，方法是将其包含在该代理上的 allowed_commands.config 文件中。</block>
   <block id="7d5e1c1f475917ddc142d876d35ea539" category="paragraph">allowed_commands.config 位于 Snap Creator Agent 安装目录的 etc 子目录中。例如：</block>
   <block id="34a5f4802bbbd7862782050a267234ee" category="list-text">在 UNIX 主机上，为 /install/path/scAgent4.1.x/etc/allowed_commands.config</block>
@@ -2049,7 +2032,6 @@
   <block id="d477fc52ef5c76f36eeacd624d112260" category="paragraph">指定的卷将显示在 Controller/Vserver Credentials 页面上。</block>
   <block id="6444a7987b5250fb710f5e1df916a0fd" category="admonition">如果您计划备份 changeinfo 目录，则必须将包含该目录的卷配置为元数据卷，如中所述 <block ref="a52a18b3ffb480e5ada8a0b65641afaa" category="inline-xref-macro-rx"></block>。此选项指示 IBM Domino 插件为 changeinfo 卷 _after_ 创建 Snapshot 副本，以便为数据库文件创建 Snapshot 副本。</block>
   <block id="243877d5557b57d0b9875c6f5696c880" category="list-text">如果要指定 SVM 详细信息以及要为另一个主存储系统备份的卷，请在控制器 /Vserver 凭据页面上单击 * 添加 * 。</block>
-  <block id="0e33d0f095749d70239b8072d114880e" category="list-text">在 Snapshot 详细信息页面上，指定 Snapshot 配置信息：</block>
   <block id="d2e55fe2815a901d5273ef24b1df02f0" category="paragraph">Snapshot 副本名称</block>
   <block id="a41a68c5e4b3590257035029ec213a71" category="paragraph">输入 Snapshot 副本的名称。* 提示： * 如果要在配置文件中重复使用 Snapshot 副本名称，请单击 * 允许重复的 Snapshot 副本名称 * 。</block>
   <block id="046a079d340e681724bcb031c0b84fe4" category="paragraph">Snapshot 副本标签</block>
@@ -2071,7 +2053,6 @@
   <block id="35eea9b89c19c0fc43a4d34027a1f92f" category="list-text">单击 * 快照 * 以归档 SnapVault 副本。</block>
   <block id="07d3cfdf2930165b1835cca001593bb3" category="list-text">指定归档 Snapshot 副本的策略。</block>
   <block id="c51ce410c124a10e0db5e4b97fc2af39" category="inline-xref">13</block>
-  <block id="5fd345bfd34f1dbedd6eea8ecba43b53" category="list-text">有关说明，请参见以下步骤<block ref="dc8c8989a76c527157eaaaba08f215b4" category="inline-xref-macro-rx"></block>。</block>
   <block id="90391274a8ef2fb943542f2c5bb3f276" category="list-text">在 * SnapVault 等待时间 * 中，输入希望 Snap Creator 等待 SnapVault 操作完成的分钟数。</block>
   <block id="d5a4f1ba59f569126d478fbb7b62f69f" category="list-text">在向二级存储执行复制之前，您需要已设置 SnapMirror 和 SnapVault 关系。有关详细信息，请参见 <block ref="677c6346df1833887064805e07455305" category="inline-xref-macro-rx"></block>。</block>
   <block id="48f4893c5290e5ab6988032734c66fe6" category="list-text">在数据保护卷页面上，单击 * 添加 * ，然后选择主存储系统的 SVM 。</block>
@@ -4624,4 +4605,19 @@
   <block id="388306add449258c47380d6b7db98378" category="paragraph">启用或禁用 Operations Manager 控制台中的事件创建。</block>
   <block id="957338adada6845bcc51f661d173fbb3" category="paragraph">在 OSSV 备份过程中或之前执行这些脚本或命令，其中 ## 是 01 到 99 之间的数字。这可以通过使用 OSSV 执行备份文件系统快照副本。</block>
   <block id="17c3a9f520927a583d184a69999e24cf" category="paragraph">启用或禁用 32 位版本的 PowerShell。</block>
+  <block id="d686234adc6679bd997bc84acf405f7a" category="inline-link-macro">使用 GUI 创建配置文件的任务</block>
+  <block id="389dbc83cdd33ec2f9525698c2615867" category="admonition">即使出现错误，也可以强制插件继续执行备份操作，如步骤 <block ref="ae4c2ceef95239719683584bbf3a84c3" category="inline-link-macro-rx"></block> 中所述。</block>
+  <block id="5f85fca306c01161913eac827fa6977a" category="paragraph">卷还原和单文件还原通常具有不同的目标目录。您可以在备份和还原配置文件的 Data Restore Directory 参数中指定目标目录（请参阅步骤<block ref="92738f9d1e8860cb12901f6ce8c9efe3" category="inline-link-macro-rx"></block>）：</block>
+  <block id="b092a130c3c3d9105c19f0dff663a5c1" category="paragraph">您应该已经在创建配置文件时将 changeinfo 卷标识为要备份的卷。有关详细信息，请参见步骤 <block ref="8e943375bddb4a1ec79831ef3c9ae1a9" category="inline-link-macro-rx"></block>。</block>
+  <block id="21d3a5e27bcde8ce5d792042cd07cbcf" category="paragraph">默认情况下，如果一个或多个数据库处于不一致或损坏状态，则备份操作将失败。您可以强制插件在出现错误时继续进行备份操作，如步骤 <block ref="92738f9d1e8860cb12901f6ce8c9efe3" category="inline-link-macro-rx"></block> 中所述。</block>
+  <block id="22995ec68e29b5e3a880224d8117937a" category="paragraph">有关详细信息，请参见步骤 <block ref="ae4c2ceef95239719683584bbf3a84c3" category="inline-link-macro-rx"></block>。</block>
+  <block id="d61982de022c35ef712a538121143630" category="list-text">重复步骤 3 和 4 以添加另一个命令。</block>
+  <block id="a1173661431508b0244246d26cb1441c" category="admonition">如果要从 SnapVault 副本还原，系统会提示您从主存储或辅助存储还原。您的选择取决于您如何处理 <block ref="ec60fee3293ee9dd2dd29a8210e13018" category="inline-link-macro-rx"></block> 中所述的限制。</block>
+  <block id="bc8a82dc9ff08c82ef1214b79d2a1443" category="list-text">[[thirteenth-step]]在 Snapshot 详细信息页面上，指定 Snapshot 配置信息：</block>
+  <block id="76db4967480a049adfd4fc0c6b74e3f2" category="list-text">说明在以下步骤中<block ref="d9b421d83918fed17b926e47f4dfb9d5" category="inline-xref-macro-rx"></block>。</block>
+  <block id="6977d3a07cd73545be9fa7fb44508127" category="list-text">通过导航到指定端口 +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block> 上的本地主机来验证 Snap Creator Framework GUI 启动。</block>
+  <block id="bce09b564bd742f6b47bceaa26bdd913" category="list-text">通过导航到指定端口上的本地主机来验证 Snap Creator Framework GUI 启动（例如，<block ref="d620275798bb903394d688f46f99577f" category="inline-link-rx"></block>）。</block>
+  <block id="e86dfb50925745c4423fcca952f011c3" category="paragraph">您还必须通过导航到指定端口 +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block> 上的本地主机来验证 Snap Creator Framework GUI 启动。</block>
+  <block id="a0fece1967628d0210d289574bbf0262" category="paragraph">此外，您必须通过导航到指定端口 +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block> 上的本地主机来验证 Snap Creator Framework GUI 启动。</block>
+  <block id="1bb7a8af421762475cdc4503924535c1" category="list-text">连接到 Snap Creator Framework 图形用户界面 (GUI)：+https://host:8443/ui/+。</block>
 </blocks>
