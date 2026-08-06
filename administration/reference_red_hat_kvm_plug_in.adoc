@@ -54,6 +54,7 @@ NOTE: 如果未安装 LHU 套件，并且配置混合使用网络连接存储和
 
 
 
+[[supported-kvm-configurations]]
 == 支持的 KVM 配置
 
 * SAN ：支持安装在原始多路径设备（具有多个路径的 LUN ）上的子虚拟机。

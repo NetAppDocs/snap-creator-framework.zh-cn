@@ -15,6 +15,7 @@ summary: 您可能更喜欢使用 SnapDrive 命令进行备份，而不是使用
 
 
 
+[[where-to-run-supplemental-commands]]
 == 在何处运行补充命令
 
 默认情况下，补充命令在 Snap Creator 代理上运行。您可以在服务器上运行补充命令，方法是在命令前面加上文本 Server ，后跟冒号（：）。例如，服务器： C ： \mysnt.bat 。
@@ -23,6 +24,7 @@ summary: 您可能更喜欢使用 SnapDrive 命令进行备份，而不是使用
 
 
 
+[[where-to-add-supplemental-commands]]
 == 如何添加补充命令
 
 您可以使用 Snap Creator GUI 或 Snap Creator CLI 向备份和还原配置中添加命令。

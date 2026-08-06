@@ -42,6 +42,7 @@ Citrix XenServer 插件支持 Windows 和 XenServer 。
 
 
 
+[[supported-citrix-xenserver-configurations]]
 == 支持的 Citrix XenServer 配置
 
 支持以下 Citrix XenServer 配置：
@@ -62,6 +63,7 @@ Citrix XenServer 插件支持 Windows 和 XenServer 。
 
 
 
+[[parameters]]
 == Parameters
 
 下表列出并介绍了 Citrix XenServer 插件参数：

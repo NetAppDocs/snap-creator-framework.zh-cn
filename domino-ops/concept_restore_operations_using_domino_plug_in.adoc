@@ -22,6 +22,7 @@ IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库�
 
 
 
+[[restore-options]]
 == 还原选项
 
 此插件提供了多种还原选项：

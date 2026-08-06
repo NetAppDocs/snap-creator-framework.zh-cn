@@ -15,6 +15,7 @@ IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库�
 
 
 
+[[understanding-snapmirror-and-snapvault-restore-operations]]
 == 了解 SnapMirror 和 SnapVault 还原操作
 
 您不能使用 Snap Creator 还原数据的 SnapMirror 副本。如果要还原镜像副本，则需要先中断镜像，然后手动还原数据。有关详细信息，请参见 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《 ONTAP 9 卷灾难恢复快速指南》"]。
@@ -23,6 +24,7 @@ IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库�
 
 
 
+[[understanding-destination-directories]]
 == 了解目标目录
 
 卷还原和单文件还原通常具有不同的目标目录。您可以在备份和还原配置文件的 Data Restore Directory 参数中指定目标目录（请参阅步骤link:task_using_the_gui_to_create_a_configuration_file.html["使用 GUI 创建配置文件的任务"]）：
@@ -35,6 +37,7 @@ IBM Domino 插件可从存储数据库的卷的 Snapshot 副本还原数据库�
 
 
 
+[[where-to-run-a-restore]]
 == 从何处运行还原
 
 除了一个例外情况，您可以使用 Snap Creator GUI 或 Snap Creator CLI 还原数据库。对于 SAN 环境中的单文件还原，必须使用命令行界面，如中所述 xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[在 SAN 环境中执行单文件还原]。
